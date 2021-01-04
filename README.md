@@ -55,3 +55,4 @@ Folgende Materialien werden für den Workshop benötigt:
 
 1* Tablet/Telefon (Android/Apple)
 
+Der bei Reichelt angebotene ESP32 (Joy-IT) geht prinzipiell auch. Er hat aber eine andere Pin-Belegung als der von AZ-Delivery. Im Workshop nutzen wir den ESP32 von AZ-Delivery.
