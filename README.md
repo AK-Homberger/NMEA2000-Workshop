@@ -2,15 +2,15 @@
 
 Dieses Repository enthält Informationen zum NMEA-Workshop im Janaur 2021.
 
-Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000 Bibliothek von Tomo Lappalainen erstellen.
+Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000-Bibliothek von Timo Lappalainen erstellen.
 
 # Vorbereitungen:
-- Download und Installation der Arduino-Entwicklungsumgebeung [Link](https://www.arduino.cc/en/software)
+- Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
-Download der NMEA-2000-Bibliotheken von Timo Lappalainen [Link](https://github.com/ttlappalainen)
+Download der NMEA-2000-Bibliotheken [Link](https://github.com/ttlappalainen)
 
-Folgene Bibliotheken alz ZIP-Dateien Downloaden und installieren:
+Folgene Bibliotheken als ZIP-Dateien Downloaden und installieren:
 - NMEA2000
 - NMEA2000_esp32
 - NMEA0183
