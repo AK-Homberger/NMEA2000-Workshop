@@ -27,10 +27,10 @@ Damit haben wir ein kleines NMEA 2000 Netzwerk zum üben.
 
 
 # Workshop Programme
-Auf dem zweiten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000 Bibliothek zu erklären.
-Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
+Auf dem zweiten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären.
+Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
-Folgende Beispielprogramm werden im Workshop gemeinsam erstellt und mit dem Simulator getestet:
+Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Reader/Simulator getestet:
 
 1. NMEA 2000 Thermometer, Barometer mit BME280 (I2C)
 
