@@ -15,14 +15,14 @@ Folgene Bibliotheken alz ZIP-Dateien Downloaden und installieren
 - NMEA2000_esp32
 - NMEA0183
 
-Jeweils auf den Namen des Repositorie klicken, dann den auf "Code" klicken und "Download ZIP auswählen. Dann in der Aroino IDE: Sketch, Bibliothek einbinden, .ZIP-Bibliothek hinzufügen auswählen und den Speierort der heruntergeladenen Biblitheken auswählen.
+Jeweils auf den Namen des Repositories klicken, dann den auf "Code" klicken und "Download ZIP auswählen. Dann in der Aroino IDE: Sketch, Bibliothek einbinden, .ZIP-Bibliothek hinzufügen auswählen und den Speierort der heruntergeladenen Biblitheken auswählen.
 
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-BusTransceivern. Der erste ESP32 dient als Schnittstelle zum NMEA-Simulator auf dem PC/Laptop.
 
 - Auf dem ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino)
 - Auf dem PC muss der NMEA 2000 Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
 
-Auf dem zweiten ESP32 werden unterschidliche Programme installiert, um die Nutzung der NME2000 Bibliothek zu erklären.
+Auf dem zweiten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000 Bibliothek zu erklären.
 
 1. Programm NMEA 2000 Barometer mit BME280
 
