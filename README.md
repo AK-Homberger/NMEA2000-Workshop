@@ -10,10 +10,12 @@ Vorbereitungen:
 
 Download der NMEA-2000-Bibliotheken von Timo Lappalainen [Link](https://github.com/ttlappalainen)
 
-Folgene Bibliotheken alz ZIP-Dateien Downloaden und installieren (Sketch, Bibliothek einbinden, .ZIP-Bibliothek hinzufügen)
+Folgene Bibliotheken alz ZIP-Dateien Downloaden und installieren
 - NMEA2000
 - NMEA2000_esp32
 - NMEA0183
+
+Jeweils auf den Namen des Repositorie klicken, dann den auf "Code" klicken und "Download ZIP auswählen. Dann in der Aroino IDE: Sketch, Bibliothek einbinden, .ZIP-Bibliothek hinzufügen auswählen und den Speierort der heruntergeladenen Biblitheken auswählen.
 
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-BusTransceivern. Der erste ESP32 dient als Schnittstelle zum NMEA-Simulator auf dem PC/Laptop.
 
@@ -22,6 +24,13 @@ Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-BusTransceivern. De
 
 Auf dem zweiten ESP32 werden unterschidliche Programme installiert, um die Nutzung der NME2000 Bibliothek zu erklären.
 
+1. Programm NMEA 2000 Barometer
+
+
+2. Temparaturfühler mit DS18B20
+
+
+3. NMEA 2000 WLAN Gateway
 
 
 # Material für den Workshop
