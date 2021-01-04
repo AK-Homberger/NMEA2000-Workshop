@@ -21,7 +21,7 @@ Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-BusTransceivern. De
 An beiden ES32 wird der CAN-Transceiver angeschlossen (3,3 Volt, HND, CAN-RX, CAN-TX). Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L).
 Damit haben wir ein kleines NMEA 2000 Netzwerk zum üben.
 
-- Auf dem ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino)
+- Auf dem ersten ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino)
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
 - Zum Lesen und Anzeigen von NMEA2000-Daten kann der NMEA Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
 
