@@ -24,7 +24,7 @@ Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-BusTransceivern. De
 
 Auf dem zweiten ESP32 werden unterschidliche Programme installiert, um die Nutzung der NME2000 Bibliothek zu erklären.
 
-1. Programm NMEA 2000 Barometer
+1. Programm NMEA 2000 Barometer mit BME280
 
 
 2. Temparaturfühler mit DS18B20
