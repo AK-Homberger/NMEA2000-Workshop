@@ -1,6 +1,6 @@
 # NMEA 2000 Workshop
 
-Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Janaur 2021.
+Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar 2021.
 
 Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000-Bibliothek von Timo Lappalainen erstellen.
 
@@ -32,13 +32,13 @@ Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit de
 
 Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Reader/Simulator getestet:
 
-1. NMEA 2000 Thermometer, Barometer mit BME280 (I2C)
+1. NMEA2000-Thermometer, Barometer mit BME280 (I2C)
 
 2. Temparaturfühler mit DS18B20 (1-Wire)
 
 3. Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
 
-4. NMEA-2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon
+4. NMEA2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon
 
 
 # Material für den Workshop
