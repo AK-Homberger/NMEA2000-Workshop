@@ -30,13 +30,13 @@ Mit dem NMEA-2000-Simulator können wird Daten vom NMEA 2000 Netzwerk anzeigen u
 
 Folgende Beispielprogramm werden im Workshop gemeinsam erstellt und mit dem Simulator getestet:
 
-1. NMEA 2000 Thermometer, Barometer mit BME280
+1. NMEA 2000 Thermometer, Barometer mit BME280 (I2C)
 
-2. Temparaturfühler mit DS18B20
+2. Temparaturfühler mit DS18B20 (1-Wire)
 
-3. Spannungs und Widerstandsmessung (Bordspannung, Tankanzeige)
+3. Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
 
-3. NMEA 2000 WLAN Gateway und Anzeige der Daten auf Tablet/Telefon
+4. NMEA-2000-WLAN-Gateway und Anzeige der Daten auf Tablet/Telefon
 
 
 # Material für den Workshop
