@@ -4,13 +4,13 @@ Dieses Repository enthält Informationen zum NMEA-Workshop im Janaur 2021.
 
 Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000 Bibliothek von Tomo Lappalainen erstellen.
 
-Vorbereitungen:
+# Vorbereitungen:
 - Download und Installation der Arduino-Entwicklungsumgebeung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
 Download der NMEA-2000-Bibliotheken von Timo Lappalainen [Link](https://github.com/ttlappalainen)
 
-Folgene Bibliotheken alz ZIP-Dateien Downloaden und installieren
+Folgene Bibliotheken alz ZIP-Dateien Downloaden und installieren:
 - NMEA2000
 - NMEA2000_esp32
 - NMEA0183
@@ -24,6 +24,7 @@ Damit haben wir ein kleines NMEA 2000 Netzwerk zum üben.
 - Auf dem ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino)
 - Auf dem PC muss der NMEA 2000 Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
 
+# Workshop Programme
 Auf dem zweiten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000 Bibliothek zu erklären.
 Mit dem NMEA-2000-Simulator können wird Daten vom NMEA 2000 Netzwerk anzeigen und auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
