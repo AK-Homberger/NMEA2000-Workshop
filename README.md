@@ -1,6 +1,6 @@
 # NMEA 2000 Workshop
 
-Dieses Repository enthält Informationen zum NMEA-Workshop im Janaur 2021.
+Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Janaur 2021.
 
 Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000-Bibliothek von Timo Lappalainen erstellen.
 
