@@ -38,7 +38,7 @@ Folgende Beispielprogramm werden im Workshop gemeinsam erstellt und mit dem Simu
 
 3. Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
 
-4. NMEA-2000-WLAN-Gateway und Anzeige der Daten auf Tablet/Telefon
+4. NMEA-2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon
 
 
 # Material für den Workshop
