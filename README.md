@@ -1,4 +1,4 @@
-# NMEA-Workshop
+# NMEA 2000 Workshop
 
 Dieses Repository enthält Informationen zum NMEA-Workshop im Janaur 2021.
 
