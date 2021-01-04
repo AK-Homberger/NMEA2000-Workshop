@@ -2,6 +2,14 @@
 
 Dieses Repository enthält Informationen zum NMEA-Workshop im Janaur 2021.
 
+Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000 Biblithek von Tomo Lappalainen ertellen.
+
+Die Basis bilden zwei ESP32 Module mit CAN-Bus Transceivern. Der erte ESP32 dient als Scnittstelle zum NMEA-Simulator auf dem PC/Laptop.
+
+- Auf dem ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino)
+- Auf dem PC muss der NMEA 2000 Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
+
+
 
 
 # Material für den Workshop
