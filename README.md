@@ -37,7 +37,7 @@ Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Rea
 
 1. NMEA2000-Thermometer, Barometer mit BME280 (I2C)
 
-2. Temparaturfühler mit DS18B20 (1-Wire)
+2. Temperaturfühler mit DS18B20 (1-Wire)
 
 3. Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
 
