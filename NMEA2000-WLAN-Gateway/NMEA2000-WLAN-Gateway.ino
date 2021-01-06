@@ -29,13 +29,16 @@
 #include "List.h"
 #include "BoatData.h"
 
+// Buffer config
+#define MAX_NMEA0183_MESSAGE_SIZE 150
+#define MAX_NMEA2000_MESSAGE_SEASMART_SIZE 500
+
 const uint16_t ServerPort = 2222; // Define the port, where server sends data. 
 
 // Struct to update BoatData. See BoatData.h for content
 tBoatData BoatData;
 
-int NodeAddress;  // To store last Node Address
-
+int NodeAddress;                    // To store last Node Address
 Preferences preferences;            // Nonvolatile storage on ESP32 - To store LastDeviceAddress
 
 const size_t MaxClients = 10;       // Maximum number of concurrent clients
@@ -67,10 +70,6 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
 void HandleNMEA2000Msg(const tN2kMsg &N2kMsg);
 void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg);
 
-// Buffer config
-#define MAX_NMEA0183_MESSAGE_SIZE 150
-char buff[MAX_NMEA0183_MESSAGE_SIZE];
-
 
 //*****************************************************************************
 void setup() {
@@ -96,8 +95,8 @@ void setup() {
   // Reserve enough buffer for sending all messages. This does not work on small memory devices like Uno or Mega
 
   NMEA2000.SetN2kCANMsgBufSize(8);
-  NMEA2000.SetN2kCANReceiveFrameBufSize(250);
-  NMEA2000.SetN2kCANSendFrameBufSize(250);
+  NMEA2000.SetN2kCANReceiveFrameBufSize(150);
+  NMEA2000.SetN2kCANSendFrameBufSize(150);
 
   esp_efuse_read_mac(chipid);
   for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));
@@ -116,8 +115,6 @@ void setup() {
                                 2046 // Just choosen free from code list on http://www.nmea.org/Assets/20121020%20nmea%202000%20registration%20list.pdf
                                );
 
-  // If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
-
   NMEA2000.SetForwardType(tNMEA2000::fwdt_Text); // Show in clear text. Leave uncommented for default Actisense format.
 
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
@@ -126,6 +123,7 @@ void setup() {
 
   Serial.printf("NodeAddress=%d\n", NodeAddress);
 
+  // If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
   NMEA2000.SetMode(tNMEA2000::N2km_ListenAndNode, NodeAddress);
 
   NMEA2000.ExtendReceiveMessages(ReceiveMessages);
@@ -149,7 +147,6 @@ void SendBufToClients(const char *buf) {
 }
 
 
-#define MAX_NMEA2000_MESSAGE_SEASMART_SIZE 500
 //*****************************************************************************
 //NMEA 2000 message handler
 void HandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
@@ -226,8 +223,11 @@ void CheckSourceAddressChange() {
 //*****************************************************************************
 void loop() {
   CheckConnections();
+  
   NMEA2000.ParseMessages();
+  
   CheckSourceAddressChange();
+  
   tN2kDataToNMEA0183.Update(&BoatData);
 
   // Dummy to empty input buffer to avoid board to stuck with e.g. NMEA Reader
