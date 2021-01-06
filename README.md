@@ -47,7 +47,7 @@ Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Rea
 
 1. [NMEA2000-Thermometer, Hygrometer und Barometer mit BME280 (I2C)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/BME280.md)
 
-2. Temperaturfühler mit DS18B20 (1-Wire)
+2. [Temperaturfühler mit DS18B20 (1-Wire)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/DS18B20.md)
 
 3. Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
 
