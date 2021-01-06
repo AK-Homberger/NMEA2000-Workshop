@@ -2,9 +2,9 @@
 
 Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar 2021.
 
-NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundsätzlicher Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
+NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
-Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000-Bibliothek von Timo Lappalainen erstellen.
+Im Rahmen des Workshops werden wir mit ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
 
 # Vorbereitungen:
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
