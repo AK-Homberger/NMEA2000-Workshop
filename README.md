@@ -26,7 +26,7 @@ So sieht das dann auf dem Steckbrett aus:
 
 ![Basis](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
-Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA-Workshop-Repository als ZIP-Datei downzuloaden. Dazu klickt man oben auf "NMEA-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntegeladen ZIP-Date in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
+Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
 
 - Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu nur den linken ESP32 mit USB verbinden und in der Arduiono-IDE den seriellen USB-Port auswählen und notieren.
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
