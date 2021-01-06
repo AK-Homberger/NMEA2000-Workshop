@@ -26,15 +26,15 @@ So sieht das dann auf dem Steckbrett aus:
 
 ![Basis](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
-Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA-Workshop-Repository als ZIP-Datei downzuloaden. Dazu klickz man auf "NMEA-Worshop" und dann auf "Code". 
+Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA-Workshop-Repository als ZIP-Datei downzuloaden. Dazu klickt man oben auf "NMEA-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntegeladen ZIP-Date in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
 
-- Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu nur den linken ESP32 mit USB verbinden und in der Arduiono IDE den Seriellen USB-Port auswählen und notieren.
+- Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu nur den linken ESP32 mit USB verbinden und in der Arduiono-IDE den seriellen USB-Port auswählen und notieren.
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
 - Zum Lesen und Anzeigen von NMEA2000-Daten kann der NMEA Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
 
 
 # Workshop Programme
-Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduini IDE der neue Serielle USB-Port ausgewählt.
+Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
 Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
 Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Reader/Simulator getestet:
