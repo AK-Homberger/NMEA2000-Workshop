@@ -43,7 +43,7 @@ Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit de
 
 Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Reader/Simulator getestet:
 
-1. NMEA2000-Thermometer, Barometer mit BME280 (I2C)
+1. [NMEA2000-Thermometer, Barometer mit BME280 (I2C)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/BME280.md)
 
 2. Temperaturfühler mit DS18B20 (1-Wire)
 
