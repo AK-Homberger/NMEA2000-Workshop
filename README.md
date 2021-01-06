@@ -10,6 +10,8 @@ Im Rahmen des Workshops werden wir mit ein kleines NMEA2000-Netzwerk aufbauen un
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
+In der Arduino ID müssen wir als nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
+
 Download der NMEA-2000-Bibliotheken [Link](https://github.com/ttlappalainen)
 
 Folgene Bibliotheken als ZIP-Dateien downloaden und installieren:
