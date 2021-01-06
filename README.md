@@ -1,8 +1,8 @@
-# NMEA 2000 Workshop
+# NMEA2000 Workshop
 
 Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar 2021.
 
-NMEA 2000 ist eine standardisierte Erweiterung des älteren Protokolls NMEA0183. Hintergründe zu NMEA2000 sinh [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
+NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls NMEA0183. Hintergründe zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
 Im Rahmen des Workshops werden wir erste Programme mit dem ESP32 und der NMEA2000-Bibliothek von Timo Lappalainen erstellen.
 
