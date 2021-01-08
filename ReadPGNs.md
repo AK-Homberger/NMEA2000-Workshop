@@ -12,13 +12,13 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reade.ino](https://github.com/AK-Ho
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
 
-Auf dem PC starten wir das Programm "NMEA-Simulator". Einen eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurierren wird die Serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options". Dann wählen wir die serielle Schnittselle vom linken ESP32. Danch OK klicken.
+Auf dem PC starten wir das Programm "NMEA-Simulator". Einen eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurierren wird die Serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options". Dann wählen wir die serielle Schnittselle vom linken ESP32. Danach OK klicken.
 
-Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen (Throttle Gear" hochschieben.
+![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
 
-Danach wählen wir die CheckBud "Run" aus.
+Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen "Throttle Gear" hochschieben.
 
-
+Danach wählen wir die CheckBox "Run" aus.
 
 Im Seriellen Monitor der Arduino-IDE sollen jetzt Zeilen ausgegeben werden:
 
