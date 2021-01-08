@@ -8,6 +8,9 @@ Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32
 
 ![Basis-Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
+
+# Das Programm
+
 Wir laden nun das Beispielprogramm [NMEA2000-Reade.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Reader/NMEA2000-Reader.ino) in die Arduino-IDE.
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
@@ -25,5 +28,12 @@ Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben wer
 ```
 PGN127250: Heading: 272.2 Deviation: 1.0 Variation: 2.0
 ```
+Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht due Ausgabe natürlich anders aus.
+
+# Programm-Elemente
+
+Kommen wir nun zu den neuen Programm-Elementen.
+
+
 
 
