@@ -6,6 +6,12 @@
 # Das Programm
 
 
+Anzeige des Motordrehzahl:
+
+![NMEA-Reader7](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-7.png)
+
+
+
 ```
 #define RPM_Calibration_Value 1.0 // Translates Generator RPM to Engine RPM 
 #define Eingine_RPM_Pin 27  // Engine RPM is measured as interrupt on pin 27
