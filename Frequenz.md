@@ -144,6 +144,6 @@ Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen K
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
-Im nächsten Teil werden wir etwas komplett anderes machen, und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
+Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/ReadPGNs.md) werden wir etwas komplett anderes machen, und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
 
 
