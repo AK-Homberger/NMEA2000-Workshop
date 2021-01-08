@@ -1,10 +1,24 @@
 # Messung von Frequenzen (Motordrehzahl)
 
+Als nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
+
+Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschiene zu messen und als PGN127488 (Engine Parameters, Rapid update) zu senden.
+    
+Wir nutzen dazu die Interrupt-Funkrion des ESP32. Interrupt bedeutet hier, das der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegt Funktion ausführt. 
+
+Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen kleinen Taster zur Simulation der Klemme "W".
+
+Das Steckbrett sollte so aussehen:
+
 ![Steckbrett-Frequenz](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Frequenz_Steckplatine.png)
 
+Der Taster auf dem Steckbrett wird mit GND und Pin 27 verbunden. Solltet ihr keinen Taster haben, so macht das auch nichts. In diesem Fall einfach zwei Stecklitzen mit GND und Pin 27 verbinden. Durch kurzes zusmmenfügen und lösen der beiden offenen Kabelenden können Tastendrücke simuliert werden.
 
 # Das Programm
 
+Als nächstes öffnen wir das Beispielprogramm "NMEA2000-Frequenz.ino" und laden es auf den rechten ESP32 hoch.
+
+Danach starten wir wieder den NMEA-Reader und wählen en PGN 127488.
 
 Anzeige des Motordrehzahl:
 
