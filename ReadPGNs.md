@@ -20,7 +20,7 @@ Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen "Thr
 
 Danach wählen wir die CheckBox "Run" aus.
 
-Im Seriellen Monitor der Arduino-IDE sollen jetzt Zeilen ausgegeben werden:
+Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben werden:
 
 ```
 PGN127250: Heading: 272.2 Deviation: 1.0 Variation: 2.0
