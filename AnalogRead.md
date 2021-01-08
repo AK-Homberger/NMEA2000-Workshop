@@ -25,7 +25,7 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 # Das Programm
 Kommen wir num zum Programm.
 
-Aus dem enpackten Download-Verzeichnis laden wir num das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino).
+Aus dem enpackten Download-Verzeichnis laden wir nun das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino).
 
 Nach dem Hochladen auf dem rechten ESP32 können wir wieder den NMEA-Reader starten und sehen, was auf dem Bus gesendet wird.
 
