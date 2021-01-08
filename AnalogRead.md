@@ -9,6 +9,7 @@ Wir nutzen dazu die Analog-Digital-Converter (ADC) Funktionen des ESP32. Der ESP
 
 Wir nutzen hier die Pins 34 und 35 (ADC1_CH6 und ADC1_CH7). Zur Vereinfachung verwenden wir im Workshop ein einfaches 10 KOhm Potentiometer, um sowohl die Bordspannung als auch den Tanklevel zu simulieren.
 
+# Schaltung
 So muss das Steckbrett dazu aussehen:
 
 ![AnalogRead](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-V-R_Steckplatine.png)
@@ -20,6 +21,8 @@ Um den Tanklevel zum Beispiel mit einem Tankgeber von Pilippi (0 - 180 Ohm) zu m
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
+
+# Das Programm
 Kommen wir num zum Programm.
 
 Aus dem enpackten Download-Verzeichnis laden wir num das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino).
@@ -33,6 +36,8 @@ Hier sehen wir die Batteriespannung (12.12 Volt) als PGN127508:
 Und hier sehen wir den Wassertanklevel (88.3 %) als PGN127505
 
 ![TankLevel](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-6.png)
+
+Wenn wir num am Potentiometer drehen, verändern sich auch die angezeigten Werte entsprechend.
 
 Das Programm selbst unterscheidet sich nicht sehr von den bisherigen Beispielprogrammen.
 
