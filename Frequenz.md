@@ -31,7 +31,7 @@ Anzeige des Motordrehzahl:
 
 Durch schnelles, wiederholtes drücken des Tasters können wir nun die angezeigte Motordrehzahl verändern.
 
-Kommen wir nun um Programm.
+Kommen wir nun zum Programm.
 
 Die Basis ist wieder unser Standard-Beispielprogramm zum Senden eines Wertes.
 
