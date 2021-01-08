@@ -20,12 +20,16 @@ Um den Tanklevel zum Beispiel mit einem Tankgeber von Pilippi (0 - 180 Ohm) zu m
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
-Kommen wir num zum Programm [
+Kommen wir num zum Programm.
 
-Aus dem enpackten Downlod laden wir num das Programm ["NMEA2000-ADC.ino"](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino)
+Aus dem enpackten Download-Verzeichnis laden wir num das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino).
 
+Nach dem hochladen auf dem rechten ESP32 können wir wieder den NMEA-Reader starten und sehen, was auf dem Bus gesendet wird.
+
+Hier sehen wir die Bordspannung als PGN127508:
 
 ![Spannung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-5.png)
 
+Un hier sehen wir dWassertanklevel als PGN127505
 ![TankLevel](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-6.png)
 
