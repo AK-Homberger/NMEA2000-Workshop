@@ -19,7 +19,7 @@ Auf dem PC starten wir das Programm "NMEA-Simulator". Einen eventuell zuvor gest
 
 ![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
 
-Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen "Throttle Gear" hochschieben.
+Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen. Dazu "Throttle Gear" hochschieben.
 
 Danach wählen wir die CheckBox "Run" aus.
 
