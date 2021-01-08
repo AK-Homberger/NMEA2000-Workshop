@@ -5,7 +5,7 @@ Als nächstes sehen wir uns an, wie wir mit dem ESP32 Spannungen und Widerständ
 1. Die die Bordspannung zu messen und als PGN127508 zu senden.
 2. Den Tanklevel des Wasertanks zu messen und als PGN127505 zu senden.
 
-Wir nutzen dazu die Analog-Digital-Converter (ADC) Funktionen des ESP32. Der ESP32 hat zwei unabhängige ADCs, die durch 18 unterschiedliche pins angesteuert werden können.
+Wir nutzen dazu die Analog-Digital-Converter (ADC) Funktionen des ESP32. Der ESP32 hat zwei unabhängige ADCs, die durch 18 unterschiedliche Pins angesteuert werden können.
 
 Wir nutzen hier die Pins 34 und 35 (ADC1_CH6 und ADC1_CH7). Zur Vereinfachung verwenden wir im Workshop ein einfaches 10 KOhm Potentiometer, um sowohl die Bordspannung als auch den Tanklevel zu simulieren.
 
@@ -21,6 +21,8 @@ Um den Tanklevel zum Beispiel mit einem Tankgeber von Pilippi (0 - 180 Ohm) zu m
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
 Kommen wir num zum Programm.
+
+Aus dem enpackten Downlod laden wir num das Programm
 
 
 ![Spannung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-5.png)
