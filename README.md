@@ -68,7 +68,7 @@ Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Rea
 
 1. [NMEA2000-Thermometer, Hygrometer und Barometer mit BME280 (I2C)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/BME280.md)
 2. [Temperaturfühler mit DS18B20 (1-Wire)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/DS18B20.md)
-3. [Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/AnalogRead.md)
+3. [Spannungs- und Widerstandsmessung (Batteriespannung, Tankanzeige)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/AnalogRead.md)
 4. Messung von Frequenzen (ESP32-Interrups nutzen)
 5. Daten (PGNs) vom NMEA-2000-Bus lesen und darstellen
 5. NMEA2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon
