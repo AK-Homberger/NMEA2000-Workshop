@@ -2,9 +2,9 @@
 
 Als nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
 
-Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschiene zu messen und als PGN127488 (Engine Parameters, Rapid update) zu senden.
+Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine zu messen und als PGN127488 (Engine Parameters, Rapid update) zu senden.
     
-Wir nutzen dazu die Interrupt-Funkrion des ESP32. Interrupt bedeutet hier, das der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegt Funktion ausführt. 
+Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
 Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen kleinen Taster zur Simulation der Klemme "W".
 
@@ -14,7 +14,7 @@ Das Steckbrett sollte so aussehen:
 
 Der Taster auf dem Steckbrett wird mit GND und Pin 27 verbunden. Solltet ihr keinen Taster haben, so macht das auch nichts. In diesem Fall einfach zwei Stecklitzen mit GND und Pin 27 verbinden. Durch kurzes zusmmenfügen und lösen der beiden offenen Kabelenden können Tastendrücke simuliert werden.
 
-Um wirklich die Motordrehzal messen zu können, würden wir noch einen Optokoppler, einen Widerstand und eine kleine Diode benötigen.
+Um wirklich die Motordrehzahl messen zu können, würden wir noch einen Optokoppler, einen Widerstand und eine kleine Diode benötigen.
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
@@ -35,20 +35,20 @@ Kommen wir nun um Programm.
 
 Die Basis ist wieder unser Standard-Beispielprogramm zum Senden eines Wertes.
 
-Auch hier benötigen wir wieder einen Kalibrirungswert und die Festlegung des Eingangs-Pins.
+Auch hier benötigen wir wieder einen Kalibrierungswert und die Festlegung des Eingangs-Pins.
 ```
 #define RPM_Calibration_Value 1.0 // Translates Generator RPM to Engine RPM 
 #define Eingine_RPM_Pin 27  // Engine RPM is measured as interrupt on pin 27
 ```
 
-Hier werden wieder die Sende-Offsets definiert. Diesmal senden wir häufiger. 333 ms bedeutet dre Mal pro Sekunde senden.
+Hier werden wieder die Sende-Offsets definiert. Diesmal senden wir häufiger. 333 ms bedeutet drei Mal pro Sekunde senden. Das sehen wir auch im NMEA-Reader (Feld "Interval").
 ```
 // Set time offsets
 #define SlowDataUpdatePeriod 333  // Time between CAN Messages sent
 #define RPM_SendOffset 0
 ```
 
-Es folgt die Definition con Variablen für die Zeitmessungen mit der Interrupt-Funktion.
+Es folgt die Definition von Variablen für die Zeitmessungen mit der Interrupt-Funktion.
 
 ```
 // Interrupt data
@@ -59,7 +59,7 @@ hw_timer_t * timer = NULL;                        // pointer to a variable of ty
 portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;  // To lock/unlock interrupt
 ```
 
-Wie schon gewohnt folgt die Definition des Sende-PGNs.
+Wie schon gewohnt, folgt die Definition der Sende-PGNs.
 ```
 // Set the information for other bus devices, which messages we support
 const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters, Rapid update                                                  
@@ -81,8 +81,8 @@ In setup() wird nun die Interupt-Funktion für Pin 27 initialisiert:
  ```
  
 Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. Das erspart uns einen externen Widerstand auf dem Steckbrett.
-Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wir festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGh auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
-Im folgenden wird ein ESP32 interner Timer dfiniert und gestartet. Den Timer benötigen wir später um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
+Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
+Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
 
 Hier wird die Funktion "handleInterrupt" definiert:
  
@@ -99,7 +99,8 @@ void IRAM_ATTR handleInterrupt()
   Last_int_time = millis();
 }
 ```
-Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal an Pin 27 von HIGH auf LOW wechselt. Also immer dann, wenn wir den Taster drücken.
+Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal an Pin 27 von HIGH auf LOW wechselt. Also immer dann, wenn wir den Taster drücken. Durch den interne Pull-Up-Widertand ist ohne gedrückten Taster Pin 27 auf HIGH-Niveau. Durch Tastendruck wird der Pin auf GND geschaltet, was LOW entspricht.
+
 Mit "PeriodCount = TempVal - StartValue;" wird die Zeitdifferenz seit dem letzten Interrupt berechnet.
 
 
@@ -141,8 +142,8 @@ void SendN2kEngineRPM(void) {
 ```
 Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kubelwelle und Lichtmachienenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
-So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall im der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
+So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
-Im nächsten Teil werden wir etwas komplett anderes machen und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
+Im nächsten Teil werden wir etwas komplett anderes machen, und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
 
 
