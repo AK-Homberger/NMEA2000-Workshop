@@ -1,8 +1,8 @@
-# Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
+# Spannungs- und Widerstandsmessung (Batteriespannung, Tankanzeige)
 
 Als nächstes sehen wir uns an, wie wir mit dem ESP32 Spannungen und Widerstände messen können. Ziel ist es:
 
-1. Die die Bordspannung zu messen und als PGN127508 zu senden.
+1. Die die Batteriespannung zu messen und als PGN127508 zu senden.
 2. Den Tanklevel des Wasertanks zu messen und als PGN127505 zu senden.
 
 Wir nutzen dazu die Analog-Digital-Converter (ADC) Funktionen des ESP32. Der ESP32 hat zwei unabhängige ADCs, die durch 18 unterschiedliche Pins angesteuert werden können.
@@ -15,7 +15,7 @@ So muss das Steckbrett dazu aussehen:
 
 Das Potentiometer wird, wie oben gezeigt, mit 3,3 V, GND und den Pins 34/35 verbunden.
 
-Um wirklich die Boardspannung messen zu können, würde ein Spannungsteiler mit zwei Widerständen (100 KOhm / 27 KOhm) verwendet werden.
+Um wirklich die Batteriespannung messen zu können, würde ein Spannungsteiler mit zwei Widerständen (100 KOhm / 27 KOhm) verwendet werden.
 Um den Tanklevel zum Beispiel mit einem Tankgeber von Pilippi (0 - 180 Ohm) zu messen, wäre ein Widerstand von 1 KOhm nötig (und ggf. eine Z-Diode zum Schutz des Eingangs vor Überspannung).
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
@@ -26,7 +26,7 @@ Aus dem enpackten Download-Verzeichnis laden wir num das Programm [NMEA2000-ADC.
 
 Nach dem Hochladen auf dem rechten ESP32 können wir wieder den NMEA-Reader starten und sehen, was auf dem Bus gesendet wird.
 
-Hier sehen wir die Bordspannung (12.12 Volt) als PGN127508:
+Hier sehen wir die Batteriespannung (12.12 Volt) als PGN127508:
 
 ![Spannung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-5.png)
 
@@ -47,7 +47,7 @@ Neu ist:
 ```
 
 Hier werden die Pins für die beiden ADC-Eingänge festgelegt (GPIO34 und 35).
-Mit ADC_Calibration_Value1 und ADC_Calibration_Value2 werden Korrekturwerte für die Spannung und die Widerstandsmessung festgelegt.
+Mit ADC_Calibration_Value1 und ADC_Calibration_Value2 werden Korrekturwerte für die Spannungs- und die Widerstandsmessung festgelegt.
 Wir sehen später, wie sie verwendet werden.
 
 Hier sehen wir die gewohnte Definition der Sende-Offsets:
@@ -79,12 +79,12 @@ double ReadADC(byte pin) {
 } // Added an improved polynomial, use either, comment out as required
 ```
 
-Mit dieser Funktion wird der Analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist leider notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Pylynominalfunktion) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unser Zweck meist ausreichend.
+Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist leider notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Pylynominalfunktion) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unsere Zwecke meist ausreichend.
 
 
 Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGNs:
 
-Bordspannung:
+Batteriespannung:
 
 ```
 void SendN2kBatteryVoltage(void) {
@@ -151,8 +151,10 @@ Wichtig sind die beiden Zeilen:
 
 Hier sehen wir, wie der ADC-Wert (0 - 4095) mit dem Kalibrierungswert korrigiert wird, um die gewünschte Anzeige zu erhalten.
 
-
 Das war es schon zum Thema Spannungs- und Widerstandsmessung.
+
+Es wäre ein Leichtes, das Programm um zusätzliche Tanks und Batteriespannungen zu erweitern.
+Die notwendigen Schritte hatten wir ja schon beim BME280 geübt.
 
 Im nächsten Teil geht es um Frequenzmessung (Motordrehzahl).
 
