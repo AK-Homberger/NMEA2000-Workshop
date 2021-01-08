@@ -4,16 +4,16 @@ Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar 2021.
 
 Nach dem Workshop werdet ihr folgendes können:
 - Die Arduino-IDE installieren
-- Die nötigen Bibliotheken installieren
-- Grundlegende Informationen zur NMEA2000-Bibliothek finden
-- Arduinio-IDE nutzen (Programme laden und auf den ESP32 hochladen
+- Die nötigen Bibliotheken installieren (ZIP-Datei und Bibliotheksverwalter)
+- Grundlegende Informationen zur NMEA2000-Bibliothek finden (PGNs)
+- Arduinio-IDE nutzen (Programme laden und auf den ESP32 hochladen)
 - Daten von einem NMEA2000-Bus auslesen und darstellen (NMEA-Reader)
-- Den Aufbau eines typischen Programm (C/C++) verstehen
-- I2C-Sensoren (hier BME280) installieren und nutzen 
+- Den Aufbau eines typischen Programms (C/C++) verstehen
+- I2C-Sensoren (hier BME280) nutzen 
 - Messen von Werten (Temperatur, Luftfeuchte, Druck) und Senden entsprechender PGNs
 - Nutzung von 1-Wire und Multitasking mit ESP32
-- Messung von Spannungen und Widerständen
-- Messung von Frequenzen
+- Messung von Spannungen und Widerständen (ESP32 ADC nutzen)
+- Messung von Frequenzen (ESP32 Interrups nutzen)
 - Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von Daten mit OpenCPN und Tablet (NMEA-Simulator)
 
 # NMEA2000 Historie
