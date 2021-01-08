@@ -15,7 +15,7 @@ Nach dem Workshop werdet ihr folgendes können:
 - Nutzung von 1-Wire und Multitasking mit ESP32 (Temperatursensor DS18B20)
 - Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
 - Messung von Frequenzen (ESP32-Interrups nutzen)
-- Daten vom NMEA-2000-Bus lesen (PGNs) und darstellen
+- Spezifische Daten vom NMEA-2000-Bus lesen (PGNs) und darstellen
 - Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
 
 # NMEA2000-Historie
