@@ -24,7 +24,7 @@
 #include <N2kMessages.h>
 
 #define RPM_Calibration_Value 1.0 // Translates Generator RPM to Engine RPM 
-#define Eingine_RPM_Pin 23  // Engine RPM is measured as interrupt on pin 23
+#define Eingine_RPM_Pin 27  // Engine RPM is measured as interrupt on pin 27
 
 // Set time offsets
 #define SlowDataUpdatePeriod 333  // Time between CAN Messages sent
