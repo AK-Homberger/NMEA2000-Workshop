@@ -37,7 +37,7 @@ Und hier sehen wir den Wassertanklevel (88.3 %) als PGN127505
 
 ![TankLevel](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-6.png)
 
-Wenn wir num am Potentiometer drehen, verändern sich auch die angezeigten Werte entsprechend.
+Wenn wir nun am Potentiometer drehen, verändern sich die Spannungen and den ADC-Eingängen und damit auch die angezeigten Werte entsprechend.
 
 Das Programm selbst unterscheidet sich nicht sehr von den bisherigen Beispielprogrammen.
 
