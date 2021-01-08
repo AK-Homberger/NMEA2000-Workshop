@@ -8,14 +8,14 @@ Nach dem Workshop werdet ihr folgendes können:
 - Die nötigen Bibliotheken installieren (ZIP-Datei und Bibliotheksverwalter)
 - Grundlegende Informationen zur NMEA2000-Bibliothek finden (PGNs, Datentypen)
 - Arduinio-IDE nutzen (Programme laden und auf den ESP32 hochladen)
-- Daten von einem NMEA2000-Bus auslesen und darstellen (NMEA-Reader)
+- Daten von einem NMEA2000-Bus auslesen und auf dem PC darstellen (mit NMEA-Reader)
 - Den Aufbau eines typischen Programms (C/C++) verstehen
 - I2C-Sensoren (hier BME280) nutzen (Anschluss I2C, Bibliotheken)
 - Messen von Werten (Temperatur, Luftfeuchte, Druck) und Senden entsprechender PGNs
 - Nutzung von 1-Wire und Multitasking mit ESP32 (Temperatursensor DS18B20)
 - Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
 - Messung von Frequenzen (ESP32-Interrups nutzen)
-- Spezifische Daten vom NMEA-2000-Bus lesen (PGNs) und darstellen
+- Spezifische Daten vom NMEA-2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
 
 # NMEA2000-Historie
