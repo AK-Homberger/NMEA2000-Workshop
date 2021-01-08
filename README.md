@@ -1,6 +1,6 @@
 # NMEA2000 Workshop
 
-Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar 2021.
+Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februar 2021.
 
 Nach dem Workshop werdet ihr folgendes können:
 - Die Arduino-IDE installieren
