@@ -20,9 +20,9 @@ Um den Tanklevel zum Beispiel mit einem Tankgeber von Pilippi (0 - 180 Ohm) zu m
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
-Kommen wir num zum Programm.
+Kommen wir num zum Programm [
 
-Aus dem enpackten Downlod laden wir num das Programm
+Aus dem enpackten Downlod laden wir num das Programm ["NMEA2000-ADC.ino"](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino)
 
 
 ![Spannung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-5.png)
