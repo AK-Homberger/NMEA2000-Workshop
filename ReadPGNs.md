@@ -34,6 +34,58 @@ Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht due Ausgabe natürlich
 
 Kommen wir nun zu den neuen Programm-Elementen.
 
+Wir starten mit der Liste der PGNs. Hier aber nicht TransmitMessages[] sondern ReceiveMessges[]:
+Wir definiren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
+
+```
+const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
+      127250L, // Heading
+      127258L, // Magnetic variation
+      128259L, // Boat speed
+      128267L, // Depth
+      129025L, // Position
+      129026L, // COG and SOG
+      129029L, // GNSS
+      130306L, // Wind
+      128275L, // Log
+      127245L, // Rudder
+      0
+    };
+    
+```
+
+Die Produkt- und Geräteinformationen wurde angepasst:
+
+```
+// Set product information
+  NMEA2000.SetProductInformation("1", // Manufacturer's Model serial code
+                                 100, // Manufacturer's product code
+                                 "NMEA Reader",  // Manufacturer's Model ID
+                                 "1.0.2.25 (2019-07-07)",  // Manufacturer's Software version code
+                                 "1.0.2.0 (2019-07-07)" // Manufacturer's Model version
+                                );
+  // Set device information
+  NMEA2000.SetDeviceInformation(id,  // Unique number. Use e.g. Serial number.
+                                131, // Device function=NMEA 2000 to Analog Gateway. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
+                                25,  // Device class=Inter/Intranetwork Device. See codes on  http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
+                                2046 // Just choosen free from code list on http://www.nmea.org/Assets/20121020%20nmea%202000%20registration%20list.pdf
+                               );
+```
+
+Wir setzen hier als Klasse "25" als "Inter/Intranetwork Device" und als Geräte-Funktion "131" als "NMEA 2000 to Analog Gateway".
+Stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach auf seriell ausgeben um sie im Seriellen Monitor auszugeben.
+
+
+Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
+```
+  NMEA2000.SetMode(tNMEA2000::N2km_ListenOnly, NodeAddress);
+  NMEA2000.ExtendReceiveMessages(ReceiveMessages);
+  NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);
+```
+
+
+
+
 
 
 
