@@ -1,2 +1,4 @@
-# Messung von Spannung und Widerstand
+# Spannungs- und Widerstandsmessung (Bordspannung, Tankanzeige)
+
+
 
