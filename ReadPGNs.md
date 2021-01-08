@@ -12,7 +12,7 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reade.ino](https://github.com/AK-Ho
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
 
-Auf dem PC starten wir das Programm "NMEA-Simulator". Einen eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurierren wird die Serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options". Dann wählen wir die serielle Schnittselle vom linken ESP32. Danach OK klicken.
+Auf dem PC starten wir das Programm "NMEA-Simulator". Einen eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittselle vom linken ESP32. Danach OK klicken.
 
 ![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
 
@@ -25,10 +25,5 @@ Im Seriellen Monitor der Arduino-IDE sollen jetzt Zeilen ausgegeben werden:
 ```
 PGN127250: Heading: 272.2 Deviation: 1.0 Variation: 2.0
 ```
-
-
-
-
-
 
 
