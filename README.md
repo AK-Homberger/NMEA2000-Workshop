@@ -3,7 +3,7 @@
 Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februar 2021.
 
 Nach dem Workshop werdet ihr folgendes können:
-- Aufbau eines NMEA-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiber)
+- Aufbau eines NMEA-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
 - Die nötigen Bibliotheken installieren (ZIP-Datei und Bibliotheksverwalter)
 - Grundlegende Informationen zur NMEA2000-Bibliothek finden (PGNs, Datentypen)
