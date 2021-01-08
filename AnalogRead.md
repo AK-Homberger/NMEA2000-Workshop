@@ -79,16 +79,80 @@ double ReadADC(byte pin) {
 } // Added an improved polynomial, use either, comment out as required
 ```
 
-Mit dieser Funktion wird der Analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist leider notwendig, weil der ADC des ESP32 nicht sehr linear ist. Auf der oben dargestellten [Web-Seite](https://github.com/G6EJD/ESP32-ADC-Accuracy-Improvement-function) wird der Hintergrund erklärt.
+Mit dieser Funktion wird der Analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist leider notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Pylynominalfunktion) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unser Zweck meist ausreichend.
 
 
+Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGNs:
+
+Bordspannung:
+
+```
+void SendN2kBatteryVoltage(void) {
+  static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, BatteryVoltageSendOffset);
+  tN2kMsg N2kMsg;
+  double BatteryVoltage;
+
+  if ( IsTimeToUpdate(SlowDataUpdated) ) {
+    SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
+
+    BatteryVoltage = ReadADC(ADCpin2) * ADC_Calibration_Value2 / 4096;
+
+    Serial.printf("Battery Voltage: %3.1f V \n", BatteryVoltage);
+
+    // Definition from N2kMessages.h
+    // void SetN2kPGN127508(tN2kMsg &N2kMsg, unsigned char BatteryInstance, double BatteryVoltage, double BatteryCurrent=N2kDoubleNA,
+    //                 double BatteryTemperature=N2kDoubleNA, unsigned char SID=1);
+
+    // Set N2K message
+    SetN2kPGN127508(N2kMsg, 0, BatteryVoltage, N2kDoubleNA, N2kDoubleNA, 0);
+
+    // Send message
+    NMEA2000.SendMsg(N2kMsg);
+  }
+}
+```
+
+Wassertanklevel:
+
+```
+void SendN2kWaterTankLevel(void) {
+  static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, WaterTankLevelSendOffset);
+  tN2kMsg N2kMsg;
+  double TankLevel;
+
+  if ( IsTimeToUpdate(SlowDataUpdated) ) {
+    SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
+
+    TankLevel = ReadADC(ADCpin1) * ADC_Calibration_Value1 / 4096;
+
+    Serial.printf("Tank Level: %3.1f %% \n", TankLevel);
+
+    // Definition from N2kMessages.h
+    // void SetN2kPGN127505(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidType FluidType, double Level, double Capacity);
+
+    // FluidType is defined in N2kTypes.h
+
+    // Set N2K message
+    SetN2kPGN127505(N2kMsg, 0, N2kft_Water, TankLevel, 100);
+
+    // Send message
+    NMEA2000.SendMsg(N2kMsg);
+  }
+}
+````
+
+der Aufbau der beiden Funktionen unterscheidet sich nicht sehr von den bisherigen Beispielen.
+
+Wichtig sind die beiden Zeilen:
+
+1. BatteryVoltage = ReadADC(ADCpin2) * ADC_Calibration_Value2 / 4096;
+
+2. TankLevel = ReadADC(ADCpin1) * ADC_Calibration_Value1 / 4096;
+
+Hier sehen wir, wie der ADC-Wert (0 - 4095) mit dem Kalibrierungswert korrigiert wird, um die gewünschte Anzeige zu erhalten.
 
 
+Das war es schon zum Thema Spannungs- und Widerstandsmessung.
 
-                                                
-
-
-
-
-
+Im nächsten Teil geht es um Frequenzmessung (Motordrehzahl).
 
