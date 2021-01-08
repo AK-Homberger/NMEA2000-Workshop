@@ -12,10 +12,10 @@ Nach dem Workshop werdet ihr folgendes können:
 - Den Aufbau eines typischen Programms (C/C++) verstehen
 - I2C-Sensoren (hier BME280) nutzen (Anschluss I2C, Bibliotheken)
 - Messen von Werten (Temperatur, Luftfeuchte, Druck) und Senden entsprechender PGNs
-- Nutzung von 1-Wire und Multitasking mit ESP32
-- Messung von Spannungen und Widerständen (ESP32 ADC nutzen)
-- Messung von Frequenzen (ESP32 Interrups nutzen)
-- Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von Daten mit OpenCPN und Tablet (NMEA-Simulator)
+- Nutzung von 1-Wire und Multitasking mit ESP32 (Temperatursensor DS18B20)
+- Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
+- Messung von Frequenzen (ESP32-Interrups nutzen)
+- Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
 
 # NMEA2000 Historie
 
