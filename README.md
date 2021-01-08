@@ -17,7 +17,7 @@ Nach dem Workshop werdet ihr folgendes können:
 - Messung von Frequenzen (ESP32-Interrups nutzen)
 - Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
 
-# NMEA2000 Historie
+# NMEA2000-Historie
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
