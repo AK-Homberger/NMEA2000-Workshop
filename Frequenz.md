@@ -14,6 +14,11 @@ Das Steckbrett sollte so aussehen:
 
 Der Taster auf dem Steckbrett wird mit GND und Pin 27 verbunden. Solltet ihr keinen Taster haben, so macht das auch nichts. In diesem Fall einfach zwei Stecklitzen mit GND und Pin 27 verbinden. Durch kurzes zusmmenfügen und lösen der beiden offenen Kabelenden können Tastendrücke simuliert werden.
 
+Um wirklich die Motordrehzal messen zu können, würden wir noch einen Optokoppler, einen Widerstand und eine kleine Diode benötigen.
+
+Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
+
+
 # Das Programm
 
 Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
