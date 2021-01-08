@@ -14,7 +14,7 @@ Nach dem Workshop werdet ihr folgendes können:
 - Messen von Werten (Temperatur, Luftfeuchte, Druck) und Senden entsprechender PGNs
 - Nutzung von 1-Wire und Multitasking mit ESP32 (Temperatursensor DS18B20)
 - Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
-- Messung von Frequenzen (ESP32-Interrups nutzen)
+- Messung von Frequenzen (ESP32-Interrupts nutzen)
 - Spezifische Daten vom NMEA-2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
 
@@ -69,7 +69,7 @@ Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Rea
 1. [NMEA2000-Thermometer, Hygrometer und Barometer mit BME280 (I2C)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/BME280.md)
 2. [Temperaturfühler mit DS18B20 (1-Wire)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/DS18B20.md)
 3. [Spannungs- und Widerstandsmessung (Batteriespannung, Tankanzeige)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/AnalogRead.md)
-4. [Messung von Frequenzen (ESP32-Interrups nutzen)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Frequenz.md)
+4. [Messung von Frequenzen (ESP32-Interrupts nutzen)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Frequenz.md)
 5. Daten (PGNs) vom NMEA-2000-Bus lesen und darstellen
 5. NMEA2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon
 
