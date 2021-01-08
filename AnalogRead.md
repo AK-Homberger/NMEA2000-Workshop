@@ -161,5 +161,5 @@ Das war es schon zum Thema Spannungs- und Widerstandsmessung.
 Es wäre ein Leichtes, das Programm um zusätzliche Tanks und Batteriespannungen zu erweitern.
 Die notwendigen Schritte hatten wir ja schon beim BME280 geübt.
 
-Im nächsten Teil geht es um Frequenzmessung (Motordrehzahl).
+Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Frequenz.md) geht es um Frequenzmessung (Motordrehzahl).
 
