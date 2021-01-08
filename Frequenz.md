@@ -24,18 +24,26 @@ Anzeige des Motordrehzahl:
 
 ![NMEA-Reader7](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-7.png)
 
+Durch schnelles, wiederholtes drücken des Tasters können wir nun die angezeigte Motordrehzahl verändern.
 
+Kommen wir nun um Programm.
 
+Die Basis ist wieder unser Standard-Beispielprogramm zum Senden eines Wertes.
+
+Auch hier benötigen wir wieder einen Kalibrirungswert und die Festlegung des Eingangs-Pins.
 ```
 #define RPM_Calibration_Value 1.0 // Translates Generator RPM to Engine RPM 
 #define Eingine_RPM_Pin 27  // Engine RPM is measured as interrupt on pin 27
 ```
 
+Hier werden wieder die Sende-Offsets definiert. Diesmal senden wir häufiger. 333 ms bedeutet dre Mal pro Sekunde senden.
 ```
 // Set time offsets
 #define SlowDataUpdatePeriod 333  // Time between CAN Messages sent
 #define RPM_SendOffset 0
 ```
+
+Es folgt die Definition con Variablen für die Zeitmessungen mit der Interrupt-Funktion.
 
 ```
 // Interrupt data
@@ -46,7 +54,7 @@ hw_timer_t * timer = NULL;                        // pointer to a variable of ty
 portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;  // To lock/unlock interrupt
 ```
 
-
+Wie schon gewohnt folgt die Definition des Sende-PGNs.
 ```
 // Set the information for other bus devices, which messages we support
 const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters, Rapid update                                                  
@@ -54,6 +62,7 @@ const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters,
                                                  };
 ```
 
+In setup() wird nun die Interupt-Funktion für Pin 27 initialisiert:
 
 ```
 // Init RPM measure
@@ -66,7 +75,11 @@ const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters,
   timerStart(timer);   
  ```
  
- 
+Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. Das erspart uns einen externen Widerstand auf dem Steckbrett.
+Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wir festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGh auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
+Im folgenden wird ein ESP32 interner Timer dfiniert und gestartet. Den Timer benötigen wir später um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
+
+Hier wird die Funktion "handleInterrupt" definiert:
  
  ```
 // RPM Event Interrupt
@@ -80,9 +93,12 @@ void IRAM_ATTR handleInterrupt()
   portEXIT_CRITICAL_ISR(&mux);
   Last_int_time = millis();
 }
-
 ```
+Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal an Pin 27 von HIGH auf LOW wechselt. Also immer dann, wenn wir den Taster drücken.
+Mit "PeriodCount = TempVal - StartValue;" wird die Zeitdifferenz seit dem letzten Interrupt berechnet.
 
+
+Die nächste Funktion dient der Berechnung der Frequenz aus der letzen Zeitdifferenz (RPM = 1000000.00 / PeriodCount; )
 ```
 // Calculate engine RPM from number of interupts per time
 double ReadRPM() {
@@ -96,6 +112,8 @@ double ReadRPM() {
 }
 
 ```
+
+Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem PGN127488 gesendet:
 
 ```
 void SendN2kEngineRPM(void) {
@@ -116,7 +134,10 @@ void SendN2kEngineRPM(void) {
   }
 }
 ```
+Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kubelwelle und Lichtmachienenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
+So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall im der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
+Im nächsten Teil werden wir etwas komplett anderes machen und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
 
 
