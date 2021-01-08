@@ -16,7 +16,7 @@ Der Taster auf dem Steckbrett wird mit GND und Pin 27 verbunden. Solltet ihr kei
 
 # Das Programm
 
-Als nächstes öffnen wir das Beispielprogramm "NMEA2000-Frequenz.ino" und laden es auf den rechten ESP32 hoch.
+Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
 
 Danach starten wir wieder den NMEA-Reader und wählen en PGN 127488.
 
