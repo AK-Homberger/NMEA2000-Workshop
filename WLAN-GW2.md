@@ -18,3 +18,24 @@ Dann gibt es noch vier weitere Unterkomponenten:
 Starten wir mit der Funktion des Hauptprogramms:
 
 
+## Zusätzliche Include-Dateien
+
+Als erstes sehen wir, dass wir zusätzliche Include-Dateien verwenden:
+
+```
+#include <Seasmart.h>
+#include <N2kMessages.h>
+#include <WiFi.h>
+#include <Preferences.h>
+
+#include "N2kDataToNMEA0183.h"
+#include "List.h"
+#include "BoatData.h"
+```
+Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und Preferences.h) und die NMEA-Bibliothek (Seasmart.h und N2kMessages.h). Seasmart.h ist nur nowedig für die optinale Ausgabe der NMEA2000-Daten im Seasmart-Format. Da es sodut wie keine Client-Programme gibt, die diese Format verarbeite können, gehen wir darauf im Moment nicht weiter ein. Preferences.h kennen wir ja schon aus den früheren Beispielen und WiFi.h benötigen wir für den WLAN-Access-Point.
+
+Die nächsten drei Include-Dateien sind für unsere lokalen Programm-Module, wie oben beschrieben.
+
+
+
+
