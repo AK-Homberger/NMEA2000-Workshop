@@ -86,7 +86,7 @@ Mit dem nächsten Kommando definieren wir hier eine Liste mit PGNs, die wir empf
 
 Mit "NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);" setzen wir die Funktion zur Behandlung der empfangenen PGNs.
 
-Diesn Funktion wird auch gleich nach setup() definiert:
+Diese Funktion wird auch gleich nach setup() definiert:
 
 ```
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
