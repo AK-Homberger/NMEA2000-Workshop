@@ -44,7 +44,9 @@ Nach den Hochladen des Programms wird im Seriellen Monitor nun auch die Wasserti
 
 ![SerialMonitor](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SerialMonitor2.png)
 
+Falls es nicht funktioniert hat, könnt ihr das eigene Programm auch mit [NMEA2000-Reader2.ino"(https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Reader2/NMEA2000-Reader2.ino) vergleichen.
+
 Das war schon alles zum Thema Lesen vom Bus.
 
-Wir kommen num zu letten Teil der Workshops, dem Aufbau eine WLAN-Gateways.
+Wir kommen num zu letzen Teil des Workshops, dem Aufbau eine WLAN-Gateways.
 
