@@ -195,7 +195,7 @@ Die nächsten vier Funktionen:
 - CheckConnections()
 - SendBufToClients()
 
-Dienen der Verwaltung der TCP-Verbindungen der Clients. Wir gehen hierauf nicht weiter ein. Gehen wir einfach davon aus, dass es funktioniert.
+dienen der Verwaltung der TCP-Verbindungen der Clients. Wir gehen hier nicht weiter darauf ein. Gehen wir einfach davon aus, dass es funktioniert.
 
 Es folgt die Definition von HandleNMEA2000Msg():
 
