@@ -27,7 +27,7 @@ NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183]
 
 Im Rahmen des Workshops werden wir mit ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
 
-# Vorbereitungen:
+# Vorbereitungen
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
