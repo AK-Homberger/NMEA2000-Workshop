@@ -82,6 +82,48 @@ Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
   NMEA2000.ExtendReceiveMessages(ReceiveMessages);
   NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);
 ```
+Als Modus setzen wir hier "N2km_ListenOnly". Das ist die minimale Funktion der Bibliothek. Die Daten werde vom Bus gelesen und an den Messge-Strem weitergeleitet.
+Mit dem nächten Kommando definieren wir hier eine Liste mit PGNs, die wir empfangen möchten. Bisher habe wir immer die zu sendenden PGNs definiert.
+
+Mit "NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);" setzen wir die Funktion zur Behandlung der empfangenen PGNs.
+
+Dies Funktion wird auch gleich nach setup() definiert:
+
+```
+void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
+
+  switch (N2kMsg.PGN) {
+    case 127250L: HandleHeading(N2kMsg);
+    case 128259L: HandleBoatSpeed(N2kMsg);
+  }
+}
+```
+Die Funktion MyHandleNMEA2000Msg() wird von der Bibliothek immer dann aufgerufen, wenn ein neuer PGN vom Bus empfangen wurde.
+Mit switch(N2kMsg.PGN) können wir nun prüfen, um welches PGN es sich handelt. Die Nummer ist in der Variablen N2kMsg.PGN gepeichert.
+Mit "case PGN-Nummer:" können wir nun nacheinander die Nummern vergleichen, und wenn die Nummer stimmt, eine Funktion aufrufen, die sich um die weitere Verarbeitung kümmert.
+
+Die Funktionen zur Behandlung werden nun definiert.
+Erst HandleHeading():
+
+```
+void HandleHeading(const tN2kMsg &N2kMsg) {
+  unsigned char SID;
+  tN2kHeadingReference ref;
+  double Deviation = 0;
+  double Variation;
+  double Heading;
+
+  if ( ParseN2kHeading(N2kMsg, SID, Heading, Deviation, Variation, ref) ) {
+  Serial.printf("PGN127250: Heading: %4.1f Deviation: %3.1f Variation: %3.1f\n", RadToDeg(Heading), RadToDeg(Deviation), RadToDeg(Variation));
+  }
+}
+```
+
+
+
+
+
+
 
 
 
