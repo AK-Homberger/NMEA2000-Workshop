@@ -417,7 +417,7 @@ Ihr solltet folgendes nun können:
 - Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
 
-Ich glaube wir können alles abhaken!
+Ich glaube, wir können alles abhaken!
 
 Vielen Dank für die Teilnahme am Workshop.
 Feedback wird gern entgegengenommen.
