@@ -77,6 +77,9 @@ Als erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und P
 
 Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clients fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
 
+Mit "sendNMEA0183Conversion = true" und "SendSeaSmart = false" legen wir fest, welche Datenformate gesendet werden sollen.
+Im Momente senden wir nur die von NMEA2000 nach NMEA0183 gewandelten Daten an die WLAN-Clients.
+
 ```
 WiFiServer server(ServerPort, MaxClients);
 
