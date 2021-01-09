@@ -50,5 +50,5 @@ Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herunprobiere
 
 Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.
 
-Es funktioniert also. Kommen wir nun aber zum Programm selbst.
+Es funktioniert also. Kommen wir nun aber zum [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW2.md) selbst.
 
