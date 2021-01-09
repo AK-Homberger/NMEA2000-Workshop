@@ -149,7 +149,7 @@ Wir haben auch die Produkt- und Geräreinformationen etwas agepasst:
 ```
 Klasse 25 und Gerät 130.
 
-Dann legen wir weietere Funktionsweisen fest:
+Dann legen wir weitere Funktionsweisen fest:
 
 ```
 // If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
@@ -162,9 +162,11 @@ Dann legen wir weietere Funktionsweisen fest:
   tN2kDataToNMEA0183.SetSendNMEA0183MessageCallback(SendNMEA0183Message);
 ```
 Diesmal setzen wir den Modus als "N2km_ListenAndNode".
-Dann geben wir die Liste der zu empfangenen  Nachrichten fest.
+Dann geben wir die Liste der zu empfangenen Nachrichten fest.
 
-Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 (NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) ) und dann für die optionale Wandlung ins Seasmart-Format (NMEA2000.SetMsgHandler(HandleNMEA2000Msg)). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wir benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine benötigt, reicht, NMEA2000.SetMsgHandler().
+Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 (NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) ) und dann für die optionale Wandlung ins Seasmart-Format (NMEA2000.SetMsgHandler(HandleNMEA2000Msg)). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine benötigt, reicht NMEA2000.SetMsgHandler().
+
+
 
 
 
