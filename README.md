@@ -1,6 +1,9 @@
 # NMEA2000-Workshop
 
 Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februar 2021.
+Das Material ist eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht.
+
+Die Informatione können aber auch ohne Worshop in eigener Regie genutzt wertde. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
 Nach dem Workshop werdet ihr folgendes können:
 - Aufbau eines NMEA-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
@@ -15,8 +18,8 @@ Nach dem Workshop werdet ihr folgendes können:
 - Nutzung von 1-Wire und Multitasking mit ESP32 (Temperatursensor DS18B20)
 - Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
 - Messung von Frequenzen (ESP32-Interrupts nutzen)
-- Spezifische Daten vom NMEA-2000-Bus lesen (PGNs) und nutzen
-- Aufbau eines NMEA2000 WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
+- Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
+- Aufbau eines NMEA2000-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
 
 # NMEA2000-Historie
 
@@ -54,7 +57,7 @@ So sieht das dann auf dem Steckbrett aus:
 
 ![Basis](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
-Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
+Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA2000-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA2000-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
 
 # Vorbereiten des linken ESP32
 Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32.ino" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu im entpackten ZIP-Ordner die Datei "ActisenseListenerSender-ESP32.ino" doppelklicken. Die Arduino-IDE startet dann mit geladenem Sketch. Dann nur den linken ESP32 mit USB verbinden und in der Arduiono-IDE den seriellen USB-Port auswählen und "Sketch" "Hochladen" anwählen. Den seriellen Port bitte notieren. 
