@@ -84,7 +84,7 @@ Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=22
 Die nächsten beiden Zeilen benötigen wir zur Verwalung der Clinets als verkettete Liste. 
 Dann wird die Behandlings-Funktion für die Wandlung von NMEA2000 auf NMEA0183 definiert.
 
-Die folgenden Zeilen sind uns aus vorigen Beispiele bekannt:
+Die folgenden Zeilen sind uns aus vorigen Beispielen schon bekannt:
 
 ```
 const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
@@ -100,8 +100,21 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
       127245UL,// Rudder
       0
     };
-    ```
+```
+Die folgenden beiden Zeilen sind Forwärts-Deklarationen.
     
+```
+// Forward declarations
+void HandleNMEA2000Msg(const tN2kMsg &N2kMsg);
+void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg);
+```
+Diese sind notwendig, damit wir die Funktionsbezeichnungen in setup() nutzen können, obwohl die Funktionen erst später definiert werden.
+
+
+
+
+
+
     
 
 
