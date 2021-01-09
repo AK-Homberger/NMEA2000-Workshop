@@ -35,7 +35,7 @@ Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht due Ausgabe natürlich
 Kommen wir nun zu den neuen Programm-Elementen.
 
 Wir starten mit der Liste der PGNs. Hier aber nicht TransmitMessages[] sondern ReceiveMessges[]:
-Wir definiren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
+Wir definieren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
 
 ```
 const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
@@ -54,7 +54,7 @@ const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
     
 ```
 
-Die Produkt- und Geräteinformationen wurde angepasst:
+Die Produkt- und Geräteinformationen wurden angepasst:
 
 ```
 // Set product information
@@ -73,8 +73,7 @@ Die Produkt- und Geräteinformationen wurde angepasst:
 ```
 
 Wir setzen hier als Klasse "25" als "Inter/Intranetwork Device" und als Geräte-Funktion "131" als "NMEA 2000 to Analog Gateway".
-Stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach auf seriell ausgeben um sie im Seriellen Monitor auszugeben.
-
+Stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach seriell ausgeben, um sie im Seriellen Monitor anzusehen.
 
 Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
 ```
@@ -82,12 +81,12 @@ Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
   NMEA2000.ExtendReceiveMessages(ReceiveMessages);
   NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);
 ```
-Als Modus setzen wir hier "N2km_ListenOnly". Das ist die minimale Funktion der Bibliothek. Die Daten werde vom Bus gelesen und an den Messge-Strem weitergeleitet.
-Mit dem nächten Kommando definieren wir hier eine Liste mit PGNs, die wir empfangen möchten. Bisher habe wir immer die zu sendenden PGNs definiert.
+Als Modus setzen wir hier "N2km_ListenOnly". Das ist die minimale Funktion der Bibliothek. Die Daten werden vom Bus gelesen und an den Message-Stream weitergeleitet.
+Mit dem nächsten Kommando definieren wir hier eine Liste mit PGNs, die wir empfangen möchten. Bisher haben wir immer die zu sendenden PGNs definiert.
 
 Mit "NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);" setzen wir die Funktion zur Behandlung der empfangenen PGNs.
 
-Dies Funktion wird auch gleich nach setup() definiert:
+Diesn Funktion wird auch gleich nach setup() definiert:
 
 ```
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
