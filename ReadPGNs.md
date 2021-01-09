@@ -149,6 +149,7 @@ Der Aufbau ist ganz ähnlich. Wir zeigen hier Speed Through Water STW (WaterRefe
 
 Das war schon alles zum Lesen von Daten vom NMEA2000-Bus.
 
+## Workshop-Aufgabe
 Als kleine Workshop-Aufgabe erweitert bitte selbständig das Programm für die Wassertiefe. Funktionsname soll "HandleDepth(N2kMsg)" sein.
 Es soll die wahre Wassertiefe angezeigt werden.
 
