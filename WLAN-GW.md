@@ -18,7 +18,7 @@ Anders als bei den bisherigen Beispielen sehen wir in der Arduino-IDE nun mehrer
 
 Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den rechten ESP32 hoch.
 
-Tipp: Wenn sich mehrere Workshop-Telnehmer in einem Raum bfinden sollte erst einmal nur einer das Programm starten.
+### Tipp: Wenn sich mehrere Workshop-Telnehmer in einem Raum bfinden sollte erst einmal nur einer das Programm starten.
 
 Wenn das Programm erfolgreich gestarte wurde, kann nun auf dem Telefon/Tablet nach einem Access Point mit dem Namen "NMEA2000-Gateway" gesucht werden.
 Das WLAN wird ausgewählt und als Passort wird "password" eingegeben.
