@@ -72,10 +72,37 @@ Als erstes wird der TCP-Port für den server definiert. NodeAdress und Pereferen
 Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clinets fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
 
 
+```
+WiFiServer server(ServerPort, MaxClients);
 
+using tWiFiClientPtr = std::shared_ptr<WiFiClient>;
+LinkedList<tWiFiClientPtr> clients;
 
+tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
+```
+Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=2222) und MaxClien (=10).
+Die nächsten beiden Zeilen benötigen wir zur Verwalung der Clinets als verkettete Liste. 
+Dann wird die Behandlings-Funktion für die Wandlung von NMEA2000 auf NMEA0183 definiert.
 
+Die folgenden Zeilen sind uns aus vorigen Beispiele bekannt:
 
+```
+const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
+      127250L, // Heading
+      127258L, // Magnetic variation
+      128259UL,// Boat speed
+      128267UL,// Depth
+      129025UL,// Position
+      129026L, // COG and SOG
+      129029L, // GNSS
+      130306L, // Wind
+      128275UL,// Log
+      127245UL,// Rudder
+      0
+    };
+    ```
+    
+    
 
 
 
