@@ -25,9 +25,8 @@ Danach wählen wir die CheckBox "Run" aus.
 
 Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben werden:
 
-```
-PGN127250: Heading: 272.2 Deviation: 1.0 Variation: 2.0
-```
+![Serial Monitor](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SerialMonitor1.png)
+
 Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht due Ausgabe natürlich anders aus.
 
 # Programm-Elemente
