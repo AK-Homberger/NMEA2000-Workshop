@@ -36,6 +36,48 @@ Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und
 
 Die nächsten drei Include-Dateien sind für unsere lokalen Programm-Module, wie oben beschrieben.
 
+Im nächten Schritt weden Definitonen festgelegt:
+
+```
+// Buffer config
+#define MAX_NMEA0183_MESSAGE_SIZE 150
+#define MAX_NMEA2000_MESSAGE_SEASMART_SIZE 500
+```
+Diese Definitonen sind für die Verwaltung der Pufferspeicher notwendig.
+
+Dann kommen globale Variablen/Objekte:
+
+```
+const uint16_t ServerPort = 2222; // Define the port, where server sends data. 
+
+// Struct to update BoatData. See BoatData.h for content
+tBoatData BoatData;
+
+int NodeAddress;                    // To store last Node Address
+Preferences preferences;            // Nonvolatile storage on ESP32 - To store LastDeviceAddress
+
+const size_t MaxClients = 10;       // Maximum number of concurrent clients
+bool SendNMEA0183Conversion = true; // Do we send NMEA2000 -> NMEA0183 conversion
+bool SendSeaSmart = false;          // Do we send NMEA2000 messages in SeaSmart format
+
+WiFiServer server(ServerPort, MaxClients);
+
+using tWiFiClientPtr = std::shared_ptr<WiFiClient>;
+LinkedList<tWiFiClientPtr> clients;
+
+tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
+```
+
+Als erstes wird der TCP-Port für den server definiert. NodeAdress und Pereference kenn wir schon aus früheren Beispielen.
+Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clinets fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
+
+
+
+
+
+
+
+
 
 
 
