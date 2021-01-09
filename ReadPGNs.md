@@ -130,7 +130,7 @@ Wir geben die Daten für Heading, Deviation und Variation einfach mit Serial.pri
 
 Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die sie zur Anzeige in Grad mit RadtoDeg() umwandeln.
 
-## Und nun zu HandleBoatSpeed():
+## Und nun HandleBoatSpeed():
 
 ```
 void HandleBoatSpeed(const tN2kMsg &N2kMsg) {
