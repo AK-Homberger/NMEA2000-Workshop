@@ -42,10 +42,9 @@ Hier ein paar Beispiele:
 
 ![iPad3](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0939.PNG)
 
+Sofern auf dem PC OPenCPN läuft kann man nach Konfiguration der seiellen Schnittstelle (zeiter ESP32) und konfiguration des OpenCPN-Dashboard-Plugins auch die vom NMEA-Simulator gesendeten Daten sehen:
 
-
-
-
+![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
 
 
 
