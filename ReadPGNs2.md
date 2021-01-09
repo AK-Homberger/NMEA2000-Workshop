@@ -40,7 +40,7 @@ void HandleDepth(const tN2kMsg &N2kMsg) {
 
 Um die wahre Wassertiefe zu erhalten, wurde zusätzlich eine Variable WaterDepth angelegt. Mit "WaterDepth = DepthBelowTransducer + Offset" werden dann die beiden Werte "Tiefe unter dem Sensor" und dem definierten Offset addiert. Eine Umrechnung ist hier nicht nötig, da die Werte schon in der Einheit Meter vorliegen.
 
-Nach den Hochladen des Programms wird im Seriellen Monitor nun auch die Wassertiefe angezeigt.
+Nach den Hochladen des Programms wird im Seriellen Monitor nun auch die Wassertiefe angezeigt. Das Programm "NMEA-Simulator" muss dazu natürlich auch laufen.
 
 ![SerialMonitor](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SerialMonitor2.png)
 
