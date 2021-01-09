@@ -27,7 +27,7 @@ NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183]
 
 Im Rahmen des Workshops werden wir mit ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
 
-# Vorbereitungen
+# Vorbereiten der Arduino-IDE
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
@@ -47,7 +47,7 @@ Für die spätere Nutzung der Bibliotheken sind speziell drei Dateien wichtig:
 2. Header-Datei "N2kMessages.h" mit den PGN-Definitionen [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h)
 3. Header-Datei "N2kTypes.h" mit Definitonen für Datentypen in den PGNs [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kTypes.h)
 
-# Vorbereitung des Steckbretts
+# Vorbereiten des Steckbretts
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. Der erste ESP32 dient als Schnittstelle zum NMEA-Simulator/-Reader auf dem PC/Laptop. Der zweite wird für die Beispielprogramme genutzt.
 
 An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L).
