@@ -65,8 +65,9 @@ Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32.ino" zu insta
 - Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gateways genutzt): [Link](https://opencpn.org/OpenCPN/info/downloads.html)
 - Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel NMEAremote(light) für Apple-Geräte. Dieses Programm ist kostenlos.
 
-# Workshop-Beispiel-Programme
+# Workshop-Beispielprogramme
 Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
+
 Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
 Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Reader/Simulator getestet:
