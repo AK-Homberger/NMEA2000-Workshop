@@ -32,9 +32,9 @@ Das sollte dann wie folgt aussehen:
 
 ![iPad1](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0937.PNG)
 
-Wenn auf dem PC der NMEA-Simulator läuft, sollten im blauen Fenster auch gleich empfangene NMEA0183-Daten angezeigt werden. Ansonsten jetzt den NMEA-Simulater starten.
+Wenn auf dem PC der NMEA-Simulator läuft, sollten im blauen Fenster auch gleich empfangene NMEA0183-Daten angezeigt werden. Ansonsten jetzt den NMEA-Simulator starten (Checkbox "Run" nicht vergessen).
 
-Dann kann man die Seite veralssen und durch rechts/links wischen die unterschiedlichen Anzeigeseiten durchblättern.
+Dann kann man die Seite verlassen und durch rechts/links wischen die unterschiedlichen Anzeigeseiten durchblättern.
 
 Hier ein paar Beispiele:
 
@@ -48,6 +48,7 @@ Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schn
 
 Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herunprobieren.
 
-Es funktioniert also. Kommen wir nun aber zum Programm selbst.
+Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.
 
+Es funktioniert also. Kommen wir nun aber zum Programm selbst.
 
