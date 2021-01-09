@@ -4,7 +4,7 @@ Bisher haben wir immer Daten auf den NMEA2000-Bus gesendet. Nun kommen wir zur a
 
 Wir fangen mit einem einfachen Beispiel an und werden es dann erweitern.
 
-Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32 und den CAN-Bus Transceivern. Es macht aber auch nichts, wenn noch Komponenten vom vorigen Beispiel geteckt sind.
+Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32 und den CAN-Bus Transceivern. Es macht aber auch nichts, wenn noch Komponenten vom vorigen Beispiel gesteckt sind.
 
 ![Basis-Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
@@ -15,7 +15,7 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reade.ino](https://github.com/AK-Ho
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
 
-Auf dem PC starten wir das Programm "NMEA-Simulator". Einen eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittselle vom linken ESP32. Danach OK klicken.
+Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittselle vom linken ESP32 (Baudrate 115200, 8N1). Danach OK klicken.
 
 ![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
 
@@ -27,13 +27,13 @@ Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben wer
 
 ![Serial Monitor](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SerialMonitor1.png)
 
-Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht due Ausgabe natürlich anders aus.
+Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht die Ausgabe natürlich auch anders aus.
 
 # Programm-Elemente
 
 Kommen wir nun zu den neuen Programm-Elementen.
 
-Wir starten mit der Liste der PGNs. Hier aber nicht TransmitMessages[] sondern ReceiveMessges[]:
+Wir starten mit der Liste der PGNs. Hier aber nicht TransmitMessages[] sondern ReceiveMessges[].
 Wir definieren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
 
 ```
@@ -71,7 +71,7 @@ Die Produkt- und Geräteinformationen wurden angepasst:
                                );
 ```
 
-Wir setzen hier als Klasse "25" als "Inter/Intranetwork Device" und als Geräte-Funktion "131" als "NMEA 2000 to Analog Gateway".
+Wir setzen hier die Klasse "25" als "Inter/Intranetwork Device" und die Geräte-Funktion "131" als "NMEA 2000 to Analog Gateway".
 Stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach seriell ausgeben, um sie im Seriellen Monitor anzusehen.
 
 Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
@@ -80,7 +80,8 @@ Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
   NMEA2000.ExtendReceiveMessages(ReceiveMessages);
   NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);
 ```
-Als Modus setzen wir hier "N2km_ListenOnly". Das ist die minimale Funktion der Bibliothek. Die Daten werden vom Bus gelesen und an den Message-Stream weitergeleitet.
+Als Modus setzen wir hier "N2km_ListenOnly". Das ist die minimale Funktion der NMEA2000-Bibliothek. Die Daten werden vom Bus gelesen und an den Message-Stream weitergeleitet.
+
 Mit dem nächsten Kommando definieren wir hier eine Liste mit PGNs, die wir empfangen möchten. Bisher haben wir immer die zu sendenden PGNs definiert.
 
 Mit "NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);" setzen wir die Funktion zur Behandlung der empfangenen PGNs.
@@ -122,13 +123,12 @@ der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
 
 Erst lokale Variablen definien. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit "ParseN2k..." beginnen.
 
-Für ParseN2kHeading() benötigen wir die Sequence ID SID, die Heading Reference ref, die Variablen für Deviation, Variation und natürlich für Heading selbst.
-Nach dem Aufruf von arseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
+Für ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
+Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
 
-Wir geben die Daten für Heading, deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittselle aus damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
+Wir geben die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittselle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
 
 Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die sie zur Anzeige in Grad mit RadtoDeg() umwandeln.
-
 
 Und nun zu HandleBoatSpeed():
 
@@ -145,11 +145,12 @@ void HandleBoatSpeed(const tN2kMsg &N2kMsg) {
 }
 ```
 
-Der Aufbau ist ganz ählich. Wir zeigen hier STW (WaterReferenced) und COG (GroundReferenced) an. Natürlich müssen wir auch hier zur Anzeige von Knoten mit msToKnots() umrechnen.
+Der Aufbau ist ganz ähnlich. Wir zeigen hier Speed Through Water STW (WaterReferenced) und Course Over Ground COG (GroundReferenced) an. Natürlich müssen wir auch hier zur Anzeige von Knoten mit msToKnots() umrechnen.
 
 Das war schon alles zum Lesen von Daten vom NMEA2000-Bus.
 
 Als kleine Workshop-Aufgabe erweitert bitte selbständig das Programm für die Wassertiefe. Funktionsname soll "HandleDepth(N2kMsg)" sein.
+Es soll die wahre Wassertiefe angezeigt werden.
 
 Hier geht es zur [Auflösung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/ReadPGNs2.md) der Aufgabe.
 
