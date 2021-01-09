@@ -115,8 +115,6 @@ void setup() {
                                 2046 // Just choosen free from code list on http://www.nmea.org/Assets/20121020%20nmea%202000%20registration%20list.pdf
                                );
 
-  NMEA2000.SetForwardType(tNMEA2000::fwdt_Text); // Show in clear text. Leave uncommented for default Actisense format.
-
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
   NodeAddress = preferences.getInt("LastNodeAddress", 32);  // Read stored last NodeAddress, default 32
   preferences.end();
@@ -134,39 +132,6 @@ void setup() {
 
   NMEA2000.Open();
   delay(200);
-}
-
-
-//*****************************************************************************
-void SendBufToClients(const char *buf) {
-  for (auto it = clients.begin() ; it != clients.end(); it++) {
-    if ( (*it) != NULL && (*it)->connected() ) {
-      (*it)->println(buf);
-    }
-  }
-}
-
-
-//*****************************************************************************
-//NMEA 2000 message handler
-void HandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
-
-  if ( !SendSeaSmart ) return;
-
-  char buf[MAX_NMEA2000_MESSAGE_SEASMART_SIZE];
-  if ( N2kToSeasmart(N2kMsg, millis(), buf, MAX_NMEA2000_MESSAGE_SEASMART_SIZE) == 0 ) return;
-  SendBufToClients(buf);
-}
-
-
-//*****************************************************************************
-void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg) {
-  if ( !SendNMEA0183Conversion ) return;
-
-  char buf[MAX_NMEA0183_MESSAGE_SIZE];
-  if ( !NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE) ) return;
-  SendBufToClients(buf);  // Send to WLAN-Clients
-  Serial.println(buf);    // Send to USB-Serial
 }
 
 
@@ -205,6 +170,39 @@ void CheckConnections() {
       it = clients.erase(it); // Should have been erased by StopClient
     }
   }
+}
+
+
+//*****************************************************************************
+void SendBufToClients(const char *buf) {
+  for (auto it = clients.begin() ; it != clients.end(); it++) {
+    if ( (*it) != NULL && (*it)->connected() ) {
+      (*it)->println(buf);
+    }
+  }
+}
+
+
+//*****************************************************************************
+//NMEA 2000 message handler
+void HandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
+
+  if ( !SendSeaSmart ) return;
+
+  char buf[MAX_NMEA2000_MESSAGE_SEASMART_SIZE];
+  if ( N2kToSeasmart(N2kMsg, millis(), buf, MAX_NMEA2000_MESSAGE_SEASMART_SIZE) == 0 ) return;
+  SendBufToClients(buf);
+}
+
+
+//*****************************************************************************
+void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg) {
+  if ( !SendNMEA0183Conversion ) return;
+
+  char buf[MAX_NMEA0183_MESSAGE_SIZE];
+  if ( !NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE) ) return;
+  SendBufToClients(buf);  // Send to WLAN-Clients
+  Serial.println(buf);    // Send to USB-Serial
 }
 
 
