@@ -14,7 +14,7 @@ Danach laden wir aus dem entpackten ZIF-Ordner das Programm [NMEA2000-WLAN-Gatew
 
 ![Arduino-IDE](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Arduino-IDE-GW.png).
 
-Anders als bei den bisherigen Beispielen sehen wir in der Arduino-IDE nun mehrere Programm-Reiter: "NMEA2000-WLAN-Gateway, "BoatData.h", "List.h" usw. Doch dazu kommen wir später.
+Anders als bei den bisherigen Beispielen sehen wir in der Arduino-IDE nun mehrere Programm-Reiter: "NMEA2000-WLAN-Gateway", "BoatData.h", "List.h" usw. Doch dazu kommen wir später.
 
 Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den rechten ESP32 hoch.
 
