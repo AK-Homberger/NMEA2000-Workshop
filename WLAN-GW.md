@@ -12,6 +12,17 @@ Für das WLAN-Gateway starten wir wieder mit unserem Basis-Steckbrett, wie auch 
 
 Danach laden wir aus dem entpackten ZIF-Ordner das Programm [NMEA2000-WLAN-Gateway.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-WLAN-Gateway/NMEA2000-WLAN-Gateway.ino). Wie immer mit einem Doppelklick auf die Datei.
 
+![Arduino-IDE](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Arduino-IDE-GW.png).
+
+Anders als bei den bisherigen Beispielen sehen wir in der Arduino-IDE nun mehrere Programm-Reiter: "NMEA2000-WLAN-Gateway, "BoatData.h", "List.h" usw. Doch dazu kommen wir später.
+
+Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es ert einmal auf den rechten ESP32 hoch.
+
+
+
+
+
+
 
 
 
