@@ -102,6 +102,7 @@ Mit switch(N2kMsg.PGN) können wir nun prüfen, um welches PGN es sich handelt. 
 Mit "case PGN-Nummer:" können wir nun nacheinander die Nummern vergleichen, und wenn die Nummer stimmt, eine Funktion aufrufen, die sich um die weitere Verarbeitung kümmert.
 
 Die Funktionen zur Behandlung werden nun definiert.
+
 Erst HandleHeading():
 
 ```
@@ -118,15 +119,38 @@ void HandleHeading(const tN2kMsg &N2kMsg) {
 }
 ```
 
+der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
+
+Erst lokale Variablen definien. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit "ParseN2k..." beginnen.
+
+Für ParseN2kHeading() benötigen wir die Sequence ID SID, die Heading Reference ref, die Variablen für Deviation, Variation und natürlich für Heading selbst.
+Nach dem Aufruf von arseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
+
+Wir geben die Daten für Heading, deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittselle aus damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
+
+Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die sie zur Anzeige in Grad mit RadtoDeg() umwandeln.
 
 
+Und nun zu HandleBoatSpeed():
 
+```
+void HandleBoatSpeed(const tN2kMsg &N2kMsg) {
+  unsigned char SID;
+  double WaterReferenced;
+  double GroundReferenced;
+  tN2kSpeedWaterReferenceType SWRT;
 
+  if ( ParseN2kBoatSpeed(N2kMsg, SID, WaterReferenced, GroundReferenced, SWRT) ) {
+    Serial.printf("PGN128259: STW: %3.1f kn SOG: %3.1f kn\n", msToKnots(WaterReferenced), msToKnots(GroundReferenced));
+  }
+}
+```
 
+Der Aufbau ist ganz ählich. Wir zeigen hier STW (WaterReferenced) und COG (GroundReferenced) an. Natürlich müssen wir auch hier zur Anzeige von Knoten mit msToKnots() umrechnen.
 
+Das war schon alles zum Lesen von Daten vom NMEA2000-Bus.
 
+Als kleine Workshop-Aufgabe erweitert bitte selbständig das Programm für die Wassertiefe. Funktionsname soll "HandleWaterDepth(N2kMsg)" sein.
 
-
-
-
+Hier geht es zur Auflösung.
 
