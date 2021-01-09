@@ -23,7 +23,7 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 
 Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
 
-Danach starten wir wieder den NMEA-Reader und wählen en PGN 127488.
+Danach starten wir wieder den NMEA-Reader und wählen den PGN 127488.
 
 Anzeige des Motordrehzahl:
 
@@ -35,13 +35,13 @@ Kommen wir nun zum Programm.
 
 Die Basis ist wieder unser Standard-Beispielprogramm zum Senden eines Wertes.
 
-Auch hier benötigen wir wieder einen Kalibrierungswert und die Festlegung des Eingangs-Pins.
+Auch hier benötigen wir wieder einen Kalibrierungswert und die Festlegung des Eingang-Pins.
 ```
 #define RPM_Calibration_Value 1.0 // Translates Generator RPM to Engine RPM 
 #define Eingine_RPM_Pin 27  // Engine RPM is measured as interrupt on pin 27
 ```
 
-Hier werden wieder die Sende-Offsets definiert. Diesmal senden wir häufiger. 333 ms bedeutet drei Mal pro Sekunde senden. Das sehen wir auch im NMEA-Reader (Feld "Interval").
+Hier werden wieder die Sende-Offsets definiert. Diesmal senden wir häufiger. 333 ms bedeutet, drei Mal pro Sekunde senden. Das sehen wir auch im NMEA-Reader (Feld "Interval").
 ```
 // Set time offsets
 #define SlowDataUpdatePeriod 333  // Time between CAN Messages sent
@@ -82,7 +82,7 @@ In setup() wird nun die Interupt-Funktion für Pin 27 initialisiert:
  
 Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. Das erspart uns einen externen Widerstand auf dem Steckbrett.
 Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
-Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
+Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
 
 Hier wird die Funktion "handleInterrupt" definiert:
  
