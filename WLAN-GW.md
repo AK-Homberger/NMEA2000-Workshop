@@ -23,6 +23,17 @@ Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den 
 Wenn das Programm erfolgreich gestartet wurde, kann nun auf dem Telefon/Tablet nach einem Access Point mit dem Namen "NMEA2000-Gateway" gesucht werden.
 Das WLAN wird ausgewählt und als Passort wird "password" eingegeben.
 
+Dann wird die App zur Anzeige gestartet. Für Apple ist das NMEAremote(lite). 
+
+Als erstes muss die Daten-Quelle fstgelegt werden. Dazu in der App liks oben tippen und "NMEAremote" anwählen. Dann auf "Quellen" tippen und "NMEA over IP" wählen.
+Dort die IP-Adresse (192.168.4.1 und Port 2222) eintragen.
+
+Das sollte dann wie folgt aussehen:
+
+![iPad1](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0937.PNG)
+
+
+
 
 
 
