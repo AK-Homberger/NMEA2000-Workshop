@@ -172,7 +172,7 @@ Dann legen wir weiteren Funktionsweisen fest:
 Diesmal setzen wir den Modus als "N2km_ListenAndNode".
 Dann geben wir die Liste der zu empfangenen Nachrichten fest.
 
-Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) und dann für die optionale Wandlung ins Seasmart-Format NMEA2000.SetMsgHandler(HandleNMEA2000Msg). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine benötigt, reicht NMEA2000.SetMsgHandler().
+Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) und dann für die optionale Wandlung ins Seasmart-Format NMEA2000.SetMsgHandler(HandleNMEA2000Msg). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine Funktion benötigt, reicht NMEA2000.SetMsgHandler().
 
 Als letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
 
@@ -253,7 +253,7 @@ void loop() {
 
 ## Modul BoatData.h
 
-Dieses Modul wird genutzt, um eien Struktur mit Werten zu deklarieren. Die Struktur dient dazu unteschiedlice Wete zusammentzfassen und die Werte über Modulgrenzen hinweg zu nutzen.
+Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu unteschiedliche Wete zusammenzufassen und die Werte über Modulgrenzen hinweg zu nutzen.
 
 ```
 struct tBoatData {
@@ -291,9 +291,9 @@ struct tBoatData {
 };
 ```
 
-Auf den Inhalt der Dateien List.h und N2kDataToNMEA0183.h gehen wir nicht im Detail ein. Das wüder dem Umfang des Workshops sprengen und erfordert C++ Kenntnisse, die wir hier nicht voraussetzen können.
+Auf den Inhalt der Dateien List.h und N2kDataToNMEA0183.h gehen wir nicht im Detail ein. Das würde dem Umfang des Workshops sprengen und erfordert C++ Kenntnisse, die wir hier nicht voraussetzen können.
 
-Aber den Aufbau von N2kDataToNMEA0183.cpp sehen wir uns zumindest genrell an:
+Aber den Aufbau von N2kDataToNMEA0183.cpp sehen wir uns zumindest generell an.
 
 Fangen wir mit HandleMsg an:
 
@@ -315,11 +315,11 @@ void tN2kDataToNMEA0183::HandleMsg(const tN2kMsg &N2kMsg) {
   }
 }
 ```
-Im Wesentlichen ist das vegleichbar mir der HandleMessge-Funktion, die wir auch im Beispiel zum Lesen von NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
+Im Wesentlichen ist das vegleichbar mit der HandleMessge-Funktion, die wir auch im Beispiel zum Lesen von NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
 
-Die Funktionsweise isz hier die gleiche. Die Funktion wird für jede NMEA2000-Nachricht aufgerufen. Mit "case" prüfen wie die PGN-Nummer und rufen Funktionen zur weiteren Behandlung auf. Hatte wir alles schon.
+Die Funktionsweise ist hier die gleiche. Die Funktion wird für jede NMEA2000-Nachricht aufgerufen. Mit "case" prüfen wie die PGN-Nummer und rufen Funktionen zur weiteren Behandlung auf. Hatten wir alles schon.
 
-Schauen wir us doch exemplarisch mal zwei Funktione an:
+Schauen wir uns doch exemplarisch mal zwei Funktionen an:
 
 Erstens HandleHeading():
 
@@ -343,28 +343,26 @@ void tN2kDataToNMEA0183::HandleHeading(const tN2kMsg &N2kMsg) {
   }
 }
 ```
-Wie wir sehen, ist der Aufbau sehr ähnlich zum Lesen von NMEA2000-Bus.
+Wie wir sehen, ist der Aufbau sehr ähnlich wie beim Lesen vom NMEA2000-Bus.
 
-Im Unterschied zu vorherigen Beispiel wir hier geprüft, ob neue Daten vorliegen. In diesem Fall werden globale Variable aktualisiert. 
+Im Unterschied zu vorherigen Lesen-Beispiel wird hier geprüft, ob neue Daten vorliegen. In diesem Fall werden globale Variable aktualisiert. 
 
-Mit LastHeadingTime = millis() wir sich der letzte korekte Empfanf der Heading-Information gemerkt.
+Mit LastHeadingTime = millis() wird sich der letzte korrekte Empfang der Heading-Information gemerkt.
 
-Dann erfolgt der Zusammenbau der NMEA0183-Nachricht:
+Dann erfolgt der Zusammenbau der NMEA0183-Nachricht: NMEA0183SetHDG(NMEA0183Msg, Heading, _Deviation, Variation).
 
-- NMEA0183SetHDG(NMEA0183Msg, Heading, _Deviation, Variation).
-
-Mit SendMessage(NMEA0183Msg) wir die Nachricht dann gesendet. 
+Mit SendMessage(NMEA0183Msg) wird die Nachricht dann gesendet. 
 
 Das wirkliche Senden erfolgt im Hauptprogramm mit der Funktion SendNMEA0183Message().
 Mit tN2kDataToNMEA0183.SetSendNMEA0183MessageCallback(SendNMEA0183Message) wurde dort diese Funktion ja zum Senden definiert.
 
-Die anderen Behandlungs-Funktioe folgen dem selben Schema.
+Die anderen Behandlungs-Funktionen folgen dem selben Schema.
 
 Sollte euch eine Konversations-Routine von MNEA2000 nach NMEA0183 fehlen, könnt ihr sie nach dem bekannten Ablauf aus dem Daten-Lesen-Beispiel ergänzen.
 
-Die NMEA0183-Bibliothek von Timo Lappalainen ist recht rudimentär. Es sind nicht alle relevante NMEA0183-Nachrichten enthalten.
+Die NMEA0183-Bibliothek von Timo Lappalainen ist recht rudimentär. Es sind nicht alle relevanten NMEA0183-Nachrichten enthalten.
 
-Das macht aber in der Praxis nicht viel aus. Durch die in der Bibliothek dfinierten Hilfsfunktionen ist das Zusammenbauen und Senden von NMEA0183 Nachrichten sehr einfach.
+Das macht aber in der Praxis nicht viel aus. Durch die in der Bibliothek dfinierten Hilfsfunktionen ist das Zusammenbauen und Senden von NMEA0183-Nachrichten sehr einfach.
 
 Wir schauen uns hierzu einmal die Funktion HandleLog() an:
 
@@ -389,20 +387,20 @@ void tN2kDataToNMEA0183::HandleLog(const tN2kMsg & N2kMsg) {
 ```
 In der Funktion parsen wir mit ParseN2kDistanceLog() die NMEA2000-Nachricht mit PGN128275, wobei wir die nowendigen Variablen mit übergeben. Log und TripLog sind übrigens im Modul global definiert.
   
-Wir erueugen nun mit "tNMEA0183Msg NMEA0183Msg" einen Nachrichten-Container für eine NMEA0183-Nachricht.
+Wir erzeugen nun mit "tNMEA0183Msg NMEA0183Msg" einen Nachrichten-Container für eine NMEA0183-Nachricht.
   
-Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0183-Nachricht "VLW" passgenau zusammen. Auch die Umwandlung vom m/s auf kn führen wir hier durch.
+Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0183-Nachricht "VLW" passgenau zusammen. Auch die Umwandlung vom m/s auf kn führen wir hier auch durch.
 
 Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
-Die anderen Funktionen im Modul sind recht ähnlich aufgebaut und einer eigenstängigen Erweiterung steht nichts mehr im Wege.
+Die anderen Funktionen im Modul sind recht ähnlich aufgebaut, und einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 
 # Das wars
 Das war es nun mit dem Workshop.
 
-Kommen wir nun nach einmal zu den Zielen des Workshops und shen, ob wir alle Ziele erreicht haben.
+Kommen wir nun noch einmal zu den Zielen des Workshops zurück und sehen nach, ob wir alle Ziele erreicht haben.
 
-Die Ziele waren;
+Ihr solltet folgendes nun können:
 
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
@@ -418,6 +416,8 @@ Die Ziele waren;
 - Messung von Frequenzen (ESP32-Interrupts nutzen)
 - Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
+
+Ich glaube wir können alles abhaken!
 
 Vielen Dank für die Teilnahme am Workshop.
 Feedback wird gern entgegengenommen.
