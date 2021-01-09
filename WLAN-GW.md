@@ -2,7 +2,7 @@
 
 Im letzten Teil des Workshops werden wir auf dem Lesen vom NMEA2000-Bus aufbauen und ein NMEA2000 zu NME0183 WLAN-Gateway programmieren.
 
-Das Programm wird definierte PGNs vom Bus lesen, die Daten nach NMEA0183 umwandeln und dann über WLAN an Clients weitegeben. Zusätzlich werden die gewandelten Daten auch über die serielle Schnittstelle ausgegeben.
+Das Programm wird definierte PGNs vom Bus lesen, die Daten nach NMEA0183 umwandeln und dann über WLAN an Clients weitergeben. Zusätzlich werden die gewandelten Daten auch über die serielle Schnittstelle ausgegeben.
 
 Als Clients werden wir sowohl OpenCPN auf dem PC als auch das Programm NMEAremote auf dem Telefon/Tablet nutzen.
 
@@ -10,7 +10,7 @@ Für das WLAN-Gateway starten wir wieder mit unserem Basis-Steckbrett, wie auch 
 
 ![Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
-Danach laden wir aus dem entpackten ZIF-Ordner das Programm [NMEA2000-WLAN-Gateway.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-WLAN-Gateway/NMEA2000-WLAN-Gateway.ino). Wie immer mit einem Doppelklick auf die Datei.
+Danach laden wir aus dem entpackten ZIP-Ordner das Programm [NMEA2000-WLAN-Gateway.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-WLAN-Gateway/NMEA2000-WLAN-Gateway.ino). Wie immer mit einem Doppelklick auf die Datei.
 
 ![Arduino-IDE](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Arduino-IDE-GW.png).
 
@@ -21,9 +21,9 @@ Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den 
 ### Tipp: Wenn sich mehrere Workshop-Teilnehmer in einem Raum befinden, sollte erst einmal nur einer das Programm starten.
 
 Wenn das Programm erfolgreich gestartet wurde, kann nun auf dem Telefon/Tablet nach einem Access Point mit dem Namen "NMEA2000-Gateway" gesucht werden.
-Das WLAN wird ausgewählt und als Passort wird "password" eingegeben.
+Das WLAN wird ausgewählt und als Passwort wird "password" eingegeben.
 
-Dann wird die App zur Anzeige gestartet. Für Apple ist das NMEAremote(lite). 
+Dann wird die App zur Anzeige gestartet. Für Apple-Geräte ist das NMEAremote(lite). 
 
 Als erstes muss die Daten-Quelle fstgelegt werden. Dazu in der App liks oben tippen und "NMEAremote" anwählen. Dann auf "Quellen" tippen und "NMEA over IP" wählen.
 Dort TCP wählen, die IP-Adresse (192.168.4.1) und den Port (2222) eintragen und dann "Aktiviert" einschalten.
@@ -46,7 +46,7 @@ Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schn
 
 ![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
 
-Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herunprobieren.
+Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herumprobieren.
 
 Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.
 
