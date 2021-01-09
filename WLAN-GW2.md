@@ -32,11 +32,11 @@ Als erstes sehen wir, dass wir zusätzliche Include-Dateien verwenden:
 #include "List.h"
 #include "BoatData.h"
 ```
-Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und Preferences.h) und die NMEA-Bibliothek (Seasmart.h und N2kMessages.h). Seasmart.h ist nur nowedig für die optinale Ausgabe der NMEA2000-Daten im Seasmart-Format. Da es sodut wie keine Client-Programme gibt, die diese Format verarbeite können, gehen wir darauf im Moment nicht weiter ein. Preferences.h kennen wir ja schon aus den früheren Beispielen und WiFi.h benötigen wir für den WLAN-Access-Point.
+Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und Preferences.h) und die NMEA-Bibliothek (Seasmart.h und N2kMessages.h). Seasmart.h ist nur nowedig für die optionale Ausgabe der NMEA2000-Daten im Seasmart-Format. Da es kaum Client-Programme gibt, die dieses Format verarbeiten können, gehen wir darauf im Moment nicht weiter ein. Preferences.h kennen wir ja schon aus den früheren Beispielen und WiFi.h benötigen wir für den WLAN-Access-Point.
 
 Die nächsten drei Include-Dateien sind für unsere lokalen Programm-Module, wie oben beschrieben.
 
-Im nächten Schritt weden Definitonen festgelegt:
+Im nächsten Schritt werden Definitonen festgelegt:
 
 ```
 // Buffer config
@@ -68,9 +68,9 @@ LinkedList<tWiFiClientPtr> clients;
 tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
 ```
 
-Als erstes wird der TCP-Port für den server definiert. NodeAdress und Pereference kenn wir schon aus früheren Beispielen.
-Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clinets fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
+Als erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und Pereference kennen wir schon aus früheren Beispielen.
 
+Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clients fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
 
 ```
 WiFiServer server(ServerPort, MaxClients);
@@ -80,9 +80,10 @@ LinkedList<tWiFiClientPtr> clients;
 
 tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
 ```
-Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=2222) und MaxClien (=10).
-Die nächsten beiden Zeilen benötigen wir zur Verwalung der Clinets als verkettete Liste. 
-Dann wird die Behandlings-Funktion für die Wandlung von NMEA2000 auf NMEA0183 definiert.
+Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=2222) und MaxCliens (=10).
+Die nächsten beiden Zeilen benötigen wir zur Verwaltung der Clinets als verkettete Liste. 
+
+Dann wird die Behandlungs-Funktion für die Wandlung von NMEA2000 auf NMEA0183 definiert.
 
 Die folgenden Zeilen sind uns aus vorigen Beispielen schon bekannt:
 
@@ -126,10 +127,10 @@ Kommen wir nun zu setup():
   server.begin();
 ```
 
-Mit diesen Zeilen ertellen wir eine WLAN-Hotspot mit dem Namen "NMEA2000-Gateway" und dem Passort "password".
+Mit diesen Zeilen erstellen wir einen WLAN-Hotspot mit dem Namen "NMEA2000-Gateway" und dem Passwort "password".
 Dann starten wir den zuvor definierten TCP-Server.
 
-Wir haben auch die Produkt- und Geräreinformationen etwas agepasst:
+Wir haben auch die Produkt- und Gerärteinformationen etwas agepasst:
 
 ```
 // Set product information
@@ -147,9 +148,9 @@ Wir haben auch die Produkt- und Geräreinformationen etwas agepasst:
                                );
 
 ```
-Klasse 25 und Gerät 130.
+Wie nutzen Klasse "25" und Gerät "130".
 
-Dann legen wir weitere Funktionsweisen fest:
+Dann legen wir weiteren Funktionsweisen fest:
 
 ```
 // If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
@@ -170,9 +171,76 @@ Als letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn e
 
 Die beiden Funktionen HandleNMEA2000Msg() und SendNMEA0183Message() sind übrigens direkt im Hauptprogamm definiert. Die Umwandlung von NME2000 zu NMEA0183 erfolgt im Modul "N2kDataToNMEA0183.cpp". Doch dazu später.
 
-   
 
+```
+//*****************************************************************************
+void SendBufToClients(const char *buf) {
+  for (auto it = clients.begin() ; it != clients.end(); it++) {
+    if ( (*it) != NULL && (*it)->connected() ) {
+      (*it)->println(buf);
+    }
+  }
+}
+```
+Die nächsten vier Funktionen:
+- AddClient()
+- StopClient()
+- CheckConnections()
+- SendBufToClients()
 
+Dienen der Verwaltung der TCP-Verbindungen der Clients. Wir gehen hierauf nicht weiter ein. Gehen wir einfach davon aus, dass es funktioniert.
 
+Es folgt die Definition von HandleNMEA2000Msg():
 
+```
+void HandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
+
+  if ( !SendSeaSmart ) return;
+
+  char buf[MAX_NMEA2000_MESSAGE_SEASMART_SIZE];
+  if ( N2kToSeasmart(N2kMsg, millis(), buf, MAX_NMEA2000_MESSAGE_SEASMART_SIZE) == 0 ) return;
+  SendBufToClients(buf);
+}
+```
+
+Diese Funktion wird für jede empfangene NMEA2000-Nachricht aufgerufen. Falls die Variable SendSeaSmart auf "True" gesetz war, erfolgt die Ausgabe der NMEA2000-Daten direkt im Sesmart-Format an die WLAN-Clients. Ansonsten wird die Funktion beendet.
+
+Danach folgt die Definition von SendNMEA0183Message():
+
+```
+void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg) {
+  if ( !SendNMEA0183Conversion ) return;
+
+  char buf[MAX_NMEA0183_MESSAGE_SIZE];
+  if ( !NMEA0183Msg.GetMessage(buf, MAX_NMEA0183_MESSAGE_SIZE) ) return;
+  SendBufToClients(buf);  // Send to WLAN-Clients
+  Serial.println(buf);    // Send to USB-Serial
+}
+```
+Auch hier wird als erstes geprüft, ob die Wandlung von NMEA2000 auf NMEA0183 gewünscht ist (SendNMEA0183Conversion = True).
+
+Falls ja, wird die aktuelle NMEA0183-Nachricht in den Puffer "buf" kopiert und an die TCP-Clients im WLAN gesendet. Zusätzlich wird der Inhalt des Puffers auch auf die serielle Schnittstelle ausgegeben. Zum Beispiel für die Anzeige in OpenCPN.
+
+Es bleibt noch die Funktion loop().
+
+```
+void loop() {
+  CheckConnections();
+  
+  NMEA2000.ParseMessages();
+  
+  CheckSourceAddressChange();
+  
+  tN2kDataToNMEA0183.Update(&BoatData);
+
+  // Dummy to empty input buffer to avoid board to stuck with e.g. NMEA Reader
+  if ( Serial.available() ) {
+    Serial.read();
+  }
+}
+```
+
+- CheckConnections() prüft regelmässig ob es neue TCP-Clinets gibt oder ob Clients, die Verbindung beendet hatten.
+- NMEA2000.ParseMessages() und CheckSourceAddressChange() sind ja schon bekannt.
+- tN2kDataToNMEA0183.Update(&BoatData) ruft die Update-Funktion in Sub-Modul auf, wobei die Referenz zur Struktur "BoatData" übergeben wird. Nach dem Funktionsaufruf enthält die Strukur alle alle aktuelisieretn Daten aus dem Sub-Modul.
 
