@@ -42,11 +42,12 @@ Hier ein paar Beispiele:
 
 ![iPad3](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0939.PNG)
 
-Sofern auf dem PC OPenCPN läuft kann man nach Konfiguration der seiellen Schnittstelle (zeiter ESP32) und konfiguration des OpenCPN-Dashboard-Plugins auch die vom NMEA-Simulator gesendeten Daten sehen:
+Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch die vom NMEA-Simulator gesendeten Daten sehen:
 
 ![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
 
+Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herunprobieren.
 
-
+Es funktioniert also. Kommen wir nun aber zum Programm selbst.
 
 
