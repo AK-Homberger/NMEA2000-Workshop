@@ -56,9 +56,14 @@ So sieht das dann auf dem Steckbrett aus:
 
 Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
 
-- Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32.ino" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu im entpackten ZIP-Ordner die Datei "ActisenseListenerSender-ESP32.ino" doppelklicken. Die Arduino-IDE startet dann mit geladenem Sketch. Dann nur den linken ESP32 mit USB verbinden und in der Arduiono-IDE den seriellen USB-Port auswählen und "Sketch" "Hochladen" anwählen. Den seriellen Port bitte notieren. 
-- Zum Lesen und Anzeigen von NMEA2000-Daten kann der NMEA Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
-- Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html)
+# Vorbereiten des linken ESP32
+Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32.ino" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu im entpackten ZIP-Ordner die Datei "ActisenseListenerSender-ESP32.ino" doppelklicken. Die Arduino-IDE startet dann mit geladenem Sketch. Dann nur den linken ESP32 mit USB verbinden und in der Arduiono-IDE den seriellen USB-Port auswählen und "Sketch" "Hochladen" anwählen. Den seriellen Port bitte notieren. 
+
+# Zusätzliche Programme zum Testen von Funkionen (PC und Apple/Android APP)
+- Zum Lesen und Anzeigen von NMEA2000-Daten auf dem PC soll der NMEA-Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/).
+- Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden [Link](http://www.kave.fi/Apps/index.html).
+- Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gatewaysw genutzt).
+- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel NMEARemote(light). Dieses Programm ist kostenlos.
 
 # Workshop-Programme
 Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
