@@ -96,6 +96,7 @@ void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
   switch (N2kMsg.PGN) {
     case 127250L: HandleHeading(N2kMsg);
     case 128259L: HandleBoatSpeed(N2kMsg);
+    case 128267L: HandleDepth(N2kMsg);
   }
 }
 
@@ -123,6 +124,21 @@ void HandleBoatSpeed(const tN2kMsg &N2kMsg) {
 
   if ( ParseN2kBoatSpeed(N2kMsg, SID, WaterReferenced, GroundReferenced, SWRT) ) {
     Serial.printf("PGN128259: STW: %3.1f kn SOG: %3.1f kn\n", msToKnots(WaterReferenced), msToKnots(GroundReferenced));
+  }
+}
+
+
+//*****************************************************************************
+void HandleDepth(const tN2kMsg &N2kMsg) {
+  unsigned char SID;
+  double DepthBelowTransducer;
+  double Offset;
+  double Range;
+  double WaterDepth;
+
+  if ( ParseN2kWaterDepth(N2kMsg, SID, DepthBelowTransducer, Offset, Range) ) {
+    WaterDepth = DepthBelowTransducer + Offset;
+    Serial.printf("PGN128267: Water Depth: %4.1f Meter \n", WaterDepth);
   }
 }
 
