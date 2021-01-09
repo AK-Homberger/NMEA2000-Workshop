@@ -6,7 +6,7 @@ Das Material ist eigentlich für die Nutzung in einem Präsenz- oder Online-Work
 Die Informationen können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
 Nach dem Workshop werdet ihr folgendes können:
-- Aufbau eines NMEA-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
+- Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
 - Die nötigen Bibliotheken installieren (ZIP-Datei und Bibliotheksverwalter)
 - Grundlegende Informationen zur NMEA2000-Bibliothek finden (PGNs, Datentypen)
@@ -19,7 +19,7 @@ Nach dem Workshop werdet ihr folgendes können:
 - Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
 - Messung von Frequenzen (ESP32-Interrupts nutzen)
 - Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
-- Aufbau eines NMEA2000-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet 
+- Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
 
 # NMEA2000-Historie
 
