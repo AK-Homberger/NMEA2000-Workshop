@@ -164,28 +164,13 @@ Dann legen wir weitere Funktionsweisen fest:
 Diesmal setzen wir den Modus als "N2km_ListenAndNode".
 Dann geben wir die Liste der zu empfangenen Nachrichten fest.
 
-Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 (NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) ) und dann für die optionale Wandlung ins Seasmart-Format (NMEA2000.SetMsgHandler(HandleNMEA2000Msg)). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine benötigt, reicht NMEA2000.SetMsgHandler().
+Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) und dann für die optionale Wandlung ins Seasmart-Format NMEA2000.SetMsgHandler(HandleNMEA2000Msg). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine benötigt, reicht NMEA2000.SetMsgHandler().
 
+Als letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
 
+Die beiden Funktionen HandleNMEA2000Msg() und SendNMEA0183Message() sind übrigens direkt im Hauptprogamm definiert. Die Umwandlung von NME2000 zu NMEA0183 erfolgt im Modul "N2kDataToNMEA0183.cpp". Doch dazu später.
 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-    
+   
 
 
 
