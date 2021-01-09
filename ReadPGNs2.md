@@ -1,8 +1,8 @@
-# Aulösung: Wassertiefe
+# Aulösung: Anzeige der Wassertiefe
 
-Hier kommt die Auflösung der Workshop Aufgabe.
+Hier kommt die Auflösung der Workshop-Aufgabe.
 
-Als erstes müssen wir die Funktion MyHandleNMEA2000Msg() um PGN128267 und die auzurufene Funktion HandleDepth() erweitern:
+Als erstes müssen wir die Funktion MyHandleNMEA2000Msg() um PGN128267 und die aufzurufene Funktion HandleDepth() erweitern:
 
 ```
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
@@ -38,7 +38,7 @@ void HandleDepth(const tN2kMsg &N2kMsg) {
 }
 ```
 
-Um die wahre Wassertiefe zu erhalten, wurde zusätzlich eine Variable WaterDepth angelegt. Mit "WaterDepth = DepthBelowTransducer + Offset" werden dann die biden Werte von Tiefe unter dem Sensor und dem definierten Offset addiert. Eine Umrechnung ist hier nicht nötig, da die Werte schon in der Einheit Meter vorliegen.
+Um die wahre Wassertiefe zu erhalten, wurde zusätzlich eine Variable WaterDepth angelegt. Mit "WaterDepth = DepthBelowTransducer + Offset" werden dann die beiden Werte "Tiefe unter dem Sensor" und dem definierten Offset addiert. Eine Umrechnung ist hier nicht nötig, da die Werte schon in der Einheit Meter vorliegen.
 
 Nach den Hochladen des Programms wird im Seriellen Monitor nun auch die Wassertiefe angezeigt.
 
