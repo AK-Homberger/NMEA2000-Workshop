@@ -36,6 +36,8 @@ Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und
 
 Die nächsten drei Include-Dateien sind für unsere lokalen Programm-Module, wie oben beschrieben.
 
+## Definitionen
+
 Im nächsten Schritt werden Definitonen festgelegt:
 
 ```
@@ -44,6 +46,9 @@ Im nächsten Schritt werden Definitonen festgelegt:
 #define MAX_NMEA2000_MESSAGE_SEASMART_SIZE 500
 ```
 Diese Definitonen sind für die Verwaltung der Pufferspeicher notwendig.
+
+
+## Globale Variable/Objekte
 
 Dann kommen globale Variablen/Objekte:
 
@@ -110,6 +115,8 @@ void HandleNMEA2000Msg(const tN2kMsg &N2kMsg);
 void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg);
 ```
 Diese sind notwendig, damit wir die Funktionsbezeichnungen in setup() nutzen können, obwohl die Funktionen erst später definiert werden.
+
+## Funktionen
 
 Kommen wir nun zu setup():
 
