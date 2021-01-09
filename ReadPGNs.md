@@ -151,5 +151,5 @@ Das war schon alles zum Lesen von Daten vom NMEA2000-Bus.
 
 Als kleine Workshop-Aufgabe erweitert bitte selbständig das Programm für die Wassertiefe. Funktionsname soll "HandleWaterDepth(N2kMsg)" sein.
 
-Hier geht es zur Auflösung.
+Hier geht es zur [Auflösung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/ReadPGNs2.md) der Aufgabe.
 
