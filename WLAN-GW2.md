@@ -110,6 +110,74 @@ void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg);
 ```
 Diese sind notwendig, damit wir die Funktionsbezeichnungen in setup() nutzen können, obwohl die Funktionen erst später definiert werden.
 
+Kommen wir nun zu setup():
+
+```
+ // Init WiFi connection
+  Serial.println("Start WLAN AP");         // WiFi Mode AP
+  WiFi.softAP("NMEA2000-Gateway", "password");
+  WiFi.setHostname("NMEA2000-Gateway");
+  IPAddress IP = WiFi.softAPIP();
+  Serial.println("");
+  Serial.print("AP IP address: ");
+  Serial.println(IP);
+
+  // Start TCP server
+  server.begin();
+```
+
+Mit diesen Zeilen ertellen wir eine WLAN-Hotspot mit dem Namen "NMEA2000-Gateway" und dem Passort "password".
+Dann starten wir den zuvor definierten TCP-Server.
+
+Wir haben auch die Produkt- und Geräreinformationen etwas agepasst:
+
+```
+// Set product information
+  NMEA2000.SetProductInformation("1", // Manufacturer's Model serial code
+                                 100, // Manufacturer's product code
+                                 "NMEA 2000 WiFi Gateway",  // Manufacturer's Model ID
+                                 "1.0.2.25 (2019-07-07)",  // Manufacturer's Software version code
+                                 "1.0.2.0 (2019-07-07)" // Manufacturer's Model version
+                                );
+  // Set device information
+  NMEA2000.SetDeviceInformation(id, // Unique number. Use e.g. Serial number. Id is generated from MAC-Address
+                                130, // Device function=Analog to NMEA 2000 Gateway. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
+                                25, // Device class=Inter/Intranetwork Device. See codes on  http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20&%20function%20codes%20v%202.00.pdf
+                                2046 // Just choosen free from code list on http://www.nmea.org/Assets/20121020%20nmea%202000%20registration%20list.pdf
+                               );
+
+```
+Klasse 25 und Gerät 130.
+
+Dann legen wir weietere Funktionsweisen fest:
+
+```
+// If you also want to see all traffic on the bus use N2km_ListenAndNode instead of N2km_NodeOnly below
+  NMEA2000.SetMode(tNMEA2000::N2km_ListenAndNode, NodeAddress);
+
+  NMEA2000.ExtendReceiveMessages(ReceiveMessages);
+  NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183); // NMEA 2000 -> NMEA 0183 conversion
+  NMEA2000.SetMsgHandler(HandleNMEA2000Msg);      // Also send all NMEA2000 messages in SeaSmart format
+
+  tN2kDataToNMEA0183.SetSendNMEA0183MessageCallback(SendNMEA0183Message);
+```
+Diesmal setzen wir den Modus als "N2km_ListenAndNode".
+Dann geben wir die Liste der zu empfangenen  Nachrichten fest.
+
+Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 (NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) ) und dann für die optionale Wandlung ins Seasmart-Format (NMEA2000.SetMsgHandler(HandleNMEA2000Msg)). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wir benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine benötigt, reicht, NMEA2000.SetMsgHandler().
+
+
+
+
+
+
+
+
+
+
+
+  
+
 
 
 
