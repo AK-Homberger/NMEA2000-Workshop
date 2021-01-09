@@ -43,9 +43,9 @@ Hier ein paar Beispiele:
 
 ![iPad3](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0939.PNG)
 
-NMEAremote unterstützt laut eigenen Aussagen auch SeaSmart- un Actisense-Format. Mit leichten Änderungen im Beispielprogramm könnte man das auch ausprobieren. Ich hatte das bisher nicht getestet.
+NMEAremote unterstützt laut eigenen Aussagen auch das SeaSmart- und Actisense-Format. Mit leichten Änderungen im Beispielprogramm könnte man das auch ausprobieren. Ich hatte das bisher aber nicht getestet.
 
-Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch die vom NMEA-Simulator gesendeten Daten sehen:
+Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch hier die vom NMEA-Simulator gesendeten Daten sehen:
 
 ![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
 
