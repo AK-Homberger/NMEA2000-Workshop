@@ -36,11 +36,14 @@ Wenn auf dem PC der NMEA-Simulator läuft, sollten im blauen Fenster auch gleich
 
 Dann kann man die Seite verlassen und durch rechts/links wischen die unterschiedlichen Anzeigeseiten durchblättern.
 
+
 Hier ein paar Beispiele:
 
 ![iPad2](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0938.PNG)
 
 ![iPad3](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0939.PNG)
+
+NMEAremote unterstützt laut eigenen Aussagen auch SeaSmart- un Actisense-Format. Mit leichten Änderungen im Beispielprogramm könnte man das auch ausprobieren. Ich hatte das bisher nicht getestet.
 
 Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch die vom NMEA-Simulator gesendeten Daten sehen:
 
