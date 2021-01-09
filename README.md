@@ -33,7 +33,7 @@ Im Rahmen des Workshops werden wir mit ein kleines NMEA2000-Netzwerk aufbauen un
 
 In der Arduino-IDE müssen wir als nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
-Download der NMEA-2000-Bibliotheken [Link](https://github.com/ttlappalainen)
+Download der NMEA2000-Bibliotheken [Link](https://github.com/ttlappalainen)
 
 Folgene Bibliotheken als ZIP-Dateien downloaden und installieren:
 - NMEA2000
