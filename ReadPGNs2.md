@@ -48,5 +48,5 @@ Falls es nicht funktioniert hat, könnt ihr das eigene Programm auch mit [NMEA20
 
 Das war schon alles zum Thema Lesen vom Bus.
 
-Wir kommen num zu letzen Teil des Workshops, dem Aufbau eine [WLAN-Gateways](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW.md).
+Wir kommen num zu letzen Teil des Workshops, dem Aufbau eines [NMEA2000-WLAN-Gateways](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW.md).
 
