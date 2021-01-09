@@ -15,7 +15,7 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-H
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
 
-Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittselle vom linken ESP32 (Baudrate 115200, 8N1). Danach OK klicken.
+Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom linken ESP32 (Baudrate 115200, 8N1). Danach OK klicken.
 
 ![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
 
@@ -33,7 +33,7 @@ Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht die Ausgabe natürlich
 
 Kommen wir nun zu den neuen Programm-Elementen.
 
-Wir starten mit der Liste der PGNs. Hier aber nicht TransmitMessages[] sondern ReceiveMessges[].
+Wir starten mit der Liste der PGNs. Hier aber nicht mit TransmitMessages[] sondern ReceiveMessges[].
 Wir definieren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
 
 ```
@@ -103,7 +103,7 @@ Mit "case PGN-Nummer:" können wir nun nacheinander die Nummern vergleichen, und
 
 Die Funktionen zur Behandlung werden nun definiert.
 
-Erst HandleHeading():
+## Erst HandleHeading():
 
 ```
 void HandleHeading(const tN2kMsg &N2kMsg) {
@@ -126,11 +126,11 @@ Erst lokale Variablen definien. Welche Variablen nötig sind, richtet sich nach 
 Für ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
 Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
 
-Wir geben die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittselle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
+Wir geben die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittstelle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
 
 Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die sie zur Anzeige in Grad mit RadtoDeg() umwandeln.
 
-Und nun zu HandleBoatSpeed():
+## Und nun zu HandleBoatSpeed():
 
 ```
 void HandleBoatSpeed(const tN2kMsg &N2kMsg) {
