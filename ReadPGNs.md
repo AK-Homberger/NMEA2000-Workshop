@@ -9,7 +9,7 @@ Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32
 ![Basis-Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
 
-# Das Programm
+## Das Programm
 
 Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Reader/NMEA2000-Reader.ino) in die Arduino-IDE.
 
@@ -29,7 +29,7 @@ Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben wer
 
 Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht die Ausgabe natürlich auch anders aus.
 
-# Programm-Elemente
+## Programm-Elemente
 
 Kommen wir nun zu den neuen Programm-Elementen.
 
@@ -72,7 +72,7 @@ Die Produkt- und Geräteinformationen wurden angepasst:
 ```
 
 Wir setzen hier die Klasse "25" als "Inter/Intranetwork Device" und die Geräte-Funktion "131" als "NMEA 2000 to Analog Gateway".
-Stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach seriell ausgeben, um sie im Seriellen Monitor anzusehen.
+Das stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach seriell ausgeben, um sie im Seriellen Monitor anzusehen.
 
 Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
 ```
@@ -119,11 +119,12 @@ void HandleHeading(const tN2kMsg &N2kMsg) {
 }
 ```
 
-der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
+Der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
 
 Erst lokale Variablen definien. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit "ParseN2k..." beginnen.
 
 Für ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
+
 Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
 
 Wir geben die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittstelle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
@@ -149,7 +150,7 @@ Der Aufbau ist ganz ähnlich. Wir zeigen hier Speed Through Water STW (WaterRefe
 
 Das war schon alles zum Lesen von Daten vom NMEA2000-Bus.
 
-## Workshop-Aufgabe
+# Workshop-Aufgabe
 Als kleine Workshop-Aufgabe erweitert bitte selbständig das Programm für die Wassertiefe. 
 - Funktionsname soll "HandleDepth(N2kMsg)" sein.
 - Es soll die wahre Wassertiefe angezeigt werden.
