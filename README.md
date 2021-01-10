@@ -21,13 +21,13 @@ Nach dem Workshop solltet ihr folgendes können:
 - Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
 
-# NMEA2000-Historie
+## NMEA2000-Historie
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
 
-# Vorbereiten der Arduino-IDE
+## Vorbereiten der Arduino-IDE
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
@@ -47,7 +47,7 @@ Für die spätere Nutzung der Bibliotheken sind speziell drei Dateien wichtig:
 2. Header-Datei "N2kMessages.h" mit den PGN-Definitionen [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h)
 3. Header-Datei "N2kTypes.h" mit Definitonen für Datentypen in den PGNs [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kTypes.h)
 
-# Vorbereiten des Steckbretts
+## Vorbereiten des Steckbretts
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. Der erste ESP32 dient als Schnittstelle zum NMEA-Simulator/-Reader auf dem PC/Laptop. Der zweite wird für die Beispielprogramme genutzt.
 
 An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L).
@@ -59,16 +59,16 @@ So sieht das dann auf dem Steckbrett aus:
 
 Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA2000-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA2000-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
 
-# Vorbereiten des linken ESP32
+## Vorbereiten des linken ESP32
 Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32.ino" zu installieren [Link](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino). Dazu im entpackten ZIP-Ordner die Datei "ActisenseListenerSender-ESP32.ino" doppelklicken. Die Arduino-IDE startet dann mit geladenem Sketch. Dann nur den linken ESP32 mit USB verbinden und in der Arduiono-IDE den seriellen USB-Port auswählen und "Sketch" "Hochladen" anwählen. Den seriellen Port bitte notieren. 
 
-# Zusätzliche Programme zum Testen von Funktionen (PC und Apple/Android APP)
+## Zusätzliche Programme zum Testen von Funktionen (PC und Apple/Android APP)
 - Zum Lesen und Anzeigen von NMEA2000-Daten auf dem PC soll der NMEA-Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden: [Link](http://www.kave.fi/Apps/index.html).
 - Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gateways genutzt): [Link](https://opencpn.org/OpenCPN/info/downloads.html)
 - Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(light)](https://apps.apple.com/de/app/nmearemote/id412806204) für Apple-Geräte. Die "light"-Programm ist kostenlos. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen uns installieren (z.B. auch avNav). Ich konnte das leider nicht testen.
 
-# Workshop-Beispielprogramme
+## Workshop-Beispielprogramme
 Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
 
 Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
