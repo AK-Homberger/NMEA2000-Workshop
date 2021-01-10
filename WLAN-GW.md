@@ -43,17 +43,17 @@ Hier ein paar Beispiele:
 
 ![iPad3](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/IMG_0939.PNG)
 
-NMEAremote unterstützt auch das SeaSmart- und Actisense-Format. Mit leichten Änderungen im Beispielprogramm kann man auch "Seasmart"ausprobieren. 
+NMEAremote unterstützt auch das SeaSmart- und Actisense-Format. Mit leichten Änderungen im Beispielprogramm kann man auch "Seasmart" ausprobieren. 
 
 Im Programm dazu folgendes ändern und dass das Programm hochladen:
+
 ```
-bool SendNMEA0183Conversion = true; // Do we send NMEA2000 -> NMEA0183 conversion
 bool SendSeaSmart = true;          // Do we send NMEA2000 messages in SeaSmart format
 ```
 
-In NMEAremot nun die Quelle NMEA over IP" löschen und eine neue Quelle "SeaSmart.NET (NMEA 2000)" auswählen. Dann TCP wählen, die IP-Adresse (192.168.4.1) und den Port (2222) eintragen und dann "Aktiviert" einschalten.
+In NMEAremote nun die Quelle "NMEA over IP" löschen und eine neue Quelle "SeaSmart.NET (NMEA 2000)" auswählen. Dann TCP wählen, die IP-Adresse (192.168.4.1) und den Port (2222) eintragen und dann "Aktiviert" einschalten.
 
-Nach verlassen der Seite sieht man die angezeigten Daten. 
+Nach Verlassen der Seite sieht man die angezeigten Daten. 
 
 Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch hier die vom NMEA-Simulator gesendeten Daten sehen:
 
@@ -63,5 +63,7 @@ Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herumprobiere
 
 Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.
 
-Es funktioniert also. Kommen wir nun aber zum [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW2.md) selbst.
+Es funktioniert also. 
+
+Kommen wir nun aber zum [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW2.md) selbst.
 
