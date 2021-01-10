@@ -61,7 +61,7 @@ So sieht das dann auf dem Steckbrett aus:
 - Zum Lesen und Anzeigen von NMEA2000-Daten auf dem PC soll der NMEA-Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden: [Link](http://www.kave.fi/Apps/index.html).
 - Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gateways genutzt): [Link](https://opencpn.org/OpenCPN/info/downloads.html)
-- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(light)](https://apps.apple.com/de/app/nmearemote/id412806204) für Apple-Geräte. Die "light"-Programm ist kostenlos. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen uns installieren (z.B. auch avNav). Ich konnte das leider nicht testen.
+- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(lite)](https://apps.apple.com/de/app/nmearemote/id412806204) für Apple-Geräte. Die "lite"-Version ist kostenlos. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen und installieren (z.B. AvNav oder nke Display). Ich konnte das leider nicht testen.
 
 ## Vorbereiten des linken ESP32
 Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA2000-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA2000-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken.
