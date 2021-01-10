@@ -2,7 +2,7 @@
 
 Als nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
 
-Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine zu messen und als PGN127488 (Engine Parameters, Rapid update) zu senden.
+Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine zu messen und als PGN127488 (Engine Parameters, Rapid Update) zu senden.
     
 Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
@@ -19,7 +19,7 @@ Um wirklich die Motordrehzahl messen zu können, würden wir noch einen Optokopp
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
 
-# Das Programm
+## Das Programm
 
 Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
 
@@ -81,7 +81,9 @@ In setup() wird nun die Interupt-Funktion für Pin 27 initialisiert:
  ```
  
 Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. Das erspart uns einen externen Widerstand auf dem Steckbrett.
+
 Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
+
 Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
 
 Hier wird die Funktion "handleInterrupt" definiert:
