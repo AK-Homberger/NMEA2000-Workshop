@@ -25,7 +25,10 @@ Das WLAN wird ausgewählt und als Passwort wird "password" eingegeben.
 
 Dann wird die App zur Anzeige gestartet. Für Apple-Geräte ist das NMEAremote(lite). 
 
+# Apple: NMEAremote lite:
+
 Als erstes muss die Daten-Quelle fstgelegt werden. Dazu in der App liks oben tippen und "NMEAremote" anwählen. Dann auf "Quellen" tippen und "NMEA over IP" wählen.
+
 Dort TCP wählen, die IP-Adresse (192.168.4.1) und den Port (2222) eintragen und dann "Aktiviert" einschalten.
 
 Das sollte dann wie folgt aussehen:
@@ -35,7 +38,6 @@ Das sollte dann wie folgt aussehen:
 Wenn auf dem PC der NMEA-Simulator läuft, sollten im blauen Fenster auch gleich empfangene NMEA0183-Daten angezeigt werden. Ansonsten jetzt den NMEA-Simulator starten (Checkbox "Run" nicht vergessen).
 
 Dann kann man die Seite verlassen und durch rechts/links wischen die unterschiedlichen Anzeigeseiten durchblättern.
-
 
 Hier ein paar Beispiele:
 
@@ -55,6 +57,11 @@ In NMEAremote nun die Quelle "NMEA over IP" löschen und eine neue Quelle "SeaSm
 
 Nach Verlassen der Seite sieht man die angezeigten Daten. 
 
+# Android: AvNav
+TBD.
+
+
+# OpenCPN
 Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch hier die vom NMEA-Simulator gesendeten Daten sehen:
 
 ![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
