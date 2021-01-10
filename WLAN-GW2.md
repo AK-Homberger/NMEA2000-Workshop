@@ -15,7 +15,7 @@ Dann gibt es noch vier weitere Unterkomponenten:
 - N2kDataToNMEA0183.cpp: Ein C++ Modul, dass die eigentlichen Umwandlungen von NME2000 zu NMEA0183 eledigt.
 - N2kDataToNMEA0183.h: Die zum obigen C++ Modul gehörende Include-Datei, mit Deklaratione/Definitionen.
 
-## Hauptprogramm
+# Hauptprogramm
 
 Starten wir mit der Funktion des Hauptprogramms:
 
@@ -255,7 +255,7 @@ void loop() {
 - NMEA2000.ParseMessages() und CheckSourceAddressChange() sind ja schon bekannt.
 - tN2kDataToNMEA0183.Update(&BoatData) ruft die Update-Funktion in Sub-Modul auf, wobei die Referenz zur Struktur "BoatData" übergeben wird. Nach dem Funktionsaufruf enthält die Strukur alle alle aktuelisieretn Daten aus dem Sub-Modul.
 
-## Modul BoatData.h
+# Modul BoatData.h
 
 Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu unteschiedliche Wete zusammenzufassen und die Werte über Modulgrenzen hinweg zu nutzen.
 
@@ -297,7 +297,7 @@ struct tBoatData {
 
 Auf den Inhalt der Dateien List.h und N2kDataToNMEA0183.h gehen wir nicht im Detail ein. Das würde dem Umfang des Workshops sprengen und erfordert C++ Kenntnisse, die wir hier nicht voraussetzen können.
 
-## Modul N2kDataToNMEA0183.cpp
+# Modul N2kDataToNMEA0183.cpp
 Aber den Aufbau von N2kDataToNMEA0183.cpp sehen wir uns zumindest generell an.
 
 Fangen wir mit HandleMsg an:
