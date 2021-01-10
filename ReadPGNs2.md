@@ -21,7 +21,7 @@ Aus [N2kMessages.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2
 ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset, double &Range)
 ````
 
-Wenn ihr bei der neuen Funktion die Namen der Variablen genauso übernommen hattet, sollte die neue Funktion HandleDepth() in etwa so aussehen:
+Wenn ihr bei der neuen Funktion die Namen der Variablen aus der PGN-Dokumentation übernommen hattet, sollte die neue Funktion HandleDepth() in etwa so aussehen:
 
 ```
 void HandleDepth(const tN2kMsg &N2kMsg) {
@@ -38,7 +38,7 @@ void HandleDepth(const tN2kMsg &N2kMsg) {
 }
 ```
 
-Um die wahre Wassertiefe zu erhalten, wurde zusätzlich eine Variable WaterDepth angelegt. Mit "WaterDepth = DepthBelowTransducer + Offset" werden dann die beiden Werte "Tiefe unter dem Sensor" und dem definierten Offset addiert. Eine Umrechnung ist hier nicht nötig, da die Werte schon in der Einheit Meter vorliegen.
+Um die wahre Wassertiefe zu erhalten, wurde hier zusätzlich eine Variable WaterDepth angelegt. Mit "WaterDepth = DepthBelowTransducer + Offset" werden dann die beiden Werte "Tiefe unter dem Sensor" und dem definierten Offset addiert. Eine Umrechnung ist hier nicht nötig, da die Werte schon in der Einheit Meter vorliegen.
 
 Nach den Hochladen des Programms wird im Seriellen Monitor nun auch die Wassertiefe angezeigt. Das Programm "NMEA-Simulator" muss dazu natürlich auf dem PC auch laufen.
 
