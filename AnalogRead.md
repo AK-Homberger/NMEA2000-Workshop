@@ -9,7 +9,7 @@ Wir nutzen dazu die Analog-Digital-Converter (ADC) Funktionen des ESP32. Der ESP
 
 Wir nutzen hier die Pins 34 und 35 (ADC1_CH6 und ADC1_CH7). Zur Vereinfachung verwenden wir im Workshop ein einfaches 10 KOhm Potentiometer, um sowohl die Bordspannung als auch den Tanklevel zu simulieren.
 
-# Schaltung
+## Schaltung
 So muss das Steckbrett dazu aussehen:
 
 ![AnalogRead](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-V-R_Steckplatine.png)
@@ -17,12 +17,12 @@ So muss das Steckbrett dazu aussehen:
 Das Potentiometer wird, wie oben gezeigt, mit 3,3 V, GND und den Pins 34/35 verbunden.
 
 Um wirklich die Batteriespannung messen zu können, würde ein Spannungsteiler mit zwei Widerständen (100 KOhm / 27 KOhm) verwendet werden.
-Um den Tanklevel zum Beispiel mit einem Tankgeber von Pilippi (0 - 180 Ohm) zu messen, wäre ein Widerstand von 1 KOhm nötig (und ggf. eine Z-Diode zum Schutz des Eingangs vor Überspannung).
+Um den Tanklevel zum Beispiel mit einem Tankgeber von Philippi (0 - 180 Ohm) zu messen, wäre ein Widerstand von 1 KOhm nötig (und ggf. eine Z-Diode zum Schutz des Eingangs vor Überspannung).
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
 
-# Das Programm
+## Das Programm
 Kommen wir nun zum Programm.
 
 Aus dem enpackten Download-Verzeichnis laden wir nun das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino).
@@ -51,7 +51,7 @@ Neu ist:
 #define ADC_Calibration_Value2 34.3  // To measure battery voltage. The real value depends on the true resistor values for the ADC input (100K / 27 K).
 ```
 
-Hier werden die Pins für die beiden ADC-Eingänge festgelegt (GPIO34 und 35).
+Hier werden die Pins für die beiden ADC-Eingänge festgelegt (GPIO 34 und 35).
 Mit ADC_Calibration_Value1 und ADC_Calibration_Value2 werden Korrekturwerte für die Spannungs- und die Widerstandsmessung festgelegt.
 Wir sehen später, wie sie verwendet werden.
 
@@ -84,7 +84,7 @@ double ReadADC(byte pin) {
 } // Added an improved polynomial, use either, comment out as required
 ```
 
-Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist leider notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Pylynominalfunktion) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unsere Zwecke meist ausreichend.
+Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Pylynominalfunktion) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unsere Zwecke meist ausreichend.
 
 
 Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGNs:
