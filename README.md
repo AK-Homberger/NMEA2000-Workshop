@@ -51,7 +51,7 @@ Für die spätere Nutzung der Bibliotheken sind speziell drei Dateien wichtig:
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. Der erste ESP32 dient als Schnittstelle zum NMEA-Simulator/-Reader auf dem PC/Laptop. Der zweite wird für die Beispielprogramme genutzt.
 
 An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L).
-Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. Eigenlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, dass an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
+Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. Eigenlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, das an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
 
 So sieht das dann auf dem Steckbrett aus:
 
@@ -66,7 +66,7 @@ Auf dem linken ESP32 ist der Sketch "ActisenseListenerSender-ESP32.ino" zu insta
 - Zum Lesen und Anzeigen von NMEA2000-Daten auf dem PC soll der NMEA-Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden: [Link](http://www.kave.fi/Apps/index.html).
 - Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gateways genutzt): [Link](https://opencpn.org/OpenCPN/info/downloads.html)
-- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(light)](https://apps.apple.com/de/app/nmearemote/id412806204) für Apple-Geräte. Die "light"-Programm ist kostenlos.
+- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(light)](https://apps.apple.com/de/app/nmearemote/id412806204) für Apple-Geräte. Die "light"-Programm ist kostenlos. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen uns installieren (z.B. auch avNav). Ich konnte das leider nicht testen.
 
 # Workshop-Beispielprogramme
 Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
