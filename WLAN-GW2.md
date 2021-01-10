@@ -405,7 +405,7 @@ Das war es nun mit dem Workshop.
 
 Kommen wir nun noch einmal zu den Zielen des Workshops zurück und sehen nach, ob wir alle Ziele erreicht haben.
 
-Ihr solltet folgendes nun können:
+Ihr solltet nun folgendes können:
 
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
