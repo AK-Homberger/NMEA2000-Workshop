@@ -398,7 +398,7 @@ Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut, und einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 
-# Das wars
+# Das war es schon
 Das war es nun mit dem Workshop.
 
 Kommen wir nun noch einmal zu den Zielen des Workshops zurück und sehen nach, ob wir alle Ziele erreicht haben.
