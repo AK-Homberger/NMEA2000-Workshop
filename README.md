@@ -25,7 +25,7 @@ Nach dem Workshop solltet ihr folgendes können:
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
-Im Rahmen des Workshops werden wir mit ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
+Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
 
 # Vorbereiten der Arduino-IDE
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
