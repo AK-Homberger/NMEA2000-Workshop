@@ -33,7 +33,7 @@ Als erstes sehen wir, dass wir zusätzliche Include-Dateien verwenden:
 #include "List.h"
 #include "BoatData.h"
 ```
-Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und Preferences.h) und die NMEA-Bibliothek (Seasmart.h und N2kMessages.h). Seasmart.h ist nur nowedig für die optionale Ausgabe der NMEA2000-Daten im Seasmart-Format. Da es kaum Client-Programme gibt, die dieses Format verarbeiten können, gehen wir darauf im Moment nicht weiter ein. Preferences.h kennen wir ja schon aus den früheren Beispielen und WiFi.h benötigen wir für den WLAN-Access-Point.
+Die oberen vier sind generelle Include-Dateien für den ESP32 selbst (WiFi.h und Preferences.h) und die NMEA-Bibliothek (Seasmart.h und N2kMessages.h). Seasmart.h ist notwedig für die optionale Ausgabe der NMEA2000-Daten im Seasmart-Format. Preferences.h kennen wir ja schon aus den früheren Beispielen und WiFi.h benötigen wir für den WLAN-Access-Point.
 
 Die nächsten drei Include-Dateien sind für unsere lokalen Programm-Module, wie oben beschrieben.
 
@@ -74,12 +74,12 @@ LinkedList<tWiFiClientPtr> clients;
 tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
 ```
 
-Als erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und Pereference kennen wir schon aus früheren Beispielen.
+Als erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und Pereferences kennen wir schon aus früheren Beispielen.
 
 Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clients fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
 
 Mit "sendNMEA0183Conversion = true" und "SendSeaSmart = false" legen wir fest, welche Datenformate gesendet werden sollen.
-Im Momente senden wir nur die von NMEA2000 nach NMEA0183 gewandelten Daten an die WLAN-Clients.
+Im Moment senden wir nur die von NMEA2000 nach NMEA0183 gewandelten Daten. Auf Seasmart kommen wir später noch zurück.
 
 ```
 WiFiServer server(ServerPort, MaxClients);
@@ -176,7 +176,9 @@ Dann legen wir weiteren Funktionsweisen fest:
 Diesmal setzen wir den Modus als "N2km_ListenAndNode".
 Dann geben wir die Liste der zu empfangenen Nachrichten fest.
 
-Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) und dann für die optionale Wandlung ins Seasmart-Format NMEA2000.SetMsgHandler(HandleNMEA2000Msg). Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine Funktion benötigt, reicht NMEA2000.SetMsgHandler().
+Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 mit  NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) und dann für die optionale Wandlung ins Seasmart-Format mit NMEA2000.SetMsgHandler(HandleNMEA2000Msg). 
+
+Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine Funktion benötigt, reicht NMEA2000.SetMsgHandler().
 
 Als letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
 
@@ -251,13 +253,13 @@ void loop() {
 }
 ```
 
-- CheckConnections() prüft regelmässig ob es neue TCP-Clinets gibt oder ob Clients, die Verbindung beendet hatten.
+- CheckConnections() prüft regelmässig ob es neue TCP-Clients gibt oder ob Clients, die Verbindung beendet hatten.
 - NMEA2000.ParseMessages() und CheckSourceAddressChange() sind ja schon bekannt.
-- tN2kDataToNMEA0183.Update(&BoatData) ruft die Update-Funktion in Sub-Modul auf, wobei die Referenz zur Struktur "BoatData" übergeben wird. Nach dem Funktionsaufruf enthält die Strukur alle alle aktuelisieretn Daten aus dem Sub-Modul.
+- tN2kDataToNMEA0183.Update(&BoatData) ruft die Update-Funktion in Sub-Modul auf, wobei die Referenz zur Struktur "BoatData" übergeben wird. Nach dem Funktionsaufruf enthält die Strukur alle alle aktuelisierten Daten aus dem Sub-Modul.
 
 # Modul BoatData.h
 
-Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu unteschiedliche Wete zusammenzufassen und die Werte über Modulgrenzen hinweg zu nutzen.
+Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu, unteschiedliche Wete zusammenzufassen, und die Werte über Modulgrenzen hinweg zu nutzen.
 
 ```
 struct tBoatData {
@@ -320,11 +322,11 @@ void tN2kDataToNMEA0183::HandleMsg(const tN2kMsg &N2kMsg) {
   }
 }
 ```
-Im Wesentlichen ist das vegleichbar mit der HandleMessge-Funktion, die wir auch im Beispiel zum Lesen von NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
+Im Wesentlichen ist das vegleichbar mit der HandleMessge-Funktion, die wir auch im Beispiel zum Lesen vom NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
 
-Die Funktionsweise ist hier die gleiche. Die Funktion wird für jede NMEA2000-Nachricht aufgerufen. Mit "case" prüfen wie die PGN-Nummer und rufen Funktionen zur weiteren Behandlung auf. Hatten wir alles schon.
+Die Funktionsweise ist hier die gleiche wie beim Lesen-Beispiel. Die Funktion wird für jede NMEA2000-Nachricht aufgerufen. Mit "case" prüfen wie die PGN-Nummer und rufen Funktionen zur weiteren Behandlung auf. Hatten wir alles schon.
 
-Schauen wir uns doch exemplarisch mal zwei Funktionen an:
+Schauen wir uns doch exemplarisch einmal zwei Funktionen an:
 
 Erstens HandleHeading():
 
@@ -367,7 +369,7 @@ Sollte euch eine Konversations-Routine von MNEA2000 nach NMEA0183 fehlen, könnt
 
 Die NMEA0183-Bibliothek von Timo Lappalainen ist recht rudimentär. Es sind nicht alle relevanten NMEA0183-Nachrichten enthalten.
 
-Das macht aber in der Praxis nicht viel aus. Durch die in der Bibliothek dfinierten Hilfsfunktionen ist das Zusammenbauen und Senden von NMEA0183-Nachrichten sehr einfach.
+Das macht aber in der Praxis nicht viel aus. Durch die in der Bibliothek definierten Hilfsfunktionen ist das Zusammenbauen und Senden von NMEA0183-Nachrichten sehr einfach.
 
 Wir schauen uns hierzu einmal die Funktion HandleLog() an:
 
@@ -394,11 +396,11 @@ In der Funktion parsen wir mit ParseN2kDistanceLog() die NMEA2000-Nachricht mit 
   
 Wir erzeugen nun mit "tNMEA0183Msg NMEA0183Msg" einen Nachrichten-Container für eine NMEA0183-Nachricht.
   
-Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0183-Nachricht "VLW" passgenau zusammen. Auch die Umwandlung vom m/s auf kn führen wir hier auch durch.
+Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0183-Nachricht "VLW" passgenau zusammen. Auch die Umwandlung vom m/s auf kn führen wir hier durch.
 
 Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
-Die anderen Funktionen im Modul sind recht ähnlich aufgebaut, und einer eigenstängigen Erweiterung steht nichts mehr im Wege.
+Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 
 # Das war es schon
 Das war es nun mit dem Workshop.
