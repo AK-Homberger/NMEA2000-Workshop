@@ -12,11 +12,10 @@ Dann gibt es noch vier weitere Unterkomponenten:
 
 - BoatData.h: In dieser Include-Datei werden Boots-Daten in eine Struktur zusammengefasst, um einfacher über Modulgrenzen hinweg darauf zugreifen zu können.
 - List.h: Die Include-Datei wird zur Verwaltung der per WLAN verbundenen TCP-Clients genutzt (Stichwort: verkettete Liste).
-- N2kDataToNMEA0183.cpp: Ein C++-Modul, dass die eigentlichen Umwandlungen von NME2000 zu NMEA0183 eledigt.
-- N2kDataToNMEA0183.h: Die zum obigen CPP-Modul gehörende Include-Datei, mit Deklaratione/Definitionen.
+- N2kDataToNMEA0183.cpp: Ein C++ Modul, dass die eigentlichen Umwandlungen von NME2000 zu NMEA0183 eledigt.
+- N2kDataToNMEA0183.h: Die zum obigen C++ Modul gehörende Include-Datei, mit Deklaratione/Definitionen.
 
 Starten wir mit der Funktion des Hauptprogramms:
-
 
 ## Zusätzliche Include-Dateien
 
@@ -296,6 +295,7 @@ struct tBoatData {
 
 Auf den Inhalt der Dateien List.h und N2kDataToNMEA0183.h gehen wir nicht im Detail ein. Das würde dem Umfang des Workshops sprengen und erfordert C++ Kenntnisse, die wir hier nicht voraussetzen können.
 
+## Modul N2kDataToNMEA0183.cpp
 Aber den Aufbau von N2kDataToNMEA0183.cpp sehen wir uns zumindest generell an.
 
 Fangen wir mit HandleMsg an:
