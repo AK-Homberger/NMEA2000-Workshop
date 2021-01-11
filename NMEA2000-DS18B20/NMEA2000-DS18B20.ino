@@ -128,8 +128,7 @@ void GetTemperature( void * parameter) {
     sensors.requestTemperatures(); // Send the command to get temperatures
     vTaskDelay(100);
     tmp = sensors.getTempCByIndex(0);
-    //if (tmp != -127) Temperature = tmp; 
-    Temperature=tmp;
+    if (tmp != -127) Temperature = tmp; 
     vTaskDelay(100);
   }
 }

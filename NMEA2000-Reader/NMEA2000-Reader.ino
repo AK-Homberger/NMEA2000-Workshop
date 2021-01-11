@@ -90,11 +90,12 @@ void setup() {
 }
 
 
-//*****************************************************************************
+///*****************************************************************************
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
 
   switch (N2kMsg.PGN) {
     case 127250L: HandleHeading(N2kMsg);
+    case 128259L: HandleBoatSpeed(N2kMsg);
   }
 }
 
@@ -109,6 +110,19 @@ void HandleHeading(const tN2kMsg &N2kMsg) {
 
   if ( ParseN2kHeading(N2kMsg, SID, Heading, Deviation, Variation, ref) ) {
   Serial.printf("PGN127250: Heading: %4.1f Deviation: %3.1f Variation: %3.1f\n", RadToDeg(Heading), RadToDeg(Deviation), RadToDeg(Variation));
+  }
+}
+
+
+//*****************************************************************************
+void HandleBoatSpeed(const tN2kMsg &N2kMsg) {
+  unsigned char SID;
+  double WaterReferenced;
+  double GroundReferenced;
+  tN2kSpeedWaterReferenceType SWRT;
+
+  if ( ParseN2kBoatSpeed(N2kMsg, SID, WaterReferenced, GroundReferenced, SWRT) ) {
+    Serial.printf("PGN128259: STW: %3.1f kn SOG: %3.1f kn\n", msToKnots(WaterReferenced), msToKnots(GroundReferenced));
   }
 }
 

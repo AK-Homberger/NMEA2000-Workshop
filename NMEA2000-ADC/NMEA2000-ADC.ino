@@ -56,7 +56,7 @@ void setup() {
   // Init USB serial port
   Serial.begin(115200);
   delay(10);
-  
+
   // Reserve enough buffer for sending all messages.
   NMEA2000.SetN2kCANMsgBufSize(8);
   NMEA2000.SetN2kCANReceiveFrameBufSize(150);
@@ -135,7 +135,7 @@ void SendN2kBatteryVoltage(void) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
     BatteryVoltage = ReadADC(ADCpin2) * ADC_Calibration_Value2 / 4096;
-    
+
     Serial.printf("Battery Voltage: %3.1f V \n", BatteryVoltage);
 
     // Definition from N2kMessages.h
@@ -144,7 +144,7 @@ void SendN2kBatteryVoltage(void) {
 
     // Set N2K message
     SetN2kPGN127508(N2kMsg, 0, BatteryVoltage, N2kDoubleNA, N2kDoubleNA, 0);
-        
+
     // Send message
     NMEA2000.SendMsg(N2kMsg);
   }
@@ -161,7 +161,7 @@ void SendN2kWaterTankLevel(void) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
     TankLevel = ReadADC(ADCpin1) * ADC_Calibration_Value1 / 4096;
-    
+
     Serial.printf("Tank Level: %3.1f %% \n", TankLevel);
 
     // Definition from N2kMessages.h
@@ -171,7 +171,7 @@ void SendN2kWaterTankLevel(void) {
 
     // Set N2K message
     SetN2kPGN127505(N2kMsg, 0, N2kft_Water, TankLevel, 100);
-    
+
     // Send message
     NMEA2000.SendMsg(N2kMsg);
   }
@@ -197,7 +197,7 @@ void CheckSourceAddressChange() {
 void loop() {
 
   SendN2kBatteryVoltage();
-  
+
   SendN2kWaterTankLevel();
 
   NMEA2000.ParseMessages();
