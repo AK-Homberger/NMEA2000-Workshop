@@ -322,7 +322,7 @@ void tN2kDataToNMEA0183::HandleMsg(const tN2kMsg &N2kMsg) {
   }
 }
 ```
-Im Wesentlichen ist das vegleichbar mit der HandleMessge-Funktion, die wir auch im Beispiel zum Lesen vom NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
+Im Wesentlichen ist das vegleichbar mit der HandleMessage-Funktion, die wir auch im Beispiel zum Lesen vom NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
 
 Die Funktionsweise ist hier die gleiche wie beim Lesen-Beispiel. Die Funktion wird für jede NMEA2000-Nachricht aufgerufen. Mit "case" prüfen wie die PGN-Nummer und rufen Funktionen zur weiteren Behandlung auf. Hatten wir alles schon.
 
