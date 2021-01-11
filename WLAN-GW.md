@@ -60,7 +60,7 @@ Nach Verlassen der Seite sieht man die angezeigten Daten.
 
 # Android
 
-Für Android können zum Beispiel die Programme "AvNav" oder auch "NKE Diplay" für die Anzeige der Daten genutzt werden.
+Für Android können zum Beispiel die Programme "AvNav" oder auch "NKE Display" für die Anzeige der Daten genutzt werden.
 
 Mit Bildschirmfotos kann ich hier nicht dienen, da ich kein Android System nutze.
 
