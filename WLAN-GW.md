@@ -58,8 +58,11 @@ In NMEAremote nun die Quelle "NMEA over IP" löschen und eine neue Quelle "SeaSm
 
 Nach Verlassen der Seite sieht man die angezeigten Daten. 
 
-# Android: AvNav
-TBD.
+# Android
+
+Für Android können zum Beispiel die Programme "AvNav" oder auch "NKE Diplay" für die Anzeige der Daten genutzt werden.
+
+Mit Bildschirmfotos kann ich hier nicht dienen, da ich kein Android System nutze.
 
 
 # OpenCPN
