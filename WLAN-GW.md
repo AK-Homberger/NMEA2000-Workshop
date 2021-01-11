@@ -10,7 +10,7 @@ Für das WLAN-Gateway starten wir wieder mit unserem Basis-Steckbrett, wie auch 
 
 ![Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
-Danach laden wir aus dem entpackten ZIP-Ordner das Programm [NMEA2000-WLAN-Gateway.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-WLAN-Gateway/NMEA2000-WLAN-Gateway.ino). Wie immer mit einem Doppelklick auf die Datei.
+Danach laden wir aus dem entpackten ZIP-Ordner das Programm [NMEA2000-WLAN-Gateway.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-WLAN-Gateway/NMEA2000-WLAN-Gateway.ino). Wie immer, mit einem Doppelklick auf die Datei.
 
 ![Arduino-IDE](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Arduino-IDE-GW.png).
 
@@ -21,6 +21,7 @@ Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den 
 ### Tipp: Wenn sich mehrere Workshop-Teilnehmer in einem Raum befinden, sollte erst einmal nur einer das Programm starten.
 
 Wenn das Programm erfolgreich gestartet wurde, kann nun auf dem Telefon/Tablet nach einem Access Point mit dem Namen "NMEA2000-Gateway" gesucht werden.
+
 Das WLAN wird ausgewählt und als Passwort wird "password" eingegeben.
 
 Dann wird die App zur Anzeige gestartet. Für Apple-Geräte ist das NMEAremote(lite). 
