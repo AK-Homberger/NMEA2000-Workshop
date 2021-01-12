@@ -42,7 +42,7 @@ Preferences preferences;    // Nonvolatile storage on ESP32 - To store LastDevic
 
 
 // Set the information for other bus devices, which messages we support
-const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters, Rapid update                                                  
+const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters, Rapid update
                                                   0
                                                  };
 
@@ -66,7 +66,7 @@ void setup() {
   // 0 = first timer
   // 80 is prescaler so 80MHZ divided by 80 = 1MHZ signal ie 0.000001 of a second
   // true - counts up
-  timerStart(timer);   
+  timerStart(timer);
 
   // Reserve enough buffer for sending all messages.
   NMEA2000.SetN2kCANMsgBufSize(8);
@@ -111,10 +111,10 @@ void IRAM_ATTR handleInterrupt()
 {
   portENTER_CRITICAL_ISR(&mux);
   uint64_t TempVal = timerRead(timer);        // value of timer at interrupt
-  PeriodCount = TempVal - StartValue;         // period count between rising edges in 0.000001 of a second
+  PeriodCount = TempVal - StartValue;         // period count between falling edges in 0.000001 of a second
   StartValue = TempVal;                       // puts latest reading as start for next calculation
-  portEXIT_CRITICAL_ISR(&mux);
   Last_int_time = millis();
+  portEXIT_CRITICAL_ISR(&mux);
 }
 
 
@@ -124,9 +124,9 @@ double ReadRPM() {
   double RPM = 0;
 
   portENTER_CRITICAL(&mux);
-  RPM = 1000000.00 / PeriodCount;                    // PeriodCount in 0.000001 of a second
+  if (PeriodCount != 0) RPM = 1000000.00 / PeriodCount;                   // PeriodCount in 0.000001 of a second
   portEXIT_CRITICAL(&mux);
-  if (millis() > Last_int_time + 200) RPM = 0;       // No signals RPM=0;
+  if (millis() > Last_int_time + 500) RPM = 0;       // No signals RPM=0;
   return (RPM);
 }
 
@@ -154,13 +154,15 @@ void SetNextUpdate(unsigned long & NextUpdate, unsigned long Period) {
 void SendN2kEngineRPM(void) {
   static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, RPM_SendOffset);
   tN2kMsg N2kMsg;
-  double EngineRPM;
-  
+  static double EngineRPM = 0;
+
   if ( IsTimeToUpdate(SlowDataUpdated) ) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
-    EngineRPM = ReadRPM() * RPM_Calibration_Value;
-    
+    if (ReadRPM() < 5000) {
+      EngineRPM = ReadRPM() * RPM_Calibration_Value;
+    }
+
     Serial.printf("Engine RPM  :%4.0f EngineRPM \n", EngineRPM);
 
     SetN2kEngineParamRapid(N2kMsg, 0, EngineRPM, N2kDoubleNA, N2kInt8NA);
