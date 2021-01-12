@@ -31,9 +31,9 @@
 #define RPM_SendOffset 0
 
 // Interrupt data
-volatile uint64_t StartValue;                     // First interrupt value
-volatile uint64_t PeriodCount;                    // period in counts of 0.000001 of a second
-unsigned long Last_int_time = 0;                  // Stores last Interrupt time
+volatile uint64_t StartValue = 0;                 // First interrupt value
+volatile uint64_t PeriodCount = 0;                // period in counts of 0.000001 of a second
+volatile unsigned long Last_int_time = 0;         // Stores last Interrupt time
 hw_timer_t * timer = NULL;                        // pointer to a variable of type hw_timer_t
 portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;  // To lock/unlock interrupt
 
@@ -124,9 +124,9 @@ double ReadRPM() {
   double RPM = 0;
 
   portENTER_CRITICAL(&mux);
-  if (PeriodCount != 0) RPM = 1000000.00 / PeriodCount;                   // PeriodCount in 0.000001 of a second
+  if (PeriodCount != 0) RPM = 1000000.00 / PeriodCount; // PeriodCount in 0.000001 of a second
+  if (millis() > Last_int_time + 500) RPM = 0;          // No signals RPM=0;
   portEXIT_CRITICAL(&mux);
-  if (millis() > Last_int_time + 500) RPM = 0;       // No signals RPM=0;
   return (RPM);
 }
 
