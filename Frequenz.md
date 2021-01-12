@@ -52,9 +52,9 @@ Es folgt die Definition von Variablen für die Zeitmessungen mit der Interrupt-F
 
 ```
 // Interrupt data
-volatile uint64_t StartValue;                     // First interrupt value
-volatile uint64_t PeriodCount;                    // period in counts of 0.000001 of a second
-unsigned long Last_int_time = 0;                  // Stores last Interrupt time
+volatile uint64_t StartValue = 0;                 // First interrupt value
+volatile uint64_t PeriodCount = 0;                // period in counts of 0.000001 of a second
+volatile unsigned long Last_int_time = 0;         // Stores last Interrupt time
 hw_timer_t * timer = NULL;                        // pointer to a variable of type hw_timer_t
 portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;  // To lock/unlock interrupt
 ```
@@ -88,17 +88,17 @@ Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer be
 
 Hier wird die Funktion "handleInterrupt" definiert:
  
- ```
+```
 // RPM Event Interrupt
 // Enters on falling edge
 void IRAM_ATTR handleInterrupt()
 {
   portENTER_CRITICAL_ISR(&mux);
   uint64_t TempVal = timerRead(timer);        // value of timer at interrupt
-  PeriodCount = TempVal - StartValue;         // period count between rising edges in 0.000001 of a second
+  PeriodCount = TempVal - StartValue;         // period count between falling edges in 0.000001 of a second
   StartValue = TempVal;                       // puts latest reading as start for next calculation
-  portEXIT_CRITICAL_ISR(&mux);
   Last_int_time = millis();
+  portEXIT_CRITICAL_ISR(&mux);
 }
 ```
 Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal an Pin 27 von HIGH auf LOW wechselt. Also immer dann, wenn wir den Taster drücken. Durch den interne Pull-Up-Widertand ist ohne gedrückten Taster Pin 27 auf HIGH-Niveau. Durch Tastendruck wird der Pin auf GND geschaltet, was LOW entspricht.
@@ -114,8 +114,8 @@ double ReadRPM() {
 
   portENTER_CRITICAL(&mux);
   if (PeriodCount != 0) RPM = 1000000.00 / PeriodCount; // PeriodCount in 0.000001 of a second
-  portEXIT_CRITICAL(&mux);
   if (millis() > Last_int_time + 500) RPM = 0;          // No signals RPM=0;
+  portEXIT_CRITICAL(&mux);
   return (RPM);
 }
 ```
