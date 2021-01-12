@@ -113,12 +113,11 @@ double ReadRPM() {
   double RPM = 0;
 
   portENTER_CRITICAL(&mux);
-  RPM = 1000000.00 / PeriodCount;                    // PeriodCount in 0.000001 of a second
+  if (PeriodCount != 0) RPM = 1000000.00 / PeriodCount; // PeriodCount in 0.000001 of a second
   portEXIT_CRITICAL(&mux);
-  if (millis() > Last_int_time + 200) RPM = 0;       // No signals RPM=0;
+  if (millis() > Last_int_time + 500) RPM = 0;          // No signals RPM=0;
   return (RPM);
 }
-
 ```
 
 Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem PGN127488 gesendet:
@@ -127,13 +126,15 @@ Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem PGN127488 gesendet
 void SendN2kEngineRPM(void) {
   static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, RPM_SendOffset);
   tN2kMsg N2kMsg;
-  double EngineRPM;
-  
+  static double EngineRPM = 0;
+
   if ( IsTimeToUpdate(SlowDataUpdated) ) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
-    EngineRPM = ReadRPM() * RPM_Calibration_Value;
-    
+    if (ReadRPM() < 5000) {
+      EngineRPM = ReadRPM() * RPM_Calibration_Value;
+    }
+
     Serial.printf("Engine RPM  :%4.0f EngineRPM \n", EngineRPM);
 
     SetN2kEngineParamRapid(N2kMsg, 0, EngineRPM, N2kDoubleNA, N2kInt8NA);
