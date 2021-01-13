@@ -59,11 +59,6 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  //*****************************************************************************
-  // Only for frequency simulation in loop()
-  ledcAttachPin(26, 1);     // sets GPIO26 as signal output (for simulation only)
-  //*****************************************************************************
-
   // Init RPM measure
   pinMode(Eingine_RPM_Pin, INPUT_PULLUP);                                            // sets pin high
   attachInterrupt(digitalPinToInterrupt(Eingine_RPM_Pin), handleInterrupt, FALLING); // attaches pin to interrupt on Falling Edge
@@ -107,6 +102,11 @@ void setup() {
 
   NMEA2000.Open();
   delay(200);
+
+  //*****************************************************************************
+  // Only for frequency simulation in loop()
+  ledcAttachPin(26, 1);     // sets GPIO26 as signal output (for simulation only)
+  //*****************************************************************************
 }
 
 //*****************************************************************************
@@ -156,6 +156,7 @@ void SetNextUpdate(unsigned long & NextUpdate, unsigned long Period) {
 }
 
 
+//*****************************************************************************
 void SendN2kEngineRPM(void) {
   static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, RPM_SendOffset);
   tN2kMsg N2kMsg;
@@ -164,9 +165,9 @@ void SendN2kEngineRPM(void) {
   if ( IsTimeToUpdate(SlowDataUpdated) ) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
-    // EngineRPM = ReadRPM() * RPM_Calibration_Value;
+    EngineRPM = ReadRPM() * RPM_Calibration_Value;
 
-    EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;  // Implements a low-pass filter
+    // EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;  // Implements a low-pass filter
 
     Serial.printf("Engine RPM  :%4.0f EngineRPM \n", EngineRPM);
 
