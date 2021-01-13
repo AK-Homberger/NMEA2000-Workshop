@@ -6,13 +6,11 @@ Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine z
     
 Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
-Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen andere Pin des ESP32 (GPIO 26) als Signalgenerator. Dir Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus den Beispiel Zur Spannungsmessung geteckt war.
+Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen anderen Pin des ESP32 (GPIO 26) als Signalgenerator. Dir Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus den Beispiel Zur Spannungsmessung geteckt war. Zusätzlich stecken wir hier eine Brücke zwiscen GPIO 26 und GPIO 27.
 
-Das Steckbrett sollte so aussehen:
+Das Steckbrett sollte dann so aussehen:
 
 ![Steckbrett-Frequenz](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Frequenz_Steckplatine.png)
-
-Der Taster auf dem Steckbrett wird mit GND und Pin 27 verbunden. Solltet ihr keinen Taster haben, so macht das auch nichts. In diesem Fall einfach zwei Stecklitzen mit GND und Pin 27 verbinden. Durch kurzes zusmmenfügen und lösen der beiden offenen Kabelenden können Tastendrücke simuliert werden.
 
 Um wirklich die Motordrehzahl messen zu können, würden wir noch einen Optokoppler, einen Widerstand und eine kleine Diode benötigen.
 
@@ -29,7 +27,7 @@ Anzeige des Motordrehzahl:
 
 ![NMEA-Reader7](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-7.png)
 
-Durch schnelles, wiederholtes drücken des Tasters können wir nun die angezeigte Motordrehzahl verändern.
+Durch drehen am Potentiometer können wir nun die angezeigte Motordrehzahl verändern (ca. 20 bis 4095).
 
 Kommen wir nun zum Programm.
 
@@ -67,6 +65,9 @@ const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters,
                                                  };
 ```
 
+
+
+
 In setup() wird nun die Interupt-Funktion für Pin 27 initialisiert:
 
 ```
@@ -85,6 +86,16 @@ Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Wider
 Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
 
 Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
+
+Als letztes in setup() wird noch der Signalgenerator an Pin 26 vorberitet.
+
+```
+  //*****************************************************************************
+  // Only for frequency simulation in loop()
+  ledcAttachPin(26, 1);     // sets GPIO26 as signal output (for simulation only)
+  //*****************************************************************************
+```
+Das war es mit setup().
 
 Hier wird die Funktion "handleInterrupt" definiert:
  
@@ -146,6 +157,20 @@ void SendN2kEngineRPM(void) {
 Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kubelwelle und Lichtmachienenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
+
+Die Erzeugung des Rechtecksignals an Pin 26 erfogt übrigens in loop() mit folgenen Zeilen:
+```
+  // For frequency simulation omly
+  //**********************************
+  static unsigned long timer = 0;
+  if (millis() > timer  + 100) {
+    timer = millis();
+    ledcSetup(1, analogRead(34), 7);
+    ledcWrite(1, 64);
+  }
+  //***********************************
+```
+Alle 100 Millisekunden wird der analoge Eingang an Pin 34 gemessen und als Frequenz an Pin 26 ausgegeben.
 
 Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/ReadPGNs.md) werden wir etwas komplett anderes machen, und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
 
