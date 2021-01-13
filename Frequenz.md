@@ -6,7 +6,7 @@ Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine z
     
 Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
-Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen kleinen Taster zur Simulation der Klemme "W".
+Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen andere Pin des ESP32 (GPIO 26) als Signalgenerator. Dir Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus den Beispiel Zur Spannungsmessung geteckt war.
 
 Das Steckbrett sollte so aussehen:
 
