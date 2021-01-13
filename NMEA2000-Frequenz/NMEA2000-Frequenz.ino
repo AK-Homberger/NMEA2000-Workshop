@@ -59,6 +59,11 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
+  //*****************************************************************************
+  // Only for frequency simulation in loop()
+  ledcAttachPin(26, 1);     // sets GPIO26 as signal output (for simulation only)
+  //*****************************************************************************
+
   // Init RPM measure
   pinMode(Eingine_RPM_Pin, INPUT_PULLUP);                                            // sets pin high
   attachInterrupt(digitalPinToInterrupt(Eingine_RPM_Pin), handleInterrupt, FALLING); // attaches pin to interrupt on Falling Edge
@@ -159,9 +164,9 @@ void SendN2kEngineRPM(void) {
   if ( IsTimeToUpdate(SlowDataUpdated) ) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
-    if (ReadRPM() < 5000) {
-      EngineRPM = ReadRPM() * RPM_Calibration_Value;
-    }
+    // EngineRPM = ReadRPM() * RPM_Calibration_Value;
+
+    EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;  // Implements a low-pass filter
 
     Serial.printf("Engine RPM  :%4.0f EngineRPM \n", EngineRPM);
 
@@ -195,6 +200,16 @@ void loop() {
   NMEA2000.ParseMessages();
 
   CheckSourceAddressChange();
+
+  // For frequency simulation omly
+  //**********************************
+  static unsigned long timer = 0;
+  if (millis() > timer  + 100) {
+    timer = millis();
+    ledcSetup(1, analogRead(34), 7);
+    ledcWrite(1, 64);
+  }
+  //***********************************
 
   // Dummy to empty input buffer to avoid board to stuck with e.g. NMEA Reader
   if ( Serial.available() ) {
