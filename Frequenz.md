@@ -23,7 +23,7 @@ Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://g
 
 Danach starten wir wieder den NMEA-Reader und wählen den PGN 127488.
 
-Anzeige des Motordrehzahl:
+Anzeige der Motordrehzahl:
 
 ![NMEA-Reader7](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-7.png)
 
