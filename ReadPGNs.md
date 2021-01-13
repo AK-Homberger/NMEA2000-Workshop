@@ -33,7 +33,7 @@ Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht die Ausgabe natürlich
 
 Kommen wir nun zu den neuen Programm-Elementen.
 
-Wir starten mit der Liste der PGNs. Hier aber nicht mit TransmitMessages[] sondern ReceiveMessges[].
+Wir starten mit der Liste der PGNs. Hier aber nicht mit TransmitMessages[], sondern ReceiveMessges[].
 Wir definieren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
 
 ```
@@ -123,13 +123,13 @@ Der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
 
 Erst lokale Variablen definien. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit "ParseN2k..." beginnen.
 
-Für ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
+ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
 
 Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
 
-Wir geben die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittstelle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
+Dann geben wir die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittstelle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
 
-Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die sie zur Anzeige in Grad mit RadtoDeg() umwandeln.
+Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die Winkel zur Anzeige in Grad mit RadtoDeg() umwandeln.
 
 ## Und nun HandleBoatSpeed():
 
