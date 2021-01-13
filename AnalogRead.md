@@ -89,7 +89,7 @@ Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert.
 
 Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGNs:
 
-Batteriespannung:
+## Batteriespannung:
 
 ```
 void SendN2kBatteryVoltage(void) {
@@ -117,7 +117,7 @@ void SendN2kBatteryVoltage(void) {
 }
 ```
 
-Wassertanklevel:
+## Wassertanklevel:
 
 ```
 void SendN2kWaterTankLevel(void) {
