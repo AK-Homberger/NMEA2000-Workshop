@@ -51,7 +51,9 @@ Für die spätere Nutzung der Bibliotheken sind speziell drei Dateien wichtig:
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. Der erste ESP32 dient als Schnittstelle zum NMEA-Simulator/-Reader auf dem PC/Laptop. Der zweite wird für die Beispielprogramme genutzt.
 
 An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L).
-Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. Eigenlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, das an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
+Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. 
+
+Eigenlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, das an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
 
 So sieht das dann auf dem Steckbrett aus:
 
