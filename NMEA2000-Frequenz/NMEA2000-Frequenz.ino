@@ -202,7 +202,7 @@ void loop() {
 
   CheckSourceAddressChange();
 
-  // For frequency simulation omly
+  // For frequency simulation only
   //**********************************
   static unsigned long timer = 0;
   if (millis() > timer  + 100) {
