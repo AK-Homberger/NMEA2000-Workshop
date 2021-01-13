@@ -87,7 +87,7 @@ Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrup
 
 Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
 
-Als letztes in setup() wird noch der Signalgenerator an Pin 26 vorberitet.
+Als letztes in setup() wird noch der Signalgenerator an Pin 26 vorbereitet.
 
 ```
   //*****************************************************************************
@@ -112,7 +112,7 @@ void IRAM_ATTR handleInterrupt()
   portEXIT_CRITICAL_ISR(&mux);
 }
 ```
-Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal an Pin 27 von HIGH auf LOW wechselt. Also immer dann, wenn wir den Taster drücken. Durch den interne Pull-Up-Widertand ist ohne gedrückten Taster Pin 27 auf HIGH-Niveau. Durch Tastendruck wird der Pin auf GND geschaltet, was LOW entspricht.
+Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal an Pin 27 von HIGH auf LOW wechselt. 
 
 Mit "PeriodCount = TempVal - StartValue;" wird die Zeitdifferenz seit dem letzten Interrupt berechnet.
 
@@ -156,9 +156,9 @@ void SendN2kEngineRPM(void) {
 ```
 Mit: "EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;" könnten wir für den gemessenen Wert einen Tiefpassfilter einsetzen, der Sprünge bei den Messwerten verringert.
 
-Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kubelwelle und Lichtmachienenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
+Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kurbelwelle und Lichtmachinenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
-So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
+So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
 Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenen Zeilen:
 ```
