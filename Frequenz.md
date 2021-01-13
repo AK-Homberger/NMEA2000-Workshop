@@ -142,9 +142,9 @@ void SendN2kEngineRPM(void) {
   if ( IsTimeToUpdate(SlowDataUpdated) ) {
     SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
 
-    if (ReadRPM() < 5000) {
-      EngineRPM = ReadRPM() * RPM_Calibration_Value;
-    }
+    EngineRPM = ReadRPM() * RPM_Calibration_Value;
+
+    // EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;  // Implements a low-pass filter
 
     Serial.printf("Engine RPM  :%4.0f EngineRPM \n", EngineRPM);
 
@@ -154,6 +154,8 @@ void SendN2kEngineRPM(void) {
   }
 }
 ```
+Mit: "EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;" könnten wir für den gemessenen eien Tiefpassfilter einsetzen, der Sprünge bei den Messwerten verringert.
+
 Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kubelwelle und Lichtmachienenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
