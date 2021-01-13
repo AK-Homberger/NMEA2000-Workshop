@@ -6,7 +6,7 @@ Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine z
     
 Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
-Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen anderen Pin des ESP32 (GPIO 26) als Signalgenerator. Dir Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus den Beispiel Zur Spannungsmessung geteckt war. Zusätzlich stecken wir hier eine Brücke zwiscen GPIO 26 und GPIO 27.
+Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen anderen Pin des ESP32 (GPIO 26) als Signalgenerator. Die Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus den Beispiel zur Spannungsmessung geteckt war. Zusätzlich stecken wir hier eine Brücke zwiscen GPIO 26 und GPIO 27.
 
 Das Steckbrett sollte dann so aussehen:
 
@@ -68,7 +68,7 @@ const unsigned long TransmitMessages[] PROGMEM = {127488L, // Engine Parameters,
 
 
 
-In setup() wird nun die Interupt-Funktion für Pin 27 initialisiert:
+In setup() wird nun die Interrupt-Funktion für Pin 27 initialisiert:
 
 ```
 // Init RPM measure
@@ -154,15 +154,15 @@ void SendN2kEngineRPM(void) {
   }
 }
 ```
-Mit: "EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;" könnten wir für den gemessenen eien Tiefpassfilter einsetzen, der Sprünge bei den Messwerten verringert.
+Mit: "EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;" könnten wir für den gemessenen Wert einen Tiefpassfilter einsetzen, der Sprünge bei den Messwerten verringert.
 
 Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kubelwelle und Lichtmachienenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispie Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
-Die Erzeugung des Rechtecksignals an Pin 26 erfogt übrigens in loop() mit folgenen Zeilen:
+Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenen Zeilen:
 ```
-  // For frequency simulation omly
+  // For frequency simulation only
   //**********************************
   static unsigned long timer = 0;
   if (millis() > timer  + 100) {
