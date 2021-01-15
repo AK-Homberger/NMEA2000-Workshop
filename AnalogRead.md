@@ -17,7 +17,9 @@ So muss das Steckbrett dazu aussehen:
 Das Potentiometer wird, wie oben gezeigt, mit 3,3 V, GND und den Pins 34/35 verbunden.
 
 Um wirklich die Batteriespannung messen zu können, würde ein Spannungsteiler mit zwei Widerständen (100 KOhm / 27 KOhm) verwendet werden.
-Um den Tanklevel zum Beispiel mit einem Tankgeber von Philippi (0 - 180 Ohm) zu messen, wäre ein Widerstand von 1 KOhm nötig (und ggf. eine Z-Diode zum Schutz des Eingangs vor Überspannung).
+Um den Tanklevel zum Beispiel mit einem Tankgeber von [Philippi (0 - 180 Ohm)](https://www.philippi-online.de/en/products/supervision/tank-sensors.html) zu messen, wäre ein Widerstand von 1 KOhm nötig (und ggf. eine Z-Diode zum Schutz des Eingangs vor Überspannung).
+
+Gängige [Öldruckgeber von VDO](http://www.druckgeber-oeldruckgeber.de/vdo-druckgeber-ohne-wk-daten.html) haben ebenfalls einen ähnlichen Widerstandsbereich (10 - 183 Ohm). 
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
