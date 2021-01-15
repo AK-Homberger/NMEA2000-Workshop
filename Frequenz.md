@@ -160,7 +160,7 @@ Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen K
 
 Genausogut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeber](https://www.roboter-bausatz.de/p/yf-s201-halleffekt-wasser-durchflusssensor-1-30l-min-g1-2) messen.
 
-So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
+So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel [Kettenzählwerksimpulse](https://github.com/AK-Homberger/ESP32_AnchorChainControl_WLAN)) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
 Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenen Zeilen:
 ```
