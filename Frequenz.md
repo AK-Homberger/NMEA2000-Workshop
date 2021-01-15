@@ -158,6 +158,8 @@ Mit: "EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;" kön
 
 Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kurbelwelle und Lichtmachinenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
+Genausogut könnten wir übrigens auch den Durchfluss mit einem Durchflussgeber messen.
+
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel Kettenzählwerksimpulse) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
 Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenen Zeilen:
