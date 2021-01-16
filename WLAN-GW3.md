@@ -1,4 +1,4 @@
-# NMEA0183 Multiplexer
+# NMEA0183-Multiplexer
 
 Jetzt fügen wir dem Gateway noch eine Multiplexing-Funktion für AIS hinzu.
 
