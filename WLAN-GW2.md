@@ -402,6 +402,8 @@ Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 
+Falls ihr auch noch AIS zur WLAN-Ausgabe in NMEA0183 hinzufügen möchtet, schaut euch bitte die Implementierung [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) an.
+
 # Das war es schon
 Das war es nun mit dem Workshop.
 
