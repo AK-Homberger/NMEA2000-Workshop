@@ -19,7 +19,7 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 
 ## Das Programm
 
-Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
+Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
 
 Danach starten wir wieder den NMEA-Reader und wählen den PGN 127488.
 
