@@ -402,7 +402,36 @@ Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 
-Falls ihr auch noch AIS zur WLAN-Ausgabe in NMEA0183 hinzufügen möchtet, schaut euch bitte die Implementierung [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) an.
+Falls ihr auch noch AIS zur WLAN-Ausgabe in NMEA0183 hinzufügen möchtet, schaut euch bitte die Schaltung [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) an.
+
+Die Ereiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
+
+Fügt folgende globale Objekte hinzu
+```
+// NMEA message and stream for AIS receiving and multiplexing
+tNMEA0183Msg NMEA0183Msg;
+tNMEA0183 NMEA0183;
+```
+Das erzeugt einen NMEA0183-Nachrichten-Container und auch eine Methode zur Behandlung eines NMEA0183-Nachrichten-Streams.
+
+Dann fügt ihr in setup() nach der Initialisierung der seriellen USB-Schnittstelle die Initialisierung der 2. seriellen Schnittstelle (GPIO 16):
+
+```
+// Init AIS serial port 2
+  Serial2.begin(38400, SERIAL_8N1);      // Configure Serial2 (GPIO 16)
+  NMEA0183.Begin(&Serial2, 3, 38400);    // Start NMEA0183 stream handling
+```
+
+In loop() dann noch folgende Zeilen ergänzen:
+
+```
+if (NMEA0183.GetMessage(NMEA0183Msg)) {  // Get AIS NMEA sentences from serial2
+    SendNMEA0183Message(NMEA0183Msg);    // Send to clients
+  }
+```
+
+Das war alles. Nun habt ihr ein NMEA2000 zu NMEA0183-WLAN-Gateway mit einem NMEA0183 Multiplexer.
+Leider können wir die Funktion hier nicht testen.
 
 # Das war es schon
 Das war es nun mit dem Workshop.
