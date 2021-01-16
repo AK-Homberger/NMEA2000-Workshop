@@ -25,6 +25,8 @@ Dann fügt ihr in setup(), nach der Initialisierung der seriellen USB-Schnittste
   Serial2.begin(38400, SERIAL_8N1);      // Configure Serial2 (GPIO 16)
   NMEA0183.Begin(&Serial2, 3, 38400);    // Start NMEA0183 stream handling
 ```
+AIS wird üblicherweise mit 38400 Baud übertragen. "SERIAL_8N1" bedeutet 8 Bit, Kein Paritätsbit und  ein Stopbit. Mit NMEA0183.Begin() wird dann die Stream-Behandlung für die zweite serielle Schnittstelle gestartet.
+
 
 In loop() dann noch folgende Zeilen ergänzen:
 
@@ -33,6 +35,7 @@ if (NMEA0183.GetMessage(NMEA0183Msg)) {  // Get AIS NMEA sentences from serial2
     SendNMEA0183Message(NMEA0183Msg);    // Send to clients
   }
 ```
+Hier wird geschaut, ob eine Nachricht erkannt wurde. Falls ja wird sie mit SendNMEA0183Message() an die Clients gesendet.
 
 Das war alles. Nun habt ihr ein NMEA2000 zu NMEA0183-WLAN-Gateway mit einem zusätzlichen NMEA0183-Multiplexer.
 Das fertige Programm ist [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway2/NMEA2000-WLAN-Gateway2.ino) gespeichert.
