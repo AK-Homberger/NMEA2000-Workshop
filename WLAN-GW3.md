@@ -35,7 +35,7 @@ if (NMEA0183.GetMessage(NMEA0183Msg)) {  // Get AIS NMEA sentences from serial2
     SendNMEA0183Message(NMEA0183Msg);    // Send to clients
   }
 ```
-Hier wird geschaut, ob eine Nachricht erkannt wurde. Falls ja wird sie mit SendNMEA0183Message() an die Clients gesendet.
+Hier wird mit NMEA0183.GetMessage() geschaut, ob eine Nachricht erkannt wurde. Falls ja, wird sie mit SendNMEA0183Message() an die Clients gesendet.
 
 Das war alles. Nun habt ihr ein NMEA2000 zu NMEA0183-WLAN-Gateway mit einem zusätzlichen NMEA0183-Multiplexer.
 Das fertige Programm ist [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway2/NMEA2000-WLAN-Gateway2.ino) gespeichert.
