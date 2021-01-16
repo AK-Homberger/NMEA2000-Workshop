@@ -1,5 +1,12 @@
-## NMEA0183 Multiplexer
-Falls ihr auch noch AIS zur WLAN-Ausgabe in NMEA0183 hinzufügen möchtet, schaut euch bitte die Schaltung [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) an.
+# NMEA0183 Multiplexer
+
+Jetzt fügen wir dem Gateway noch eine Multiplexing-Funktion für AIS hinzu.
+
+Multiplexing bedutet, dass man NMEA0183-Nachrichten von mehreren Quellen zu einem kombinierten Nachrichtenstrom zusammen setzt.
+
+Zusätzlich zu den gewandelten NMEA2000-Daten wollen wir nun auch noch AIS über eine serielle Schnittstelle einlesen und auch an die Clients weiterleiten.
+
+Für die Pegelwandlung von RS-232 (oder RS-433) benötigen wir eine kleine [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) an.
 
 Die Erweiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
 
