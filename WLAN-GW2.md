@@ -407,7 +407,7 @@ Falls ihr auch noch AIS zur WLAN-Ausgabe in NMEA0183 hinzufügen möchtet, schau
 
 Die Ereiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
 
-Fügt folgende globale Objekte hinzu
+Fügt folgende globale Objekte hinzu:
 ```
 // NMEA message and stream for AIS receiving and multiplexing
 tNMEA0183Msg NMEA0183Msg;
