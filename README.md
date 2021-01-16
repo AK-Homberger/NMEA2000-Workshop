@@ -1,9 +1,8 @@
 # NMEA2000-Workshop
 
 Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februar 2021.
-Das Material ist eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht.
 
-Die Informationen können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
+Das Material ist eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Die Informationen können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
 Nach dem Workshop solltet ihr folgendes können:
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
