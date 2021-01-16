@@ -15,7 +15,7 @@
 // NMEA 2000 WLAN Gateway (for NMEA Workshop)
 // Version 1.0, 04.01.2021, AK-Homberger
 
-#define ESP32_CAN_TX_PIN GPIO_NUM_5  // Set CAN TX port to 5 (Caution!!! Pin 2 before)
+#define ESP32_CAN_TX_PIN GPIO_NUM_5  // Set CAN TX port to 5
 #define ESP32_CAN_RX_PIN GPIO_NUM_4  // Set CAN RX port to 4
 
 #include <Arduino.h>
