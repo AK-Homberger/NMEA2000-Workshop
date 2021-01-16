@@ -4,7 +4,7 @@ Jetzt fügen wir dem Gateway noch eine Multiplexing-Funktion für AIS hinzu.
 
 Multiplexing bedutet, dass man NMEA0183-Nachrichten von mehreren Quellen zu einem kombinierten Nachrichtenstrom zusammen setzt.
 
-Zusätzlich zu den gewandelten NMEA2000-Daten wollen wir nun auch noch AIS über eine serielle Schnittstelle einlesen und auch an die Clients weiterleiten.
+Zusätzlich zu den gewandelten NMEA2000-Daten wollen wir nun auch noch AIS über eine serielle Schnittstelle einlesen und an die Clients weiterleiten.
 
 Für die Pegelwandlung von [RS-232](https://de.wikipedia.org/wiki/RS-232) (oder [RS-422](https://de.wikipedia.org/wiki/EIA-422)) benötigen wir eine kleine Schaltung. Der Schaltplan ist hier, siehe Eingang [AIS](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32).
 
@@ -34,7 +34,7 @@ if (NMEA0183.GetMessage(NMEA0183Msg)) {  // Get AIS NMEA sentences from serial2
   }
 ```
 
-Das war alles. Nun habt ihr ein NMEA2000 zu NMEA0183-WLAN-Gateway mit einem NMEA0183-Multiplexer.
+Das war alles. Nun habt ihr ein NMEA2000 zu NMEA0183-WLAN-Gateway mit einem zusätzlichen NMEA0183-Multiplexer.
 Das fertige Programm ist [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway2/NMEA2000-WLAN-Gateway2.ino) gespeichert.
 
 Leider können wir die Funktion hier nicht testen.
