@@ -405,7 +405,7 @@ Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstäng
 ## NMEA0183 Multiplexer
 Falls ihr auch noch AIS zur WLAN-Ausgabe in NMEA0183 hinzufügen möchtet, schaut euch bitte die Schaltung [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32) an.
 
-Die Ereiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
+Die Erweiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
 
 Fügt folgende globale Objekte hinzu:
 ```
