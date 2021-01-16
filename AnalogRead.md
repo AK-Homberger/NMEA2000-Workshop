@@ -26,7 +26,7 @@ Gängige [Öldruckgeber von VDO](http://www.druckgeber-oeldruckgeber.de/vdo-druc
 ## Das Programm
 Kommen wir nun zum Programm.
 
-Aus dem enpackten Download-Verzeichnis laden wir nun das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/NMEA2000-ADC/NMEA2000-ADC.ino).
+Aus dem enpackten Download-Verzeichnis laden wir nun das Programm [NMEA2000-ADC.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-ADC/NMEA2000-ADC.ino).
 
 Nach dem Hochladen auf dem rechten ESP32 können wir wieder den NMEA-Reader starten und sehen, was auf dem Bus gesendet wird.
 
