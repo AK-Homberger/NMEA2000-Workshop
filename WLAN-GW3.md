@@ -10,7 +10,7 @@ Für die Pegelwandlung von [RS-232](https://de.wikipedia.org/wiki/RS-232) (oder 
 
 Die Erweiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
 
-Fügt folgende globalen Objekte hinzu:
+Fügt als erstes folgende globalen Objekte hinzu:
 ```
 // NMEA message and stream for AIS receiving and multiplexing
 tNMEA0183Msg NMEA0183Msg;
@@ -18,7 +18,7 @@ tNMEA0183 NMEA0183;
 ```
 Das erzeugt einen NMEA0183-Nachrichten-Container und auch eine Methode zur Behandlung eines NMEA0183-Nachrichten-Streams.
 
-Dann fügt ihr in setup(), nach der Initialisierung der seriellen USB-Schnittstelle, die Initialisierung der zweiten seriellen Schnittstelle hinzu (GPIO 16):
+Dann fügt ihr in setup(), nach der Initialisierung der seriellen USB-Schnittstelle, die Initialisierung der zweiten seriellen Schnittstelle hinzu (RX an GPIO 16):
 
 ```
 // Init AIS serial port 2
