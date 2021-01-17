@@ -118,7 +118,6 @@ void handleOn() {
 ```
 LED-Status auf "An" (OnOff=true) und LED-Dimmer auf Level. 
 
-
 Diese Funktion wird ausgefürt, wenn im Browser die Taste "Aus" angeklickt wird.
 ```
 void handleOff() {
@@ -128,7 +127,6 @@ void handleOff() {
 }
 ```
 LED-Status auf "Aus" (OnOff=false) und LED-Dimmer auf 0. PWM-Tastverhältnis auf Maximum (128) bedeutet LED ist aus.
-
 
 Die folgende Funktion wird immer dann ausgeführt, wenn im Browser der Schieber verändert wird.
 ```
@@ -160,13 +158,15 @@ web_server.handleClient();
 
 Das ist alles im Hauptprogramm.
 
+## Modul index.h
+
 Kommen wir nun zum Inhalt des Moduls "index.h". 
 
-Als ertes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann.
+Als erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann.
 
 Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werde Metadaten und CSS-Stile "style" definiert. Die "style"-Daten bstimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
 
-Im Bereich "body" ertellen wir dan die Anzeigeelemente der Seite:
+Im Bereich "body" erstellen wir dann die Anzeigeelemente der Seite:
 
 ```
 <body style="font-family: verdana,sans-serif" BGCOLOR="#819FF7">
@@ -192,15 +192,15 @@ Im Bereich "body" ertellen wir dan die Anzeigeelemente der Seite:
   <hr>
   ```
   
-Wie HTML im Detail funktionier kan man [hier](https://www.w3schools.com/html/default.asp) nachlesen.
+Wie HTML im Detail funktioniert, kann man [hier](https://www.w3schools.com/html/default.asp) nachlesen.
   
 Die Elemente mit den IDs: cog, sog, state und level werden in einer Tabelle definiert. Mit den IDs können wir später die Werte für die Elemente setzen.
 
-Dann erzeigen wir einen Schieber mit der ID "myRange" und den Min/Max-Werten 0/100.
+Dann erzeugen wir einen Schieber mit der ID "myRange" und den Min/Max-Werten 0/100.
 
-Als letzte HTML-Element kommen noch die beiden tsten "An" und "Aus" wobei auch gleich festgelegt wird, was geschehen soll, wenn eine Taste angeklickt wird. Es wird dann die Javascript-Funktion button_clicked() aufgerufen, wobei der Wert der Taste "on/off" mit übergeben wird.
+Als letzte HTML-Element kommen noch die beiden Tasten "An" und "Aus" wobei auch gleich festgelegt wird, was geschehen soll, wenn eine Taste angeklickt wird. Es wird dann die Javascript-Funktion button_clicked() aufgerufen, wobei der Wert der Taste "on/off" mit übergeben wird.
 
-Mit <script> wird angezigt, dass nun der eigentliche Javascript-Code folgt.
+Mit <script> wird angezeigt, dass nun der eigentliche Javascript-Code folgt.
   
 ```
 requestData(); // get intial data straight away 
@@ -209,7 +209,8 @@ var slider = document.getElementById("myRange");
 var output = document.getElementById("level");
 ```
 Als erstes holen wir gleich einmal aktuelle Werte vom Server.
-Dann definieren wir zwei Variablen, um später einfacher auf die HTML-Objekte "my"Range" und "level" zugreifen zu können.
+
+Dann definieren wir zwei Variablen, um später einfacher auf die HTML-Objekte "myRange" und "level" zugreifen zu können.
 
 Dann definieren wir zwei Funktionen, um auf Änderungen das Schiebers und auf die Tasten (An/Aus" zu reagieren. 
 ```
@@ -233,9 +234,9 @@ setInterval(requestData, 500);
 
 Aus Details der Funktionsweise wollen wir hier nicht eingehen. Grundsätzlich wird aber immer ein Request erzeugt, der Inhalt definiert und dann gesendet.
 
-Mit setInterval(requestData, 500) legen wir fest, das die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisieret.
+Mit setInterval(requestData, 500) legen wir fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert.
 
-Als letztes folgt die definition der Funktion requestData() selbst.
+Als letztes folgt die Definition der Funktion requestData() selbst.
 
 ```
     function requestData() {
@@ -263,19 +264,19 @@ Als letztes folgt die definition der Funktion requestData() selbst.
     }
 ```
 
-Mit var xhr = new XMLHttpRequest() wir eine neuer Request erzeugt und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passoeren soll, wenn der Request erfolgreich beendet wurde. 
+Mit var xhr = new XMLHttpRequest() wird eine neuer Request erzeugt und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passieren soll, wenn der Request erfolgreich beendet wurde. 
 
 Der Wert "200" wurde übrigens zusammen mit dem JSON-Ausdruck "Text" von der Funktion getData() im Hauptprogramm gesendet "web_server.send(200, "text/plain", Text)".
 
 Mit "var data = JSON.parse(this.responseText);" holen wir uns auch den JSON-Ausdruck als Variable "data".
-Auf die einzelnen Datenelemente greichen wir einfach mit data.Elementname zu.
+Auf die einzelnen Datenelemente greifen wir einfach mit "data.Elementname" zu.
 
-Für die jeweiligen HTML-Elemente setzen wir nun einfach die übergebenen Werte. Immer nach dem gleichen Schema: document.getElementById("name").innerText = data.name;
+Für die jeweiligen HTML-Elemente setzen wir nun einfach die übergebenen Werte. Immer nach dem gleichen Schema: "document.getElementById("name").innerText = data.name;"
 
-Für "output" und "slider" hatten wir ja extra Variablen erzeugt. Mit diesen Variablen setzen wir nun den wert für Level. Einmal als Zahl (output.innerHTML = data.level;) und auch als Position des Schiebers (slider.value = data.level)
+Für "output" und "slider" hatten wir ja extra Variablen erzeugt. Mit diesen Variablen setzen wir nun den Wert für Level. Einmal als Zahl (output.innerHTML = data.level;) und dann auch als Position des Schiebers (slider.value = data.level)
 
 Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL. Und mit xhr.send() senden wir den Request.
 
-Das war alles zum Thema Web-server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
+Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
 
 [Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Ende.md).
