@@ -160,5 +160,122 @@ web_server.handleClient();
 
 Das ist alles im Hauptprogramm.
 
+Kommen wir nun zum Inhalt des Moduls "index.h". 
+
+Als ertes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann.
+
+Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werde Metadaten und CSS-Stile "style" definiert. Die "style"-Daten bstimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
+
+Im Bereich "body" ertellen wir dan die Anzeigeelemente der Seite:
+
+```
+<body style="font-family: verdana,sans-serif" BGCOLOR="#819FF7">
+
+  <table>
+    <tr><td style="text-align:right;">COG:</td><td style="color:white;"><span id='cog'></span> °</td></tr>
+    <tr><td style="text-align:right;">SOG:</td><td style="color:white;"><span id='sog'></span> kn</td></tr>
+    <tr><td style="text-align:right;">LED:</td><td style="color:white;"><span id='state'></span></td></tr>
+    <tr><td style="text-align:right;">Dim:</td><td style="color:white;"><span id='level'></span> %</td></tr>
+  </table>
+
+  <br>
+  
+  <div class="slidecontainer">
+    <p><input type="range" min="0" max="100" value="50" class="slider" id="myRange"></p>
+  </div>
+
+  <hr>
+  <p>
+  <input type="button" class="button" value="  An  " onclick="button_clicked('on')"> 
+  <input type="button" class="button" value="Aus" onclick="button_clicked('off')"> 
+  </p>
+  <hr>
+  ```
+  
+Wie HTML im Detail funktionier kan man [hier](https://www.w3schools.com/html/default.asp) nachlesen.
+  
+Die Elemente mit den IDs: cog, sog, state und level werden in einer Tabelle definiert. Mit den IDs können wir später die Werte für die Elemente setzen.
+
+Dann erzeigen wir einen Schieber mit der ID "myRange" und den Min/Max-Werten 0/100.
+
+Als letzte HTML-Element kommen noch die beiden tsten "An" und "Aus" wobei auch gleich festgelegt wird, was geschehen soll, wenn eine Taste angeklickt wird. Es wird dann die Javascript-Funktion button_clicked() aufgerufen, wobei der Wert der Taste "on/off" mit übergeben wird.
+
+Mit <script> wird angezigt, dass nun der eigentliche Javascript-Code folgt.
+  
+```
+requestData(); // get intial data straight away 
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("level");
+```
+Als erstes holen wir gleich einmal aktuelle Werte vom Server.
+Dann definieren wir zwei Variablen, um später einfacher auf die HTML-Objekte "my"Range" und "level" zugreifen zu können.
+
+Dann definieren wir zwei Funktionen, um auf Änderungen das Schiebers und auf die Tasten (An/Aus" zu reagieren. 
+```
+slider.oninput = function() {
+      output.innerHTML = this.value;
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'slider' + '?level=' + this.value, true);
+      xhr.send();
+    }
+
+function button_clicked(key) { 
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', key, true);
+      xhr.send();
+      requestData();
+    }
+  
+// request data updates every 500 milliseconds
+setInterval(requestData, 500);
+```
+
+Aus Details der Funktionsweise wollen wir hier nicht eingehen. Grundsätzlich wird aber immer ein Request erzeugt, der Inhalt definiert und dann gesendet.
+
+Mit setInterval(requestData, 500) legen wir fest, das die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisieret.
+
+Als letztes folgt die definition der Funktion requestData() selbst.
+
+```
+    function requestData() {
+
+      var xhr = new XMLHttpRequest();
+      
+      xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+          if (this.responseText) { // if the returned data is not null, update the values
+
+            var data = JSON.parse(this.responseText);
+
+            document.getElementById("cog").innerText = data.cog;
+            document.getElementById("sog").innerText = data.sog;
+            document.getElementById("state").innerText = data.state;
+            
+            output.innerHTML = data.level;
+            slider.value = data.level;
+          } 
+        } 
+      }
+      xhr.open('GET', 'get_data', true);
+      xhr.send();
+    }
+```
+
+Mit var xhr = new XMLHttpRequest() wir eine neuer Request erzeugt und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passoeren soll, wenn der Request erfolgreich beendet wurde. 
+
+Der Wert "200" wurde übrigens zusammen mit dem JSON-Ausdruck "Text" von der Funktion getData() im Hauptprogramm gesendet "web_server.send(200, "text/plain", Text)".
+
+Mit "var data = JSON.parse(this.responseText);" holen wir uns auch den JSON-Ausdruck als Variable "data".
+Auf die einzelnen Datenelemente greichen wir einfach mit data.Elementname zu.
+
+Für die jeweiligen HTML-Elemente setzen wir nun einfach die übergebenen Werte. Immer nach dem gleichen Schema: document.getElementById("name").innerText = data.name;
+
+Für "output" und "slider" hatten wir ja extra Variablen erzeugt. Mit diesen Variablen setzen wir nun den wert für Level. Einmal als Zahl (output.innerHTML = data.level;) und auch als Position des Schiebers (slider.value = data.level)
+
+Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL. Und mit xhr.send() senden wir den Request.
+
+Das war alles zum Thema Web-server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
 
 [Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Ende.md).
