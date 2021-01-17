@@ -61,12 +61,16 @@ Mit ledcAttachPin(1, 1) verbinden wir den Kanal 1 des Pulsweitenmodulators mit G
 
 Direkt hinter setup() definieren wir nun die einzelnen Behandlungroutinen:
 
+Als erstes handleRoot():
 ```
 void handleRoot() {
   web_server.send(200, "text/html", MAIN_page); //Send web page
 }
 ```
+Die Funktion wird immer dann aufgerufen, wenn der Web-Client dei Hauptseite des Web-Servers aufruft "/". Also zum Beispiel nur die Adresse des Web-Servers eingibt. Die Funktion liefert dann die Web-Seite mit dem HTML und Javascript-Code an den Client. Die Seite selbst und der Javascript-Code sind im Modul "index.h" ausgelagert. Dazu kommen wir später.
 
+
+Wenn der Client die URL "/get_data" aufruft, wird folgende Funktion ausgeführt:
 ```
 void getData() {
   String Text;
@@ -88,8 +92,21 @@ void getData() {
   web_server.send(200, "text/plain", Text); //Send values to client ajax request
 }
 ```
+Wir definieren eine String mit Namen Text, der die Antwort an den Client enthalten soll. Buf ist nur ein Puffer, um formatierte Daten zwischenzuspeichern.
 
+Dann erzeugen wir ein JSON-Objekt mit dem Nanen "root", wobei wir als maximale Größe 200 angeben.
 
+Dann setzen wir die Werte für SOG/COG nach dem selben Schema:
+Erst füllen wir den Puffer buf mit dem F´formatierten Wert für SOG/COG (drei Vorkommastellen, eine Nachkommastelle).
+Dann setzen wir die JSON-Werte für beide Werte;
+
+Dann setzen wir noch JSON-Wete für den Dim-Level und den Status der LED (An/Aus).
+
+Mit serializeJsonPretty(root, Text) füllen wir den String Text mit dem vollständigen JSON-Ausdruck und mit web_server.send() senden wir den Text an den Client.
+
+Die nächsten drei Funktionen steuern die LED.
+
+Die folgende Funktion wird ausgefürt, wenn im Browser die Taste "An" angeklickt wird.
 ```
 void handleOn() {
   OnOff=true;
@@ -97,7 +114,10 @@ void handleOn() {
   web_server.send(200, "text/html");
 }
 ```
+LED-Status auf "An" (OnOff=true) und LED-Dimmer auf Level. 
 
+
+Diese Funktion wird ausgefürt, wenn im Browser die Taste "Aus" angeklickt wird.
 ```
 void handleOff() {
   OnOff=false;
@@ -105,8 +125,10 @@ void handleOff() {
   web_server.send(200, "text/html");
 }
 ```
+LED-Status auf "Aus" (OnOff=false) und LED-Dimmer auf 0. PWM-Tastverhältnis auf Maximum (128) bedeutet LED ist aus.
 
 
+Die folgende Funktion wird immer dann ausgeführt, wenn im Browser der Schieber verändert wird.
 ```
 void handleSlider() {
   
@@ -118,7 +140,11 @@ void handleSlider() {
   if(OnOff) ledcWrite(1, 128 - Level);    
 }
 ```
+Mit "web_server.args() > 0" prüfen wir zuerst, ob auch ein Wert mit übergeben wurde. Falls ja, setzen wir den Wert für Level mit "web_server.arg(0).toFloat(), wobei wir auch gleich angeben, dass es sich um eine Kommazahl (float) handelt.
 
+Dann setzen wir den DIM-Wert der LED auf den wert Level. Aber nur wenn der Status der LED auch "An" ist.
+
+Die letzte Behandlungsfunktion definiert, was geschehen soll, wenn der Client eine nicht definierte URL aufruft. Den Code 404 hat bestimmt schon jeder einemal beim Browsen gesehen.
 
 ```
 void handleNotFound() {                                           // Unknown request. Send error 404
@@ -131,25 +157,6 @@ In loop() ergänzen wir nur eine Zeile:
 web_server.handleClient();
 
 Das ist alles im Hauptprogramm.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
