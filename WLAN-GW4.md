@@ -15,7 +15,7 @@ Nun sehen wir die Web-Seite des WLAN-Gateways.
 
 Wie wir sehen, werden die Daten für COG und SOG im Browser angezeigt.
 
-Mit dem Schieber und den Tasten AN/Aus können wir übrigens die eingebaute LED des ESP32 steueren (Ein/Aus und Dimmen).
+Mit dem Schieber und den Tasten An/Aus können wir übrigens die eingebaute LED des ESP32 steueren (Ein/Aus und Dimmen).
 
 ## Das Programm
 
