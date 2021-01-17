@@ -9,6 +9,10 @@ Der NMEA-Simulator sollte auch gestartet sein.
 Dann verbinden wir uns wieder mit dem WLAN ung starten dann den Web-Browser. Als Adresse geben wir "192.168.4.1" ein.
 Nun sehen wir die Web-Seite des WLAN-Gateways.
 
+![Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Web-Server.PNG);
+
+
+
 
 
 
