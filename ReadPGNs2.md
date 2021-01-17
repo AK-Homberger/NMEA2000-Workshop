@@ -1,4 +1,4 @@
-# Aulösung: Anzeige der Wassertiefe
+# Auflösung: Anzeige der Wassertiefe
 
 Hier kommt die Auflösung der Workshop-Aufgabe.
 
