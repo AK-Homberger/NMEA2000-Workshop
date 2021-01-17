@@ -215,7 +215,7 @@ Als erstes holen wir gleich einmal aktuelle Werte vom Server.
 
 Dann definieren wir zwei Variablen, um später einfacher auf die HTML-Objekte "myRange" und "level" zugreifen zu können.
 
-Dann definieren wir zwei Funktionen, um auf Änderungen das Schiebers und auf die Tasten (An/Aus" zu reagieren. 
+Dann definieren wir die Funktion, um auf Änderungen das Schiebers zu reagieren:
 ```
 slider.oninput = function() {
       output.innerHTML = this.value;
@@ -223,7 +223,21 @@ slider.oninput = function() {
       xhr.open('GET', 'slider' + '?level=' + this.value, true);
       xhr.send();
     }
+```
+Die Funktion wird immer dann aufgrufen, wenn der Schieber verändert wird, wobe der Wert des Schiber als Variable "this.value" übergben wird. Als ertes setzen wir die 
 
+
+Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
+
+Weitere Argumente werden übrigens nach dem Schema "&name=wert" hinzugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
+
+Mit JSON zur Datenübergabe vom Server zum Client und der URL-Kodierung für Client zu Server haben wir nun alles was wir benötigen, um Werte auszutauschen.
+
+
+
+
+Hier definieren wir die Funktion, um auf die Tasten (An/Aus" zu reagieren:
+```
 function button_clicked(key) { 
       var xhr = new XMLHttpRequest();
       xhr.open('GET', key, true);
@@ -235,13 +249,6 @@ function button_clicked(key) {
 setInterval(requestData, 500);
 ```
 
-Aus Details der Funktionsweise wollen wir hier nicht eingehen. Grundsätzlich wird aber immer ein Request erzeugt, der Inhalt definiert und dann gesendet.
-
-Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
-
-Weitere Argumente werden übrigens nach dem Schema "&name=wert" hinzugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
-
-Mit JSON zur Datenübergabe vom Server zum Client und der URL-Kodierung für Client zu Server haben wir nun alles was wir benötigen, um Werte auszutauschen.
 
 Mit setInterval(requestData, 500) legen wir fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert.
 
