@@ -390,5 +390,6 @@ Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0
 Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
+Eine Liste mit NMEA0183-Nachrichtentypen ist [hier](http://www.nmea.de/nmea0183datensaetze.html) zu finden.
 
 Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW3.md) erweitern wir das Gateway noch um eine Multiplexing-Funktion.
