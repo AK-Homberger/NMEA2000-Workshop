@@ -391,4 +391,4 @@ Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 
-Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW3.md) erweitern wir das Gateway noch um eine Multiplexing-Funktion.
+Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW3.md) erweitern wir das Gateway noch um eine Multiplexing-Funktion.
