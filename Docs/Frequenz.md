@@ -176,6 +176,6 @@ Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folg
 ```
 Alle 100 Millisekunden wird der analoge Eingang an Pin 34 gemessen und als Frequenz an Pin 26 ausgegeben.
 
-Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/ReadPGNs.md) werden wir etwas komplett anderes machen, und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
+Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/ReadPGNs.md) werden wir etwas komplett anderes machen, und zur Abwechslung etwas vom NMEA2000-Bus lesen anstatt zu schreiben.
 
 
