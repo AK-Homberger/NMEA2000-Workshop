@@ -234,6 +234,12 @@ setInterval(requestData, 500);
 
 Aus Details der Funktionsweise wollen wir hier nicht eingehen. Grundsätzlich wird aber immer ein Request erzeugt, der Inhalt definiert und dann gesendet.
 
+Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
+
+Weitere Argumente werden übrigens nach dem Schema "&name=wert" hizugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
+
+Mit JSON zur Datenübergabe vom Server zum Client und der URL-Kodierung für Client zu Server haben wir nun alles was wir benötigen um Werete auszutauschen.
+
 Mit setInterval(requestData, 500) legen wir fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert.
 
 Als letztes folgt die Definition der Funktion requestData() selbst.
