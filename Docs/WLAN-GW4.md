@@ -304,4 +304,4 @@ Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL (/get_data). Und 
 
 Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
 
-[Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Ende.md).
+[Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
