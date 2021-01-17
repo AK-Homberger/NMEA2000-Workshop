@@ -1,5 +1,16 @@
 # Web-Server mit AJAX
 
+Als letztes wollen wir unser WLAN-Gateway noch mit einem Web-Server ausstatten.
+
+Laden wir dazu das Programm [NMEA2000-WLAN-Gateway3.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/NMEA2000-WLAN-Gateway3.ino) auf den rechten ESP32.
+
+Der NMEA-Simulator sollte auch gestartet sein.
+
+Dann verbinden wir uns wieder mit dem WLAN ung starten dann den Web-Browser. Als Adresse geben wir "192.168.4.1" ein.
+Nun sehen wir die Web-Seite des WLAN-Gateways.
+
+
+
 
 
 # Das war es schon
