@@ -184,17 +184,6 @@ Als letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn e
 
 Die beiden Funktionen HandleNMEA2000Msg() und SendNMEA0183Message() sind übrigens direkt im Hauptprogamm definiert. Die Umwandlung von NMEA2000 zu NMEA0183 erfolgt im Modul "N2kDataToNMEA0183.cpp". Doch dazu später.
 
-
-```
-//*****************************************************************************
-void SendBufToClients(const char *buf) {
-  for (auto it = clients.begin() ; it != clients.end(); it++) {
-    if ( (*it) != NULL && (*it)->connected() ) {
-      (*it)->println(buf);
-    }
-  }
-}
-```
 Die nächsten vier Funktionen:
 - AddClient()
 - StopClient()
