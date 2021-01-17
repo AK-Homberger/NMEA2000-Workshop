@@ -156,7 +156,9 @@ void handleNotFound() {                                           // Unknown req
 
 In loop() ergänzen wir nur eine Zeile:
 
+```
 web_server.handleClient();
+```
 
 Das ist schon alles im Hauptprogramm.
 
@@ -226,7 +228,7 @@ slider.oninput = function() {
       xhr.send();
     }
 ```
-Die Funktion wird immer dann aufgrufen, wenn der Schieber verändert wird, wobe der Wert des Schiber als Variable "this.value" übergben wird. Als erstes setzen wir die Anzeige des DIM-Levels mit "output.innerHTML = this.value".
+Die Funktion wird immer dann aufgerufen, wenn der Schieber verändert wird, wobei der Wert des Schiebers als Variable "this.value" übergeben wird. Als erstes setzen wir die Anzeige des DIM-Levels mit "output.innerHTML = this.value".
 
 Dann erzeugen wir mit "var xhr = new XMLHttpRequest();" ein neues Request-Objekt.
 
