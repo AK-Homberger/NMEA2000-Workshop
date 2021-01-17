@@ -155,5 +155,7 @@ Als kleine Workshop-Aufgabe erweitert bitte selbständig das Programm für die W
 - Funktionsname soll "HandleDepth(N2kMsg)" sein.
 - Es soll die wahre Wassertiefe angezeigt werden.
 
+Kleiner Tip: Schaut in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) mal nach Zeile 720.
+
 Hier geht es zur [Auflösung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/ReadPGNs2.md) der Aufgabe.
 
