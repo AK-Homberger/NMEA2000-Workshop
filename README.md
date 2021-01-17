@@ -83,7 +83,7 @@ Folgende Beispielprogramme werden im Workshop gemeinsam erstellt und mit dem Rea
 5. [Daten (PGNs) vom NMEA-2000-Bus lesen und darstellen](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/ReadPGNs.md)
 6. [NMEA2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW.md)
 7. [Gateway plus AIS-Multiplexing](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW3.md)
-8. [Gateway mit Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW4.md)
+8. [Optional: Gateway mit Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW4.md)
 
 
 # Material für den Workshop
