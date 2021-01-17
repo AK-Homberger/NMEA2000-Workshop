@@ -42,6 +42,6 @@ Das fertige Programm ist [hier](https://github.com/AK-Homberger/NMEA2000-Worksho
 
 Leider können wir die Funktion hier nicht testen.
 
-Als Bonus-Material könnten wir unser Gateway noch mit einem [Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW4.md) erweitern.
+Als Bonus-Material könnten wir unser Gateway noch mit einem [Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW4.md) erweitern.
 
-Oder aber wir [beenden](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Ende.md) hier den Workshop.
+Oder aber wir [beenden](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md) hier den Workshop.
