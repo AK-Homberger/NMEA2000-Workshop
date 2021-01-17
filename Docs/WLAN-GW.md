@@ -76,5 +76,5 @@ Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per W
 
 Es funktioniert also. 
 
-Kommen wir nun aber zum [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/WLAN-GW2.md) selbst.
+Kommen wir nun aber zum [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW2.md) selbst.
 
