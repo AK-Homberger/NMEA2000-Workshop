@@ -97,7 +97,7 @@ table {
   <input type="button" class="button" value="  An  " onclick="button_clicked('on')"> 
   <input type="button" class="button" value="Aus" onclick="button_clicked('off')"> 
   </p>
-  <hr>
+  </hr>
   
   <script>
  
