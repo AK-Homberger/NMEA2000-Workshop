@@ -23,4 +23,4 @@ Ihr solltet nun folgendes können:
 Ich glaube, wir können alles abhaken!
 
 Vielen Dank für die Teilnahme am Workshop.
-Feedback wird gern entgegengenommen.
+Feedback wird gern entgegen genommen.
