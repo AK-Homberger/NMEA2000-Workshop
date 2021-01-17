@@ -100,7 +100,7 @@ Dann erzeugen wir ein [JSON-Objekt](https://de.wikipedia.org/wiki/JavaScript_Obj
 Dann setzen wir die Werte für SOG/COG nach dem selben Schema:
 
 - Erst füllen wir den Puffer buf mit dem formatierten Wert für SOG/COG (drei Vorkommastellen, eine Nachkommastelle).
-- Dann setzen wir die JSON-Objekte für beide Werte;
+- Dann setzen wir die JSON-Objekte für beide Werte.
 
 Dann setzen wir noch JSON-Objekte für den Dim-Level und den Status der LED (An/Aus).
 
