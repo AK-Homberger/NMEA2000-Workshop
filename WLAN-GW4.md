@@ -6,7 +6,7 @@ Wir werden dazu HTML, CSS und Javascript nutzen. Eine gute Einführung zu allen 
 
 Laden wir nun das Programm [NMEA2000-WLAN-Gateway3.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/NMEA2000-WLAN-Gateway3.ino) auf den rechten ESP32.
 
-Der NMEA-Simulator sollte auch gestartet sein. Wir geben etwas Gas (Throttle Gear etwas hochieben) und drehen am Ruder nach rechts (Rudder etwas nach rechts schieben). Nun ändern sich die Werte für SOG/COG im Simulator.
+Der NMEA-Simulator sollte auch gestartet sein. Wir geben etwas Gas (Throttle Gear etwas hochschieben) und drehen am Ruder nach rechts (Rudder etwas nach rechts schieben). Nun ändern sich die Werte für SOG/COG im Simulator.
 
 Dann verbinden wir uns wieder mit dem WLAN und starten dann den Web-Browser. Als Adresse geben wir "192.168.4.1" ein.
 Nun sehen wir die Web-Seite des WLAN-Gateways.
@@ -21,13 +21,13 @@ Mit dem Schieber und den Tasten AN/Aus können wir übrigens die eingebaute LED 
 
 Schauen wir uns jetzt im Programm die Ergänzungen an. Wie wir sehen, gibt es ein neues Modul "index.h". In diesem Modul ist die Web-Seite (HTML, CSS) und der Javascript-Code gepeichert. Das sehen wir uns später an.
 
-Kommen wir erst zum Hauptprogramm. Es gibt zei neie Include-Dateien.
+Kommen wir erst zum Hauptprogramm. Es gibt zwei neue Include-Dateien.
 
 ```
 #include <WebServer.h>
 #include <ArduinoJson.h>
 ```
-Die Erste wird für die Web-Server-Methoden benötigt und die Zeite für die Datenübergabe zwischen dem Web-Server auf dem ESP32 und dem Client auf dem Tablet.
+Die Erste wird für die Web-Server-Methoden benötigt, und die Zweite für die Datenübergabe zwischen dem Web-Server auf dem ESP32 und dem Client auf dem Tablet.
 
 Als nächstes definieren wir drei neue Variablen/Objekte:
 
@@ -69,8 +69,7 @@ void handleRoot() {
   web_server.send(200, "text/html", MAIN_page); //Send web page
 }
 ```
-Die Funktion wird immer dann aufgerufen, wenn der Web-Client dei Hauptseite des Web-Servers aufruft "/". Also zum Beispiel nur die Adresse des Web-Servers eingibt. Die Funktion liefert dann die Web-Seite mit dem HTML und Javascript-Code an den Client. Die Seite selbst und der Javascript-Code sind im Modul "index.h" ausgelagert. Dazu kommen wir später.
-
+Die Funktion wird immer dann aufgerufen, wenn der Web-Client dei Hauptseite des Web-Servers aufruft "/". Also zum Beispiel nur die Adresse des Web-Servers eingibt. Die Funktion liefert dann die Web-Seite mit dem HTML- und Javascript-Code an den Client. Die Seite selbst und der Javascript-Code sind im Modul "index.h" ausgelagert. Dazu kommen wir später.
 
 Wenn der Client die URL "/get_data" aufruft, wird folgende Funktion ausgeführt:
 ```
@@ -94,21 +93,22 @@ void getData() {
   web_server.send(200, "text/plain", Text); //Send values to client ajax request
 }
 ```
-Wir definieren eine String mit Namen Text, der die Antwort an den Client enthalten soll. Buf ist nur ein Puffer, um formatierte Daten zwischenzuspeichern.
+Wir definieren einen String mit Namen Text, der die Antwort an den Client enthalten soll. "Buf" ist nur ein Puffer, um formatierte Daten zwischen zu speichern.
 
-Dann erzeugen wir ein JSON-Objekt mit dem Nanen "root", wobei wir als maximale Größe 200 angeben.
+Dann erzeugen wir ein [JSON-Objekt](https://de.wikipedia.org/wiki/JavaScript_Object_Notation) mit dem Namen "root", wobei wir als maximale Größe 200 angeben.
 
 Dann setzen wir die Werte für SOG/COG nach dem selben Schema:
-Erst füllen wir den Puffer buf mit dem F´formatierten Wert für SOG/COG (drei Vorkommastellen, eine Nachkommastelle).
-Dann setzen wir die JSON-Werte für beide Werte;
 
-Dann setzen wir noch JSON-Wete für den Dim-Level und den Status der LED (An/Aus).
+Erst füllen wir den Puffer buf mit dem formatierten Wert für SOG/COG (drei Vorkommastellen, eine Nachkommastelle).
+Dann setzen wir die JSON-Objekte für beide Werte;
 
-Mit serializeJsonPretty(root, Text) füllen wir den String Text mit dem vollständigen JSON-Ausdruck und mit web_server.send() senden wir den Text an den Client.
+Dann setzen wir noch JSON-Objekte für den Dim-Level und den Status der LED (An/Aus).
+
+Mit serializeJsonPretty(root, Text) füllen wir den String Text mit dem vollständigen JSON-Ausdruck, und mit web_server.send() senden wir den Text an den Client.
 
 Die nächsten drei Funktionen steuern die LED.
 
-Die folgende Funktion wird ausgefürt, wenn im Browser die Taste "An" angeklickt wird.
+Die folgende Funktion wird ausgeführt, wenn im Browser die Taste "An" angeklickt wird.
 ```
 void handleOn() {
   OnOff=true;
@@ -118,7 +118,7 @@ void handleOn() {
 ```
 LED-Status auf "An" (OnOff=true) und LED-Dimmer auf Level. 
 
-Diese Funktion wird ausgefürt, wenn im Browser die Taste "Aus" angeklickt wird.
+Diese Funktion wird ausgeführt, wenn im Browser die Taste "Aus" angeklickt wird.
 ```
 void handleOff() {
   OnOff=false;
@@ -142,9 +142,9 @@ void handleSlider() {
 ```
 Mit "web_server.args() > 0" prüfen wir zuerst, ob auch ein Wert mit übergeben wurde. Falls ja, setzen wir den Wert für Level mit "web_server.arg(0).toFloat(), wobei wir auch gleich angeben, dass es sich um eine Kommazahl (float) handelt.
 
-Dann setzen wir den DIM-Wert der LED auf den wert Level. Aber nur wenn der Status der LED auch "An" ist.
+Dann setzen wir den DIM-Wert der LED auf den Wert Level. Aber nur, wenn der Status der LED auch "An" ist.
 
-Die letzte Behandlungsfunktion definiert, was geschehen soll, wenn der Client eine nicht definierte URL aufruft. Den Code 404 hat bestimmt schon jeder einemal beim Browsen gesehen.
+Die letzte Behandlungsfunktion definiert, was geschehen soll, wenn der Client eine nicht definierte URL aufruft. Den Code 404 hat bestimmt schon jeder einmal beim Browsen gesehen.
 
 ```
 void handleNotFound() {                                           // Unknown request. Send error 404
@@ -156,15 +156,15 @@ In loop() ergänzen wir nur eine Zeile:
 
 web_server.handleClient();
 
-Das ist alles im Hauptprogramm.
+Das ist schon alles im Hauptprogramm.
 
 ## Modul index.h
 
 Kommen wir nun zum Inhalt des Moduls "index.h". 
 
-Als erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann.
+Als erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann (R"=====).
 
-Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werde Metadaten und CSS-Stile "style" definiert. Die "style"-Daten bstimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
+Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werden Metadaten und CSS-Stile "=style" definiert. Die "style"-Daten bstimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
 
 Im Bereich "body" erstellen wir dann die Anzeigeelemente der Seite:
 
@@ -189,7 +189,8 @@ Im Bereich "body" erstellen wir dann die Anzeigeelemente der Seite:
   <input type="button" class="button" value="  An  " onclick="button_clicked('on')"> 
   <input type="button" class="button" value="Aus" onclick="button_clicked('off')"> 
   </p>
-  <hr>
+  </hr>
+    
   ```
   
 Wie HTML im Detail funktioniert, kann man [hier](https://www.w3schools.com/html/default.asp) nachlesen.
@@ -198,15 +199,17 @@ Die Elemente mit den IDs: cog, sog, state und level werden in einer Tabelle defi
 
 Dann erzeugen wir einen Schieber mit der ID "myRange" und den Min/Max-Werten 0/100.
 
-Als letzte HTML-Element kommen noch die beiden Tasten "An" und "Aus" wobei auch gleich festgelegt wird, was geschehen soll, wenn eine Taste angeklickt wird. Es wird dann die Javascript-Funktion button_clicked() aufgerufen, wobei der Wert der Taste "on/off" mit übergeben wird.
+Als letzte HTML-Elemente kommen noch die beiden Tasten "An" und "Aus", wobei auch gleich festgelegt wird, was geschehen soll, wenn eine Taste angeklickt wird. Es wird dann die Javascript-Funktion button_clicked() aufgerufen, wobei der Wert der Taste "on/off" mit übergeben wird.
 
 Mit <script> wird angezeigt, dass nun der eigentliche Javascript-Code folgt.
   
 ```
-requestData(); // get intial data straight away 
+<script>
+  
+  requestData(); // get intial data straight away 
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("level");
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("level");
 ```
 Als erstes holen wir gleich einmal aktuelle Werte vom Server.
 
@@ -236,9 +239,9 @@ Aus Details der Funktionsweise wollen wir hier nicht eingehen. Grundsätzlich wi
 
 Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
 
-Weitere Argumente werden übrigens nach dem Schema "&name=wert" hizugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
+Weitere Argumente werden übrigens nach dem Schema "&name=wert" hinzugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
 
-Mit JSON zur Datenübergabe vom Server zum Client und der URL-Kodierung für Client zu Server haben wir nun alles was wir benötigen um Werete auszutauschen.
+Mit JSON zur Datenübergabe vom Server zum Client und der URL-Kodierung für Client zu Server haben wir nun alles was wir benötigen, um Werte auszutauschen.
 
 Mit setInterval(requestData, 500) legen wir fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert.
 
@@ -277,11 +280,13 @@ Der Wert "200" wurde übrigens zusammen mit dem JSON-Ausdruck "Text" von der Fun
 Mit "var data = JSON.parse(this.responseText);" holen wir uns auch den JSON-Ausdruck als Variable "data".
 Auf die einzelnen Datenelemente greifen wir einfach mit "data.Elementname" zu.
 
-Für die jeweiligen HTML-Elemente setzen wir nun einfach die übergebenen Werte. Immer nach dem gleichen Schema: "document.getElementById("name").innerText = data.name;"
+Für die jeweiligen HTML-Elemente setzen wir nun einfach die übergebenen Werte. Immer nach dem gleichen Schema: 
+
+"document.getElementById("name").innerText = data.name;"
 
 Für "output" und "slider" hatten wir ja extra Variablen erzeugt. Mit diesen Variablen setzen wir nun den Wert für Level. Einmal als Zahl (output.innerHTML = data.level;) und dann auch als Position des Schiebers (slider.value = data.level)
 
-Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL. Und mit xhr.send() senden wir den Request.
+Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL (/get_data). Und mit xhr.send() senden wir den Request.
 
 Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
 
