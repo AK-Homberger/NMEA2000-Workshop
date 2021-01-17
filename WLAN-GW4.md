@@ -224,16 +224,17 @@ slider.oninput = function() {
       xhr.send();
     }
 ```
-Die Funktion wird immer dann aufgrufen, wenn der Schieber verändert wird, wobe der Wert des Schiber als Variable "this.value" übergben wird. Als ertes setzen wir die 
+Die Funktion wird immer dann aufgrufen, wenn der Schieber verändert wird, wobe der Wert des Schiber als Variable "this.value" übergben wird. Als erstes setzen wir die Anzeige des DIM-Levels mit "output.innerHTML = this.value".
 
+Dann erzeugen wir mit "var xhr = new XMLHttpRequest();" ein neues Request-Objekt.
 
 Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
+
+Als letztes wird der Request gesendet.
 
 Weitere Argumente werden übrigens nach dem Schema "&name=wert" hinzugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
 
 Mit JSON zur Datenübergabe vom Server zum Client und der URL-Kodierung für Client zu Server haben wir nun alles was wir benötigen, um Werte auszutauschen.
-
-
 
 
 Hier definieren wir die Funktion, um auf die Tasten (An/Aus" zu reagieren:
@@ -248,9 +249,11 @@ function button_clicked(key) {
 // request data updates every 500 milliseconds
 setInterval(requestData, 500);
 ```
+Diese Funktion wird immer dann aufgerufen, wenn ein Button angeklickt wurde.  Wobei je nach Taste für die Variable key "on" oder "off" mit übergeben wurde. 
 
+Je nach key wird mit xhr.open('GET', key, true) entweder die URL "/on" oder "/off" erzeugt. Im Hauptprogramm wird daher, je nach URL, handleOn() oder handleOff() ausgeführt.
 
-Mit setInterval(requestData, 500) legen wir fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert.
+Mit setInterval(requestData, 500) legen wir nun fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert. 
 
 Als letztes folgt die Definition der Funktion requestData() selbst.
 
@@ -280,7 +283,7 @@ Als letztes folgt die Definition der Funktion requestData() selbst.
     }
 ```
 
-Mit var xhr = new XMLHttpRequest() wird eine neuer Request erzeugt und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passieren soll, wenn der Request erfolgreich beendet wurde. 
+Mit var xhr = new XMLHttpRequest() wird ein neuer Request erzeugt, und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passieren soll, wenn der Request erfolgreich beendet wurde. 
 
 Der Wert "200" wurde übrigens zusammen mit dem JSON-Ausdruck "Text" von der Funktion getData() im Hauptprogramm gesendet "web_server.send(200, "text/plain", Text)".
 
