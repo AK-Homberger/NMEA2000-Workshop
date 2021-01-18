@@ -4,6 +4,8 @@ Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februa
 
 Das Material ist eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Die Informationen können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
+Für den Workshop wird Material benötigt. Die Liste folgt weiter unten.
+
 Nach dem Workshop solltet ihr folgendes können:
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
