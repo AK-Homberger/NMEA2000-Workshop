@@ -106,7 +106,7 @@ Dann setzen wir noch JSON-Objekte für den Dim-Level und den Status der LED (An/
 
 Mit serializeJsonPretty(root, Text) füllen wir den String Text mit dem vollständigen JSON-Ausdruck, und mit web_server.send() senden wir den Text an den Client.
 
-Mit der Struktur "BoatData" können wir auf alle Daten zugreifen, die im Modul "N2kDataToNMEA0183.cpp" empfangen und den Strukturelementen in ["tN2kDataToNMEA0183::Update()"](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/80ccf0ab2bd75c560b33a617c7d65770808e1854/Software/NMEA2000-WLAN-Gateway3/N2kDataToNMEA0183.cpp#L70) zugewiesen wurden. Wir verwenden hier BoatData.SOG und BoatData.COG.
+Mit der Struktur "BoatData" können wir auf alle Daten zugreifen, die im Modul "N2kDataToNMEA0183.cpp" empfangen und den Strukturelementen in [tN2kDataToNMEA0183::Update()](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/80ccf0ab2bd75c560b33a617c7d65770808e1854/Software/NMEA2000-WLAN-Gateway3/N2kDataToNMEA0183.cpp#L70) zugewiesen wurden. Wir verwenden hier BoatData.SOG und BoatData.COG.
 
 Die nächsten drei Funktionen steuern die LED.
 
