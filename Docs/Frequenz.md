@@ -85,7 +85,7 @@ Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Wider
 
 Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
 
-Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abtand von zwei Interrupts auf die Frequenz zu schließen.
+Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abstand von zwei Interrupts auf die Frequenz zu schließen.
 
 Als letztes in setup() wird noch der Signalgenerator an Pin 26 vorbereitet.
 
