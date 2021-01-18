@@ -15,7 +15,7 @@ void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
 }
 ```
 
-Aus [N2kMessages.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h#726) Zeile 726 können wir den Aufbau der Funktion und der nötigen Variablen entnehmen:
+Aus [N2kMessages.h](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L726) Zeile 726 können wir den Aufbau der Funktion und der nötigen Variablen entnehmen:
 
 ````
 ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset, double &Range)
