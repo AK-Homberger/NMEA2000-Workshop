@@ -389,7 +389,7 @@ Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0
 
 Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
-Die unterschiedlichen Funktionen zum Zusammenbauen von NMEA0183-Nachrichten sind [hier](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Msg.cpp) definiert.
+Die unterschiedlichen Funktionen zum Zusammenbauen von NMEA0183-Nachrichten sind [hier](https://github.com/ttlappalainen/NMEA0183/blob/04a9235182b12ead309fb349cca534cd211e1334/NMEA0183Msg.cpp#L151) definiert.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 Eine Liste mit NMEA0183-Nachrichtentypen ist [hier](http://www.nmea.de/nmea0183datensaetze.html) zu finden.
