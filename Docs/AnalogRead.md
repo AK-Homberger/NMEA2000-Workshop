@@ -14,9 +14,10 @@ So muss das Steckbrett dazu aussehen:
 
 ![AnalogRead](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-V-R_Steckplatine.png)
 
-Das Potentiometer wird, wie oben gezeigt, mit 3,3 V, GND und den Pins 34/35 verbunden.
+Das Potentiometer wird, wie oben gezeigt, mit 3,3 V, GND und den Pins 34/35 verbunden und funktioniert als variabler Spannungsteiler. Je nach Drehposition wird eine Spannung von 0 Volt bis 3,3 Volt an die Pins 34 und 35 geliefert.
 
 Um wirklich die Batteriespannung messen zu können, würde ein Spannungsteiler mit zwei Widerständen (100 KOhm / 27 KOhm) verwendet werden.
+
 Um den Tanklevel zum Beispiel mit einem Tankgeber von [Philippi (5 - 180 Ohm)](https://www.philippi-online.de/en/products/supervision/tank-sensors.html) zu messen, wäre ein Widerstand von 1 KOhm nötig (und ggf. eine Z-Diode zum Schutz des Eingangs vor Überspannung).
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
