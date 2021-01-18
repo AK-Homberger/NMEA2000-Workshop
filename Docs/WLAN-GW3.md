@@ -6,7 +6,7 @@ Multiplexing bedutet, dass man NMEA0183-Nachrichten von mehreren Quellen zu eine
 
 Zusätzlich zu den gewandelten NMEA2000-Daten wollen wir nun auch noch AIS über eine serielle Schnittstelle einlesen und an die Clients weiterleiten.
 
-Für die Pegelwandlung von [RS-232](https://de.wikipedia.org/wiki/RS-232) (oder [RS-422](https://de.wikipedia.org/wiki/EIA-422)) benötigen wir eine kleine Schaltung. Der Schaltplan ist [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32), siehe Eingang AIS.
+Für die Pegelwandlung von [RS-232](https://de.wikipedia.org/wiki/RS-232) (oder [RS-422](https://de.wikipedia.org/wiki/EIA-422)) würden  wir noch eine kleine Schaltung benötigen. Der Schaltplan ist [hier](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32), siehe Eingang AIS. Für den Workshop lassen wir das aber, da wir sowiso keinen AIS-Empfänger zum Testen haben.
 
 Die Erweiterung des WLAN-Gateways um eine Multiplexing-Funktion ist ganz einfach. Es sind nur wenige Zeilen Code nötig.
 
