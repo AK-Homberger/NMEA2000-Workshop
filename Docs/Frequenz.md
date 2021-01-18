@@ -131,7 +131,7 @@ double ReadRPM() {
 }
 ```
 
-Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem PGN127488 gesendet:
+Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem [PGN127488](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L204) gesendet:
 
 ```
 void SendN2kEngineRPM(void) {
