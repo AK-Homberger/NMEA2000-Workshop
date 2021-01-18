@@ -6,7 +6,7 @@ Das Ziel ist es diesmal, die Motordrehzahl an der Klemme "W" der Lichtmaschine z
     
 Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
-Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen anderen Pin des ESP32 (GPIO 26) als Signalgenerator. Die Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus den Beispiel zur Spannungsmessung geteckt war. Zusätzlich stecken wir hier eine Brücke zwiscen GPIO 26 und GPIO 27.
+Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen anderen Pin des ESP32 (GPIO 26) als Signalgenerator. Die Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus dem Beispiel zur Spannungsmessung gesteckt war. Zusätzlich stecken wir hier eine Brücke zwischen GPIO 26 und GPIO 27.
 
 Das Steckbrett sollte dann so aussehen:
 
@@ -81,7 +81,7 @@ In setup() wird nun die Interrupt-Funktion für Pin 27 initialisiert:
   timerStart(timer);   
  ```
  
-Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. Das erspart uns einen externen Widerstand auf dem Steckbrett.
+Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. 
 
 Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
 
