@@ -158,6 +158,8 @@ Mit: "EngineRPM = (EngineRPM + (ReadRPM() * RPM_Calibration_Value)) / 2.0;" kön
 
 Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen Kurbelwelle und Lichtmachinenwelle. In der Praxis findet man den Wert aber durch Ausprobieren und Vergleich mit dem fest eingebauten Drehzahlmesser.
 
+Sollte eure Lichtmaschine keinen "W"-Anschluss haben, könnt ihr auch eine kleine Reflex-Lichtschranke nutzen [Norbert](https://www.segeln-forum.de/board194-boot-technik/board35-elektrik-und-elektronik/board195-open-boat-projects-org/71890-motormanagement-diy/) hat das hier gut dargestellt.
+
 Genausogut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeber](https://www.roboter-bausatz.de/p/yf-s201-halleffekt-wasser-durchflusssensor-1-30l-min-g1-2) messen (Kalibrierungswert = 0,1333 für L/m).
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel [Kettenzählwerksimpulse](https://github.com/AK-Homberger/ESP32_AnchorChainControl_WLAN)) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
