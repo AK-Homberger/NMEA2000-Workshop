@@ -387,9 +387,9 @@ Wir erzeugen nun mit "tNMEA0183Msg NMEA0183Msg" einen Nachrichten-Container für
   
 Dann verwenden wir die Variablen Log und TripLog und bauen uns einfach die NMEA0183-Nachricht "VLW" passgenau zusammen. Auch die Umwandlung vom m/s auf kn führen wir hier durch.
 
-Die unterschiedlichen Funktionen zum Zusammenbauen von NMEA0183-Nachrichten sind [hier](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Msg.cpp) definiert.
-
 Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
+
+Die unterschiedlichen Funktionen zum Zusammenbauen von NMEA0183-Nachrichten sind [hier](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Msg.cpp) definiert.
 
 Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
 Eine Liste mit NMEA0183-Nachrichtentypen ist [hier](http://www.nmea.de/nmea0183datensaetze.html) zu finden.
