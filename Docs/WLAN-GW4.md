@@ -47,7 +47,7 @@ In setup() ergänzen wir, welche Funktionen für welche URLs aufgerufen werden s
   web_server.on("/get_data", getData);      // To get update of values
   web_server.on("/on", handleOn);           // On button
   web_server.on("/off", handleOff);         // Off button
-  web_server.on("/slider", handleSlider);   // Slider evebt
+  web_server.on("/slider", handleSlider);   // Slider event
   web_server.onNotFound(handleNotFound);
   
   web_server.begin();                       // Start web server
