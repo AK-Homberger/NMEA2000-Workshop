@@ -86,7 +86,7 @@ double ReadADC(byte pin) {
 } // Added an improved polynomial, use either, comment out as required
 ```
 
-Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Stichwort: [Polynomfunktion](https://de.wikipedia.org/wiki/Polynom) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unsere Zwecke meist ausreichend.
+Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Stichwort: [Polynomfunktion](https://de.wikipedia.org/wiki/Polynom)) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unsere Zwecke meist ausreichend.
 
 
 Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGNs:
