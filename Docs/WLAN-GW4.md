@@ -54,7 +54,7 @@ In setup() ergänzen wir, welche Funktionen für welche URLs aufgerufen werden s
 ```
 Mit web_server.begin() starten wir dann den Web-Server.
 
-Dan konfigurieren wir den Dimmer für die LED;
+Dann konfigurieren wir den Dimmer für die LED;
 ```
   ledcAttachPin(1, 1);                      // PWM channel 1 on GPIO 1 (builtin LED)
   ledcSetup(1, 8000, 7);                    // Setup channel 1 with 8000 Hz
@@ -93,7 +93,7 @@ void getData() {
   web_server.send(200, "text/plain", Text); //Send values to client ajax request
 }
 ```
-Wir definieren einen String mit Namen Text, der die Antwort an den Client enthalten soll. "Buf" ist nur ein Puffer, um formatierte Daten zwischen zu speichern.
+Wir definieren einen String mit Namen Text, der die Antwort an den Client enthalten soll. "buf" ist nur ein Puffer, um formatierte Daten zwischen zu speichern.
 
 Dann erzeugen wir ein [JSON-Objekt](https://de.wikipedia.org/wiki/JavaScript_Object_Notation) mit dem Namen "root", wobei wir als maximale Größe 200 angeben.
 
