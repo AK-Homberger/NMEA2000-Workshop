@@ -75,7 +75,7 @@ Wenn der Client die URL "/get_data" aufruft, wird folgende Funktion ausgeführt:
 ```
 void getData() {
   String Text;
-  char buf[20];
+  char buf[30];
   
   StaticJsonDocument<200> root;
   
