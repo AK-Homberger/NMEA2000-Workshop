@@ -8,6 +8,8 @@ Laden wir nun das Programm [NMEA2000-WLAN-Gateway3.ino](https://github.com/AK-Ho
 
 Der NMEA-Simulator sollte auch gestartet sein. Wir geben etwas Gas (Throttle Gear etwas hochschieben) und drehen am Ruder nach rechts (Rudder etwas nach rechts schieben). Nun ändern sich die Werte für SOG/COG im Simulator.
 
+![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
+
 Dann verbinden wir uns wieder mit dem WLAN und starten dann den Web-Browser. Als Adresse geben wir "192.168.4.1" ein.
 Nun sehen wir die Web-Seite des WLAN-Gateways.
 
