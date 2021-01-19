@@ -79,7 +79,7 @@ In der Funktion requestData() fügen wir nach "var data = JSON.parse(this.respon
 
 Das ist alles. Nach dem Speichern, Kompilieren und Hochladen sieht das Bild im Browser so aus.
 
-Eventell WLAN neu verbinden und die Adresse 192.168.4.1 erneut anwählen. Und der NMEA-Simulator muss natürlich auch laufen.
+Eventuell WLAN neu verbinden und die Adresse 192.168.4.1 erneut anwählen. Und der NMEA-Simulator muss natürlich auch laufen.
 
 ![Web](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Web-Server2.PNG)
 
