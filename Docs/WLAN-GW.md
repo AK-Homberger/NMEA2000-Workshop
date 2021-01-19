@@ -30,7 +30,7 @@ Dann wird die App zur Anzeige gestartet. Für Apple-Geräte ist das NMEAremote(l
 
 # Apple: NMEAremote lite:
 
-Als erstes muss die Daten-Quelle fstgelegt werden. Dazu in der App liks oben tippen und "NMEAremote" anwählen. Dann auf "Quellen" tippen und "NMEA over IP" wählen.
+Als erstes muss die Daten-Quelle festgelegt werden. Dazu in der App links oben tippen und "NMEAremote" anwählen. Dann auf "Quellen" tippen und "NMEA over IP" wählen.
 
 Dort TCP wählen, die IP-Adresse (192.168.4.1) und den Port (2222) eintragen und dann "Aktiviert" einschalten.
 
