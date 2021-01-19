@@ -2,6 +2,13 @@
 
 Nun werden wir den Web-Server noch etwas erweitern, um auch die Position anzeigen zu können.
 
+Die Anzeige von Längen- und Breitengrad soll in der üblichen Notation: Grad/Minuten erfolgen.
+
+Beispiel:
+
+LAT 54°34.234'N
+LON 005°14.123'E
+
 Wir brauchen dazu nur wenig zu ändern.
 
 ## 1. Hauptprogram
@@ -28,13 +35,13 @@ Dann nach "StaticJsonDocument<200> root;" folgendes hinzufügen:
   root["lat"] = buf;
 ```
 
-Wir wollen den Breitengrad in Grad und Minuten anzeigen und nicht als vorzeichenbehaftete Kommazahl in Grad.
+Wir wollen ja den Breitengrad in Grad und Minuten anzeigen und nicht als vorzeichenbehaftete Kommazahl in Grad.
 
 Dazu berechnen wir zuerst jeweils den Absolutwert, ohne Vorzeichen von Grad und Minuten (abs). Von Grad wollen wir nur den ganzzahligen Teil (trunc).
 
 Dann unterscheiden wir anhand des Vorzeichens, ob es sich um Nord (>0) oder Süd (<=0) handelt.
 
-Nun bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit fürenden Nullen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
+Nun bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit führenden Nullen. Die Zahl 6 ist übrigens richtig: der Punkt "." zählt mit (2+1+3 = 6). Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein. 
 
 Das Gleiche wiederholen wir jetzt mit dem Längengrad:
 ```
