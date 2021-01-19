@@ -23,6 +23,6 @@ Ihr solltet nun folgendes können:
 Ich glaube, wir können alles abhaken!
 
 Vielen Dank für die Teilnahme am Workshop.
-Feedback wird gern entgegen genommen. [Spenden](paypal.me/akhomberger) auch.
+Feedback wird gern entgegen genommen. [Spenden](http://paypal.me/akhomberger) aber auch.
 
 [Zurück zum Anfang](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/README.md)
