@@ -76,6 +76,8 @@ tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion ha
 
 Als erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und Pereferences kennen wir schon aus früheren Beispielen.
 
+Mit "tBoatData BoatData;" Erzeugen wir eine Struktur-Variable, welche Daten zusammenfasst. Zum Inhalt kommen wir später.
+
 Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeitigen Clients fest. Falls ihr mehr als zehn gleichzeitige Clients im WLAN erwartet, müsst ihr hier den Wert erhöhen.
 
 Mit "sendNMEA0183Conversion = true" und "SendSeaSmart = false" legen wir fest, welche Datenformate gesendet werden sollen.
