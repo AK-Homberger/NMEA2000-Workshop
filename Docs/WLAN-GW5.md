@@ -11,7 +11,7 @@ Beispiel:
 
 Wir brauchen dazu nur wenig zu ändern.
 
-## 1. Hauptprogram
+## 1. Hauptprogramm
 
 In getData() ergänzen wir einige Zeilen.
 
