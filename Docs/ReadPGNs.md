@@ -129,6 +129,15 @@ Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem 
 
 Dann geben wir die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittstelle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
 
+Die Formatierung "%4.1" bedeutet übrigens:
+- 4 = 4 Stellen insgesammt (der Punkt zählt mit)
+- .1 = Eine Nachkommastellen
+
+Also zwei Vorkommastellen, und eine Nachkommastellen, wobei keine führende Nullen verwendet werden.
+Und "%3.1" demnach eine Vorkommastelle und eine Nachkommastelle.
+
+Falls wir führende Nullen verwenden möchten, wäre die Formatierung "04.1". Wir nutzen das später noch bei den Web-Server Beispielen (Längengrad/Breitengad).
+
 Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die Winkel zur Anzeige in Grad mit RadtoDeg() umwandeln.
 
 ## Und nun HandleBoatSpeed():
