@@ -6,8 +6,8 @@ Die Anzeige von Längen- und Breitengrad soll in der üblichen Notation: Grad/Mi
 
 Beispiel:
 
-- LAT 54°34.234'N
-- LON 005°14.123'E
+- LAT: 54°34.234'N
+- LON: 005°14.123'E
 
 Wir brauchen dazu nur wenig zu ändern.
 
@@ -89,6 +89,8 @@ Das komplette Programm ist als [NMEA2000-WLAN-Gateway4.ino](https://github.com/A
 
 
 Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun für weitere Daten zu erweitern.
+
+Ergänzt das Programm doch einfach selbstständig um die Wassertiefe.
 
 [Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
 
