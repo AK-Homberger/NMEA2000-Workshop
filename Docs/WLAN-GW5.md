@@ -71,14 +71,16 @@ In der Funktion requestData() fügen wir nach "var data = JSON.parse(this.respon
 
 Das ist alles. Nach dem Speicherm, Kompilieren und Hochladen sieht das Bild im Browser so aus.
 
-Eventell WLAN neu verbinden und die Adresse 192.168.4.1 erneut anwählen.
+Eventell WLAN neu verbinden und die Adresse 192.168.4.1 erneut anwählen. Und der NMEA-Simulator muss natürlich auch laufen.
 
 ![Web](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Web-Server2.PNG)
+
+Im NMEA-Simulator kann man jetzt mit Throttle/Ruder etwas Fahrt aufnehmen. Dann sieht man auch, wie sich die Positionsdaten ändern.
 
 Das komplette Programm ist als [NMEA2000-WLAN-Gateway4.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway4/NMEA2000-WLAN-Gateway4.ino) bei den Beispielen gespeichert.
 
 
-Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
+Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun für weitere Daten zu erweitern.
 
 [Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
 
