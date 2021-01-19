@@ -6,8 +6,8 @@ Die Anzeige von Längen- und Breitengrad soll in der üblichen Notation: Grad/Mi
 
 Beispiel:
 
-LAT 54°34.234'N
-LON 005°14.123'E
+- LAT 54°34.234'N
+- LON 005°14.123'E
 
 Wir brauchen dazu nur wenig zu ändern.
 
