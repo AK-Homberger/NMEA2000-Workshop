@@ -61,7 +61,7 @@ Dan konfigurieren wir den Dimmer für die LED;
 ```
 Mit ledcAttachPin(1, 1) verbinden wir den Kanal 1 des Pulsweitenmodulators mit GPIO1. Die eingebaute rote LED ist an GPIO1 angeschlossen (gilt für den ESP32 von AzDelivery). Und mit ledcSetup(1, 8000, 7) Setzen wir Kanal 1 auf 8000 Hz und 7 Bit Tastverhältnis (128).
 
-Direkt hinter setup() definieren wir nun die einzelnen Behandlungroutinen:
+Direkt hinter setup() definieren wir nun die einzelnen Behandlungsroutinen:
 
 Als erstes handleRoot():
 ```
