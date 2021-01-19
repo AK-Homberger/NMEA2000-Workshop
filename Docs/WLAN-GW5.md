@@ -32,9 +32,10 @@ Wir wollen den Breitengrad in Grad und Minuten anzeigen und nicht als vorzeichen
 
 Dazu berechnen wir zuerst jeweils den Absolutwert (ohne Vorzeichen) von Grad und Minuten.
 Dann unterscheiden wir anhand des Vorzeichens, ob es sich um Nord (>0) oder Süd (<=0) handelt.
-Nun bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (02.0) und Minuten mit zwei Vor- und drei Nachkommastellen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
 
-Das gleiche wiederholen wir jetzt mit dem Längengrad:
+un bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit zwei fürenden Nullen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
+
+Das Gleiche wiederholen wir jetzt mit dem Längengrad:
 ```
   deg = abs(trunc(BoatData.Longitude));
   minutes = abs((BoatData.Longitude - trunc(BoatData.Longitude)) * 60.0);
@@ -49,7 +50,8 @@ Das gleiche wiederholen wir jetzt mit dem Längengrad:
 Hier ist die Formatierung für Grad etwas anders, da Längengradangaben immer dreistellig mit führenden Nullen dargestellt werden. Und statt N/S unterscheiden wir hier zwischen E/W.
 
 ## 2. index.h
-Nun ergänzen wir den HTML- und Javascrip code entsprechend.
+Nun ergänzen wir den HTML- und Javascript-Code entsprechend.
+
 Erst die Tabelle im HTML-Code. Wir fügen zwei Zeilen für LAT/LON am Anfang der Tabelle hinzu.
 
 ```
@@ -67,7 +69,8 @@ In der Funktion requestData() fügen wir nach "var data = JSON.parse(this.respon
     document.getElementById("lon").innerText = data.lon;
 ```
 
-Das ist alles. Nach dem Speicher, kompilieren und Hochladen sieht das Bild im Browser so aus.
+Das ist alles. Nach dem Speicherm, Kompilieren und Hochladen sieht das Bild im Browser so aus.
+
 Eventell WLAN neu verbinden und die Adresse 192.168.4.1 erneut anwählen.
 
 ![Web](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Web-Server2.PNG)
