@@ -33,7 +33,14 @@ Wir wollen den Breitengrad in Grad und Minuten anzeigen und nicht als vorzeichen
 Dazu berechnen wir zuerst jeweils den Absolutwert (ohne Vorzeichen) von Grad und Minuten.
 Dann unterscheiden wir anhand des Vorzeichens, ob es sich um Nord (>0) oder Süd (<=0) handelt.
 
-un bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit zwei fürenden Nullen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
+un bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit fürenden Nullen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
+
+Die Formatierung "%06.3" bedeutet übrigens:
+- 0 = Führende Nullen verwenden
+- 6 = 6 Stellen insgesammt (der Punkt zählt mit)
+- .3 = 3 Nachkommastellen
+Also zwei Vorkommastellen und drei Nachkommastellen, wobe fürende nullen verwendet werden.
+
 
 Das Gleiche wiederholen wir jetzt mit dem Längengrad:
 ```
