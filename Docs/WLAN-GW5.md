@@ -41,7 +41,7 @@ Die Formatierung "%06.3" bedeutet übrigens:
 - 6 = 6 Stellen insgesammt (der Punkt zählt mit)
 - .3 = 3 Nachkommastellen
 
-Also zwei Vorkommastellen und drei Nachkommastellen, wobe fürende nullen verwendet werden.
+Also zwei Vorkommastellen, und drei Nachkommastellen, wobei führende Nullen verwendet werden.
 
 Das Gleiche wiederholen wir jetzt mit dem Längengrad:
 ```
