@@ -317,7 +317,7 @@ Die Funktionsweise ist hier die gleiche wie beim Lesen-Beispiel. Die Funktion wi
 
 Schauen wir uns doch exemplarisch einmal zwei Funktionen an:
 
-Erstens HandleHeading():
+Erstens **HandleHeading()**:
 
 ```
 void tN2kDataToNMEA0183::HandleHeading(const tN2kMsg &N2kMsg) {
@@ -360,7 +360,7 @@ Die NMEA0183-Bibliothek von Timo Lappalainen ist recht rudimentär. Es sind nich
 
 Das macht aber in der Praxis nicht viel aus. Durch die in der Bibliothek definierten Hilfsfunktionen ist das Zusammenbauen und Senden von NMEA0183-Nachrichten sehr einfach.
 
-Wir schauen uns hierzu einmal die Funktion HandleLog() an:
+Wir schauen uns hierzu einmal die **Funktion HandleLog()** an:
 
 ```
 void tN2kDataToNMEA0183::HandleLog(const tN2kMsg & N2kMsg) {
