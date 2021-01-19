@@ -10,10 +10,10 @@ Die Dateinamen enstprechen den oben angezeigten Programmreitern.
 
 Dann gibt es noch vier weitere Unterkomponenten:
 
-- BoatData.h: In dieser Include-Datei werden Bootsdaten in eine Struktur zusammengefasst, um einfacher über Modulgrenzen hinweg darauf zugreifen zu können.
-- List.h: Die Include-Datei wird zur Verwaltung der per WLAN verbundenen TCP-Clients genutzt (Stichwort: verkettete Liste).
-- N2kDataToNMEA0183.cpp: Ein C++ Modul, dass die eigentlichen Umwandlungen von NMEA2000 zu NMEA0183 eledigt.
-- N2kDataToNMEA0183.h: Die zum obigen C++ Modul gehörende Include-Datei, mit Deklaratione/Definitionen.
+- [BoatData.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/BoatData.h): In dieser Include-Datei werden Bootsdaten in eine Struktur zusammengefasst, um einfacher über Modulgrenzen hinweg darauf zugreifen zu können.
+- [List.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/List.h): Die Include-Datei wird zur Verwaltung der per WLAN verbundenen TCP-Clients genutzt (Stichwort: verkettete Liste).
+- [N2kDataToNMEA0183.cpp](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp): Ein C++ Modul, dass die eigentlichen Umwandlungen von NMEA2000 zu NMEA0183 eledigt.
+- [N2kDataToNMEA0183.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.h): Die zum obigen C++ Modul gehörende Include-Datei, mit Deklaratione/Definitionen.
 
 # Hauptprogramm
 
@@ -248,9 +248,9 @@ void loop() {
 - NMEA2000.ParseMessages() und CheckSourceAddressChange() sind ja schon bekannt.
 - tN2kDataToNMEA0183.Update(&BoatData) ruft die Update-Funktion in Sub-Modul auf, wobei die Referenz zur Struktur "BoatData" übergeben wird. Nach dem Funktionsaufruf enthält die Strukur alle aktualisierten Daten aus dem Sub-Modul.
 
-# Modul BoatData.h
+# Modul [BoatData.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/BoatData.h)
 
-Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu, unteschiedliche Wete zusammenzufassen, und die Werte über Modulgrenzen hinweg zu nutzen.
+Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu, unteschiedliche Werte zusammenzufassen, und diese Werte über Modulgrenzen hinweg zu nutzen.
 
 ```
 struct tBoatData {
@@ -291,7 +291,7 @@ struct tBoatData {
 Auf den Inhalt der Dateien List.h und N2kDataToNMEA0183.h gehen wir nicht im Detail ein. Das würde dem Umfang des Workshops sprengen und erfordert C++ Kenntnisse, die wir hier nicht voraussetzen können.
 
 # Modul N2kDataToNMEA0183.cpp
-Aber den Aufbau von N2kDataToNMEA0183.cpp sehen wir uns zumindest generell an.
+Aber den Aufbau von [N2kDataToNMEA0183.cpp](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp) sehen wir uns zumindest generell an.
 
 Fangen wir mit HandleMsg an:
 
@@ -319,7 +319,7 @@ Die Funktionsweise ist hier die gleiche wie beim Lesen-Beispiel. Die Funktion wi
 
 Schauen wir uns doch exemplarisch einmal zwei Funktionen an:
 
-Erstens **HandleHeading()**:
+Erstens **[HandleHeading()](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/6ce80837294ece73c6da79ad5106bb347dc9479c/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp#L108)**:
 
 ```
 void tN2kDataToNMEA0183::HandleHeading(const tN2kMsg &N2kMsg) {
@@ -362,7 +362,7 @@ Die NMEA0183-Bibliothek von Timo Lappalainen ist recht rudimentär. Es sind nich
 
 Das macht aber in der Praxis nicht viel aus. Durch die in der Bibliothek definierten Hilfsfunktionen ist das Zusammenbauen und Senden von NMEA0183-Nachrichten sehr einfach.
 
-Wir schauen uns hierzu einmal die **Funktion HandleLog()** an:
+Wir schauen uns hierzu einmal die **[Funktion HandleLog(https://github.com/AK-Homberger/NMEA2000-Workshop/blob/6ce80837294ece73c6da79ad5106bb347dc9479c/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp#L298)]()** an:
 
 ```
 void tN2kDataToNMEA0183::HandleLog(const tN2kMsg & N2kMsg) {
