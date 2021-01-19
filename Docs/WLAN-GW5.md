@@ -30,10 +30,11 @@ Dann nach "StaticJsonDocument<200> root;" folgendes hinzufügen:
 
 Wir wollen den Breitengrad in Grad und Minuten anzeigen und nicht als vorzeichenbehaftete Kommazahl in Grad.
 
-Dazu berechnen wir zuerst jeweils den Absolutwert (ohne Vorzeichen) von Grad und Minuten.
+Dazu berechnen wir zuerst jeweils den Absolutwert, ohne Vorzeichen von Grad und Minuten (abs). Von Grad wollen wir nur den ganzzahligen Teil (trunc).
+
 Dann unterscheiden wir anhand des Vorzeichens, ob es sich um Nord (>0) oder Süd (<=0) handelt.
 
-un bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit fürenden Nullen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
+Nun bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung passt. Grad mit zwei Stellen (%02.0) und Minuten mit zwei Vor- und drei Nachkommastellen (%06.3). Jeweils mit fürenden Nullen. Die Zeichen für Grad "°" und Minuten "'" fügen wir auch gleich an den richtigen Stellen ein.
 
 Die Formatierung "%06.3" bedeutet übrigens:
 - 0 = Führende Nullen verwenden
