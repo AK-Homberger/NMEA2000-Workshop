@@ -302,6 +302,5 @@ Für "output" und "slider" hatten wir ja extra Variablen erzeugt. Mit diesen Var
 
 Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL (/get_data). Und mit xhr.send() senden wir den Request.
 
-Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun mit weiteren Funktionen zu erweitern.
+Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW5.md) werden wir den Web-Server noch um die Anzeige von LAT/LON erweitern.
 
-[Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
