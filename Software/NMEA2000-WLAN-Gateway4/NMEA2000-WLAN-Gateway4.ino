@@ -157,11 +157,11 @@ void setup() {
   web_server.on("/off", handleOff);         // Off button
   web_server.on("/slider", handleSlider);   // Slider evebt
   web_server.onNotFound(handleNotFound);
-  
+
   web_server.begin();                       // Start web server
   ledcAttachPin(1, 1);                      // PWM channel 1 on GPIO 1 (builtin LED)
   ledcSetup(1, 8000, 7);                    // Setup channel 1 with 8000 Hz
-  
+
   delay(200);
 }
 
@@ -176,9 +176,33 @@ void handleRoot() {
 void getData() {
   String Text;
   char buf[30];
-  
+
+  double minutes;
+  double deg;
+
+
   StaticJsonDocument<200> root;
-  
+
+  deg = abs(trunc(BoatData.Latitude));
+  minutes = abs((BoatData.Latitude - trunc(BoatData.Latitude)) * 60.0);
+
+  if (BoatData.Latitude > 0) {
+    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' N", deg, minutes);
+  } else {
+    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' S", deg, minutes);
+  }
+  root["lat"] = buf;
+
+  deg = abs(trunc(BoatData.Longitude));
+  minutes = abs((BoatData.Longitude - trunc(BoatData.Longitude)) * 60.0);
+
+  if (BoatData.Longitude > 0) {
+    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' E", deg, minutes);
+  } else {
+    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' W", deg, minutes);
+  }
+  root["lon"] = buf;
+
   snprintf(buf, sizeof(buf), "%4.1f", BoatData.SOG);
   root["sog"] = buf;
 
@@ -186,7 +210,7 @@ void getData() {
   root["cog"] = buf;
 
   root["level"] = Level;
-  
+
   if (OnOff) root["state"] = "An"; else root["state"] = "Aus";
 
   serializeJsonPretty(root, Text);
@@ -196,7 +220,7 @@ void getData() {
 
 //*****************************************************************************
 void handleOn() {
-  OnOff=true;
+  OnOff = true;
   ledcWrite(1, 128 - Level);
   web_server.send(200, "text/html");
 }
@@ -204,7 +228,7 @@ void handleOn() {
 
 //*****************************************************************************
 void handleOff() {
-  OnOff=false;
+  OnOff = false;
   ledcWrite(1, 128);
   web_server.send(200, "text/html");
 }
@@ -212,13 +236,13 @@ void handleOff() {
 
 //*****************************************************************************
 void handleSlider() {
-  
-  if(web_server.args() > 0) {
-    Level=web_server.arg(0).toFloat();
+
+  if (web_server.args() > 0) {
+    Level = web_server.arg(0).toFloat();
   }
   web_server.send(200, "text/html");
 
-  if(OnOff) ledcWrite(1, 128 - Level);    
+  if (OnOff) ledcWrite(1, 128 - Level);
 }
 
 
@@ -314,7 +338,7 @@ void CheckSourceAddressChange() {
 //*****************************************************************************
 void loop() {
   web_server.handleClient();
-  
+
   CheckConnections();
 
   NMEA2000.ParseMessages();
