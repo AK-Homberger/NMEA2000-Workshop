@@ -77,7 +77,7 @@ In der Funktion requestData() fügen wir nach "var data = JSON.parse(this.respon
     document.getElementById("lon").innerText = data.lon;
 ```
 
-Das ist alles. Nach dem Speicherm, Kompilieren und Hochladen sieht das Bild im Browser so aus.
+Das ist alles. Nach dem Speichern, Kompilieren und Hochladen sieht das Bild im Browser so aus.
 
 Eventell WLAN neu verbinden und die Adresse 192.168.4.1 erneut anwählen. Und der NMEA-Simulator muss natürlich auch laufen.
 
