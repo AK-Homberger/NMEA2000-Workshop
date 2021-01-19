@@ -21,7 +21,7 @@ Mit dem Schieber und den Tasten An/Aus können wir übrigens die eingebaute LED 
 
 ## Das Programm
 
-Schauen wir uns jetzt im Programm die Ergänzungen an. Wie wir sehen, gibt es ein neues Modul "index.h". In diesem Modul ist die Web-Seite (HTML, CSS) und der Javascript-Code gepeichert. Das sehen wir uns später an.
+Schauen wir uns jetzt im Programm die Ergänzungen an. Wie wir sehen, gibt es ein neues Modul [index.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/index.h). In diesem Modul ist die Web-Seite (HTML, CSS) und der Javascript-Code gepeichert. Das sehen wir uns später an.
 
 Kommen wir erst zum Hauptprogramm. Es gibt zwei neue Include-Dateien.
 
