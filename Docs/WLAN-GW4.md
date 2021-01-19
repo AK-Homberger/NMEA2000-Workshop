@@ -166,7 +166,7 @@ Das ist schon alles im Hauptprogramm.
 
 ## Modul index.h
 
-Kommen wir nun zum Inhalt des Moduls "index.h". 
+Kommen wir nun zum Inhalt des Moduls [index.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/index.h). 
 
 Als erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann (R"=====).
 
