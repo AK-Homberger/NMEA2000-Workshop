@@ -92,5 +92,7 @@ Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktione
 
 Ergänzt das Programm doch einfach selbstständig um die Wassertiefe.
 
+Bei größeren Erweiterungen bitte auch den Wert in **StaticJsonDocument<200>** erhöhen, um genügend Speicher für den kompletten JSON-Ausdruck zu haben.
+
 [Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
 
