@@ -88,7 +88,7 @@ Im NMEA-Simulator kann man jetzt mit Throttle/Ruder etwas Fahrt aufnehmen. Dann 
 Das komplette Programm ist als [NMEA2000-WLAN-Gateway4.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway4/NMEA2000-WLAN-Gateway4.ino) und [index.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway4/index.h) bei den Beispielen gespeichert.
 
 
-Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Cleint-Seite nun für weitere Daten zu erweitern.
+Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Client-Seite nun für weitere Daten zu erweitern.
 
 Ergänzt das Programm doch einfach selbstständig um die Wassertiefe.
 
