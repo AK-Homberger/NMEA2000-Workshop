@@ -77,7 +77,7 @@ Sobald "Leaving...  Hard resetting via RTS pin..." angezeigt wird, ist das Progr
 - Zum Lesen und Anzeigen von NMEA2000-Daten auf dem PC soll der NMEA-Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
 - Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden: [Link](http://www.kave.fi/Apps/index.html).
 - Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gateways genutzt): [Link](https://opencpn.org/OpenCPN/info/downloads.html)
-- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(lite)](https://apps.apple.com/de/app/nmearemote-lite/id413937027) für Apple-Geräte. Die "lite"-Version ist kostenlos. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen und installieren (z.B. AvNav oder nke Display). Ich konnte das leider nicht testen.
+- Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(lite)](https://apps.apple.com/de/app/nmearemote-lite/id413937027) für Apple-Geräte. Die "lite"-Version kostet wohl 3,49 Euro. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen und installieren (z.B. AvNav oder nke Display). Ich konnte das leider nicht testen.
 
 ## Workshop-Beispielprogramme
 Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
