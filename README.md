@@ -36,7 +36,7 @@ Wir werden im Workshop den Prozessor [ESP32](https://de.wikipedia.org/wiki/ESP32
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
 
-In der Arduino-IDE müssen wir als nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
+In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
 Download der NMEA2000-Bibliotheken [Link](https://github.com/ttlappalainen)
 
@@ -58,7 +58,7 @@ Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. D
 An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). **Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L)**.
 Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. 
 
-Eigenlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, das an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
+Eigentlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, das an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
 
 So sieht das dann auf dem Steckbrett aus:
 
