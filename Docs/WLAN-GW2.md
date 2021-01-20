@@ -4,7 +4,7 @@
 
 Wie bereits erwähnt, besteht das Gateway-Programm aus mehreren Teilen. Die Teilprogramme sind alle im gleichen Verzeichnis gespeichert.
 
-Die Dateinamen enstprechen den oben angezeigten Programmreitern.
+Die Dateinamen entsprechen den oben angezeigten Programmreitern.
 
 - NMEA2000-WLAN-Gateway: Das ist unser Hauptprogramm (.ino wird nicht mit angezeigt).
 
@@ -13,7 +13,7 @@ Dann gibt es noch vier weitere Unterkomponenten:
 - [BoatData.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/BoatData.h): In dieser Include-Datei werden Bootsdaten in eine Struktur zusammengefasst, um einfacher über Modulgrenzen hinweg darauf zugreifen zu können.
 - [List.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/List.h): Die Include-Datei wird zur Verwaltung der per WLAN verbundenen TCP-Clients genutzt (Stichwort: verkettete Liste).
 - [N2kDataToNMEA0183.cpp](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp): Ein C++ Modul, dass die eigentlichen Umwandlungen von NMEA2000 zu NMEA0183 eledigt.
-- [N2kDataToNMEA0183.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.h): Die zum obigen C++ Modul gehörende Include-Datei, mit Deklaratione/Definitionen.
+- [N2kDataToNMEA0183.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.h): Die zum obigen C++ Modul gehörende Include-Datei, mit Deklarationen/Definitionen.
 
 # Hauptprogramm
 
@@ -39,7 +39,7 @@ Die nächsten drei Include-Dateien sind für unsere lokalen Programm-Module, wie
 
 ## Definitionen
 
-Im nächsten Schritt werden Definitonen festgelegt:
+Im nächsten Schritt werden Definitionen festgelegt:
 
 ```
 // Buffer config
@@ -92,7 +92,7 @@ LinkedList<tWiFiClientPtr> clients;
 tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
 ```
 Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=2222) und MaxCliens (=10).
-Die nächsten beiden Zeilen benötigen wir zur Verwaltung der Clinets als verkettete Liste. 
+Die nächsten beiden Zeilen benötigen wir zur Verwaltung der Clients als verkettete Liste. 
 
 Dann wird die Behandlungsfunktion für die Wandlung von NMEA2000 auf NMEA0183 definiert.
 
@@ -143,7 +143,7 @@ Kommen wir nun zu setup():
 Mit diesen Zeilen erstellen wir einen WLAN-Access-Point mit dem Namen "NMEA2000-Gateway" und dem Passwort "password".
 Dann starten wir den zuvor definierten TCP-Server.
 
-Wir haben auch die Produkt- und Gerärteinformationen etwas agepasst:
+Wir haben auch die Produkt- und Geräteinformationen etwas angepasst:
 
 ```
 // Set product information
@@ -161,7 +161,7 @@ Wir haben auch die Produkt- und Gerärteinformationen etwas agepasst:
                                );
 
 ```
-Wie nutzen Klasse "25" und Gerät "130".
+Wir nutzen Klasse "25" und Gerät "130".
 
 Dann legen wir weitere Funktionsweisen fest:
 
@@ -180,9 +180,9 @@ Dann geben wir die Liste der zu empfangenen Nachrichten fest.
 
 Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlung von NMEA2000 auf NMEA0183 mit  NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) und dann für die optionale Wandlung ins Seasmart-Format mit NMEA2000.SetMsgHandler(HandleNMEA2000Msg). 
 
-Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine Funktion benötigt, reicht NMEA2000.SetMsgHandler().
+Das letzte Kommando kennen wir ja schon aus den Beispielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine Funktion benötigt, reicht NMEA2000.SetMsgHandler().
 
-Als Letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
+Als Letztes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
 
 Die beiden Funktionen HandleNMEA2000Msg() und SendNMEA0183Message() sind übrigens direkt im Hauptprogamm definiert. Die Umwandlung von NMEA2000 zu NMEA0183 erfolgt im Modul "N2kDataToNMEA0183.cpp". Doch dazu später.
 
@@ -244,13 +244,13 @@ void loop() {
 }
 ```
 
-- CheckConnections() prüft regelmässig ob es neue TCP-Clients gibt oder ob Clients, die Verbindung beendet hatten.
+- CheckConnections() prüft regelmäßig ob es neue TCP-Clients gibt oder ob Clients, die Verbindung beendet hatten.
 - NMEA2000.ParseMessages() und CheckSourceAddressChange() sind ja schon bekannt.
 - tN2kDataToNMEA0183.Update(&BoatData) ruft die Update-Funktion in Sub-Modul auf, wobei die Referenz zur Struktur "BoatData" übergeben wird. Nach dem Funktionsaufruf enthält die Strukur alle aktualisierten Daten aus dem Sub-Modul.
 
 # Modul [BoatData.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/BoatData.h)
 
-Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu, unteschiedliche Werte zusammenzufassen, und diese Werte über Modulgrenzen hinweg zu nutzen.
+Dieses Modul wird genutzt, um eine Struktur mit Werten zu deklarieren. Die Struktur dient dazu, unterschiedliche Werte zusammenzufassen, und diese Werte über Modulgrenzen hinweg zu nutzen.
 
 ```
 struct tBoatData {
@@ -313,7 +313,7 @@ void tN2kDataToNMEA0183::HandleMsg(const tN2kMsg &N2kMsg) {
   }
 }
 ```
-Im Wesentlichen ist das vegleichbar mit der HandleMessage-Funktion, die wir auch im Beispiel zum Lesen vom NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
+Im Wesentlichen ist das vergleichbar mit der HandleMessage-Funktion, die wir auch im Beispiel zum Lesen vom NMEA2000-Bus verwendet hatten. Es ist genau genommen, die Funktion, die wir oben im Hauptprogramm mit NMEA2000.AttachMsgHandler(&tN2kDataToNMEA0183) festgelegt hatten. 
 
 Die Funktionsweise ist hier die gleiche wie beim Lesen-Beispiel. Die Funktion wird für jede NMEA2000-Nachricht aufgerufen. Mit "case" prüfen wie die PGN-Nummern und rufen Funktionen zur weiteren Behandlung auf. Hatten wir alles schon.
 
@@ -383,7 +383,7 @@ void tN2kDataToNMEA0183::HandleLog(const tN2kMsg & N2kMsg) {
     }
   }
 ```
-In der Funktion parsen wir mit ParseN2kDistanceLog() die NMEA2000-Nachricht mit PGN128275, wobei wir die nowendigen Variablen mit übergeben. Log und TripLog sind übrigens im Modul global definiert.
+In der Funktion parsen wir mit ParseN2kDistanceLog() die NMEA2000-Nachricht mit PGN128275, wobei wir die notwendigen Variablen mit übergeben. Log und TripLog sind übrigens im Modul global definiert.
   
 Wir erzeugen nun mit "tNMEA0183Msg NMEA0183Msg" einen Nachrichten-Container für eine NMEA0183-Nachricht.
   
@@ -393,7 +393,7 @@ Dann wird die Nachricht mit SendMessage(NMEA0183Msg) gesendet.
 
 Die unterschiedlichen Funktionen zum Zusammenbauen von NMEA0183-Nachrichten sind [hier](https://github.com/ttlappalainen/NMEA0183/blob/04a9235182b12ead309fb349cca534cd211e1334/NMEA0183Msg.cpp#L151) definiert.
 
-Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenstängigen Erweiterung steht nichts mehr im Wege.
+Die anderen Funktionen im Modul sind recht ähnlich aufgebaut. Einer eigenständigen Erweiterung steht nichts mehr im Wege.
 Eine Liste mit NMEA0183-Nachrichtentypen ist [hier](http://www.nmea.de/nmea0183datensaetze.html) zu finden.
 
 Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW3.md) erweitern wir das Gateway noch um eine Multiplexing-Funktion.
