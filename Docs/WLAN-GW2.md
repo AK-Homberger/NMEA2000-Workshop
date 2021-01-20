@@ -21,7 +21,7 @@ Starten wir mit der Funktion des Hauptprogramms:
 
 ## Zusätzliche Include-Dateien
 
-Als erstes sehen wir, dass wir zusätzliche Include-Dateien verwenden:
+Als Erstes sehen wir, dass wir zusätzliche Include-Dateien verwenden:
 
 ```
 #include <Seasmart.h>
@@ -74,7 +74,7 @@ LinkedList<tWiFiClientPtr> clients;
 tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
 ```
 
-Als erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und Pereferences kennen wir schon aus früheren Beispielen.
+Als Erstes wird der TCP-Port für den Server definiert (2222). NodeAddress und Pereferences kennen wir schon aus früheren Beispielen.
 
 Mit "tBoatData BoatData;" Erzeugen wir eine Struktur-Variable, welche Daten zusammenfasst. Zum Inhalt kommen wir später.
 
@@ -182,7 +182,7 @@ Danach legen wir zwei Nachrichten-Behandlungsroutinen fest. Einmal zur Umwandlun
 
 Das letzte Kommando kennen wir ja schon aus den Beipielen zum Lesen vom NMEA2000-Bus. NMEA2000.AttachMsgHandler() wird benötigt, um eine zusätzliche Behandlungsroutine hinzuzufügen. Wenn man nur eine Funktion benötigt, reicht NMEA2000.SetMsgHandler().
 
-Als letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
+Als Letzes setzen wir hier noch die Funktion, die aufgerufen werden soll, wenn eine NMEA0183-Nachricht gesendet werden soll.
 
 Die beiden Funktionen HandleNMEA2000Msg() und SendNMEA0183Message() sind übrigens direkt im Hauptprogamm definiert. Die Umwandlung von NMEA2000 zu NMEA0183 erfolgt im Modul "N2kDataToNMEA0183.cpp". Doch dazu später.
 
