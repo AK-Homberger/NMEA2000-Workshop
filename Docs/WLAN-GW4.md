@@ -304,5 +304,5 @@ Für "output" und "slider" hatten wir ja extra Variablen erzeugt. Mit diesen Var
 
 Mit "xhr.open('GET', 'get_data', true)" definieren wir die URL (/get_data). Und mit xhr.send() senden wir den Request.
 
-Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW5.md) werden wir den Web-Server noch um die Anzeige von LAT/LON erweitern.
+Im nächsten [Teil](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW5.md) werden wir den Web-Server noch um die Anzeige von Längen- und Breitengrad erweitern.
 
