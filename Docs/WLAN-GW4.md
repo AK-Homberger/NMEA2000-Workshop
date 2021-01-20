@@ -17,7 +17,7 @@ Nun sehen wir die Web-Seite des WLAN-Gateways.
 
 Wie wir sehen, werden die Daten für COG und SOG im Browser angezeigt.
 
-Mit dem Schieber und den Tasten An/Aus können wir übrigens die eingebaute LED des ESP32 steueren (Ein/Aus und Dimmen).
+Mit dem Schieber und den Tasten An/Aus können wir übrigens die eingebaute LED des ESP32 steuern (Ein/Aus und Dimmen).
 
 ## Das Programm
 
@@ -170,7 +170,7 @@ Kommen wir nun zum Inhalt des Moduls [index.h](https://github.com/AK-Homberger/N
 
 Als Erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann (R"=====).
 
-Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werden Metadaten und CSS-Stile "=style" definiert. Die "style"-Daten bstimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
+Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werden Metadaten und CSS-Stile "=style" definiert. Die "style"-Daten bestimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
 
 Im Bereich "body" erstellen wir dann die Anzeigeelemente der Seite:
 
