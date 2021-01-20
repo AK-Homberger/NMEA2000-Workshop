@@ -1,6 +1,6 @@
 # Spannungs- und Widerstandsmessung (Batteriespannung, Tankanzeige)
 
-Als nächstes sehen wir uns an, wie wir mit dem ESP32 Spannungen und Widerstände messen können. Ziel ist es:
+Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Spannungen und Widerstände messen können. Ziel ist es:
 
 1. Die Batteriespannung zu messen und als PGN127508 zu senden.
 2. Den Tanklevel des Wassertanks zu messen und als PGN127505 zu senden.
