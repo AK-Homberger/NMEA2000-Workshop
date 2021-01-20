@@ -4,7 +4,7 @@ Bisher haben wir immer Daten auf den NMEA2000-Bus gesendet. Nun kommen wir zur a
 
 Wir fangen mit einem einfachen Beispiel an und werden es dann erweitern.
 
-Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32 und den CAN-Bus Transceivern. Es macht aber auch nichts, wenn noch Komponenten vom vorigen Beispiel gesteckt sind.
+Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32 und den CAN-Bus-Transceivern. Es macht aber auch nichts, wenn noch Komponenten vom vorigen Beispiel gesteckt sind.
 
 ![Basis-Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
@@ -15,13 +15,13 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-H
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
 
-Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Snittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom linken ESP32 (Baudrate 115200, 8N1). Danach OK klicken.
+Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom linken ESP32 (Baudrate 115200, 8N1). Danach OK klicken.
 
 ![Simulator](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator1.png)
 
 Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen. Dazu "Throttle Gear" hochschieben.
 
-Danach wählen wir die CheckBox "Run" aus.
+Danach wählen wir die Check-Box "Run" aus.
 
 Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben werden:
 
@@ -98,7 +98,7 @@ void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
 }
 ```
 Die Funktion MyHandleNMEA2000Msg() wird von der Bibliothek immer dann aufgerufen, wenn ein neuer PGN vom Bus empfangen wurde.
-Mit switch(N2kMsg.PGN) können wir nun prüfen, um welches PGN es sich handelt. Die Nummer ist in der Variablen N2kMsg.PGN gepeichert.
+Mit switch(N2kMsg.PGN) können wir nun prüfen, um welches PGN es sich handelt. Die Nummer ist in der Variablen N2kMsg.PGN gespeichert.
 Mit "case PGN-Nummer:" können wir nun nacheinander die Nummern vergleichen, und wenn die Nummer stimmt, eine Funktion aufrufen, die sich um die weitere Verarbeitung kümmert.
 
 Die Funktionen zur Behandlung werden nun definiert.
@@ -121,7 +121,7 @@ void HandleHeading(const tN2kMsg &N2kMsg) {
 
 Der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
 
-Erst lokale Variablen definien. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit "ParseN2k..." beginnen.
+Erst lokale Variablen definieren. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit "ParseN2k..." beginnen.
 
 ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
 
