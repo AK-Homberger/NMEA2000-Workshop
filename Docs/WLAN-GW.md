@@ -6,7 +6,7 @@ Das Programm wird definierte PGNs vom Bus lesen, die Daten nach NMEA0183 umwande
 
 Als Clients werden wir sowohl OpenCPN auf dem PC als auch das Programm NMEAremote auf dem Telefon/Tablet nutzen.
 
-Für das WLAN-Gateway starten wir wieder mit unserem Basis-Steckbrett, wie auch beim letzen Teil.
+Für das WLAN-Gateway starten wir wieder mit unserem Basis-Steckbrett, wie auch beim vorherigen Teil.
 
 ![Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 
@@ -22,7 +22,7 @@ Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den 
 
 ### Tipp: Wenn sich mehrere Workshop-Teilnehmer in einem Raum befinden, sollte erst einmal nur einer das Programm starten.
 
-Wenn das Programm erfolgreich gestartet wurde, kann nun auf dem Telefon/Tablet nach einem Access Point mit dem Namen "NMEA2000-Gateway" gesucht werden.
+Wenn das Programm erfolgreich gestartet wurde, kann nun auf dem Telefon/Tablet nach einem Access-Point mit dem Namen "NMEA2000-Gateway" gesucht werden.
 
 Das WLAN wird ausgewählt und als Passwort wird "password" eingegeben.
 
