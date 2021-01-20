@@ -164,7 +164,7 @@ Genau so gut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeb
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel [Kettenzählwerksimpulse](https://github.com/AK-Homberger/ESP32_AnchorChainControl_WLAN)) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
-Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenen Zeilen:
+Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenden Zeilen:
 ```
   // For frequency simulation only
   //**********************************
