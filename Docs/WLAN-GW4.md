@@ -1,6 +1,6 @@
 # Web-Server mit AJAX
 
-Als letztes wollen wir unser WLAN-Gateway noch mit einem Web-Server ausstatten.
+Als Letztes wollen wir unser WLAN-Gateway noch mit einem Web-Server ausstatten.
 
 Wir werden dazu HTML, CSS und Javascript nutzen. Eine gute Einführung zu allen drei Themen ist [hier](https://www.w3schools.com/html/default.asp) zu finden. Speziell auch zur [AJAX-Methode](https://www.w3schools.com/js/js_ajax_intro.asp), um einfach Daten zwischen Server und Client auszutauschen.
 
@@ -65,7 +65,7 @@ Mit ledcAttachPin(1, 1) verbinden wir den Kanal 1 des [Pulsweitenmodulators](htt
 
 Direkt hinter setup() definieren wir nun die einzelnen Behandlungsroutinen:
 
-Als erstes handleRoot():
+Als Erstes handleRoot():
 ```
 void handleRoot() {
   web_server.send(200, "text/html", MAIN_page); //Send web page
@@ -168,7 +168,7 @@ Das ist schon alles im Hauptprogramm.
 
 Kommen wir nun zum Inhalt des Moduls [index.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/index.h). 
 
-Als erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann (R"=====).
+Als Erstes wird mit "const char MAIN_page[] PROGMEM = R"=====(" die Variable "Main_page" erzeugt. Die kryptischen Zeichen sorgen dafür, dass sie im Programmspeicher des ESP32 gespeichert werden soll (PROGMEM) und dass sie auch Sonderzeichen enthalten kann (R"=====).
 
 Dann wird die Web-Seite als HTML-Code erstellt. Im Bereich "head" werden Metadaten und CSS-Stile "=style" definiert. Die "style"-Daten bstimmen, wie Elemente im Browser dargestellt werden (Farben, Größe, Abstände usw.). Details kann man [hier](https://www.w3schools.com/css/default.asp) nachlesen.
 
@@ -217,7 +217,7 @@ Mit <script> wird angezeigt, dass nun der eigentliche Javascript-Code folgt.
   var slider = document.getElementById("myRange");
   var output = document.getElementById("level");
 ```
-Als erstes holen wir gleich einmal aktuelle Werte vom Server.
+Als Erstes holen wir gleich einmal aktuelle Werte vom Server.
 
 Dann definieren wir zwei Variablen, um später einfacher auf die HTML-Objekte "myRange" und "level" zugreifen zu können.
 
@@ -236,7 +236,7 @@ Dann erzeugen wir mit "var xhr = new XMLHttpRequest();" ein neues Request-Objekt
 
 Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
 
-Als letztes wird der Request gesendet.
+Als Letztes wird der Request gesendet.
 
 Weitere Argumente werden übrigens nach dem Schema "&name=wert" hinzugefügt. Auf das zweite Argument wir auf Server-Seite dann mit "web_server.arg(1)" zugegriffen.
 
@@ -261,7 +261,7 @@ Je nach key wird mit xhr.open('GET', key, true) entweder die URL "/on" oder "/of
 
 Mit setInterval(requestData, 500) legen wir nun fest, dass die Funktion requestData() alle 500 ms aufgerufen wird. Dadurch werden die Werte im Browser zwei Mal pro Sekunde aktualisiert. 
 
-Als letztes folgt die Definition der Funktion requestData() selbst.
+Als Letztes folgt die Definition der Funktion requestData() selbst.
 
 ```
     function requestData() {
