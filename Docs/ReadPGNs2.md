@@ -2,7 +2,7 @@
 
 Hier kommt die Auflösung der Workshop-Aufgabe.
 
-Als Erstes müssen wir die Funktion MyHandleNMEA2000Msg() um PGN128267 und die aufzurufene Funktion HandleDepth() erweitern:
+Als Erstes müssen wir die Funktion MyHandleNMEA2000Msg() um PGN128267 und die aufzurufende Funktion HandleDepth() erweitern:
 
 ```
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
@@ -48,5 +48,5 @@ Falls es nicht funktioniert hat, könnt ihr das eigene Programm auch mit [NMEA20
 
 Das war schon alles zum Thema Lesen vom Bus.
 
-Wir kommen num zu letzen Teil des Workshops, dem Aufbau eines [NMEA2000-WLAN-Gateways](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW.md).
+Wir kommen nun zum letzten Teil des Workshops, dem Aufbau eines [NMEA2000-WLAN-Gateways](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW.md).
 
