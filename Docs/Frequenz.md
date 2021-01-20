@@ -1,6 +1,6 @@
 # Messung von Frequenzen (Motordrehzahl)
 
-Als nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
+Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
 
 Das Ziel ist es diesmal, die Motordrehzahl an der [Klemme "W" der Lichtmaschine](https://de.wikipedia.org/wiki/Lichtmaschine) zu messen und als PGN127488 (Engine Parameters, Rapid Update) zu senden.
     
@@ -19,7 +19,7 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 
 ## Das Programm
 
-Als nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
+Als Nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
 
 Danach starten wir wieder den NMEA-Reader und wählen den PGN 127488.
 
@@ -81,13 +81,13 @@ In setup() wird nun die Interrupt-Funktion für Pin 27 initialisiert:
   timerStart(timer);   
  ```
  
-Als erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. 
+Als Erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. 
 
-Als nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
+Als Nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
 
-Im folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abstand von zwei Interrupts auf die Frequenz zu schließen.
+Im Folgenden wird ein ESP32 interner Timer definiert und gestartet. Den Timer benötigen wir später, um aus dem zeitlichen Abstand von zwei Interrupts auf die Frequenz zu schließen.
 
-Als letztes in setup() wird noch der Signalgenerator an Pin 26 vorbereitet.
+Als Letztes in setup() wird noch der Signalgenerator an Pin 26 vorbereitet.
 
 ```
   //*****************************************************************************
