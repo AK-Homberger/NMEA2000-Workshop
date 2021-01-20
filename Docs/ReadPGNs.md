@@ -123,7 +123,7 @@ Der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
 
 Erst lokale Variablen definieren. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit **"ParseN2k..."** beginnen.
 
-ParseN2kHeading() benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
+[ParseN2kHeading()](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L116) benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
 
 Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem empfangenen PGN und können genutzt werden.
 
