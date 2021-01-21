@@ -11,7 +11,7 @@ Nach dem Workshop solltet ihr folgendes können:
 - Die Arduino-IDE installieren
 - Die nötigen Bibliotheken installieren (ZIP-Datei und Bibliotheksverwalter)
 - Grundlegende Informationen zur NMEA2000-Bibliothek finden (PGNs, Datentypen)
-- Arduinio-IDE nutzen (Programme laden und auf den ESP32 hochladen)
+- Arduino-IDE nutzen (Programme laden und auf den ESP32 hochladen)
 - Daten von einem NMEA2000-Bus auslesen und auf dem PC darstellen (mit NMEA-Reader)
 - Den Aufbau eines typischen Programms (C/C++) verstehen
 - I2C-Sensoren (hier BME280) nutzen (Anschluss I2C, Bibliotheken)
