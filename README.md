@@ -41,9 +41,9 @@ In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu
 Download der NMEA2000-Bibliotheken [Link](https://github.com/ttlappalainen)
 
 Folgene Bibliotheken als ZIP-Dateien downloaden und installieren:
-- NMEA2000
-- NMEA2000_esp32
-- NMEA0183
+- [NMEA2000](https://github.com/ttlappalainen/NMEA2000)
+- [NMEA2000_esp32](https://github.com/ttlappalainen/NMEA2000_esp32)
+- [NMEA0183](https://github.com/ttlappalainen/NMEA0183)
 
 Jeweils auf den Namen des Repositories klicken, dann den auf "Code" klicken und "Download ZIP" auswählen. Dann in der Arduino-IDE: Sketch, Bibliothek einbinden, .ZIP-Bibliothek hinzufügen auswählen und den Speicherort der heruntergeladenen Bibliotheken für jede der drei Bibliotheken nacheinander auswählen und installieren.
 
