@@ -11,7 +11,7 @@ Die Dateinamen entsprechen den oben angezeigten Programmreitern.
 Dann gibt es noch vier weitere Unterkomponenten:
 
 - [BoatData.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/BoatData.h): In dieser Include-Datei werden Bootsdaten in eine Struktur zusammengefasst, um einfacher über Modulgrenzen hinweg darauf zugreifen zu können.
-- [List.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/List.h): Die Include-Datei wird zur Verwaltung der per WLAN verbundenen TCP-Clients genutzt (Stichwort: verkettete Liste).
+- [List.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/List.h): Die Include-Datei wird zur Verwaltung der per WLAN verbundenen TCP-Clients genutzt (Stichwort: [verkettete Liste](https://de.wikipedia.org/wiki/Liste_(Datenstruktur))).
 - [N2kDataToNMEA0183.cpp](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp): Ein C++ Modul, dass die eigentlichen Umwandlungen von NMEA2000 zu NMEA0183 eledigt.
 - [N2kDataToNMEA0183.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.h): Die zum obigen C++ Modul gehörende Include-Datei, mit Deklarationen/Definitionen.
 
