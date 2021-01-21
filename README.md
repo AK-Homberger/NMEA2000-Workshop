@@ -26,7 +26,7 @@ Nach dem Workshop solltet ihr folgendes können:
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
-Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der NMEA2000-Bibliothek von Timo Lappalainen erstellen und ausprobieren.
+Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
 ## ESP32
 Wir werden im Workshop den Prozessor [ESP32](https://de.wikipedia.org/wiki/ESP32) von Espressif verwenden. Zur einfacheren Verwendung werden wir ein "ESP32 Dev Module" verwenden, bei dem die notwendige externe Beschaltung schon vorhanden ist. Inclusive USB-Anschluss, der für die Workshop-Beispiele auch die Spannungsversorgung liefert. Für die Beispiele auf dem Steckbrett nutzen wir das [Development-Modul](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-das-multitalent) von AzDelivery. Es hat diese [Pin-Belegung](https://www.dropbox.com/s/08vp6s54f17n303/DevKitCV4.png?dl=0).
@@ -38,7 +38,7 @@ Wir werden im Workshop den Prozessor [ESP32](https://de.wikipedia.org/wiki/ESP32
 
 In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
-Download der NMEA2000-Bibliotheken [Link](https://github.com/ttlappalainen)
+Download der NMEA2000-Bibliotheken
 
 Folgene Bibliotheken als ZIP-Dateien downloaden und installieren:
 - [NMEA2000](https://github.com/ttlappalainen/NMEA2000)
