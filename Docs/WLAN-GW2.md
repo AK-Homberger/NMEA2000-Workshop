@@ -83,14 +83,6 @@ Mit "const size_t MaxClients = 10;" legen wir die maximale Anzahl der gleichzeit
 Mit "sendNMEA0183Conversion = true" und "SendSeaSmart = false" legen wir fest, welche Datenformate gesendet werden sollen.
 Im Moment senden wir nur die von NMEA2000 nach NMEA0183 gewandelten Daten. Auf Seasmart kommen wir später noch zurück.
 
-```
-WiFiServer server(ServerPort, MaxClients);
-
-using tWiFiClientPtr = std::shared_ptr<WiFiClient>;
-LinkedList<tWiFiClientPtr> clients;
-
-tN2kDataToNMEA0183 tN2kDataToNMEA0183(&NMEA2000, 0);  // NMEA 0183 conversion handler
-```
 Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=2222) und MaxCliens (=10).
 Die nächsten beiden Zeilen benötigen wir zur Verwaltung der Clients als verkettete Liste. 
 
