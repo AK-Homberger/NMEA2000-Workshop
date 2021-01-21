@@ -86,7 +86,7 @@ Im Moment senden wir nur die von NMEA2000 nach NMEA0183 gewandelten Daten. Auf S
 Jetzt definieren wir einen WiFiServer (=TCP-Server) mit dem Port ServerPort (=2222) und MaxCliens (=10).
 Die nächsten beiden Zeilen benötigen wir zur Verwaltung der Clients als verkettete Liste. 
 
-Dann wird die Behandlungsfunktion für die Wandlung von NMEA2000 auf NMEA0183 definiert. Die zugehörige Classe und die Methoden sind übrigens in [N2kDataToNMEA0183.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.h) und [N2kDataToNMEA0183.cpp](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp) deklariert/definiert.
+Dann wird die Behandlungsfunktion für die Wandlung von NMEA2000 auf NMEA0183 definiert. Die zugehörige C++ Class und die Methoden sind übrigens in [N2kDataToNMEA0183.h](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.h) und [N2kDataToNMEA0183.cpp](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway/N2kDataToNMEA0183.cpp) deklariert/definiert.
 
 Die folgenden Zeilen sind uns aus vorigen Beispielen schon bekannt:
 
