@@ -153,7 +153,7 @@ Wir haben auch die Produkt- und Geräteinformationen etwas angepasst:
                                );
 
 ```
-Wir nutzen Klasse "25" und Gerät "130".
+Wir nutzen Klasse "25" und Gerät "135".
 
 Dann legen wir weitere Funktionsweisen fest:
 
