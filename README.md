@@ -28,7 +28,7 @@ NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183]
 
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
-Die üblichen Hersteller verkaufen ihre CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAN-BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Conrad](https://www.conrad.de/de/p/lapp-2170261-1-busleitung-unitronic-bus-2-x-2-x-0-22-mm-violett-meterware-604030.html). Zum Beispiel in Verbindung mit [MicroC-Steckern](https://moerer.de/navigation/nmea2000/zubehoer-kabel/).
+Die üblichen Hersteller verkaufen ihre CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAN-BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Conrad](https://www.conrad.de/de/p/lapp-2170261-1-busleitung-unitronic-bus-2-x-2-x-0-22-mm-violett-meterware-604030.html). Zum Beispiel in Verbindung mit schraubbaren [Micro-C-Steckverbindern](https://moerer.de/navigation/nmea2000/zubehoer-kabel/2652/micro-c-steckverbinder-stecker-gerade?c=193).
 
 Für kleinere Netzwerke funktionieren aber auch alle anderen paarweise verdrillten Leitungen. Gerne auch geschirmt; der Standard fordert das aber nicht. Für die feuchte Bootsumgebung ist aber das Kabel alein nicht entscheidend, sondern die Qualität der Verbindungen und Stecker.
 
