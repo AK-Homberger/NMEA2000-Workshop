@@ -28,7 +28,7 @@ NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183]
 
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
-Die üblicher Hersteller verkaufen ihre CAN-Bus-Kabel zu extremen Preisen. Eingünstige Alternative ist das CAn_BUS-Kabel von Unitronic. Unter anderm erhältlich beo [Conrad](https://www.conrad.de/de/p/lapp-2170261-1-busleitung-unitronic-bus-2-x-2-x-0-22-mm-violett-meterware-604030.html).
+Die üblichen Hersteller verkaufen ihre CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAn_BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Conrad](https://www.conrad.de/de/p/lapp-2170261-1-busleitung-unitronic-bus-2-x-2-x-0-22-mm-violett-meterware-604030.html).
 
 ## ESP32
 Wir werden im Workshop den Prozessor [ESP32](https://de.wikipedia.org/wiki/ESP32) von Espressif verwenden. Zur einfacheren Verwendung werden wir ein "ESP32 Dev Module" verwenden, bei dem die notwendige externe Beschaltung schon vorhanden ist. Inclusive USB-Anschluss, der für die Workshop-Beispiele auch die Spannungsversorgung liefert. Für die Beispiele auf dem Steckbrett nutzen wir das [Development-Modul](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-das-multitalent) von AzDelivery. Es hat diese [Pin-Belegung](https://www.dropbox.com/s/08vp6s54f17n303/DevKitCV4.png?dl=0).
