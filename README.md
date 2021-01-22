@@ -105,7 +105,7 @@ Folgende Materialien werden für den Workshop benötigt:
 - 2* CAN-Bus-Transceiver [Link](https://eckstein-shop.de/Waveshare-SN65HVD230-CAN-Board-33V-ESD-protection)
 - BME280-Sensor [Link](https://www.reichelt.de/entwicklerboards-temperatur-feuchtigkeits-und-drucksensor--debo-bme280-p253982.html?&trstct=pos_1&nbc=1)
 - DS18B20-Temperaturfühler [Link](https://www.reichelt.de/digital-thermometer-1-wire--0-5-c-to-92-ds-18b20-p58169.html?search=18b20)
-- Drehpotentiometer 10 KOhm [Link](https://www.reichelt.de/drehpotentiometer-10-kohm-logarithmisch-6-mm-pih-pc16ip06103b-p232589.html?&trstct=pol_9&nbc=1)
+- Drehpotentiometer 10 KOhm [Link](https://www.reichelt.de/drehpotentiometer-10-kohm-linear-6-mm-pih-pc16ip061033-p232701.html?&nbc=1)
 - Flexible Drahtbrücken [Link](https://www.reichelt.de/flexible-drahtbruecken-15-cm-mehrfarbig-65er-pack-rnd-255-00009-p253202.html?&nbc=1&trstct=lsbght_sldr::253206)
 
 2* USB-Kabel (Micro, passend für ESP32)
