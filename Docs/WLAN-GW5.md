@@ -90,7 +90,7 @@ Das komplette Programm ist als [NMEA2000-WLAN-Gateway4.ino](https://github.com/A
 
 Das war alles zum Thema Web-Server und AJAX. Es ist recht einfach, die Funktionen auf Server- und auf Client-Seite nun für weitere Daten zu erweitern.
 
-Ergänzt das Programm doch einfach selbstständig um die Wassertiefe.
+Ergänzt das Programm doch einfach selbstständig um die Wassertiefe. Die Lösung ist [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/tree/main/Software/NMEA2000-WLAN-Gateway5) zu finden.
 
 Bei größeren Erweiterungen bitte auch den Wert in **StaticJsonDocument<200>** erhöhen, um genügend Speicher für den kompletten JSON-Ausdruck zu haben.
 
