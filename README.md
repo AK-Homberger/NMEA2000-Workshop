@@ -6,6 +6,7 @@ Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Onlin
 
 Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelldaten folgt weiter unten.
 
+## Ziele
 Nach dem Workshop solltet ihr folgendes können:
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
