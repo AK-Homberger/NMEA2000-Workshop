@@ -178,28 +178,27 @@ void getData() {
   char buf[30];
 
   double minutes;
-  double deg;
-
+  double degrees;
 
   StaticJsonDocument<200> root;
 
-  deg = abs(trunc(BoatData.Latitude));
+  degrees = abs(trunc(BoatData.Latitude));
   minutes = abs((BoatData.Latitude - trunc(BoatData.Latitude)) * 60.0);
 
   if (BoatData.Latitude > 0) {
-    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' N", deg, minutes);
+    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' N", degrees, minutes);
   } else {
-    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' S", deg, minutes);
+    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' S", degrees, minutes);
   }
   root["lat"] = buf;
 
-  deg = abs(trunc(BoatData.Longitude));
+  degrees = abs(trunc(BoatData.Longitude));
   minutes = abs((BoatData.Longitude - trunc(BoatData.Longitude)) * 60.0);
 
   if (BoatData.Longitude > 0) {
-    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' E", deg, minutes);
+    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' E", degrees, minutes);
   } else {
-    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' W", deg, minutes);
+    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' W", degrees, minutes);
   }
   root["lon"] = buf;
 
