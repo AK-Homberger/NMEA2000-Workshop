@@ -24,6 +24,8 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 
 Gängige [Öldruckgeber von VDO](http://www.druckgeber-oeldruckgeber.de/vdo-druckgeber-ohne-wk-daten.html) haben ebenfalls einen ähnlichen Widerstandsbereich (10 - 184 Ohm). [VDO Temperaturgeber](http://www.temperaturgeber.de/vdo_temperaturgeber_warnkontakt_daten.html) können bis über 200 Ohm haben.
 
+Hilfen zur Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-ohms) sind hier zu finden.
+
 ## Das Programm
 Kommen wir nun zum Programm.
 
