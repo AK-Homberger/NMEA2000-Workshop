@@ -24,7 +24,7 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 
 Gängige [Öldruckgeber von VDO](http://www.druckgeber-oeldruckgeber.de/vdo-druckgeber-ohne-wk-daten.html) haben ebenfalls einen ähnlichen Widerstandsbereich (10 - 184 Ohm). [VDO Temperaturgeber](http://www.temperaturgeber.de/vdo_temperaturgeber_warnkontakt_daten.html) können bis über 200 Ohm haben.
 
-Hilfen zur Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-voltage-divider) sind hier zu finden. Bei Spannung zur Sicherheit 15 Volt eingeben. Die Ausgangspannung muss immer unter 3,3 Volt liegen.
+Hilfen zur Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-voltage-divider) sind hier zu finden. Bei Eingangsspannung zur Sicherheit 15 Volt eingeben. Die Ausgangspannung muss immer unter 3,3 Volt liegen.
 
 ## Das Programm
 Kommen wir nun zum Programm.
