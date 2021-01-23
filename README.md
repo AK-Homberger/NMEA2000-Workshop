@@ -38,7 +38,7 @@ Für kleinere Netzwerke funktionieren aber auch alle anderen paarweise verdrillt
 Für die feuchte Bootsumgebung ist aber das Kabel allein nicht entscheidend, sondern die Qualität der Verbindungen und Stecker.
 
 ## ESP32
-Wir werden im Workshop den Prozessor [ESP32](https://de.wikipedia.org/wiki/ESP32) von Espressif verwenden. Zur einfacheren Verwendung werden wir ein "ESP32 Dev Module" verwenden, bei dem die notwendige externe Beschaltung schon vorhanden ist. Inclusive USB-Anschluss, der für die Workshop-Beispiele auch die Spannungsversorgung liefert. Für die Beispiele auf dem Steckbrett nutzen wir das [Development-Modul](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-das-multitalent) von AzDelivery. Es hat diese [Pin-Belegung](https://www.dropbox.com/s/08vp6s54f17n303/DevKitCV4.png?dl=0).
+Wir werden im Workshop den Prozessor ESP32 von Espressif verwenden. Zur einfacheren Verwendung werden wir ein "ESP32 Dev Module" verwenden, bei dem die notwendige externe Beschaltung schon vorhanden ist. Inclusive USB-Anschluss, der für die Workshop-Beispiele auch die Spannungsversorgung liefert. Für die Beispiele auf dem Steckbrett nutzen wir das [Development-Modul](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-das-multitalent) von AzDelivery. Es hat diese [Pin-Belegung](https://www.dropbox.com/s/08vp6s54f17n303/DevKitCV4.png?dl=0).
 
 
 ## Vorbereiten der Arduino-IDE
