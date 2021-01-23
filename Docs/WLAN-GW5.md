@@ -19,20 +19,20 @@ Erst zwei neue lokale Variablen:
 
 ```
   double minutes;
-  double deg;
+  double degrees;
 ```
 Dann nach "StaticJsonDocument<200> root;" folgendes hinzufügen:
 
 ```
-  deg = abs(trunc(BoatData.Latitude));
+  degrees = abs(trunc(BoatData.Latitude));
   minutes = abs((BoatData.Latitude - trunc(BoatData.Latitude)) * 60.0);
 
   if (BoatData.Latitude > 0) {
-    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' N", deg, minutes);
+    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' N", degrees, minutes);
   } else {
-    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' S", deg, minutes);
+    snprintf(buf, sizeof(buf), "%02.0f°%06.3f' S", degrees, minutes);
   }
-  root["lat"] = buf;
+  root["lat"] = buf;  
 ```
 
 Wir wollen ja den Breitengrad in Grad und Minuten anzeigen und nicht als vorzeichenbehaftete Kommazahl in Grad.
@@ -45,13 +45,13 @@ Nun bauen wir uns die Ausgabe in den Puffer so zusammen, dass die Formatierung p
 
 Das Gleiche wiederholen wir jetzt mit dem Längengrad:
 ```
-  deg = abs(trunc(BoatData.Longitude));
+  degrees = abs(trunc(BoatData.Longitude));
   minutes = abs((BoatData.Longitude - trunc(BoatData.Longitude)) * 60.0);
 
   if (BoatData.Longitude > 0) {
-    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' E", deg, minutes);
+    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' E", degrees, minutes);
   } else {
-    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' W", deg, minutes);
+    snprintf(buf, sizeof(buf), "%03.0f°%06.3f' W", degrees, minutes);
   }
   root["lon"] = buf;
 ```
