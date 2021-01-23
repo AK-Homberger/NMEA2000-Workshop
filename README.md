@@ -23,7 +23,7 @@ Nach dem Workshop solltet ihr folgendes können:
 - Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
 
-Vorkenntnisse in Programmiersprachen wie C und C++ sind hilfreich, für den Workshop aber nicht unbedingt notwendig. Die Beispiele und auch das eigenständige Erweitern von Programmen wird auch ohne Vorkenntnisse funktionieren.
+Vorkenntnisse in Programmiersprachen wie C und C++ sind hilfreich, für den Workshop aber nicht unbedingt notwendig. Die Nutzung der Beispiele und auch das eigenständige Erweitern von Programmen wird auch ohne Vorkenntnisse funktionieren.
 
 ## NMEA2000-Historie
 
