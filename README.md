@@ -4,7 +4,7 @@ Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februa
 
 Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Sie können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
-Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelldaten folgt weiter unten.
+Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelldaten folgt weiter [unten](https://github.com/AK-Homberger/NMEA2000-Workshop#material-f%C3%BCr-den-workshop).
 
 ## Ziele
 Nach dem Workshop solltet ihr folgendes können:
