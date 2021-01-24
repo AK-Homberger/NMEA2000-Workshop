@@ -17,7 +17,7 @@ Ihr solltet nun folgendes können:
 - Nutzung von 1-Wire und Multitasking mit ESP32 (Temperatursensor DS18B20)
 - Messung von Spannungen und Widerständen (ESP32-ADC nutzen)
 - Messung von Frequenzen (ESP32-Interrupts nutzen)
-- Spezifische Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
+- Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGNs) und nutzen
 - Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
 
 Ich glaube, wir können alles abhaken!
