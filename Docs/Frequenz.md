@@ -12,7 +12,7 @@ Das Steckbrett sollte dann so aussehen:
 
 ![Steckbrett-Frequenz](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Frequenz_Steckplatine.png)
 
-Um wirklich die Motordrehzahl messen zu können, würden wir noch einen Optokoppler, einen Widerstand und eine kleine Diode benötigen.
+Um wirklich die Motordrehzahl messen zu können, würden wir noch einen [Optokoppler](https://de.wikipedia.org/wiki/Optokoppler), einen Widerstand und eine kleine Diode benötigen.
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
