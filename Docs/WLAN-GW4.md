@@ -289,7 +289,7 @@ Als Letztes folgt die Definition der Funktion requestData() selbst.
     }
 ```
 
-Mit "var xhr = new XMLHttpRequest()" wird ein neuer Request erzeugt, und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passieren soll, wenn der Request [erfolgreich beendet](https://www.w3schools.com/js/js_ajax_http_response.asp) wurde. 
+Mit "var xhr = new XMLHttpRequest()" wird ein neuer [Request](https://www.w3schools.com/js/js_ajax_http.asp) erzeugt, und mit "xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) {" wird auch gleich festgelegt, was passieren soll, wenn der Request [erfolgreich beendet](https://www.w3schools.com/js/js_ajax_http_response.asp) wurde. 
 
 Der Wert "200" wurde übrigens zusammen mit dem JSON-Ausdruck "Text" von der Funktion getData() im Hauptprogramm gesendet "web_server.send(200, "text/plain", Text)".
 
