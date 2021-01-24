@@ -232,7 +232,7 @@ slider.oninput = function() {
 ```
 Die Funktion wird immer dann aufgerufen, wenn der Schieber verändert wird, wobei der Wert des Schiebers als Variable "this.value" übergeben wird. Als erstes setzen wir die Anzeige des DIM-Levels mit "output.innerHTML = this.value".
 
-Dann erzeugen wir mit "var xhr = new XMLHttpRequest();" ein neues Request-Objekt.
+Dann erzeugen wir mit "var xhr = new XMLHttpRequest();" ein neues [Request-Objekt](https://www.w3schools.com/js/js_ajax_http.asp).
 
 Der Funktion "xhr.open('GET', 'slider' + '?level=' + this.value, true)" ist wichtig, um zu verstehen, wie der Wert für Level in der URL übergeben wird. Das passierte mit "'slider' + '?level=' + this.value". das erzeugt eine Request URL mit folgenem exemplarischen Inhalt "/slider/?level=wert". Im Hauptprogamm wir der so übergebene Wert in der Funktion handleSlider() als Argument erkannt und mit "Level=web_server.arg(0).toFloat();" gesetzt.
 
