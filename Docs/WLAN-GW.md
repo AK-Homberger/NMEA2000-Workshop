@@ -72,6 +72,11 @@ Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schn
 
 ![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
 
+# AvNav auf PC
+Da AvNav auch auf einem PC läuft kann ich euch zumindest zeigen wie es hier aussieht. Die Daten bekommt AvNav hier auch über die serielle Schnittstelle.
+
+![AvNav](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/AvNav.png)
+
 Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herumprobieren.
 
 Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.
