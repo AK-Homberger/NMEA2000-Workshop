@@ -116,6 +116,7 @@ Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal a
 
 Mit "PeriodCount = TempVal - StartValue;" wird die Zeitdifferenz seit dem letzten Interrupt berechnet.
 
+Bei der Nutzung von Interrupt-Funktionen ist etwas spezielles zu beachten. Wie man sieht ist die Funktion mit einem Attribut "IRAM_ATTR" deklariert. Das sorgt dafür, dass sich die Funktion im RAM des ESP32 befindet. Wenn jetzt weiter Funkrionen aufruft, ist wichtig zu wissen, dass dies auch für diese Funktionen zutrifft. Für [millis()](IRAM_ATTR) ist das der Fall. 
 
 Die nächste Funktion dient der Berechnung der Frequenz aus der letzen Zeitdifferenz (RPM = 1000000.00 / PeriodCount; )
 ```
