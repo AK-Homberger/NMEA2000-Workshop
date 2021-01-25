@@ -6,7 +6,7 @@
 <p class="has-line-data" data-line-start="8" data-line-end="9">Für das WLAN-Gateway starten wir wieder mit unserem Basis-Steckbrett, wie auch beim vorherigen Teil.</p>
 <p class="has-line-data" data-line-start="10" data-line-end="11"><img src="./Bilder/NMEA2000-Basis_Steckplatine.png" alt="Steckbrett"></p>
 <p class="has-line-data" data-line-start="12" data-line-end="13">Es macht aber auch nichts, wenn Bauteile aus früheren Beispielen gesteckt bleiben. Sie stören nicht.</p>
-<p class="has-line-data" data-line-start="14" data-line-end="15">Danach laden wir aus dem entpackten ZIP-Ordner das Programm NMEA2000-WLAN-Gateway.ino. Wie immer, mit einem Doppelklick auf die Datei.</p>
+<p class="has-line-data" data-line-start="14" data-line-end="15">Danach laden wir aus dem entpackten ZIP-Ordner das Programm "NMEA2000-WLAN-Gateway.ino". Wie immer, mit einem Doppelklick auf die Datei.</p>
 <p class="has-line-data" data-line-start="16" data-line-end="17"><img src="./Bilder/Arduino-IDE-GW.png" alt="Arduino-IDE">.</p>
 <p class="has-line-data" data-line-start="18" data-line-end="19">Anders als bei den bisherigen Beispielen, sehen wir in der Arduino-IDE nun mehrere Programm-Reiter: “NMEA2000-WLAN-Gateway”, “BoatData.h”, “List.h” usw. Doch dazu kommen wir später.</p>
 <p class="has-line-data" data-line-start="20" data-line-end="21">Erst einmal wollen wir sehen, was das Programm macht. Dazu laden wir es auf den rechten ESP32 hoch.</p>
@@ -23,7 +23,7 @@
 <p class="has-line-data" data-line-start="42" data-line-end="43">Dann kann man die Seite verlassen und durch rechts/links wischen die unterschiedlichen Anzeigeseiten durchblättern.</p>
 <p class="has-line-data" data-line-start="44" data-line-end="45">Hier ein paar Beispiele:</p>
 <p class="has-line-data" data-line-start="46" data-line-end="47"><img src="./Bilder/IMG_0938.PNG" alt="iPad2"></p>
-<p class="has-line-data" data-line-start="48" data-line-end="49"><img src="./Bilder/IMG_0939.PNG" alt="iPad3"></p>
+<p class="has-line-data" data-line-start="48" data-line-end="49"><img src="./IMG_0939.PNG" alt="iPad3"></p>
 <p class="has-line-data" data-line-start="50" data-line-end="51">NMEAremote unterstützt auch das SeaSmart- und Actisense-Format. Mit leichten Änderungen im Beispielprogramm kann man auch “Seasmart” ausprobieren.</p>
 <p class="has-line-data" data-line-start="52" data-line-end="53">Im Programm dazu folgendes ändern und dass das Programm hochladen:</p>
 <pre><code class="has-line-data" data-line-start="55" data-line-end="57">bool SendSeaSmart = true;          // Do we send NMEA2000 messages in SeaSmart format
@@ -36,8 +36,11 @@
 <h1 class="code-line" data-line-start=69 data-line-end=70><a id="OpenCPN_69"></a>OpenCPN</h1>
 <p class="has-line-data" data-line-start="70" data-line-end="71">Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch hier die vom NMEA-Simulator gesendeten Daten sehen:</p>
 <p class="has-line-data" data-line-start="72" data-line-end="73"><img src="./Bilder/OpenCPN.png" alt="OpenCPN"></p>
-<p class="has-line-data" data-line-start="74" data-line-end="75">Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herumprobieren.</p>
-<p class="has-line-data" data-line-start="76" data-line-end="77">Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.</p>
-<p class="has-line-data" data-line-start="78" data-line-end="79">Es funktioniert also.</p>
-<p class="has-line-data" data-line-start="80" data-line-end="81">Kommen wir nun aber zum <a href="./WLAN-GW2.md.html">Programm</a> selbst.</p>
+<h1 class="code-line" data-line-start=74 data-line-end=75><a id="AvNav_auf_PC_74"></a>AvNav auf PC</h1>
+<p class="has-line-data" data-line-start="75" data-line-end="76">Da AvNav auch auf einem PC läuft, kann ich euch zumindest zeigen, wie es hier aussieht. Die Daten bekommt AvNav hier auch über die serielle Schnittstelle.</p>
+<p class="has-line-data" data-line-start="77" data-line-end="78"><img src="./Bilder/AvNav.png" alt="AvNav"></p>
+<p class="has-line-data" data-line-start="79" data-line-end="80">Ihr könnt nun gern etwas mit dem Simulator und dan Anzeigeprogrammen herumprobieren.</p>
+<p class="has-line-data" data-line-start="81" data-line-end="82">Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.</p>
+<p class="has-line-data" data-line-start="83" data-line-end="84">Es funktioniert also.</p>
+<p class="has-line-data" data-line-start="85" data-line-end="86">Kommen wir nun aber zum <a href="./WLAN-GW2.md.html">Programm</a> selbst.</p>
 </body></html>
