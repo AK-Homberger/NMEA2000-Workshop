@@ -77,7 +77,7 @@ Da AvNav auch auf einem PC läuft kann ich euch zumindest zeigen wie es hier aus
 
 ![AvNav](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/AvNav.png)
 
-Ihr könnt nun gern etwas mit dem Simulator und NMEAremote/OpenCPN herumprobieren.
+Ihr könnt nun gern etwas mit dem Simulator und dan Anzeigeprogrammen herumprobieren.
 
 Die Daten werden sowohl auf der seriellen Schnittstelle des ESP32 als auch per WLAN ausgegeben.
 
