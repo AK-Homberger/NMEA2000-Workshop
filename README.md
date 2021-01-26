@@ -89,7 +89,7 @@ Sobald "Leaving...  Hard resetting via RTS pin..." angezeigt wird, ist das Progr
 
 ## Zusätzliche Programme zum Testen von Funktionen (PC und Apple/Android APP)
 - Zum Lesen und Anzeigen von NMEA2000-Daten auf dem PC soll der NMEA-Reader verwendet werden: [Link](https://actisense.com/acti_software/nmea-reader/)
-- Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden: [Link](http://www.kave.fi/Apps/index.html).
+- Auf dem PC muss zum Senden von Daten der NMEA2000-Simulator installiert werden: [Link](http://www.kave.fi/Apps/index.html). Eventuell muss zum Entpacken des Simulators auch das Entpack-Programm [7-ZIP](https://www.7-zip.de/) installiert werden.
 - Optional kann auf dem PC auch OpenCPN installiert werden (wird zum Testen des WLAN-Gateways genutzt): [Link](https://opencpn.org/OpenCPN/info/downloads.html)
 - Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(lite)](https://apps.apple.com/de/app/nmearemote-lite/id413937027) für Apple-Geräte. Die "lite"-Version kostet wohl 3,49 Euro. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen und installieren (z.B. [AvNav](https://play.google.com/store/apps/details?id=de.wellenvogel.avnav.main&hl=de&gl=DE) oder [nke Display](https://play.google.com/store/apps/details?id=nke.appandroid.activities&hl=de&gl=DE)). Ich konnte das leider nicht testen.
 
