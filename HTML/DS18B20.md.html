@@ -40,7 +40,7 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&amp;oneWire);
 </code></pre>
 <p class="has-line-data" data-line-start="64" data-line-end="65">Mit:</p>
-<pre><code class="has-line-data" data-line-start="66" data-line-end="68">double Temperature = 0;     // Variable to store Temperature
+<pre><code class="has-line-data" data-line-start="66" data-line-end="68">volatile double Temperature = 0;     // Variable to store Temperature
 </code></pre>
 <p class="has-line-data" data-line-start="68" data-line-end="69">erzeugen wir noch eine globale Variable zum Speichern der Temperatur.</p>
 <p class="has-line-data" data-line-start="70" data-line-end="71">Nun fügen wir noch die globale Variable “TaskHandle_t Task1” hinzu:</p>
