@@ -39,7 +39,7 @@ OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature.
 DallasTemperature sensors(&oneWire);
 
-double Temperature = 0;     // Variable to store Temperature
+volatile double Temperature = 0;     // Variable to store Temperature
 
 int NodeAddress;            // To store last Node Address
 Preferences preferences;    // Nonvolatile storage on ESP32 - To store LastDeviceAddress
