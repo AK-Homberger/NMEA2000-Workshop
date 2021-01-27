@@ -25,7 +25,7 @@ Nach dem Workshop solltet ihr folgendes können:
 
 Vorkenntnisse in Programmiersprachen wie C und C++ sind hilfreich, für den Workshop aber nicht unbedingt notwendig. Die Nutzung der Beispiele und auch das eigenständige Erweitern von Programmen wird auch ohne Vorkenntnisse funktionieren.
 
-## NMEA2000-Historie
+## NMEA2000
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
