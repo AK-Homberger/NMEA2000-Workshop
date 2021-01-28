@@ -1,6 +1,6 @@
 # NMEA2000-Workshop
 
-Wenn alle Vorbereitungen durchgeführt wurden können wir nun starten.
+Wenn alle Vorbereitungen erfolgreich durchgeführt wurden, können wir nun starten.
 
 ## NMEA2000
 
