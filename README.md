@@ -64,7 +64,7 @@ So sieht das dann auf dem Steckbrett aus:
 - Auf dem Telefon/Tablet benötigen wir eine APP zum Anzeigen von NMEA0183-Daten. Zum Beispiel [NMEAremote(lite)](https://apps.apple.com/de/app/nmearemote-lite/id413937027) für Apple-Geräte. Die "lite"-Version kostet wohl 3,49 Euro. Für Android-Geräte bitte im App-Store nach einer geeigneten APP suchen und installieren (z.B. [AvNav](https://play.google.com/store/apps/details?id=de.wellenvogel.avnav.main&hl=de&gl=DE) oder [nke Display](https://play.google.com/store/apps/details?id=nke.appandroid.activities&hl=de&gl=DE)). Ich konnte das leider nicht testen.
 
 ## Workshop-Beispielprogramme
-Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
+Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. 
 
 Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
