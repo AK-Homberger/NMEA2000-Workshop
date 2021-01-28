@@ -26,7 +26,7 @@ Nach dem Workshop solltet ihr folgendes können:
 Vorkenntnisse in Programmiersprachen wie C und C++ sind hilfreich, für den Workshop aber nicht unbedingt notwendig. Die Nutzung der Beispiele und auch das eigenständige Erweitern von Programmen wird auch ohne Vorkenntnisse funktionieren.
 
 # Vorbereitungen
-Für den Workshop sind einige Vorbereitungen notwendig. Diese sollten vor dem Workshop durchgeführt werden, um im Workshop mahr Zeit für die Beispiele zu haben.
+Für den Workshop sind einige Vorbereitungen notwendig. Diese sollten vor dem Workshop durchgeführt werden, um im Workshop mehr Zeit für die Beispiele zu haben.
 
 Falls bei den Vorbereitungen zu Problemen kam, können wie die Probleme im Workshop gemeinsam lösen.
 
