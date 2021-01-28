@@ -68,6 +68,8 @@ Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutz
 
 Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
+Hier [startet](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Start.md) der Workshop.
+
 # Material für den Workshop
 Folgende Materialien werden für den Workshop benötigt:
 
