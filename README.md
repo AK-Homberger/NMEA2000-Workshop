@@ -36,7 +36,7 @@ Falls bei den Vorbereitungen zu Problemen kam, können wie die Probleme im Works
 
 In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
-Download der NMEA2000-Bibliotheken
+## Download der NMEA2000-Bibliotheken
 
 Folgene Bibliotheken als ZIP-Dateien downloaden und installieren:
 - [NMEA2000](https://github.com/ttlappalainen/NMEA2000)
