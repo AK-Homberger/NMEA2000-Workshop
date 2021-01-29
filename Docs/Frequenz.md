@@ -2,7 +2,7 @@
 
 Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
 
-Das Ziel ist es diesmal, die Motordrehzahl an der [Klemme "W" der Lichtmaschine](https://de.wikipedia.org/wiki/Lichtmaschine) zu messen und als PGN127488 (Engine Parameters, Rapid Update) zu senden.
+Das Ziel ist es diesmal, die Motordrehzahl an der [Klemme "W" der Lichtmaschine](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Klemme-w.pdf) zu messen und als PGN127488 (Engine Parameters, Rapid Update) zu senden.
     
 Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
