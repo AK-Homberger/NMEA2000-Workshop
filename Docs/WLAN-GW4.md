@@ -4,7 +4,9 @@ Als Letztes wollen wir unser WLAN-Gateway noch mit einem Web-Server ausstatten.
 
 Wir werden dazu HTML, CSS und Javascript nutzen. Eine gute Einführung zu allen drei Themen ist [hier](https://www.w3schools.com/html/default.asp) zu finden. Speziell auch zur [AJAX-Methode](https://www.w3schools.com/js/js_ajax_intro.asp), um einfach Daten zwischen Server und Client auszutauschen.
 
-Laden wir nun das Programm [NMEA2000-WLAN-Gateway3.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/NMEA2000-WLAN-Gateway3.ino) auf den rechten ESP32.
+Als Erstes müssen wir noch eine neue Bibliothek installieren. Wie immer mit "Sketch", "Bibliothek einbinden" , "Bibliotheken verwalten...". Danach im Suchfeld "ArduinoJson" eingeben und die angezeigte Bibliothek installieren. 
+
+Danach laden wir nun das Programm [NMEA2000-WLAN-Gateway3.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway3/NMEA2000-WLAN-Gateway3.ino) auf den rechten ESP32.
 
 Der NMEA-Simulator sollte auch gestartet sein. Wir geben etwas Gas (Throttle Gear etwas hochschieben) und drehen am Ruder nach rechts (Rudder etwas nach rechts schieben). Nun ändern sich die Werte für SOG/COG im Simulator.
 
