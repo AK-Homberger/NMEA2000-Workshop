@@ -33,7 +33,7 @@ Kommen wir erst zum Hauptprogramm. Es gibt zwei neue Include-Dateien.
 ```
 Die Erste wird für die Web-Server-Methoden benötigt, und die Zweite für die Datenübergabe zwischen dem Web-Server auf dem ESP32 und dem Client auf dem Tablet.
 
-Als nächstes definieren wir drei neue Variablen/Objekte:
+Als Nächstes definieren wir drei neue Variablen/Objekte:
 
 ```
 WebServer web_server(80);   // Web server on TCP port 80
