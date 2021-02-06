@@ -4,6 +4,8 @@ Dieses Repository enthält Informationen zum NMEA-2000-Workshop im Januar/Februa
 
 Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Sie können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
+Für Fragen und Diskussionen zum Workshop könnt ihr gern auch das [Segeln-Forum](https://www.segeln-forum.de/board69-gewerbliche-angebote/board114-aus-weiterbildung-gewerblich/77672-seminar-workshop-nmea-2000/) nutzen.
+
 Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelldaten folgt weiter [unten](https://github.com/AK-Homberger/NMEA2000-Workshop#material-f%C3%BCr-den-workshop).
 
 ## Ziele
