@@ -43,7 +43,11 @@ Dann starten wir auf dem PC den SignalK-Server indem wir das Desktop-Icon "Start
 
 Wenn der Server gestatet wurde kann mit einen Doppelklick auf "Signal K Server" das Web-Interfach gestartet werden.
 
-![Server](Signal K Server).
+Nach der Auswahl von "Data Browser" auf der linken Seite sollte das Bild wie folgt aussehen:
+![Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SignalK-DataBrowser.png).
+
+
+
 
 
 
