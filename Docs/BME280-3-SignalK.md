@@ -96,7 +96,7 @@ In loop()
 ```
 sigK.handle();
 ```
-Wurde der Funktionsaufruf sigK.handle() hinzugefügt.
+wurde der Funktionsaufruf sigK.handle() hinzugefügt.
 
 Kommen wir nun zum Senden der Informationen an den SignalK-Server. In den drei Funktionen zum Senden von Temperatatur, Luftfeuchtigkeit und Luftdruck wurde jeweils noch eine Zeile hinzugefügt. Hier exemplarisch für die Temperatur:
 
