@@ -24,7 +24,7 @@ Zuvor müssen wir noch zwei zusätzliche Bibliotheken installieren.
 
 Die eigentliche ESP-SignalK-Bibliothek ist direkt im Programmverzeichnis mit abgelegt. Der Grund dafür ist, dass umfangreiche Änderungen gegenüber der [Original-Bibliothek](https://github.com/mxtommy/EspSigK) notwendig waren, um sie an den ESP32 und die aktuelle ArduinoJson-Bibliothek anzupassen. In der IDE sehen wir die Bibliothek als zwei zusätzliche Module (EspSigK.h und EspSigK.cpp).
 
-Um später die vom ESP32 gesendeten SignalK-Daten auch empfangen und anzeigen zu können, müssen wir noch einen SignalK-Server installieren. Wir nutzen hier den Server für Windows. Es sind aber auch Server für andere Plattformen verfügbar (z.B. Linux auf RaspberryPi). Im Prinzip ist es egal, auf welcher Plattform der Server läuft. Die Bedienung erfolgt hauptsächlich über ein Web-Interface.
+Um später die vom ESP32 gesendeten SignalK-Daten auch empfangen und anzeigen zu können, müssen wir noch einen SignalK-Server installieren. Wir nutzen hier den Server für Windows. Es sind aber auch Server für andere Plattformen verfügbar (z.B. Linux auf Raspberry Pi). Im Prinzip ist es egal, auf welcher Plattform der Server läuft. Die Bedienung erfolgt hauptsächlich über ein Web-Interface.
 
 Die Windows-Version kann wie [hier](https://github.com/SignalK/signalk-server-windows) beschrieben installiert werden.
 
