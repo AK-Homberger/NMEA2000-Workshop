@@ -28,7 +28,7 @@ Um später die vom ESP32 gesendeten SignalK-Daten auch empfangen und anzeigen zu
 
 Die Windows-Version kann wie [hier](https://github.com/SignalK/signalk-server-windows) beschrieben installiert werden.
 
-Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der Download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen werden. Der Installationsvorgang dauert etwas.
+Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der Download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen werden. Der Installationsvorgang dauert etwas. Bitte legt vorest keinen Admin-Nutzer an, sonst funktioniert das Beispiel so nicht.
 
 Im Modul"NMEA2000-BME280-3-Signalk.ino" müssen wir noch die Zugangsdaten zum eigenen WLAN eingeben. Ohne WLAN funktioniert es nicht.
 
