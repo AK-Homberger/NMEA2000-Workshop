@@ -1,0 +1,92 @@
+# Auflösung der Workshop-Aufgabe
+
+Falls alles richtig funktioniert hat, sollte nach dem Hochladen des Programms, die Anzeige des NMEA-Readers wie folgt aussehen:
+
+![NMEAReader-3](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/Bilder/NMEAReader-3.png)
+
+Wie sollten die einzelnen, hinzugefügten Komponenten im Programm nun aussehen?
+
+## 1. Neuen Offset definieren
+
+```
+#define SlowDataUpdatePeriod 1000  // Time between CAN Messages sent
+#define TempSendOffset 0           // + 0 ms
+#define HumiditySendOffset 50      // + 50 ms
+#define PressureSendOffset 100     // + 100 ms
+````
+Die neue Konstante "PressureSendOffset 100" definiert, dass der Luftdruck 50 ms nach der Luftfeuchtigkeit gesendet werden soll.
+
+## 2. Liste "Transmit Messages" erweitern
+
+```
+const unsigned long TransmitMessages[] PROGMEM = {130312L, // Temperature
+                                                  130313L, // Humidity
+                                                  130314L, // Pressure
+                                                  0
+                                                 };
+                                                 
+````
+Der Wert "130314L" wird als Zeile hinzugefügt.
+
+## 3. Neue Funktion mit PGN zusammenbauen
+
+```
+void SendN2kPressure(void) {
+  static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, PressureSendOffset);
+  tN2kMsg N2kMsg;
+  double Pressure;        
+
+  if ( IsTimeToUpdate(SlowDataUpdated) ) {
+    SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
+        
+    Pressure = bme.readPressure() /100;  // Read and convert to mBar 
+    Serial.printf("Pressure: %3.1f mBar \n", Pressure);
+
+    // Definition from N2kMessages.h
+    // SetN2kPGN130314(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
+    //                 tN2kPressureSource PressureSource, double Pressure);
+    
+    // PressureSource is defined in N2kTypes.h
+
+    // Set N2K message
+    SetN2kPGN130314(N2kMsg, 0, 0, N2kps_Atmospheric, mBarToPascal(Pressure));
+    
+    // Send message
+    NMEA2000.SendMsg(N2kMsg);
+  }
+}
+```
+
+## 4. Funktion loop() ergänzen
+
+```
+void loop() {
+
+  SendN2kTemperature();
+  
+  SendN2kHumidity();
+
+  SendN2kPressure();
+
+  NMEA2000.ParseMessages();
+
+  CheckSourceAddressChange();
+  
+  // Dummy to empty input buffer to avoid board to stuck with e.g. NMEA Reader
+  if ( Serial.available() ) {
+    Serial.read();
+  }
+}
+```
+
+Falls es nicht funktioniert hat, kann man das eigene Programm auch mit der Datei [NMEA2000-BME280-3.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-BME280-3/NMEA2000-BME280-3.ino) vergleichen.
+
+Bei jeder eigenen Erweiterung des NMEA2000-Daten-Senders sind immer diese vier Schritte nötig. Wie man sieht, ist es eigentlich nicht wirklich schwierig.
+
+Das war es nun zu I2C und dem BME280-Modul.
+
+Im nächsten Schritt sehen wir, wie wir einen anderen Temperatur-Sensor mit 1-Wire-Bus verwenden können.
+
+Hier geht es zum nächsten Workshop-Teil: [Temperaturfühler mit DS18B20 (1-Wire)](https://github.com/AK-Homberger/NMEA-Workshop/blob/main/Docs/DS18B20.md)
+
+
