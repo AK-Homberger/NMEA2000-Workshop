@@ -156,7 +156,7 @@ Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch, eure
 
 ## NMEA2000 per USB
 
-Eine Müglichkeit, die Daten vom NMEA2000-Bus an den SignalK-Server zu senden, ist die Verwendung des "ActisenseListenerSender-ESP32.ino". Diesen können wir nun auch auf den rechten ESP32 laden. Im SignalK-Web-Interface legen wir danach eine neue Datenquelle an:
+Eine Möglichkeit, die Daten vom NMEA2000-Bus an den SignalK-Server zu senden, ist die Verwendung des "ActisenseListenerSender-ESP32.ino". Diesen können wir nun auch auf den rechten ESP32 laden. Im SignalK-Web-Interface legen wir danach eine neue Datenquelle an:
 
 ![Quelle](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SignalK-Actisense.png)
 
