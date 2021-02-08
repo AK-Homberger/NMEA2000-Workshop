@@ -17,9 +17,12 @@ Wir laden jetzt das Programm [NMEA2000-BME280-3-Signalk.ino](https://github.com/
 
 Wie wir sehen, besteht das Programm aus drei Modulen. Dazu kommen wir aber erst später.
 
-Zuvor müssen wir noch ein paar zusätzliche Bibliotheken intallieren.
+Zuvor müssen wir noch zwei paar zusätzliche Bibliotheken intallieren.
 
+- ESP32SSDP (als [ZIP-File](https://github.com/luc-github/ESP32SSDP))
+- WebSockets (fom Markus Sattler, mit dem Bibliotheksverwalter)
 
+Die eigentliche ESP-SignalK-Bibliothek ist direkt im Programmverzeichnis mit abgelegt. Der Grund dafür ist, dass umfangreich Änderungen gegenüber der [Original-Bibliothek](https://github.com/mxtommy/EspSigK) notwendig waren, ums sie an den ESP32 und die aktuelle ArduinoJson-Bibliothek anzupassen. In der IDE sehen wir die Bibliothek als zwei zusätzliche Module (EspSigK.h und EspSigK.cpp).
 
 
 
