@@ -88,7 +88,7 @@ In setup()
 
   sigK.begin();                          // Start everything. Connect to wifi, setup services, etc...
 ```
-gibt es Einstellmöglichkeiten für die Funktionsweise der Bibliothek. Die können im Wesentlichen aber auskommentiert beliben.
+gibt es Einstellmöglichkeiten für die Funktionsweise der Bibliothek. Die können im Wesentlichen aber auskommentiert bleiben.
 
 Mit sigK.begin() wird die SignalK-Behandlung gestartet.
 
