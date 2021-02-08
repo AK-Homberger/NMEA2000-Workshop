@@ -157,6 +157,7 @@ Ein vollständiges NMEA2000 zu SignalK-Gateway ist übrigens [hier](https://gith
 
 Es ist im Wesentlichen eine Erweiterung der Workshop-Beispiele zum Lesen vom NMEA2000-Bus. Ihr solltet keine Probleme haben, das Programm zu verstehen und auch zu erweitern, falls euch Daten fehlen sollten. Ihr könnt das Gateway-Programm gern auf den rechten ESP32 hochladen und Daten mit dem NMEA-Simulator an NMEA2000 senden (setzen von SSID und Passwort nich vergessen). Das Gateway nimmt die Daten vom Bus auf und sendet sie per WLAN and den SignalK-Server. Ihr könnt euch dann eine schöne Anzeige zusammenbauen.
 
+
 ![Anzeige](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
 
 [Das war es nun schon ...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
