@@ -38,8 +38,12 @@ const String ssidPass  = "password";  // Password for wifi
 
 Danach speichern wir das Programm und laden es auf den rechten ESP32 hoch.
 
-Dann starten wir auf dem PC den SignalK-Server indem wir das Desktop-Icon "Start Signal K Service" ausführen. Das muss als 
+Dann starten wir auf dem PC den SignalK-Server indem wir das Desktop-Icon "Start Signal K Service" ausführen. Das muss als Administrator erfolgen (rechte Maustaste und 
+"als Administrator ausführen" anklicken).
 
+Wenn der Server gestatet wurde kann mit einen Doppelklick auf "Signal K Server" das Web-Interfach gestartet werden.
+
+![Server](Signal K Server).
 
 
 
