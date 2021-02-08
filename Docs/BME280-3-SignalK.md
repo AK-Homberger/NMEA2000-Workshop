@@ -24,12 +24,12 @@ Zuvor müssen wir noch zwei paar zusätzliche Bibliotheken intallieren.
 
 Die eigentliche ESP-SignalK-Bibliothek ist direkt im Programmverzeichnis mit abgelegt. Der Grund dafür ist, dass umfangreich Änderungen gegenüber der [Original-Bibliothek](https://github.com/mxtommy/EspSigK) notwendig waren, ums sie an den ESP32 und die aktuelle ArduinoJson-Bibliothek anzupassen. In der IDE sehen wir die Bibliothek als zwei zusätzliche Module (EspSigK.h und EspSigK.cpp).
 
-Um später die SignalK-Daten auch empfangen und anzeigen zu können, müssen wir noch den SignalK-Server installieren. Wir nutzen hier den Server für Windows. Es sinda aber auch Server für andere Plattformen verfügbar (Linux auf RaspberryPi). Im Prinzip ist es egal, auf welcher Plattform der Server läuft. Die Bedienung erfolgt hauptsächlich über ein Web-Interface.
+Um später die SignalK-Daten auch empfangen und anzeigen zu können, müssen wir noch den SignalK-Server installieren. Wir nutzen hier den Server für Windows. Es sind aber auch Server für andere Plattformen verfügbar (z.B. Linux auf RaspberryPi). Im Prinzip ist es egal, auf welcher Plattform der Server läuft. Die Bedienung erfolgt hauptsächlich über ein Web-Interface.
 
 Die Windows-Version kann wie [hier](https://github.com/SignalK/signalk-server-windows) beschrieben installiert werden.
-Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen weden.
+Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der Download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen weden.
 
-Im Programm müsen wir noch die Uugangsdaten zum eigenen WLAN eingeben. Ohne WLAN funktioniert es nicht.
+Im Programm müssen wir noch die Zugangsdaten zum eigenen WLAN eingeben. Ohne WLAN funktioniert es nicht.
 
 ```
 const String ssid      = "ssid";      // SSID to connect to
@@ -38,16 +38,17 @@ const String ssidPass  = "password";  // Password for wifi
 
 Danach speichern wir das Programm und laden es auf den rechten ESP32 hoch.
 
-Dann starten wir auf dem PC den SignalK-Server indem wir das Desktop-Icon "Start Signal K Service" ausführen. Das muss als Administrator erfolgen (rechte Maustaste und 
-"als Administrator ausführen" anklicken).
+Dann starten wir auf dem PC den SignalK-Server, indem wir das Desktop-Icon "Start Signal K Service" ausführen. Das muss als Administrator erfolgen (rechte Maustaste und "als Administrator ausführen" anklicken).
 
-Wenn der Server gestatet wurde kann mit einen Doppelklick auf "Signal K Server" das Web-Interfach gestartet werden.
+Wenn der Server gestatet wurde, kann mit einen Doppelklick auf "Signal K Server" das Web-Interfach gestartet werden.
 
 Nach der Auswahl von "Data Browser" auf der linken Seite sollte das Bild wie folgt aussehen:
 ![Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SignalK-DataBrowser.png).
 
+Falls keine Daten angezeigt werden, kann es an der Windows-Firewall liegen, die den Zugriff auf den Server verhindert.
+Zum Testen kann die Firewall kurz abgeschaltet werden. Dazu rechter Mausklick auf das Netzwerk-Icon und dann "Netzwerk und Interneteinstellungen öffnen" anklicken. Dann "Windows Firewall" anklicken un die Firewall für das private Netzwer auschalten.
 
+Spätestens jetzt sollten die Daten angezeigt werden. Nach dem Testen von SignalK sollte die Firewall auch wieder eingeschaltet werden.
 
-
-
+Dan [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) findet der ESP32 selstständig den SignalK-Server und verbindet sich mit diesem.
 
