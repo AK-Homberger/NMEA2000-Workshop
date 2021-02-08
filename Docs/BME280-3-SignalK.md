@@ -20,7 +20,7 @@ Wie wir sehen, besteht das Programm aus drei Modulen. Dazu kommen wir aber erst 
 Zuvor müssen wir noch zwei zusätzliche Bibliotheken installieren.
 
 - ESP32SSDP (als [ZIP-File](https://github.com/luc-github/ESP32SSDP))
-- WebSockets (fom Markus Sattler, mit dem Bibliotheksverwalter)
+- WebSockets (von Markus Sattler, Installation mit dem Bibliotheksverwalter)
 
 Die eigentliche ESP-SignalK-Bibliothek ist direkt im Programmverzeichnis mit abgelegt. Der Grund dafür ist, dass umfangreiche Änderungen gegenüber der [Original-Bibliothek](https://github.com/mxtommy/EspSigK) notwendig waren, um sie an den ESP32 und die aktuelle ArduinoJson-Bibliothek anzupassen. In der IDE sehen wir die Bibliothek als zwei zusätzliche Module (EspSigK.h und EspSigK.cpp).
 
