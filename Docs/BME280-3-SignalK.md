@@ -162,7 +162,7 @@ Im SignalK-Web-Interface legen wir danach eine neue Datenquelle an:
 
 ![Quelle](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SignalK-Actisense.png)
 
-Als Quelle wählt ihr "Actisense NGT-1 (canboatjs)" aus. Ald COM-Port wählt ihr den Com-Port des **rechten** ESP32 aus.
+Als Quelle wählt ihr "Actisense NGT-1 (canboatjs)" aus. Als COM-Port wählt ihr den Com-Port des **rechten** ESP32 aus. Baud-Rate ist wie immer 115200.
 
 Dann haben wir alle NMEA2000-Daten im SignalK-Server.
 
