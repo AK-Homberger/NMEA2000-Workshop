@@ -43,6 +43,7 @@ Dann starten wir auf dem PC den SignalK-Server, indem wir das Desktop-Icon "Star
 Wenn der Server gestatet wurde, kann mit einen Doppelklick auf "Signal K Server" das Web-Interfach gestartet werden.
 
 Nach der Auswahl von "Data Browser" auf der linken Seite sollte das Bild wie folgt aussehen:
+
 ![Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SignalK-DataBrowser.png).
 
 Falls keine Daten angezeigt werden, kann es an der Windows-Firewall liegen, die den Zugriff auf den Server verhindert.
@@ -139,11 +140,11 @@ Wie wir auch sehen, werden im "Data Browser"-Fenster auch genau die Pfadangabe a
 
 Welche Pfadangeben zu nutzen dien, ist nicht willkürlich, sondern in der SignalK-Dokumentation festgelegt. Für Boote sind [diese](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html) festlegungen zu nutzen.
 
-Im Programm kann man "/vessels/<RegExp>/" in derRegel weg lassen, Und für "sigK.sendDelta" sind die "/"-Zeichen durch "." zu ersetzen. So, das war es auch schon. Nun könnt ihr alle Daten auch an einen SignalK-Server senden und anzeigen lassen.
+Im Programm kann man "/vessels/<RegExp>/" in der Regel weg lassen, Und für "sigK.sendDelta" sind die "/"-Zeichen durch "." zu ersetzen. So, das war es auch schon. Nun könnt ihr alle Daten auch an einen SignalK-Server senden und anzeigen lassen.
 
 Zur Anzeige gibt es auch eine schöne "WebApp" die man über den linken Menüeintrag "WebApps" und "@SignalK/Instrumentenpanel" erreicht. Hier kann man die Datenfelder auswählen und unter "Schraubenschlüsselsymbol", "Curtomise Displa", "Preferred Units" auch die beforugten Einheiten auswählen. Dann mach die Anzeige auch die Umrechnungen von SI-Einheiten selbstständig.
 
-Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch so aussehen zu lassen.
+Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch, so aussehen zu lassen.
 
 ![Instument](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Signalk-Instruments.png).
 
