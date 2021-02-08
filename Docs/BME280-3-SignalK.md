@@ -154,16 +154,17 @@ Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch, eure
 ![Instument](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Signalk-Instruments.png).
 
 
-## Alternative
-Eine andere Alternative die Daten vom NMEA2000-Bus an den SignalK-Server ist die Verwendung des "ActisenseListenerSender-ESP32.ino". Diesen können wir nun auch auf den rechten ESP32 laden. Im SignalK-Web-Interface legen wir nun eine neue Datenquelle an:
+## NMEA2000 per USB
+
+Eine Müglichkeit, die Daten vom NMEA2000-Bus an den SignalK-Server zu senden, ist die Verwendung des "ActisenseListenerSender-ESP32.ino". Diesen können wir nun auch auf den rechten ESP32 laden. Im SignalK-Web-Interface legen wir danach eine neue Datenquelle an:
 
 ![Quelle](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/SignalK-Actisense.png)
 
-Als Quelle wählt ihr "Actisense NGT-1 (canboatjs)" aus. Ald COM-Port wählt ih den Com-Port des **rechten** ESP32 aus.
+Als Quelle wählt ihr "Actisense NGT-1 (canboatjs)" aus. Ald COM-Port wählt ihr den Com-Port des **rechten** ESP32 aus.
 
 Dann haben wir alle NMEA2000-Daten im SignalK-Server.
 
-Mit dem NMEA-Simulator können wir nun Daten über den linken ESP32 an den NMEA2000-Bus senden. Der rechte ESP32 liest die Daten vom Bus und gibt sie im Actisense-Format über USB and den SignalK-Server. Dieser kann sie dann verwenden und auch anzeigen.
+Mit dem NMEA-Simulator können wir nun Daten über den linken ESP32 an den NMEA2000-Bus senden. Der rechte ESP32 liest die Daten vom Bus und gibt sie im Actisense-Format über USB an den SignalK-Server. Dieser kann sie dann verwenden und auch anzeigen.
 
 
 ![Anzeige](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
