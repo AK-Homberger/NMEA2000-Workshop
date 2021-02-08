@@ -153,6 +153,8 @@ Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch, eure
 
 ![Instument](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Signalk-Instruments.png).
 
-Ein vollständiges NMEA2000 zu SignalK-Gateway ist übrigens [hier](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway) zu finden. Es ist im Wesentlichen eine Erweiterung der Workshop-Beispiele zum Lesen vom NMEA2000-Bus. Ihr solltet keine Probleme haben, das Programm zu verstehen und auch zu erweitern, falls euch Daten fehlen sollten.
+Ein vollständiges NMEA2000 zu SignalK-Gateway ist übrigens [hier](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway) zu finden. 
 
-[Das wars zum Them SignalK...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
+Es ist im Wesentlichen eine Erweiterung der Workshop-Beispiele zum Lesen vom NMEA2000-Bus. Ihr solltet keine Probleme haben, das Programm zu verstehen und auch zu erweitern, falls euch Daten fehlen sollten.
+
+[Das war es nun schon ...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
