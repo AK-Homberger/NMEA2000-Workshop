@@ -29,6 +29,15 @@ Um später die SignalK-Daten auch empfangen und anzeigen zu können, müssen wir
 Die Windows-Version kann wie [hier](https://github.com/SignalK/signalk-server-windows) beschrieben installiert werden.
 Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen weden.
 
+Im Programm müsen wir noch die Uugangsdaten zum eigenen WLAN eingeben. Ohne WLAN funktioniert es nicht.
+
+```
+const String ssid      = "ssid";      // SSID to connect to
+const String ssidPass  = "password";  // Password for wifi
+```
+
+Danach speichern wir das Programm und laden es auf den rechten ESP32 hoch.
+
 
 
 
