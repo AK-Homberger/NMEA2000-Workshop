@@ -52,3 +52,101 @@ Spätestens jetzt sollten die Daten angezeigt werden. Nach dem Testen von Signal
 
 Dan [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) findet der ESP32 selstständig den SignalK-Server und verbindet sich mit diesem.
 
+Kommen wir nun zum Programm. Es sind nur wenige Änderungen gegenüber dem letzten BME280-Beispiel hinzugekommen.
+
+Es gibt eine neue Include-Datei:
+```
+#include "EspSigK.h"        // For SignalK handling
+````
+Neue globale Definitionen:
+```
+const String hostname  = "NMEA2000-Gateway";    //Hostname for network discovery
+const String ssid      = "ssid";     //SSID to connect to
+const String ssidPass  = "password";  // Password for wifi
+
+EspSigK sigK(hostname, ssid, ssidPass); // create the object
+````
+Hier wird der Netzwerk-Name des Gateways festgelegt und die WLAN-Zugangsdaten gesetzt.
+Dansch wird das Objekt sgK erstellt und mit den Werten des WLANs initialisiert. Die EspSigK-Bibliothek kümmer sich auch um die WLAN-Verbindung.
+
+In setup()
+
+```
+ // SignalK settings
+  sigK.setPrintDebugSerial(false);       // Default false, causes debug messages to be printed to Serial (connecting etc)
+  sigK.setPrintDeltaSerial(false);       // Default false, prints deltas to Serial.
+  //sigK.setServerHost("192.168.0.20");  // Optional. Sets the ip of the SignalKServer to connect to. If not set we try to discover server with mDNS
+  //sigK.setServerPort(3000);            // If manually setting host, this sets the port for the signalK Server (default 80);
+
+  //sigK.setServerToken("secret"); // if you have security enabled in node server, it wont accept deltas unles you auth
+  // add a user via the admin console, and then run the "signalk-generate-token" script
+  // included with signalk to generate the string. (or disable security)
+
+  sigK.begin();                          // Start everything. Connect to wifi, setup services, etc...
+```
+gibt es Einstellmöglichkeiten für die Funktionsweise der Bibliothek. Die können im Wesentlichen aber auskommentiert beliben.
+
+Mit sigK.begin() wird die SignalK-Behandlung gestartet.
+
+In loop() 
+```
+sigK.handle();
+```
+Wurde der Funktionsaufruf sigK.handle() hinzugefügt.
+
+Kommen wir num zum Senden der Informationen an den SignalK-Server. In den drei Funktionen zum Senden von Tempertature, Luftfeuchtigkeit und Luftdruck wurde jeweils noch eine Zeile hinzugefügt. Hier exemplarisch die Temperatur:
+
+```
+void SendN2kTemperature(void) {
+  static unsigned long SlowDataUpdated = InitNextUpdate(SlowDataUpdatePeriod, TempSendOffset);
+  tN2kMsg N2kMsg;
+  double Temperature;
+
+  if ( IsTimeToUpdate(SlowDataUpdated) ) {
+    SetNextUpdate(SlowDataUpdated, SlowDataUpdatePeriod);
+
+    Temperature = bme.readTemperature();    
+    Serial.printf("Temperature: %3.1f °C \n", Temperature);
+    sigK.sendDelta("environment.inside.temperature", CToKelvin(Temperature));    
+
+    // Definition from N2kMessages.h
+    // void SetN2kPGN130312(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
+    //        double ActualTemperature, double SetTemperature=N2kDoubleNA);
+
+    // tN2kTempSource is defined in N2kTypes.h
+
+    // Set N2K message
+    SetN2kPGN130312(N2kMsg, 0, 0, N2kts_MainCabinTemperature, CToKelvin(Temperature), N2kDoubleNA);
+    
+    // Send message
+    NMEA2000.SendMsg(N2kMsg);
+  }
+}
+```
+Wie wir sehen wurde nur die Zeile
+```
+sigK.sendDelta("environment.inside.temperature", CToKelvin(Temperature));    
+```
+hinzugefügt. Das ist alles was nötig ist, Daten an den SignalK-Server zu senden.
+
+Für Luftfeuchtigkeit und Luftdruck sehen die Zeilen ähnlich aus:
+
+```
+sigK.sendDelta("environment.inside.relativeHumidity", Humidity);    
+...
+sigK.sendDelta("environment.inside.pressure", mBarToPascal(Pressure));    
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
