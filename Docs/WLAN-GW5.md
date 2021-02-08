@@ -94,5 +94,7 @@ Ergänzt das Programm doch einfach selbstständig um die Wassertiefe. Die Lösun
 
 Bei größeren Erweiterungen bitte auch den Wert in **StaticJsonDocument<200>** erhöhen, um genügend Speicher für den kompletten JSON-Ausdruck zu haben.
 
-[Das wars...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
+Falls ihr noch möchtet, können wir auch noch sehen, wie wir [Daten an einen SignalK-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/BME280-3-SignalK.md) senden.
+
+[Oder wir beenden den Workshop hier...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
 
