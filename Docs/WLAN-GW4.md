@@ -1,6 +1,6 @@
 # Web-Server mit AJAX
 
-Als Letztes wollen wir unser WLAN-Gateway noch mit einem Web-Server ausstatten.
+Als nächstes wollen wir unser WLAN-Gateway noch mit einem Web-Server ausstatten.
 
 Wir werden dazu HTML, CSS und Javascript nutzen. Eine gute Einführung zu allen drei Themen ist [hier](https://www.w3schools.com/html/default.asp) zu finden. Speziell auch zur [AJAX-Methode](https://www.w3schools.com/js/js_ajax_intro.asp), um einfach Daten zwischen Server und Client auszutauschen.
 
