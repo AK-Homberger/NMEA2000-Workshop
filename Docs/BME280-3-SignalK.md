@@ -130,23 +130,18 @@ sigK.sendDelta("environment.inside.temperature", CToKelvin(Temperature));
 hinzugefügt. Das ist alles was nötig ist, Daten an den SignalK-Server zu senden.
 
 Für Luftfeuchtigkeit und Luftdruck sehen die Zeilen ähnlich aus:
-
 ```
 sigK.sendDelta("environment.inside.relativeHumidity", Humidity);    
 ...
 sigK.sendDelta("environment.inside.pressure", mBarToPascal(Pressure));    
 ```
+Wie wir auch sehen, werden im "Data Browser"-Fenster auch genau die Pfadangabe angezeigt. Für die Temperatur zum Beispiel "environment.inside.temperature". 
 
+Welche Pfadangeben zu nutzen dien, ist nicht willkürlich, sondern in der SignalK-Dokumentation festgelegt. Für Boote sind [diese](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html) festlegungen zu nutzen.
 
+Im Programm kann man "/vessels/<RegExp>/" in derRegel weg lassen, Und für "sigK.sendDelta" sind die "/"-Zeichen durch "." zu ersetzen. So, das war es auch schon. Nun könnt ihr alle Daten auch an einen SignalK-Server senden und anzeigen lassen.
 
+Zur Anzeige gibt es auch eine schöne "WebApp" die man über den linken Menüeintrag "WebApps" und "@SignalK/Instrumentenpanel" erreicht. Hier kann man die Datenfelder auswählen und unter "Schraubenschlüsselsymbol", "Curtomise Displa", "Preferred Units" auch die beforugten Einheiten auswählen. Dann mach die Anzeige auch die Umrechnungen von SI-Einheiten selbstständig.
 
-
-
-
-
-
-
-
-
-
+Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch so aussehen zu lassen.
 
