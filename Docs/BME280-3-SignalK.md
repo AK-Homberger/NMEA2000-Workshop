@@ -145,7 +145,7 @@ Welche Pfadangaben zu nutzen sind, ist nicht willkürlich, sondern in der Signal
 
 Im eigenen Programm kann man "/vessels/<RegExp>/" in der Regel weg lassen, und für "sigK.sendDelta" sind die "/"-Zeichen durch "." zu ersetzen. 
  
-So, das war es auch schon. Nun könnt ihr alle möglichn Daten auch an einen SignalK-Server senden und anzeigen lassen.
+So, das war es auch schon. Nun könnt ihr alle möglichen Daten auch an einen SignalK-Server senden und anzeigen lassen.
 
 Zur Anzeige gibt es auch eine schöne "WebApp" die man über den linken Menüeintrag "WebApps" und "@SignalK/Instrumentenpanel" erreicht. Hier kann man die Datenfelder auswählen und unter "Schraubenschlüsselsymbol", "Customise Display", "Preferred Units" auch die bevorzugten Einheiten auswählen. Dann macht die Anzeige auch die Umrechnungen von SI-Einheiten selbstständig.
 
