@@ -3,7 +3,7 @@
 Jetzt sehen wir noch, wie wir Daten zusätzlich zu NMEA2000 auch an einen SignalK-Server senden können.
 Ziel ist es Temperatur, Luftfeuchtigkeit und Luftdruck an einen SignalK-Server im eignen WLAN zu senden.
 
-SignalK hat eine immer stärkere Verbreitung, weil es die Integration unterschiedlicher Datenquellen vereinfacht und darüber hinaus auch gut zur Anzeige von Daten genutzt weden kann.
+SignalK hat eine immer stärkere Verbreitung, weil es die Integration unterschiedlicher Datenquellen vereinfacht und darüber hinaus auch gut zur Anzeige von Daten genutzt werden kann.
 
 Grundlegende Informationen zu SignalK sind [hier](https://signalk.org/) zu finden.
 
@@ -28,7 +28,7 @@ Um später die vom ESP32 gesendeten SignalK-Daten auch empfangen und anzeigen zu
 
 Die Windows-Version kann wie [hier](https://github.com/SignalK/signalk-server-windows) beschrieben installiert werden.
 
-Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der Download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen weden. Der Installationsvorgang dauert etwas.
+Über diesen [Link](https://github.com/SignalK/signalk-server-windows/releases/latest/download/signalk-server-setup.exe) startet der Download. Nach Ausführen der Datei "signalk-server-setup.exe" wird der Server installiert. Die Standard-Vorschläge zur Installation sollten so belassen werden. Der Installationsvorgang dauert etwas.
 
 Im Modul"NMEA2000-BME280-3-Signalk.ino" müssen wir noch die Zugangsdaten zum eigenen WLAN eingeben. Ohne WLAN funktioniert es nicht.
 
@@ -39,7 +39,7 @@ const String ssidPass  = "password";  // Password for wifi
 
 Danach speichern wir das Programm und laden es auf den rechten ESP32 hoch.
 
-Dann starten wir auf dem PC den SignalK-Server, indem wir das Desktop-Icon "Start Signal K Service" ausführen. Das muss als Administrator erfolgen (rechte Maustaste aud das Icom und "als Administrator ausführen" anklicken).
+Dann starten wir auf dem PC den SignalK-Server, indem wir das Desktop-Icon "Start Signal K Service" ausführen. Das muss als Administrator erfolgen (rechte Maustaste auf das Icon und "als Administrator ausführen" anklicken).
 
 Wenn der Server gestartet wurde, kann mit einen Doppelklick auf das Desktop-Icon "Signal K Server" das Web-Interface gestartet werden.
 
@@ -53,7 +53,7 @@ Zum Testen kann die Firewall kurz abgeschaltet werden. Dazu rechter Mausklick au
 
 Spätestens jetzt sollten die Daten angezeigt werden. Nach dem Testen von SignalK sollte die Firewall auch wieder eingeschaltet werden.
 
-Dank [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) findet der ESP32 selstständig den SignalK-Server und verbindet sich mit diesem.
+Dank [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) findet der ESP32 selbstständig den SignalK-Server und verbindet sich mit diesem.
 
 Kommen wir nun zum Programm. Es sind nur wenige Änderungen gegenüber dem letzten BME280-Beispiel hinzugekommen.
 
@@ -98,7 +98,7 @@ sigK.handle();
 ```
 Wurde der Funktionsaufruf sigK.handle() hinzugefügt.
 
-Kommen wir num zum Senden der Informationen an den SignalK-Server. In den drei Funktionen zum Senden von Tempertatur, Luftfeuchtigkeit und Luftdruck wurde jeweils noch eine Zeile hinzugefügt. Hier exemplarisch für die Temperatur:
+Kommen wir nun zum Senden der Informationen an den SignalK-Server. In den drei Funktionen zum Senden von Temperatatur, Luftfeuchtigkeit und Luftdruck wurde jeweils noch eine Zeile hinzugefügt. Hier exemplarisch für die Temperatur:
 
 ```
 void SendN2kTemperature(void) {
