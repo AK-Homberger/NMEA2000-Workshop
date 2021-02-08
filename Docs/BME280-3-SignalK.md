@@ -17,7 +17,7 @@ Wir laden jetzt das Programm [NMEA2000-BME280-3-Signalk.ino](https://github.com/
 
 Wie wir sehen, besteht das Programm aus drei Modulen. Dazu kommen wir aber erst später.
 
-Zuvor müssen wir noch zwei zusätzliche Bibliotheken intallieren.
+Zuvor müssen wir noch zwei zusätzliche Bibliotheken installieren.
 
 - ESP32SSDP (als [ZIP-File](https://github.com/luc-github/ESP32SSDP))
 - WebSockets (fom Markus Sattler, mit dem Bibliotheksverwalter)
