@@ -127,7 +127,7 @@ void SendN2kTemperature(void) {
   }
 }
 ```
-Wie wir sehen wurde nur die Zeile
+Wie wir sehen, wurde nur die Zeile
 ```
 sigK.sendDelta("environment.inside.temperature", CToKelvin(Temperature));    
 ```
