@@ -1,7 +1,7 @@
 # Senden von Daten an einen SignalK-Server
 
 Jetzt sehen wir noch, wie wir Daten zusätzlich zu NMEA2000 auch an einen SignalK-Server senden können.
-Ziel ist es Temperatur, Luftfeuchtigkeit und Luftdruck an einen SignalK-Server im eignen WLAN zu senden.
+Ziel ist es Temperatur, Luftfeuchtigkeit und Luftdruck an einen SignalK-Server im eigenen WLAN zu senden.
 
 SignalK hat eine immer stärkere Verbreitung, weil es die Integration unterschiedlicher Datenquellen vereinfacht und darüber hinaus auch gut zur Anzeige von Daten genutzt werden kann.
 
