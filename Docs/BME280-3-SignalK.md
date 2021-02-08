@@ -143,7 +143,7 @@ Wie wir auch sehen, werden im "Data Browser"-Fenster auch genau die Pfadangaben 
 
 Welche Pfadangaben zu nutzen sind, ist nicht willkürlich, sondern in der SignalK-Dokumentation festgelegt. Für Boote sind [diese](https://signalk.org/specification/1.5.0/doc/vesselsBranch.html) Festlegungen zu nutzen.
 
-Im eigenen Programm kann man "/vessels/<RegExp>/" in der Regel weg lassen, und für "sigK.sendDelta" sind die "/"-Zeichen durch "." zu ersetzen. 
+Im eigenen Programm kann man "/vessels/RegExp/" in der Regel weg lassen, und für "sigK.sendDelta" sind die "/"-Zeichen durch "." zu ersetzen. 
  
 So, das war es auch schon. Nun könnt ihr alle möglichen Daten auch an einen SignalK-Server senden und anzeigen lassen.
 
