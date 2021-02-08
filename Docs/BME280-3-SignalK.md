@@ -145,3 +145,5 @@ Zur Anzeige gibt es auch eine schöne "WebApp" die man über den linken Menüein
 
 Ich habe mir folgende kleine Anzeige zusammengebaut. Versucht es doch auch so aussehen zu lassen.
 
+![Instument](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Signalk-Instruments.png).
+
