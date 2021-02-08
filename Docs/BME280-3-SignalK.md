@@ -13,7 +13,11 @@ Die Basis ist das Steckbrett aus den BME280-Beispielen.
 
 Wir laden jetzt das Programm [NMEA2000-BME280-3-Signalk.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-BME280-3-SignalK/NMEA2000-BME280-3-Signalk.ino) in die Arduino-IDE.
 
-![Arduini-IDE](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/BME280-Signalk.png)
+![Arduino-IDE](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/BME280-Signalk.png)
+
+Wie wir sehen, besteht das Programm aus drei Modulen. Dazu kommen wir aber erst später.
+
+Zuvor müssen wir noch ein paar zusätzliche Bibliotheken intallieren.
 
 
 
