@@ -79,7 +79,7 @@ Folgende Materialien werden für den Workshop benötigt:
 - Steckbrett (Spannungsversorgung Mitte) [Link](https://www.reichelt.de/experimentier-steckboard-1260-300-kontakte-steckboard-sb-3-p139508.html?&trstct=pol_5&nbc=1)
 - 2* ESP32 [Link](https://www.amazon.de/AZDelivery-NodeMCU-Development-Nachfolgermodell-ESP8266/dp/B071P98VTG/ref=sxts_sxwds-bia-wc-drs3_0?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&cv_ct_cx=ESP32&dchild=1&keywords=ESP32)
 - 2* CAN-Bus-Transceiver [Link](https://eckstein-shop.de/Waveshare-SN65HVD230-CAN-Board-33V-ESD-protection)
-- BME280-Sensor [Link](https://www.reichelt.de/entwicklerboards-temperatur-feuchtigkeits-und-drucksensor--debo-bme280-p253982.html?&trstct=pos_1&nbc=1). Die Stiftleiste bitte anlöten.
+- BME280-Sensor [Link](https://www.reichelt.de/entwicklerboards-temperatur-feuchtigkeits-und-drucksensor--debo-bme280-p253982.html?&trstct=pos_1&nbc=1). Die Stiftleiste bitte anlöten. Am Besten so herum, dass man die Kontaktbezeichnungen gesteckt noch lesen kann.
 - DS18B20-Temperaturfühler [Link](https://www.reichelt.de/digital-thermometer-1-wire--0-5-c-to-92-ds-18b20-p58169.html?search=18b20)
 - Drehpotentiometer 10 KOhm [Link](https://www.reichelt.de/drehpotentiometer-10-kohm-linear-6-mm-pih-pc16ip061033-p232701.html?&nbc=1). Falls das Potentiometer nicht direkt ins Steckbrett gesteckt werden kann, bitte kurze Drahtbrücken anlöten.
 - Flexible Drahtbrücken [Link](https://www.reichelt.de/flexible-drahtbruecken-15-cm-mehrfarbig-65er-pack-rnd-255-00009-p253202.html?&nbc=1&trstct=lsbght_sldr::253206)
