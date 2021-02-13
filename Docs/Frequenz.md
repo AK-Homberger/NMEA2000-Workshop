@@ -161,9 +161,9 @@ Zur Kalibrierung benötigt man übrigens das Übersetzungsverhältnis zwischen K
 
 Sollte eure Lichtmaschine keinen "W"-Anschluss haben, könnt ihr auch eine kleine Reflex-Lichtschranke nutzen [Norbert W.](https://www.segeln-forum.de/board194-boot-technik/board35-elektrik-und-elektronik/board195-open-boat-projects-org/71890-motormanagement-diy/) hat das hier gut dargestellt.
 
-Genau so gut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeber](https://www.roboter-bausatz.de/p/yf-s201-halleffekt-wasser-durchflusssensor-1-30l-min-g1-2) messen (Kalibrierungswert = 0,1333 für L/m). Aber aufpassen! Der Geber hat als Ausgangsignal ein Spannungsniveau von 5 Volt. Das ist zu viel für den ESP32. Hier müssen wie wieder einen Spannungsteiler einsetzen.
+Genau so gut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeber](https://www.roboter-bausatz.de/p/yf-s201-halleffekt-wasser-durchflusssensor-1-30l-min-g1-2) messen (Kalibrierungswert = 0,1333 für L/m). Aber aufpassen! Der Geber hat laut Spezifikation ein Ausgangssignal  von 5 Volt. Das ist zu viel für den ESP32. Hier müssen wir wieder einen Spannungsteiler einsetzen.
 
-Hier ist wieder die Hilfe Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-voltage-divider) nützlich. Die Eingangsspannung ist hier 5 Volt (vom Geber) und Ausgangsspannung muss immer klar unter 3,3 Volt liegen. Welche Widerstandskombination ihr wählt, ist weitestgehend glech. Die Widerstände sollten jedoch im Kilo-Ohm-Bereich liegen, damit die Ströme nicht zu hoch werden.
+Hier ist wieder die Hilfe Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-voltage-divider) nützlich. Die Eingangsspannung ist hier 5 Volt (vom Geber) und Ausgangsspannung muss immer klar unter 3,3 Volt liegen. Welche Widerstandskombination ihr wählt, ist weitestgehend gleich. Die Widerstände sollten jedoch im Kilo-Ohm-Bereich liegen, damit die Ströme nicht zu hoch werden.
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel [Kettenzählwerksimpulse](https://github.com/AK-Homberger/ESP32_AnchorChainControl_WLAN)) geht übrigens ganz ähnlich. In diesem Fall in der "handleInterrupt"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
