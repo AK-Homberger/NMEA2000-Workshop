@@ -32,7 +32,7 @@ Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymari
 
 Und hier [Micro-C](https://klabauterkiste.de/wp-content/uploads/mnea2000_micro-c_steckerbelegung-1536x541.png).
 
-Um später den ESP32 mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom (Spur-)Kabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden.
+Um später ein ESP32-Gerät mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom (Spur-)Kabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden (CAN-H, CAN-L, 12 Volt, GND).
 
 ## ESP32
 Wir werden im Workshop den Prozessor ESP32 von Espressif nutzen. Zur einfacheren Verwendung werden wir ein "ESP32 Dev Module" verwenden, bei dem die notwendige externe Beschaltung schon vorhanden ist. Inclusive USB-Anschluss, der für die Workshop-Beispiele auch die Spannungsversorgung liefert. Für die Beispiele auf dem Steckbrett nutzen wir das [Development-Modul](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-das-multitalent) von AzDelivery. Es hat diese [Pin-Belegung](https://www.dropbox.com/s/o90qsp1rn5ol9gf/NodeMCU.png?dl=0):
