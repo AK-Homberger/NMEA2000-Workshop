@@ -28,7 +28,7 @@ Wichtig ist in diesem Zusammenhang auch der Seatalk1 zu SeatalkNG-Wandler. Der W
 
 Hier ist die Steckerbelegung für Raymarine SeatlkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
 
-Um später den ESP32 mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom Spurkabel abzuschneiden und die drähte gemäß der Beschreibung zu verbinden.
+Um später den ESP32 mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom Spurkabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden.
 
 ## ESP32
 Wir werden im Workshop den Prozessor ESP32 von Espressif nutzen. Zur einfacheren Verwendung werden wir ein "ESP32 Dev Module" verwenden, bei dem die notwendige externe Beschaltung schon vorhanden ist. Inclusive USB-Anschluss, der für die Workshop-Beispiele auch die Spannungsversorgung liefert. Für die Beispiele auf dem Steckbrett nutzen wir das [Development-Modul](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-das-multitalent) von AzDelivery. Es hat diese [Pin-Belegung](https://www.dropbox.com/s/o90qsp1rn5ol9gf/NodeMCU.png?dl=0):
