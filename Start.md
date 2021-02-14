@@ -30,6 +30,8 @@ Bei größeren Booten mit längerem Backbone-Kabel kann es sinnvoll sein, die Sp
 
 Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
 
+Und hier [Micro-C](https://klabauterkiste.de/wp-content/uploads/mnea2000_micro-c_steckerbelegung-1536x541.png).
+
 Um später den ESP32 mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom Spurkabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden.
 
 ## ESP32
