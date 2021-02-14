@@ -28,6 +28,8 @@ Nach dem Workshop solltet ihr folgendes können:
 
 Vorkenntnisse in Programmiersprachen wie C und C++ sind hilfreich, für den Workshop aber nicht unbedingt notwendig. Die Nutzung der Beispiele und auch das eigenständige Erweitern von Programmen wird auch ohne Vorkenntnisse funktionieren.
 
+Wenn ihr alle Vorbereitungen abgeschlossen habt, startet [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Start.md) der Workshop.
+
 # Vorbereitungen
 Für den Workshop sind einige Vorbereitungen notwendig. Diese sollten vor dem Workshop durchgeführt werden, um im Workshop mehr Zeit für die Beispiele zu haben.
 
