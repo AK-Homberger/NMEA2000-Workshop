@@ -6,7 +6,7 @@ Wenn alle Vorbereitungen erfolgreich durchgeführt wurden, können wir nun start
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
-![Bil](https://de.wikipedia.org/wiki/NMEA_2000#/media/Datei:NMEA2000_Modified_motor_yacht.jpg)
+![Bild](https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg)
 
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
