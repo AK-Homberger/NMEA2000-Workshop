@@ -63,7 +63,7 @@ Sobald "Leaving...  Hard resetting via RTS pin..." angezeigt wird, ist das Progr
 
 Das Programm wird im [Flash-Speicher](https://de.wikipedia.org/wiki/Flash-Speicher) des ESP32 gespeichert. Es muss nur einmal übertragen werden und verbleibt im Speicher, auch wenn die Versorgungsspannung unterbrochen wird. Beim nächsten Einschalten wird es automatisch wieder gestartet.
 
-Dieser direkte, sekundenschnelle Start, ohne lange Boot-Zeiten, ist einer der wesentlichen Vorteile gegenüber Computern mit einem vollständigen Betriebssystem (Raspberry Pi, Windows 10 usw.)
+Dieser direkte, sekundenschnelle Start, ohne lange Boot-Zeiten, ist einer der wesentlichen Vorteile gegenüber Computern mit einem vollständigen Betriebssystem (Raspberry Pi, Windows 10 usw.).
 
 ## Workshop-Beispielprogramme
 Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
