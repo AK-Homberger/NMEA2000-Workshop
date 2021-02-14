@@ -1,6 +1,6 @@
 # NMEA2000-Workshop
 
-Wenn alle [Vorbereitungen](https://github.com/AK-Homberger/NMEA2000-Workshop#vorbereiten-der-arduino-ide) erfolgreich durchgeführt wurden, können wir nun starten.
+Wenn alle [Vorbereitungen](https://github.com/AK-Homberger/NMEA2000-Workshop#vorbereitungen) erfolgreich durchgeführt wurden, können wir nun starten.
 
 ## NMEA2000
 
