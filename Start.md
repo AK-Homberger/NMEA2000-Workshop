@@ -20,7 +20,7 @@ Für die feuchte Bootsumgebung ist aber das Kabel allein nicht entscheidend, son
 
 Hier ein typischer Kabelplan:
 
-!{Kabelplan](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Kabelplan.png)
+![Kabelplan](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Kabelplan.png)
 
 
 ## ESP32
