@@ -26,7 +26,7 @@ Im obigen Beispiel wird der NMEA2000/SeatalkNG-Bus durch den ACU200 (Autopilot-S
 
 Wichtig ist in diesem Zusammenhang auch der Seatalk1 zu SeatalkNG-Wandler. Der Wandler verbindet die Versorgungsspannung von Seatalk1 und SeatalkNG direkt. Es ist daher nicht erforderlich, und auch nicht erwünscht, den Seatalk1-Bus extra zu versorgen. Speziell nicht über unterschiedliche Sicherungen/Schalter.
 
-Hier ist die Steckerbelegung für Raymarine SeatlkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
+Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
 
 Um später den ESP32 mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom Spurkabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden.
 
