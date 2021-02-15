@@ -52,7 +52,7 @@ Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einf
 
 Eine HTML-Version des Workshops befindet sich im Ordner "HTML". Damit kann der Workshop auch Offline, ohne GitHub genutzt werden. Zum Start einfach "Start.html" anklicken. Der HTML-Version fehlen derzeit aber die optionalen SignalK-Beispiele.
 
-Die [fritzing](https://fritzing.org/learning/get-started)-daten sind [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/tree/main/Fritzing) gespeichert.
+Die [fritzing](https://fritzing.org/learning/)-daten sind [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/tree/main/Fritzing) gespeichert.
 
 ## Vorbereiten des linken ESP32
 Auf dem **linken** ESP32 ist der Sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino) zu installieren. Dazu im entpackten ZIP-Ordner die Datei "ActisenseListenerSender-ESP32.ino" doppelklicken. Die Arduino-IDE startet dann mit geladenem Sketch (Sketch = Programm). Dann nur den linken ESP32 mit USB verbinden und in der Arduino-IDE den seriellen USB-Port auswählen und "Sketch" "Hochladen" anwählen. **Den seriellen Port bitte notieren**.
