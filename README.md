@@ -89,10 +89,9 @@ Folgende Materialien werden für den Workshop benötigt:
 - Drehpotentiometer 10 KOhm [Link](https://www.reichelt.de/drehpotentiometer-10-kohm-linear-6-mm-pih-pc16ip061033-p232701.html?&nbc=1). Falls das Potentiometer nicht direkt ins Steckbrett gesteckt werden kann, bitte kurze Drahtbrücken anlöten.
 - Flexible Drahtbrücken [Link](https://www.reichelt.de/flexible-drahtbruecken-15-cm-mehrfarbig-65er-pack-rnd-255-00009-p253202.html?&nbc=1&trstct=lsbght_sldr::253206)
 
-2* USB-Kabel (Micro, passend für ESP32)
-
-PC/Laptop (mit 2 * USB)
-
-Tablet/Smartphone (Android/Apple)
+Zusätzlich benötigen wir auch noch folgendes:
+- 2* USB-Kabel (Micro, passend für ESP32)
+- PC/Laptop (mit 2* USB)
+- Tablet/Smartphone (Android/Apple)
 
 Der bei Reichelt angebotene ESP32 (Joy-IT) geht prinzipiell auch. Er hat aber eine andere Pin-Belegung als der von AZ-Delivery. Im Workshop nutzen wir den ESP32 von AZ-Delivery.
