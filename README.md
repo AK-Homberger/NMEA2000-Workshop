@@ -91,8 +91,8 @@ Folgende Materialien werden für den Workshop benötigt:
 
 2* USB-Kabel (Micro, passend für ESP32)
 
-1 PC/Laptop (mit 2 * USB)
+PC/Laptop (mit 2 * USB)
 
-1* Tablet/Smartphone (Android/Apple)
+Tablet/Smartphone (Android/Apple)
 
 Der bei Reichelt angebotene ESP32 (Joy-IT) geht prinzipiell auch. Er hat aber eine andere Pin-Belegung als der von AZ-Delivery. Im Workshop nutzen wir den ESP32 von AZ-Delivery.
