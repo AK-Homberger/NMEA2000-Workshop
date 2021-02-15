@@ -15,10 +15,12 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-H
 
 Danach können wir das Programm auf den rechten ESP32 hochladen.
 
-Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht. Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom linken ESP32 (Baudrate 115200, 8N1).
+Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht.
 
+Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom linken ESP32 (Baudrate 115200, 8N1).
+ 
 ![Settings](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator-Settings.png)
-
+ 
 Im unteren Bereich müssen wir noch auswählen, welche PGNs gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGNs aus.
 
 Danach OK klicken.
