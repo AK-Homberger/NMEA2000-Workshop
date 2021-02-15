@@ -165,6 +165,8 @@ Genau so gut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeb
 
 Hier ist wieder die Hilfe zur Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-voltage-divider) nützlich. Die Eingangsspannung ist hier 5 Volt (vom Geber) und die Ausgangsspannung muss immer klar unter 3,3 Volt liegen. Welche Widerstandskombination ihr wählt, ist weitestgehend gleich. Die Widerstände sollten jedoch im Kilo-Ohm-Bereich liegen, damit die Ströme nicht zu hoch werden. Zum Beispiel führt die Kombination R1: 6800 Ohm und R2: 10000 Ohm zu 2,97 Volt.
 
+Bei der Widerstandswahl sollte man sich an die [E12](https://www.electronicsplanet.ch/Widerstand/Widerstandsreihe-E12.htm) oder [E24](https://www.electronicsplanet.ch/Widerstand/Widerstandsreihe-E24.htm)-Reihe halten. Es gibt nicht alle Widerstandsgröße einfach zu kaufen.
+
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel [Kettenzählwerksimpulse](https://github.com/AK-Homberger/ESP8266_AnchorChainControl_WLAN)) geht übrigens ganz ähnlich. In diesem Fall in der "[handleInterrupt](https://github.com/AK-Homberger/ESP8266_AnchorChainControl_WLAN/blob/c1af59d8e8d59aac96ce903dd28879ab76045985/ChainCounterWLAN/ChainCounterWLAN.ino#L58)"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
 Die Erzeugung des Rechtecksignals an Pin 26 erfolgt übrigens in loop() mit folgenden Zeilen:
