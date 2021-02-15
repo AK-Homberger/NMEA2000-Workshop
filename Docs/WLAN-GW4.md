@@ -43,7 +43,7 @@ int Level = 0;              // LED dimm level
 
 Wir erzeugen einen Web-Server auf Port 80. Die beiden nächsten Variablen sind für den Status der eingebauten LED des ESP32.
 
-In setup() ergänzen wir, welche Funktionen für welche URLs aufgerufen werden sollen:
+In setup() ergänzen wir, welche Funktionen für welche [URLs](https://de.wikipedia.org/wiki/Uniform_Resource_Locator) aufgerufen werden sollen:
 
 ```
 // Define web server events
