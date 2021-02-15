@@ -16,9 +16,9 @@ So muss das Steckbrett dazu aussehen:
 
 Das Potentiometer wird, wie oben gezeigt, mit 3,3 V, GND und den Pins 34/35 verbunden und funktioniert als variabler Spannungsteiler. Je nach Drehposition wird eine Spannung von 0 Volt bis 3,3 Volt an die Pins 34 und 35 geliefert.
 
-Um wirklich die Batteriespannung messen zu können, würde ein [Spannungsteiler](https://de.wikipedia.org/wiki/Spannungsteiler) mit zwei Widerständen (100 KOhm / 27 KOhm) verwendet werden.
+Um wirklich die Batteriespannung messen zu können, würde ein [Spannungsteiler](https://de.wikipedia.org/wiki/Spannungsteiler) mit zwei Widerständen (100 kOhm / 27 kOhm) verwendet werden.
 
-Um den Tanklevel zum Beispiel mit einem Tankgeber von [Philippi (5 - 180 Ohm)](https://www.philippi-online.de/ultraschall-tankgeber-boot-yacht-gobius-monitor-tankanzeige.html) zu messen, wäre ein Widerstand von 1 KOhm möglich (und ggf. eine [Z-Diode](https://de.wikipedia.org/wiki/Z-Diode) zum Schutz des Eingangs vor Überspannung). Als Spannung würden wir auch  die stabilisierte Versorgungsspannung (5 Volt) nutzen, da die Batteriespannung zu sehr schwankt.
+Um den Tanklevel zum Beispiel mit einem Tankgeber von [Philippi (5 - 180 Ohm)](https://www.philippi-online.de/ultraschall-tankgeber-boot-yacht-gobius-monitor-tankanzeige.html) zu messen, wäre ein Widerstand von 1 kOhm möglich (und ggf. eine [Z-Diode](https://de.wikipedia.org/wiki/Z-Diode) zum Schutz des Eingangs vor Überspannung). Als Spannung würden wir auch  die stabilisierte Versorgungsspannung (5 Volt) nutzen, da die Batteriespannung zu sehr schwankt.
 
 Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.com/AK-Homberger/NMEA2000-Data-Sender) dargestellt.
 
