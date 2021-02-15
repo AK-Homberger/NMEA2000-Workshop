@@ -19,7 +19,7 @@ Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Da
  
 ![Settings](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator-Settings.png)
  
-Im unteren Bereich müssen wir noch auswählen, welche PGNs gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGNs aus.
+Im unteren Bereich "NMEA2000 PGNs to be set" müssen wir noch auswählen, welche PGNs gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGNs aus.
 
 Danach OK klicken.
 
