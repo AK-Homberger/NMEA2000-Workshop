@@ -55,7 +55,7 @@ Eine HTML-Version des Workshops befindet sich im Ordner "HTML". Damit kann der W
 Die [Fritzing](https://fritzing.org/learning/)-daten sind [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/tree/main/Fritzing) gespeichert. Mit etwas Einarbeitung könnte man mit Fritzing sogar eigene Projekte mit gefertigten Leiterplatten erstellen.
 
 ## Vorbereiten des linken ESP32
-Der linke ESP32 dient ja als Schnittstelle für den NMEA-Reader und NMEA-Simulator. Damit das funktioniert, muss ein entsprechendes Programm installiert werden.
+Der linke ESP32 dient ja als Schnittstelle für den NMEA-Reader und den NMEA-Simulator. Beide Programme verstehen das Actisense-Format an der seriellen Schnittstelle. Damit das später funktioniert, muss ein entsprechendes Programm aud dem ESP32 installiert werden.
 
 Auf dem **linken** ESP32 ist der Sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino) zu installieren. 
 
