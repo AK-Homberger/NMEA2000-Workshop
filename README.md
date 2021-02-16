@@ -36,7 +36,7 @@ Wenn ihr alle Vorbereitungen abgeschlossen habt, startet [hier](https://github.c
 # Vorbereitungen
 Für den Workshop sind einige Vorbereitungen notwendig. Diese sollten vor dem Workshop durchgeführt werden, um im Workshop mehr Zeit für die Beispiele zu haben.
 
-Falls es bei den Vorbereitungen zu Problemen kam, können wie die Probleme im Workshop gemeinsam lösen.
+Falls es bei den Vorbereitungen zu Problemen kam, können wir die Probleme im Workshop gemeinsam lösen.
 
 ## Vorbereiten der Arduino-IDE
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
