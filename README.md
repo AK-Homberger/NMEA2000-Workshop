@@ -62,7 +62,14 @@ Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. D
 
 **Um Schäden durch falsche Steckverbindungen zu vermeiden, bitte den ESP32 immer zuerst von der USB-Stromversorgung trennen, bevor Steckverbindungen gesteckt oder geändert werden.**
 
-An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). **Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L)**.
+An beiden ESP32 wird der CAN-Transceiver angeschlossen:
+- 3,3 Volt an 3,3 Volt
+- GND an GND
+- CAN-RX an GPIO 4
+- CAN-TX an GPIO 5 
+
+Die beiden Transceiver werden dann verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L).
+
 Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. 
 
 Eigentlich besteht ein NMEA2000-Netzwerk aus einem Backbone-Kabel, das an beiden Enden mit einem Widerstand abgeschlossen ist. Vom Backbone können dann mehrere Stichleitungen zu den Geräten abgehen. Für unser Mini-Netzwerk ist das aber nicht weiter wichtig. Der CAN-Bus ist so robust, dass es auch mit einer einfachen Direktverbindung von CAN-L und CAN-H funktioniert.
