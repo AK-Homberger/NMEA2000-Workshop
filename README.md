@@ -60,6 +60,8 @@ Ein Steckbrett (auch Breadboard), ist die einfachste Art, kleine Schaltungen auf
 
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. Der linke ESP32 dient als Schnittstelle zum NMEA-Simulator/-Reader auf dem PC/Laptop. Der rechte wird für die Beispielprogramme genutzt.
 
+Um Schäden durch falsche Steckverbindungen zu vermeiden, bitte den ESP32 immer zuerst von der USB-Stromversorgung trennen, bevor Steckverbindungen gesteckt oder geändert werden.
+
 An beiden ESP32 wird der CAN-Transceiver angeschlossen (3,3 Volt, GND, CAN-RX, CAN-TX). **Die beiden Transceiver werden verbunden (CAN-H mit CAN-H und CAN-L mit CAN-L)**.
 Damit haben wir ein kleines NMEA2000-Netzwerk zum Üben. 
 
