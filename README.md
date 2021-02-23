@@ -13,6 +13,7 @@ Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelld
 
 ## Ziele
 Nach dem Workshop solltet ihr folgendes können:
+- Grundlegende Informationen zu NMEA0183 und NMEA2000 finden und verstehen
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
 - Die Arduino-IDE installieren
 - Die nötigen Bibliotheken installieren (ZIP-Datei und Bibliotheksverwalter)
