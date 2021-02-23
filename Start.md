@@ -6,11 +6,10 @@ Wenn alle [Vorbereitungen](https://github.com/AK-Homberger/NMEA2000-Workshop#vor
 
 NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
 
-Die aktuelle Liste der PGNs (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden.
+Die aktuelle Liste der PGNs (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. Die Liste der PGNs ist nicht ausreichend, um die PGNs im Programm zu nutzen. Dazu sind weitere Informationen zur Interpretation der Felder notwendig. Diese sind nur in der lizenzpflichtigen Dokumentation des Standards enthalten. Hersteller, die NMEA2000 in ihern Produkten nutzen, dürfen darüber hinaus auch keine weiteren Details offenlegen. Nicht einmal für eigne proprietäre Erweiterungn.
 
 <p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
  
-
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
 Die üblichen Hersteller verkaufen ihre NMEA2000-/CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAN-BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Voelkner](https://www.voelkner.de/products/146612/LAPP-2170261-1-Busleitung-UNITRONIC-BUS-2-x-2-x-0.22mm-Violett-Meterware.html). Zum Beispiel in Verbindung mit schraubbaren [Micro-C-Steckverbindern](https://www.gmm-yacht.de/nmea_2000_installation.html).
