@@ -72,7 +72,7 @@ Das Programm wird im [Flash-Speicher](https://de.wikipedia.org/wiki/Flash-Speich
 Dieser direkte, sekundenschnelle Start, ohne lange Boot-Zeiten, ist einer der wesentlichen Vorteile gegenüber Computern mit einem vollständigen Betriebssystem (Raspberry Pi, Windows 10 usw.).
 
 ## Workshop-Beispielprogramme
-Auf dem rechten ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
+Auf dem **rechten** ESP32 werden unterschiedliche Programme installiert, um die Nutzung der NMEA2000-Bibliothek zu erklären. Dazu wird der ESP32 mit USB verbunden und in der Arduino-IDE der neue serielle USB-Port ausgewählt.
 
 Mit dem NMEA-Reader können wir Daten vom NMEA2000-Netzwerk anzeigen, und mit dem NMEA-Simulator auch Daten an das Netzwerk senden. Beides werden wir im Workshop nutzen.
 
