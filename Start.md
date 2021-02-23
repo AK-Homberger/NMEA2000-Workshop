@@ -55,7 +55,7 @@ Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA2000-Work
 
 Dann kann man die Beispielprogramme direkt in der Arduino-IDE öffnen. Dazu einfach auf die jeweilige .ino-Datei doppelklicken. Alle Programme befinden sich im Ordner "Software".
 
-Eine HTML-Version des Workshops befindet sich im Ordner "HTML". Damit kann der Workshop auch Offline, ohne GitHub genutzt werden. Zum Start einfach "Start.html" anklicken. Der HTML-Version fehlen derzeit aber die optionalen SignalK-Beispiele.
+Eine HTML-Version des Workshops befindet sich im Ordner "HTML". Damit kann der Workshop auch Offline, ohne GitHub genutzt werden. Zum Start einfach "Start.html" anklicken. Der HTML-Version ist nicht ganz aktuell. Auch fehlen derzeit die optionalen SignalK-Beispiele.
 
 Die [Fritzing](https://fritzing.org/learning/)-daten sind [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/tree/main/Fritzing) gespeichert. Mit etwas Einarbeitung könnte man mit Fritzing sogar eigene Projekte mit gefertigten Leiterplatten erstellen.
 
