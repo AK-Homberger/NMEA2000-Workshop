@@ -56,7 +56,7 @@ Jeweils auf den Namen des Repositories klicken, dann den auf "Code" klicken und 
 
 ## Vorbereiten des Steckbretts
 
-Ein Steckbrett (auch Breadboard) ist die einfachste Art kleine Schaltungen aufzubauen. Wie ein Steckbrett funktioniert wird zum Beispiel [hier](https://www.exp-tech.de/blog/tutorial-breadboard-steckplatine) beschrieben.
+Ein Steckbrett (auch Breadboard), ist die einfachste Art, kleine Schaltungen aufzubauen. Wie ein Steckbrett funktioniert wird zum Beispiel [hier](https://www.exp-tech.de/blog/tutorial-breadboard-steckplatine) beschrieben.
 
 Die Basis für den Workshop bilden zwei ESP32-Module mit CAN-Bus-Transceivern. Der linke ESP32 dient als Schnittstelle zum NMEA-Simulator/-Reader auf dem PC/Laptop. Der rechte wird für die Beispielprogramme genutzt.
 
