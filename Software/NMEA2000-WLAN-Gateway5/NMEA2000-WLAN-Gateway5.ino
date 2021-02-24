@@ -329,6 +329,7 @@ void SendNMEA0183Message(const tNMEA0183Msg &NMEA0183Msg) {
 void CheckSourceAddressChange() {
   int SourceAddress = NMEA2000.GetN2kSource();
   if (SourceAddress != NodeAddress) { // Save potentially changed Source Address to NVS memory
+    NodeAddress = SourceAddress;      // Set new Node Address (to save only once)
     preferences.begin("nvs", false);
     preferences.putInt("LastNodeAddress", SourceAddress);
     preferences.end();
