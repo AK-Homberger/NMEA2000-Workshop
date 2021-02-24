@@ -64,6 +64,8 @@ Der linke ESP32 dient ja als Schnittstelle für den NMEA-Reader und den NMEA-Sim
 
 Auf dem **linken** ESP32 ist der Sketch [ActisenseListenerSender-ESP32.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/ActisenseListenerSender-ESP32/ActisenseListenerSender-ESP32.ino) zu installieren. 
 
+Übrigens: Wenn ihr in anderen Programmen wie OpenCPN oder SignalK etwas von einem NGT-1 lest, dann könnt ihr auch den ESP32 mit ActisenseListenerSender-ESP32-Programm nutzen.
+
 ![Steckbrett](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA2000-Basis_Steckplatine.png)
 Dazu im entpackten ZIP-Ordner die Datei "ActisenseListenerSender-ESP32.ino" doppelklicken. Die Arduino-IDE startet dann mit geladenem Sketch (Sketch = Programm). Dann nur den linken ESP32 mit USB verbinden und in der Arduino-IDE den seriellen USB-Port auswählen und "Sketch" "Hochladen" anwählen. **Den seriellen Port bitte notieren**.
 
