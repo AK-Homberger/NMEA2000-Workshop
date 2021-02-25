@@ -173,6 +173,6 @@ Mit dem NMEA-Simulator können wir nun Daten über den linken ESP32 an den NMEA2
 
 ![Anzeige](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway/blob/main/Signalk-Instrumentpanel.png)
 
-Wenn man die Anbindung an SignalK lieber drahtlos per WLAN machen möchte, so geht das auch. Zum [Beispiel](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway) mit dem Yacht-Devices-Format per UDP. Das funktioniert nicht nur für SignalK. Auch viele Tablet Apps verstehen dieses Format.
+Wenn man die Anbindung an SignalK lieber drahtlos per WLAN machen möchte, so geht das auch. Zum [Beispiel](https://github.com/AK-Homberger/NMEA2000-SignalK-Gateway#2-wlan-gateway-all-pgns) mit dem Yacht-Devices-Format per UDP. Das funktioniert nicht nur für SignalK. Auch viele Tablet Apps verstehen dieses Format.
 
 [Das war es nun schon ...](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Ende.md).
