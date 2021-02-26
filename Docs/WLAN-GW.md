@@ -68,7 +68,7 @@ Mit Bildschirmfotos kann ich hier nicht dienen, da ich kein Android-System nutze
 
 
 # OpenCPN
-Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (zweiter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch hier die vom NMEA-Simulator gesendeten Daten sehen:
+Sofern auf dem PC OpenCPN läuft, kann man nach Konfiguration der seriellen Schnittstelle (rechter ESP32) und Konfiguration des OpenCPN-Dashboard-Plugins auch hier die vom NMEA-Simulator gesendeten Daten sehen:
 
 ![OpenCPN](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/OpenCPN.png)
 
