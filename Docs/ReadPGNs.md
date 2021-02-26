@@ -11,7 +11,7 @@ Zum Lesen von Daten benötigen wir nur das Basis-Steckbrett mit den beiden ESP32
 
 ## Das Programm
 
-Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-Reader/NMEA2000-Reader.ino) in die Arduino-IDE. Danach können wir das Programm auf den rechten ESP32 hochladen.
+Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-Reader/NMEA2000-Reader.ino) in die Arduino-IDE. Danach können wir das Programm auf den **rechten** ESP32 hochladen.
 
 Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht.
 
