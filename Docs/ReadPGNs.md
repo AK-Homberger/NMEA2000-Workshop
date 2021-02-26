@@ -15,7 +15,7 @@ Wir laden nun das Beispielprogramm [NMEA2000-Reader.ino](https://github.com/AK-H
 
 Auf dem PC starten wir das Programm "NMEA-Simulator". Ein eventuell zuvor gestartetes NMEA-Reader-Programm beenden wir, damit die serielle Schnittstelle zur Verfügung steht.
 
-Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom linken ESP32 (Baudrate 115200).
+Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Das geht mit "Tools", "Options", Reiter "NMEA2000". Dann wählen wir die serielle Schnittstelle vom **linken** ESP32 (Baudrate 115200).
  
 ![Settings](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator-Settings.png)
  
