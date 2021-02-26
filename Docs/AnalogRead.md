@@ -7,7 +7,7 @@ Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Spannungen und Widerständ
 
 Wir nutzen dazu die [Analog-Digital-Converter](https://de.wikipedia.org/wiki/Analog-Digital-Umsetzer) (ADC) Funktionen des ESP32. Der ESP32 hat zwei unabhängige ADCs, die durch 18 unterschiedliche Pins angesteuert werden können.
 
-Wir nutzen hier die Pins 34 und 35 (ADC1_CH6 und ADC1_CH7). Zur Vereinfachung verwenden wir im Workshop ein einfaches 10 KOhm Potentiometer, um sowohl die Bordspannung als auch den Tanklevel zu simulieren.
+Wir nutzen hier die Pins 34 und 35 (ADC1_CH6 und ADC1_CH7). Zur Vereinfachung verwenden wir im Workshop ein einfaches 10 kOhm Potentiometer, um sowohl die Bordspannung als auch den Tanklevel zu simulieren.
 
 ## Schaltung
 So muss das Steckbrett dazu aussehen:
