@@ -40,9 +40,9 @@ Hier wird mit NMEA0183.GetMessage() geschaut, ob eine Nachricht erkannt wurde. F
 Das war alles. Nun habt ihr ein NMEA2000 zu NMEA0183-WLAN-Gateway mit einem zusätzlichen NMEA0183-Multiplexer.
 Das fertige Programm ist [hier](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-WLAN-Gateway2/NMEA2000-WLAN-Gateway2.ino) gespeichert.
 
-Falls ihr nur einen NMEA0183-WLAN-Multiplexer ohne NMEA2000 benötigt, könnt ich auch diesen [Multiplexer](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer) nutzen.
-
 Leider können wir die Funktion hier nicht testen.
+
+Falls ihr nur einen NMEA0183-WLAN-Multiplexer ohne NMEA2000 benötigt, könnt ich auch diesen [Multiplexer](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer) nutzen.
 
 Als Bonus-Material könnten wir unser Gateway noch mit einem [Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW4.md) erweitern.
 
