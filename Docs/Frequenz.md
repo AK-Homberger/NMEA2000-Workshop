@@ -81,7 +81,7 @@ In setup() wird nun die Interrupt-Funktion für Pin 27 initialisiert:
   timerStart(timer);   
  ```
  
-Als Erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem Pull-Up-Widerstand definiert. 
+Als Erstes wird mit pinMode() Pin 27 als Eingangs-Pin mit internem [Pull-Up-Widerstand](https://de.wikipedia.org/wiki/Open_circuit#Pull-up) definiert. 
 
 Als Nächstes folgt mit attachInterrupt() die Festlegung von Pin 27 als Interrupt. Es wird festgelegt, dass bei einem externen Signalwechsel an Pin27 von HIGH auf LOW (=FALLING) die Funktion "handleInterrupt" aufgerufen wird.
 
