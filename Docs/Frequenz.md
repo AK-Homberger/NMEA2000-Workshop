@@ -116,7 +116,7 @@ Wie schon erwähnt, wird diese Funktion immer dann aufgerufen, wenn das Signal a
 
 Mit "PeriodCount = TempVal - StartValue;" wird die Zeitdifferenz seit dem letzten Interrupt berechnet.
 
-Bei der Nutzung von Interrupt-Funktionen ist etwas spezielles zu beachten. Wie man sieht, ist die Funktion mit einem Attribut "IRAM_ATTR" deklariert. Das sorgt dafür, dass sich die Funktion dauerhaft im RAM des ESP32 befindet (statt im Flash-Speicher oder zufällig im Cache). Wenn ihr jetzt weitere Funktionen aufruft, ist wichtig zu wissen, dass dies auch für diese Funktionen zutrifft. Für [timerRead()](https://github.com/espressif/arduino-esp32/blob/dd513df124bd39736e96c2b03b23dd48bdae0c97/cores/esp32/esp32-hal-timer.c#L93) und [millis()](https://github.com/espressif/arduino-esp32/blob/dd513df124bd39736e96c2b03b23dd48bdae0c97/cores/esp32/esp32-hal-misc.c#L139) ist das der Fall.
+Bei der Nutzung von Interrupt-Funktionen ist etwas spezielles zu beachten. Wie man sieht, ist die Funktion mit einem Attribut **"IRAM_ATTR"** deklariert. Das sorgt dafür, dass sich die Funktion dauerhaft im RAM des ESP32 befindet (statt im Flash-Speicher oder zufällig im Cache). Wenn ihr jetzt weitere Funktionen aufruft, ist wichtig zu wissen, dass dies auch für diese Funktionen zutrifft. Für [timerRead()](https://github.com/espressif/arduino-esp32/blob/dd513df124bd39736e96c2b03b23dd48bdae0c97/cores/esp32/esp32-hal-timer.c#L93) und [millis()](https://github.com/espressif/arduino-esp32/blob/dd513df124bd39736e96c2b03b23dd48bdae0c97/cores/esp32/esp32-hal-misc.c#L139) ist das der Fall.
 
 Diese Trennung von Daten-Bus und Programm-Bus beim ESP32 nennt sich übrigens [Harvard-Architektur](https://de.wikipedia.org/wiki/Harvard-Architektur).
 
