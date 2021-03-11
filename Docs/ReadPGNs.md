@@ -27,7 +27,7 @@ Danach OK klicken.
 
 Jetzt können wir im Simulator Werte ändern und die Motordrehzahl erhöhen. Dazu "Throttle Gear" hochschieben.
 
-Danach wählen wir die Check-Box "Run" aus.
+**Danach wählen wir die Check-Box "Run" aus.**
 
 Im Seriellen Monitor der Arduino-IDE sollen jetzt folgende Zeilen ausgegeben werden:
 
