@@ -4,7 +4,7 @@ Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
 
 Das Ziel ist es diesmal, die Motordrehzahl an der [Klemme "W"](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Klemme-w.pdf) der [Lichtmaschine](https://de.wikipedia.org/wiki/Lichtmaschine) zu messen und als PGN127488 (Engine Parameters, Rapid Update) zu senden.
     
-Wir nutzen dazu die Interrupt-Funktion des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
+Wir nutzen dazu die [Interrupt-Funktion](https://de.wikipedia.org/wiki/Interrupt) des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
 Für das Beispielprogramm nutzen wir Pin 27 als Eingang. Da wir für den Workshop keine Lichtmaschine zur Verfügung haben, nutzen wir einen anderen Pin des ESP32 (GPIO 26) als Signalgenerator. Die Drehzahl stellen wir mit dem Potentiometer ein, dass schon aus dem Beispiel zur Spannungsmessung gesteckt war. Zusätzlich stecken wir hier eine Brücke zwischen GPIO 26 und GPIO 27.
 
