@@ -165,7 +165,7 @@ Sollte eure Lichtmaschine keinen "W"-Anschluss haben, könnt ihr auch eine klein
 
 Genau so gut könnten wir übrigens auch den Durchfluss mit einem [Durchflussgeber](https://www.roboter-bausatz.de/p/yf-s201-halleffekt-wasser-durchflusssensor-1-30l-min-g1-2) messen (Kalibrierungswert = 0,1333 für L/m). 
 
-Im Geber ist, anders als im Datenblatt beschrieben, ein [Open-Collector-Ausgang](https://de.wikipedia.org/wiki/Open-Collector-Ausgang) verbaut. Daher reicht in ein einfacher Pull-Up-Widerstand am Eingang des ESP32 aus (s. Definition "INPUT-PULLUP" für GPIO in setup()).
+Im Geber ist, anders als im Datenblatt beschrieben, ein [Open-Collector-Ausgang](https://de.wikipedia.org/wiki/Open-Collector-Ausgang) verbaut. Daher reicht in ein einfacher Pull-Up-Widerstand am Eingang des ESP32 aus (s. Definition "INPUT_PULLUP" für GPIO in setup()).
 
 So, nun können wir auch Frequenzen messen. Das Messen von Ereignissen (zum Beispiel [Kettenzählwerksimpulse](https://github.com/AK-Homberger/ESP8266_AnchorChainControl_WLAN)) geht übrigens ganz ähnlich. In diesem Fall in der "[handleInterrupt](https://github.com/AK-Homberger/ESP8266_AnchorChainControl_WLAN/blob/c1af59d8e8d59aac96ce903dd28879ab76045985/ChainCounterWLAN/ChainCounterWLAN.ino#L58)"-Funktion einfach die Ereignise hoch- oder runterzählen.
 
