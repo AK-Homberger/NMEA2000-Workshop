@@ -26,6 +26,8 @@ Gängige [Öldruckgeber von VDO](http://www.druckgeber-oeldruckgeber.de/vdo-druc
 
 Hilfen zur Berechnung der [Widerstände](https://www.digikey.de/de/resources/conversion-calculators/conversion-calculator-voltage-divider) sind hier zu finden. Die Ausgangsspannung muss immer unter 3,3 Volt liegen.
 
+Bei der Widerstandswahl sollte man sich an die [E12](https://www.electronicsplanet.ch/Widerstand/Widerstandsreihe-E12.htm) oder [E24](https://www.electronicsplanet.ch/Widerstand/Widerstandsreihe-E24.htm)-Reihe halten. Es gibt nicht alle Widerstandsgrößen einfach zu kaufen.
+
 ## Das Programm
 Kommen wir nun zum Programm.
 
