@@ -1,9 +1,17 @@
 # NMEA2000-Workshop
 
-Dieses Repository enthält Informationen zum NMEA2000-Workshop vom 30. Januar 2021.
+Dieses Repository enthält Informationen zum NMEA2000-Workshop in 2021.
 
-Weitere Workshops werden aber auch in Open Boat Projects live geplant. 
-Bei Interesse bitte im Segeln-Forum [hier](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) melden. 
+Es haben inzwischen zwei Workshops stattgefunden:
+
+- Am 30.01.21 als Teil der [Yachttechnik Seminare](https://www.segeln-forum.de/board69-gewerbliche-angebote/board114-aus-weiterbildung-gewerblich/77672-seminar-workshop-nmea-2000/)
+- Am 24.02.21 und 10.03.21 als Teil von [Open-Boat-Projects-Live](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec).
+
+Die Zweiteilung des Workshops hat sich dabei bewährt, da es für einen Termin zu viel Inhalt ist.
+
+Weitere Seminare können bei Bedarf folgen.
+
+Bei Interesse bitte im Segeln-Forum [hier] melden. 
 
 Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Sie können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
 
