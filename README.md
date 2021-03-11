@@ -9,7 +9,7 @@ Es haben inzwischen zwei Workshops stattgefunden:
 
 Die Zweiteilung des Workshops hat sich dabei bewährt, da es für einen Termin zu viel Inhalt ist.
 
-Weitere Seminare können bei Bedarf folgen.
+Weitere Workshops können bei Bedarf folgen.
 
 Bei Interesse bitte im Segeln-Forum [hier](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) melden. 
 
