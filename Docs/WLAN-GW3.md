@@ -42,7 +42,7 @@ Das fertige Programm ist [hier](https://github.com/AK-Homberger/NMEA2000-Worksho
 
 Leider können wir die Funktion hier nicht testen.
 
-Falls ihr nur einen NMEA0183-WLAN-Multiplexer ohne NMEA2000 benötigt, könnt ich auch diesen [Multiplexer](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer) nutzen.
+Falls ihr nur einen NMEA0183-WLAN-Multiplexer ohne NMEA2000 benötigt, könnt ihr auch diesen [Multiplexer](https://github.com/AK-Homberger/NMEA0183-WiFi-Multiplexer) nutzen.
 
 Als Bonus-Material könnten wir unser Gateway noch mit einem [Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW4.md) erweitern.
 
