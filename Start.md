@@ -39,9 +39,9 @@ Bei größeren Booten mit längerem Backbone-Kabel kann es sinnvoll sein, die Sp
 
 Für die Berechnung des maximalen Lastfaktors (Lastfaktor = LEN) ist die Leistungsaufnahme der angeschlossenen Geräte und die Länge des Backbone-Kabels entscheidend. Detaillierte Informationen zur Berechnung findet man in der Hersteller-Dokumenten. [Hier](https://media1.svb-media.de/media/snr/504053/pdf/manual_2018-08-24_15-45-03_b95c81e6054c9a0496a6fd235f8eee6e.pdf) zum Beipiel für Raymarine.
 
-Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
-
-Und hier für [Micro-C](https://klabauterkiste.de/wp-content/uploads/mnea2000_micro-c_steckerbelegung-1536x541.png).
+## Steckerbelegung
+- Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
+- Und hier für [Micro-C](https://klabauterkiste.de/wp-content/uploads/mnea2000_micro-c_steckerbelegung-1536x541.png).
 
 Um später ein ESP32-Gerät mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom (Spur-)Kabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden (CAN-H, CAN-L, +12V, 0V/GND). Für die Funktion sind mindestens CAN-H, CAN-L und GND notwendig. Die +12V können zusätzlich verwendet werden, um das ESP32-Gerät mit Spannung zu versorgen (über DC/DC-Wandler von 12 Volt auf 5 Volt).
 
