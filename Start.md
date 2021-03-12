@@ -19,6 +19,7 @@ Hersteller, die NMEA2000 in ihren Produkten nutzen, dürfen darüber hinaus auch
  
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
+## Kabel
 Die üblichen Hersteller verkaufen ihre NMEA2000-/CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAN-BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Voelkner](https://www.voelkner.de/products/146612/LAPP-2170261-1-Busleitung-UNITRONIC-BUS-2-x-2-x-0.22mm-Violett-Meterware.html). Zum Beispiel in Verbindung mit schraubbaren [Micro-C-Steckverbindern](https://www.gmm-yacht.de/nmea_2000_installation.html).
 
 Ein standardisiertes NMEA2000(Light)-Kabel muss einen Mindestquerschnitt haben. Für das Signal sind dies [AWG24](https://de.wikipedia.org/wiki/American_Wire_Gauge) (0,205 mm²) und für die Versorgungsspannung [AWG22](https://de.wikipedia.org/wiki/American_Wire_Gauge) (0,326 mm²). Das obige Unitronic-Kabel erfüllt die Anforderungen für das Signal. Für die standardkonforme Stromversorgung ist es etwas zu dünn (0,22 mm²). Darauf muss man bei größeren Netzwerken und der Berechnung der maximalen Last achten (s. LEN-Berechnung weiter unten).
@@ -37,6 +38,7 @@ Wichtig ist in diesem Zusammenhang auch der Seatalk1 zu SeatalkNG-Wandler. Der W
 
 Bei größeren Booten mit längerem Backbone-Kabel kann es sinnvoll sein, die Spannungsversorgung in der Mitte des Kabels anzuschließen. Das verringert die Spannungsverluste auf dem Kabelweg.
 
+## Lastfaktor (LEN)
 Für die Berechnung des maximalen Lastfaktors (Lastfaktor = LEN) ist die Leistungsaufnahme der angeschlossenen Geräte und die Länge des Backbone-Kabels entscheidend. Detaillierte Informationen zur Berechnung findet man in der Hersteller-Dokumenten. [Hier](https://media1.svb-media.de/media/snr/504053/pdf/manual_2018-08-24_15-45-03_b95c81e6054c9a0496a6fd235f8eee6e.pdf) zum Beipiel für Raymarine.
 
 ## Steckerbelegung
