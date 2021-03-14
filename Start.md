@@ -17,17 +17,17 @@ Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefor
 Ein Adernpaar ist für das Signal (CAN-H, CAN-L) und ein Adernpaar ist für die Versorgungsspennung (12 Volt, GND).
 Folgende Farben sind festgelegt.
 
-| Farbe   | Name     | Spannung |  Funktion |
-|-------- |----------|----------|-----------|
-| weiß    | CAN_High | +2,5 V   | Signal |
-| blau    | CAN_Low  | -2,5 V   | Signal |
-| Schirm  | Masse    | GND      | Abschirmung  |
+| Farbe   | Name     | Spannung | Funktion             |
+|-------- |----------|----------|----------------------|
+| weiß    | CAN_High | +2,5 V   | Signal               |
+| blau    | CAN_Low  | -2,5 V   | Signal               |
+| Schirm  | Masse    | GND      | Abschirmung          |
 | rot     | V+       | +12 V    | Spannungsversorgung  |
 | schwarz | V-       | GND      | Spannungsversorgung  |
 
 Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. Geräte mit höherem Strombedarf müsse extra versorgt werden. Der Maximalstrom ist mit 3 A festgelegt.
 
-Das NMEA-Netzwerk darf nur an einer Stelle mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
+Das NMEA2000-Netzwerk darf nur an einer Stelle mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
 
 Ein NMEA2000 Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
 Die Endwiderstände sind notwendig, um Reflexionen des Signals zu verweiden. 120 Ohm entsprechen dem [Wellenwiderstand](https://de.wikipedia.org/wiki/Wellenwiderstand#Der_Leitungswellenwiderstand,_der_Leitungsabschluss_und_die_Eingangsimpedanz_einer_Leitung) von paarweise verdrillten Leitern. Vom Backbone-Kabel gehen Stichleitungen zu den einzelnen Geräten ab (über T-Stücke).
@@ -40,7 +40,7 @@ Es gelten folgende Grenzwerte:
 
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN-H und CAN-L messen der Wert sollte ca 60 Ohm sein.
 
-Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGNs). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs können sind adressierbar (Senden an ein definirtes Gerät). Die meisten PGNs sind jedoch Broadcast-PGNs, die an alle Busteilnehmer adressiert sind.
+Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGNs). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGNs sind jedoch Broadcast-PGNs, die an alle Busteilnehmer adressiert sind.
 
 Die aktuelle Liste der unterstützten PGNs (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. 
 
