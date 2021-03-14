@@ -42,7 +42,7 @@ Es gelten folgende Grenzwerte:
 - Eine Stichleitung  darf maximal 6 m lang sein.
 - Es dürfen maximal 50 Geräte an das NMEA2000-Netzwerk angeschlossen werden (s. LEN-Berechnung).
 
-**Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN-H und CAN-L messen der Wert sollte ca. 60 Ohm sein.
+**Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN-H und CAN-L messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
 Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGNs). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGNs sind jedoch Broadcast-PGNs, die an alle Busteilnehmer adressiert sind.
 
