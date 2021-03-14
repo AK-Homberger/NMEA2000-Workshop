@@ -15,7 +15,8 @@ NMEA2000 definiert zusätzlich zu CAN-Bus Mindestanforderungen für die Kabeltyp
 Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP)).
 
 Ein Adernpaar ist für das Signal (CAN-H, CAN-L) und ein Adernpaar ist für die Versorgungsspennung (12 Volt, GND).
-Folgende Farben sind festgelegt.
+
+Folgende Farben sind festgelegt:
 
 | Farbe   | Name     | Spannung | Funktion             |
 |-------- |----------|----------|----------------------|
