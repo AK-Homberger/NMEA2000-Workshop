@@ -30,6 +30,9 @@ Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. 
 
 Das NMEA2000-Netzwerk darf nur an einer Stelle mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
 
+<p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
+
+
 Ein NMEA2000 Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
 Die Endwiderstände sind notwendig, um Reflexionen des Signals zu verweiden. 120 Ohm entsprechen dem [Wellenwiderstand](https://de.wikipedia.org/wiki/Wellenwiderstand#Der_Leitungswellenwiderstand,_der_Leitungsabschluss_und_die_Eingangsimpedanz_einer_Leitung) von paarweise verdrillten Leitern. Vom Backbone-Kabel gehen Stichleitungen zu den einzelnen Geräten ab (über T-Stücke).
 
@@ -48,11 +51,6 @@ Die aktuelle Liste der unterstützten PGNs (Stand 2015) ist [hier](https://www.n
 Die Liste der PGNs ist nicht ausreichend, um die PGNs im Programm zu nutzen. Dazu sind weitere Informationen zur Interpretation der Felder notwendig. Diese sind nur in der lizenzpflichtigen Dokumentation des Standards enthalten.
 
 Hersteller, die NMEA2000 in ihren Produkten nutzen, dürfen darüber hinaus auch keine weiteren Details offenlegen (s. Seite 6 im Dokument ["Certification Process Overview and License Agreement"](https://www.nmea.org/Assets/NMEA%202000%20Certification%20Process%20Overview%20and%20License%20Agreement-%20Updated%202020.pdf). Nicht einmal für eigene proprietäre Erweiterungen.
- 
-  
-<p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
- 
-
  
 Im Rahmen des Workshops werden wir ein kleines NMEA2000-Netzwerk aufbauen und erste Programme mit der [NMEA2000-Bibliothek](https://github.com/ttlappalainen) von Timo Lappalainen erstellen und ausprobieren.
 
