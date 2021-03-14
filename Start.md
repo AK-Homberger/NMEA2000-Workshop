@@ -10,7 +10,7 @@ Anders als NMEA0183 definiert NMEA2000 nicht nur eine Schnittstelle, sondern ein
 NMEA2000 nutzt den CAN-Bus mit einer Datenrate von 250 kBit/s und ist damit über 50-mal schneller als NMEA0183 (4800 Bit/s).
 NMEA2000 ist ein selbstkonfigurierendes System. Es funktioniert ohne eine zetrale Steuerinstanz. Alle notwendigen Konfigurationen (z. Adresszuweisung) erledigen die Geräte selbstständig durch Kommunikation miteinander.
 
-# Elektrische Schnittstelle
+## Elektrische Schnittstelle
 NMEA2000 definiert zusätzlich zu CAN-Bus Anforderungen für die Kabeltypen und die einzelnen Adern des Kabels.
 Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP)).
 
