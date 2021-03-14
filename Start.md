@@ -50,8 +50,8 @@ Die aktuelle Liste der unterstützten PGNs (Stand 2015) ist [hier](https://www.n
 
 Die Liste der PGNs ist nicht ausreichend, um die PGNs im Programm zu nutzen. Dazu sind weitere Informationen zur Interpretation der Felder notwendig. Diese sind nur in der lizenzpflichtigen Dokumentation des Standards enthalten.
 
-Hersteller, die NMEA2000 in ihren Produkten nutzen, dürfen darüber hinaus auch keine weiteren Details offenlegen (s. Seite 6 im Dokument ["Certification Process Overview and License Agreement"](https://www.nmea.org/Assets/NMEA%202000%20Certification%20Process%20Overview%20and%20License%20Agreement-%20Updated%202020.pdf). Nicht einmal für eigene proprietäre Erweiterungen.
- 
+Hersteller, die NMEA2000 in ihren Produkten nutzen, dürfen darüber hinaus auch keine weiteren Details offenlegen (s. Seite 6 im Dokument ["Certification Process Overview and License Agreement"](https://www.nmea.org/Assets/NMEA%202000%20Certification%20Process%20Overview%20and%20License%20Agreement-%20Updated%202020.pdf).
+
 ### NMEA2000-Kabel
 Die üblichen Hersteller verkaufen ihre NMEA2000-/CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAN-BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Voelkner](https://www.voelkner.de/products/146612/LAPP-2170261-1-Busleitung-UNITRONIC-BUS-2-x-2-x-0.22mm-Violett-Meterware.html). Zum Beispiel in Verbindung mit schraubbaren [Micro-C-Steckverbindern](https://www.gmm-yacht.de/nmea_2000_installation.html).
 
