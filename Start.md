@@ -11,10 +11,10 @@ NMEA2000 nutzt den CAN-Bus mit einer Datenrate von 250 kBit/s und ist damit übe
 NMEA2000 ist ein selbstkonfigurierendes System. Es funktioniert ohne eine zetrale Steuerinstanz. Alle notwendigen Konfigurationen (z. Adresszuweisung) erledigen die Geräte selbstständig durch Kommunikation miteinander.
 
 # Elektrische Schnittstelle
-NMEA2000 definiert zusätzlich zu CAN-Bus Mindestanforderungen für die Kabeltypen und die einzelnen Adern des Kabels.
+NMEA2000 definiert zusätzlich zu CAN-Bus Anforderungen für die Kabeltypen und die einzelnen Adern des Kabels.
 Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP)).
 
-Ein Adernpaar ist für das Signal (CAN-H, CAN-L) und ein Adernpaar ist für die Versorgungsspennung (12 Volt, GND).
+Ein Adernpaar ist für das Signal (CAN_High, CAN_Low) und ein Adernpaar ist für die Versorgungsspennung (12 Volt, GND).
 
 Folgende Farben sind festgelegt:
 
@@ -42,7 +42,7 @@ Es gelten folgende Grenzwerte:
 - Eine Stichleitung  darf maximal 6 m lang sein.
 - Es dürfen maximal 50 Geräte an das NMEA2000-Netzwerk angeschlossen werden (s. LEN-Berechnung).
 
-**Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN-H und CAN-L messen. Der gemessene Wert sollte ca. 60 Ohm sein.
+**Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
 Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGNs). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGNs sind jedoch Broadcast-PGNs, die an alle Busteilnehmer adressiert sind.
 
