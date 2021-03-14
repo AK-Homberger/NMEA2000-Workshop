@@ -17,18 +17,13 @@ Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefor
 Ein Adernpaar ist für das Signal (CAN-H, CAN-L) und ein Adernpaar ist für die Versorgungsspennung (12 Volt, GND).
 Folgende Farben sind festgelegt.
 
-| Farbe  | Name  | Spannung  |  Funktion |
-|---|---|---|---|
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-
-Farbe   |	Name     |	Spannung |	Funktion 
-weiß 	  | CAN_High |	+2,5 V   |	Signal 
-blau 	  | CAN_Low 	| −2,5 V 	 | Signal
-Schirm  | Masse 	  | GND      |	Abschirmung
-rot 	   | V+ 	     | +12 V 	  | Spannungsversorgung 
-schwarz | V− 	     | GND 	    | Spannungsversorgung 
+| Farbe   | Name     | Spannung |  Funktion |
+|-------- |----------|----------|-----------|
+| weiß    | CAN_High | +2,5 V   | Signal |
+| blau    | CAN_Low  | -2,5 V   | Signal |
+| Schirm  | Masse    | GND      | Abschirmung  |
+| rot     | V+       | +12 V    | Spannungsversorgung  |
+| schwarz | V-       | GND      | Spannungsversorgung  |
 
 Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. Geräte mit höherem Strombedarf müsse extra versorgt werden. Der Maximalstrom ist mit 3 A festgelegt.
 
