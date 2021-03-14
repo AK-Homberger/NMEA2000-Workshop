@@ -12,7 +12,7 @@ NMEA2000 ist ein selbstkonfigurierendes System. Es funktioniert ohne eine zetral
 
 ### Elektrische Schnittstelle
 NMEA2000 definiert zusätzlich zu CAN-Bus Anforderungen an die Kabeltypen und die einzelnen Adern des Kabels.
-Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP)).
+Es werden zwei paarweise verdrillte Adernpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP)).
 
 Ein Adernpaar ist für das Signal (CAN_High, CAN_Low) und ein Adernpaar ist für die Versorgungsspannung (12 Volt, GND).
 
