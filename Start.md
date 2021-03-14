@@ -30,11 +30,11 @@ Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. 
 
 Das NMEA2000-Netzwerk darf nur an einer Stelle mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
 
-<p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
-
 ### NMEA-Netzwerk
 Ein NMEA2000 Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
 Die Endwiderstände sind notwendig, um Reflexionen des Signals zu vermeiden. 120 Ohm entsprechen dem [Wellenwiderstand](https://de.wikipedia.org/wiki/Wellenwiderstand#Der_Leitungswellenwiderstand,_der_Leitungsabschluss_und_die_Eingangsimpedanz_einer_Leitung) von paarweise verdrillten Leitern. Vom Backbone-Kabel gehen Stichleitungen zu den einzelnen Geräten ab (über T-Stücke).
+
+<p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
 
 Es gelten folgende Grenzwerte:
 - Der Abstand zwischen zwei Punkten des NMEA 2000-Netzwerks darf 100 m nicht überschreiten (Backbonelänge plus Länge der Stichleitungen).
