@@ -44,6 +44,7 @@ Es gelten folgende Grenzwerte:
 
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
+## Datenübertragung - PGNs
 Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGNs). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGNs sind jedoch Broadcast-PGNs, die an alle Busteilnehmer adressiert sind.
 
 Die aktuelle Liste der unterstützten PGNs (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. 
