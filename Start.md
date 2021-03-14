@@ -3,10 +3,45 @@
 Wenn alle [Vorbereitungen](https://github.com/AK-Homberger/NMEA2000-Workshop#vorbereitungen) erfolgreich durchgeführt wurden, können wir nun starten.
 
 ## NMEA2000
+NMEA2000 ist ein von der National Marine Electronics Association ([NMEA](https://de.wikipedia.org/wiki/National_Marine_Electronics_Association) definierter internationaler Standard, der in der Schifffahrt zur Vernetzung von Geräten verwendet wird. NMEA2000 wurde im Jahr 2000 von der NMEA als Nachfolger des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183) vorgestellt.
 
-NMEA2000 ist eine standardisierte Erweiterung des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183). Grundlegende Informationen zu NMEA2000 sind [hier](https://de.wikipedia.org/wiki/NMEA_2000) zu finden.
+Anders als NMEA0183 definiert NMEA2000 nicht nur eine Schnittstelle sondern ein Netzwerk-System. Es basiert auf dem Standard [SAE J1939](https://de.wikipedia.org/wiki/SAE_J1939) aus dem Nutzfahrzeugbereich und nutzt zur Datenübertragung die [CAN-Bus-Technologie](https://de.wikipedia.org/wiki/Controller_Area_Network).
 
-Die aktuelle Liste der PGNs (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. 
+NMEA2000 nutzt den CAN-Bus mit einer Datenrate von 250 kBit/s und ist damit 52 Mal schneller als NMEA0183 (4800 Bit/s).
+NMEA2000 ist ein selbstkonfigurierendes System. Es funktioniert ohne eine zetrale Steuerinstanz. Alle notwendigen Konfigurationen (z. Adresszuweisung) erledigen die Geräte selbstständig durch Kommunikation miteinander.
+
+# Elektrische Schnittstelle
+NMEA2000 definiert zusätzlich zu CAN-Bus Mindestanforderungen für die Kabeltypen und die einzelnen Adern des Kabels.
+Es werden zwei paarweise verdrillte Adrenpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP).
+
+Ein Adernpaar ist für das Signal (CAN-H, CAN-L) und ein Adernpaar ist für die Versorgungsspennung (12 Volt, GND).
+Folgende Farben sind festgelegt.
+
+Farbe   |	Name     |	Spannung |	Funktion 
+weiß 	  | CAN_High |	+2,5 V   |	Signal 
+blau 	  | CAN_Low 	| −2,5 V 	 | Signal
+Schirm  | Masse 	  | GND      |	Abschirmung
+rot 	   | V+ 	     | +12 V 	  | Spannungsversorgung 
+schwarz | V− 	     | GND 	    | Spannungsversorgung 
+
+Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. Geräte mit höherem Strombedarf müsse extra versorgt werden. Der Maximalstrom ist mit 3 A festgelegt.
+
+Das NMEA-Netzwerk darf nur an einer Stelle mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
+
+Ein NMEA2000 Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
+Die Endwiderstände sind notwendig, um Reflexionen des Signals zu verweiden. 120 Ohm entsprechen dem [Wellenwiderstand](https://de.wikipedia.org/wiki/Wellenwiderstand#Der_Leitungswellenwiderstand,_der_Leitungsabschluss_und_die_Eingangsimpedanz_einer_Leitung) von paarweise verdrillten Leitern. Vom Backbone-Kabel gehen Stichleitungen zu den einzelnen Geräten ab (über T-Stücke).
+
+Es gelten folgende Grenzwerte:
+- Der Abstand zwischen zwei Punkten des NMEA 2000-Netzwerks darf 100 m nicht überschreiten (Backbonelänge plus Länge der Stichleitungen).
+- Die Gesamtlänge aller Stichleitungen muss weniger als 78 m sein.
+- Eine Stichleitung  darf maximal 6 m lang sein.
+- Es dürfen maximal 50 Geräte an das NMEA2000-Netzwerk angeschlossen werden (s. LEN-Berechnung).
+
+**Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN-H und CAN-L messen der Wert sollte ca 60 Ohm sein.
+
+Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGNs). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs können sind adressierbar (Senden an ein definirtes Gerät). Die meisten PGNs sind jedoch Broadcast-PGNs, die an alle Busteilnehmer adressiert sind.
+
+Die aktuelle Liste der unterstützten PGNs (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. 
 
 Die Liste der PGNs ist nicht ausreichend, um die PGNs im Programm zu nutzen. Dazu sind weitere Informationen zur Interpretation der Felder notwendig. Diese sind nur in der lizenzpflichtigen Dokumentation des Standards enthalten.
 
