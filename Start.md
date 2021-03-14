@@ -42,6 +42,8 @@ Es gelten folgende Grenzwerte:
 - Eine Stichleitung  darf maximal 6 m lang sein.
 - Es dürfen maximal 50 Geräte an das NMEA2000-Netzwerk angeschlossen werden (s. LEN-Berechnung).
 
+Die obigen Grenzwerte gelten für die im Sportbootbereich üblichen Lite-Kabel. Für Heavy-Duty-Kabel (z.B. genutzt in der Berufsschifffahrt) gelten andere Werte.
+
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
 ### Datenübertragung - PGNs
