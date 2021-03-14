@@ -47,13 +47,15 @@ Die obigen Grenzwerte gelten für die im Sportbootbereich üblichen Lite-Kabel. 
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
 ### Datenübertragung - PGN
-Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGNs sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch Broadcast-PGN, die an alle Busteilnehmer adressiert sind.
+Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGN sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch Broadcast-PGN, die an alle Busteilnehmer adressiert sind.
 
 Die aktuelle Liste der unterstützten PGN (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. 
 
 Die Liste der PGN ist nicht ausreichend, um die PGN im Programm zu nutzen. Dazu sind weitere Informationen zur Interpretation der Felder notwendig. Diese sind nur in der lizenzpflichtigen Dokumentation des Standards enthalten.
 
 Hersteller, die NMEA2000 in ihren Produkten nutzen, dürfen darüber hinaus auch keine weiteren Details offenlegen (s. Seite 6 im Dokument ["Certification Process Overview and License Agreement"](https://www.nmea.org/Assets/NMEA%202000%20Certification%20Process%20Overview%20and%20License%20Agreement-%20Updated%202020.pdf).
+
+Die NMEA2000-Bibliothek nutzt daher durch Reverse Engineering gefundene Informationen zum Protokoll und den Datenfeldern in den PGN. Einzelne PGN sind bish heute nicht vollständig frei dokumentiert. Siehe hierzu auch das [Canboat-Projekt](https://github.com/canboat/canboat).
 
 ### NMEA2000-Kabel
 Die üblichen Hersteller verkaufen ihre NMEA2000-/CAN-Bus-Kabel zu extremen Preisen. Eine günstigere Alternative ist das CAN-BUS-Kabel von Unitronic. Unter anderem erhältlich bei [Voelkner](https://www.voelkner.de/products/146612/LAPP-2170261-1-Busleitung-UNITRONIC-BUS-2-x-2-x-0.22mm-Violett-Meterware.html). Zum Beispiel in Verbindung mit schraubbaren [Micro-C-Steckverbindern](https://www.gmm-yacht.de/nmea_2000_installation.html).
