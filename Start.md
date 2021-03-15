@@ -5,7 +5,7 @@ Wenn alle [Vorbereitungen](https://github.com/AK-Homberger/NMEA2000-Workshop#vor
 ## NMEA2000
 NMEA2000 ist ein von der National Marine Electronics Association ([NMEA](https://de.wikipedia.org/wiki/National_Marine_Electronics_Association)) definierter internationaler Standard, der in der Schifffahrt zur Vernetzung von Geräten verwendet wird. NMEA2000 wurde im Jahr 2000 von der NMEA als Nachfolger des älteren Protokolls [NMEA0183](https://de.wikipedia.org/wiki/NMEA_0183) vorgestellt.
 
-Anders als NMEA0183 definiert NMEA2000 nicht nur eine Schnittstelle, sondern ein Netzwerk-System. Es basiert auf dem Standard [SAE J1939](https://de.wikipedia.org/wiki/SAE_J1939) aus dem Nutzfahrzeugbereich und nutzt zur Datenübertragung die [CAN-Bus-Technologie](https://de.wikipedia.org/wiki/Controller_Area_Network).
+Anders als NMEA0183 definiert NMEA2000 nicht nur eine Schnittstelle, sondern ein Netzwerk-System. Es basiert auf dem Standard [SAE J1939](https://de.wikipedia.org/wiki/SAE_J1939) aus dem Nutzfahrzeugbereich und nutzt zur Datenübertragung den [CAN-Bus](https://de.wikipedia.org/wiki/Controller_Area_Network).
 
 NMEA2000 nutzt den CAN-Bus mit einer Datenrate von 250 kBit/s und ist damit über 50-mal schneller als NMEA0183 (4800 Bit/s).
 NMEA2000 ist ein selbstkonfigurierendes System. Es funktioniert ohne eine zetrale Steuerinstanz. Alle notwendigen Konfigurationen (z.B. Adresszuweisung) erledigen die Geräte selbstständig durch Kommunikation miteinander.
