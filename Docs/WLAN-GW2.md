@@ -375,7 +375,7 @@ void tN2kDataToNMEA0183::HandleLog(const tN2kMsg & N2kMsg) {
     }
   }
 ```
-In der Funktion parsen wir mit ParseN2kDistanceLog() die NMEA2000-Nachricht mit PGN128275, wobei wir die notwendigen Variablen mit übergeben. Log und TripLog sind übrigens im Modul global definiert.
+In der Funktion parsen wir mit ParseN2kDistanceLog() die NMEA2000-Nachricht mit PGN 128275, wobei wir die notwendigen Variablen mit übergeben. Log und TripLog sind übrigens im Modul global definiert.
   
 Wir erzeugen nun mit "tNMEA0183Msg NMEA0183Msg" einen Nachrichten-Container für eine NMEA0183-Nachricht.
   
