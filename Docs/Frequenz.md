@@ -2,7 +2,7 @@
 
 Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Frequenzen messen können.
 
-Das Ziel ist es diesmal, die Motordrehzahl an der [Klemme "W"](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Klemme-w.pdf) der [Lichtmaschine](https://de.wikipedia.org/wiki/Lichtmaschine) zu messen und als PGN127488 (Engine Parameters, Rapid Update) zu senden.
+Das Ziel ist es diesmal, die Motordrehzahl an der [Klemme "W"](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Klemme-w.pdf) der [Lichtmaschine](https://de.wikipedia.org/wiki/Lichtmaschine) zu messen und als PGN 127488 (Engine Parameters, Rapid Update) zu senden.
     
 Wir nutzen dazu die [Interrupt-Funktion](https://de.wikipedia.org/wiki/Interrupt) des ESP32. Interrupt bedeutet hier, dass der ESP32 auf Änderungen des logischen Signallevels reagiert und eine zuvor festgelegte Funktion ausführt. 
 
@@ -21,7 +21,7 @@ Die genaue Beschaltung ist im Repository [NMEA-2000-Data-Sender](https://github.
 
 Als Nächstes öffnen wir das Beispielprogramm [NMEA2000-Frequenz.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA2000-Frequenz/NMEA2000-Frequenz.ino) und laden es auf den rechten ESP32 hoch.
 
-Danach starten wir wieder den NMEA-Reader und wählen den PGN 127488.
+Danach starten wir wieder den NMEA-Reader und wählen PGN 127488.
 
 Anzeige der Motordrehzahl:
 
@@ -134,7 +134,7 @@ double ReadRPM() {
 }
 ```
 
-Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem [PGN127488](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L204) gesendet:
+Hier wird der Wert EngineRPM gemessen, kalibriert und mit dem [PGN 127488](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L204) gesendet:
 
 ```
 void SendN2kEngineRPM(void) {
