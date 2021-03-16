@@ -2,7 +2,7 @@
 
 Hier kommt die Auflösung der Workshop-Aufgabe.
 
-Als Erstes müssen wir die Funktion MyHandleNMEA2000Msg() um PGN128267 und die aufzurufende Funktion HandleDepth() erweitern:
+Als Erstes müssen wir die Funktion MyHandleNMEA2000Msg() um PGN 128267 und die aufzurufende Funktion HandleDepth() erweitern:
 
 ```
 void MyHandleNMEA2000Msg(const tN2kMsg &N2kMsg) {
