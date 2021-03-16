@@ -19,7 +19,7 @@ Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Da
  
 ![Settings](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator-Settings.png)
  
-Im unteren Bereich "NMEA2000 PGNs to be set" müssen wir noch auswählen, welche PGNs gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGNs aus.
+Im unteren Bereich "NMEA2000 PGNs to be set" müssen wir noch auswählen, welche PGN gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGNs aus.
 
 Danach OK klicken.
 
@@ -39,8 +39,8 @@ Wenn im NMEA-Simulator andere Werte gesetzt wurden, sieht die Ausgabe natürlich
 
 Kommen wir nun zu den neuen Programm-Elementen.
 
-Wir starten mit der Liste der PGNs. Hier aber nicht mit TransmitMessages[], sondern ReceiveMessges[].
-Wir definieren gleich eine ganze Reihe von PGNs, auch wenn wir sie jetzt noch nicht benötigen.
+Wir starten mit der Liste der PGN. Hier aber nicht mit TransmitMessages[], sondern ReceiveMessges[].
+Wir definieren gleich eine ganze Reihe von PGN, auch wenn wir sie jetzt noch nicht benötigen.
 
 ```
 const unsigned long ReceiveMessages[] PROGMEM = {/*126992L,*/ // System time
@@ -77,7 +77,7 @@ Die Produkt- und Geräteinformationen wurden angepasst:
                                );
 ```
 
-Wir setzen hier die Klasse "25" als "Inter/Intranetwork Device" und die Geräte-Funktion "131" als "NMEA 2000 to Analog Gateway".
+Wir setzen hier die Klasse "25" als "Inter/Intranetwork Device" und die Geräte-Funktion "131" als "NMEA2000 to Analog Gateway".
 Das stimmt zwar nicht ganz, ist aber nah dran, da wir die Werte einfach seriell ausgeben, um sie im Seriellen Monitor anzusehen.
 
 Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
@@ -135,7 +135,7 @@ Nach dem Aufruf von ParseN2kHeading() enthalten die Variablen die Werte aus dem 
 
 Dann geben wir die Daten für Heading, Deviation und Variation einfach mit Serial.printf() auf der seriellen Schnittstelle aus, damit sie im Seriellen Monitor der Arduino-IDE angezeigt werden.
 
-Da Daten in NMEA2000-PGNs immer als SI-Einheiten gepeichert sind, müssen wir die Winkel zur Anzeige in Grad mit RadtoDeg() umwandeln.
+Da Daten in NMEA2000-PGN immer als SI-Einheiten gepeichert sind, müssen wir die Winkel zur Anzeige in Grad mit RadtoDeg() umwandeln.
 
 ## Und nun HandleBoatSpeed():
 
