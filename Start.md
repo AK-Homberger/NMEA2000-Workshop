@@ -95,7 +95,7 @@ Wir werden im Workshop den Prozessor [ESP32 von Espressif](https://www.espressif
 Für die spätere Nutzung der NMEA2000-Bibliothek sind speziell drei Dateien wichtig:
 1. NMEA2000-Library-Referenz [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/Documents/NMEA2000_library_reference.pdf)
 2. Header-Datei "N2kMessages.h" mit den PGN-Definitionen [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h)
-3. Header-Datei "N2kTypes.h" mit Definitonen für Datentypen in den PGNs [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kTypes.h)
+3. Header-Datei "N2kTypes.h" mit Definitonen für Datentypen in den PGN [Link](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kTypes.h)
 
 ## Download des Repositories
 Der einfachste Weg, die Beispielprogramme zu nutzen, ist das ganze NMEA2000-Workshop-Repository als ZIP-Datei herunterzuladen. Dazu klickt man oben auf "NMEA2000-Workshop" und dann auf den grünen Button "Code". Dann "Download ZIP" auswählen. Die heruntergeladene ZIP-Datei in einen frei wählbaren Ordner entpacken. 
