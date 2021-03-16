@@ -47,7 +47,7 @@ Die obigen Grenzwerte gelten für die im Sportbootbereich üblichen Lite-Kabel. 
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
 ### Datenübertragung - PGN
-Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGN sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch Broadcast-PGN, die an alle Busteilnehmer adressiert sind.
+Die Übertragung von Nutzdaten erfolgt mit definierten Parameter-Gruppen-Nummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGN sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch [Broadcast](https://de.wikipedia.org/wiki/Broadcast)-PGN, die an alle Busteilnehmer adressiert sind.
 
 Die aktuelle Liste der unterstützten PGN (Stand 2015) ist [hier](https://www.nmea.org/Assets/20151026%20nmea%202000%20pgn_website_description_list.pdf) zu finden. 
 
