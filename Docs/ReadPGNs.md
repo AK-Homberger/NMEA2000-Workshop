@@ -19,7 +19,7 @@ Im NMEA-Simulator konfigurieren wir die serielle Schnittstelle für NMEA2000. Da
  
 ![Settings](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEA-Simulator-Settings.png)
  
-Im unteren Bereich "NMEA2000 PGNs to be set" müssen wir noch auswählen, welche PGN gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGNs aus.
+Im unteren Bereich "NMEA2000 PGNs to be set" müssen wir noch auswählen, welche PGN gesendet werden sollen. Wählt für "Navigation" und "Wind, temp" einfach alle PGN aus.
 
 Danach OK klicken.
 
@@ -88,9 +88,9 @@ Die folgenden drei Zeilen sind anders als in den bisherigen Beispielen:
 ```
 Als Modus setzen wir hier "N2km_ListenOnly". Das ist die minimale Funktion der NMEA2000-Bibliothek. Die Daten werden vom Bus gelesen und an den Message-Stream weitergeleitet.
 
-Mit dem nächsten Kommando definieren wir hier eine Liste mit PGNs, die wir empfangen möchten. Bisher haben wir immer die zu sendenden PGNs definiert.
+Mit dem nächsten Kommando definieren wir hier eine Liste mit PGN, die wir empfangen möchten. Bisher haben wir immer die zu sendenden PGN definiert.
 
-Mit "NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);" setzen wir die Funktion zur Behandlung der empfangenen PGNs.
+Mit "NMEA2000.SetMsgHandler(MyHandleNMEA2000Msg);" setzen wir die Funktion zur Behandlung der empfangenen PGN.
 
 Diese Funktion wird auch gleich nach setup() definiert:
 
@@ -125,9 +125,9 @@ void HandleHeading(const tN2kMsg &N2kMsg) {
 }
 ```
 
-Der Aufbau von Funktionen zur Behandlung der PGNs ist immer ähnlich:
+Der Aufbau von Funktionen zur Behandlung der PGN ist immer ähnlich:
 
-Erst lokale Variablen definieren. Welche Variablen nötig sind, richtet sich nach den PGNs, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit **"ParseN2k..."** beginnen.
+Erst lokale Variablen definieren. Welche Variablen nötig sind, richtet sich nach den PGN, die in [N2kMessges.h](https://github.com/ttlappalainen/NMEA2000/blob/master/src/N2kMessages.h) definiert sind. Anders als beim Senden interessieren uns jetzt die Funktionen, die mit **"ParseN2k..."** beginnen.
 
 [ParseN2kHeading()](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L116) benötigen wir die Sequence-ID "SID", die Heading Reference "ref", die Variablen für Deviation, Variation und natürlich für Heading selbst.
 
