@@ -2,8 +2,8 @@
 
 Als Nächstes sehen wir uns an, wie wir mit dem ESP32 Spannungen und Widerstände messen können. Ziel ist es:
 
-1. Die Batteriespannung zu messen und als PGN127508 zu senden.
-2. Den Tanklevel des Wassertanks zu messen und als PGN127505 zu senden.
+1. Die Batteriespannung zu messen und als PGN 127508 zu senden.
+2. Den Tanklevel des Wassertanks zu messen und als PGN 127505 zu senden.
 
 Wir nutzen dazu die [Analog-Digital-Converter](https://de.wikipedia.org/wiki/Analog-Digital-Umsetzer) (ADC) Funktionen des [ESP32](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/ESP32%20NodeMCU-small.jpg). Der ESP32 hat zwei unabhängige ADCs, die durch 18 unterschiedliche Pins angesteuert werden können.
 
