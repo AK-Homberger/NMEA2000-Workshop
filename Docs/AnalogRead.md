@@ -35,11 +35,11 @@ Aus dem entpackten Download-Verzeichnis laden wir nun das Programm [NMEA2000-ADC
 
 Nach dem Hochladen auf dem rechten ESP32 können wir wieder den NMEA-Reader starten und sehen, was auf dem Bus gesendet wird.
 
-Hier sehen wir die Batteriespannung (12.12 Volt) als PGN127508:
+Hier sehen wir die Batteriespannung (12.12 Volt) als PGN 127508:
 
 ![Spannung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-5.png)
 
-Und hier sehen wir den Wassertanklevel (88.3 %) als PGN127505
+Und hier sehen wir den Wassertanklevel (88.3 %) als PGN 127505
 
 ![TankLevel](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-6.png)
 
@@ -93,7 +93,7 @@ double ReadADC(byte pin) {
 Mit dieser Funktion wird der analoge Eingang des ADCs ausgelesen und korrigiert. Dieser Schritt ist notwendig, weil der ADC des ESP32 nicht sehr linear ist. Mit der oben berechneten Korrektur (Stichwort: [Polynomfunktion](https://de.wikipedia.org/wiki/Polynom)) erreichen wir eine Genauigkeit von ca. 1 %. Das ist für unsere Zwecke meist ausreichend.
 
 
-Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGNs:
+Hier kommen nun die beiden Funktionen zum Messen der Werte und Senden der PGN:
 
 ### Batteriespannung:
 
