@@ -39,7 +39,7 @@ Bei Gateways ist daher eine drahtlose Kopplung (WLAN) einer kabelgebundenen (USB
 In den allermeisten Fällen wird es aber auch durch eine zusätzliche Massekopplung nicht zu Problemen kommen. Trotzdem sollte man diesen Zusammenhang verstehen.
 
 ### NMEA-Netzwerk
-Ein NMEA2000 Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
+Ein NMEA2000-Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
 Die Endwiderstände sind notwendig, um Reflexionen des Signals zu vermeiden. 120 Ohm entsprechen dem [Wellenwiderstand](https://de.wikipedia.org/wiki/Wellenwiderstand#Der_Leitungswellenwiderstand,_der_Leitungsabschluss_und_die_Eingangsimpedanz_einer_Leitung) der paarweise verdrillten Adern. Vom Backbone-Kabel gehen Stichleitungen zu den einzelnen Geräten ab (über T-Stücke).
 
 <p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
