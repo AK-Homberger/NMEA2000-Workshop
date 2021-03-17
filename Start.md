@@ -79,7 +79,7 @@ Hier ein typischer Kabelplan:
 
 ![Kabelplan](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/Kabelplan.png)
 
-Im obigen Beispiel wird der NMEA2000/SeatalkNG-Bus durch die [ACU-200](https://www.raymarine.de/view/index-id=8239.html) (Autopilot-Steuereinheit) mit Spannung versorgt. Der Plotter und das Funkgerät haben eine eigene Stromversorgung. Die Instrumente, das EV-1 und die Autopilot-Fernbedienung werden vom Bus mit Spannung versorgt.
+Im obigen Beispiel wird der NMEA2000/SeatalkNG-Bus durch die [ACU-200](https://www.raymarine.de/view/index-id=8239.html) (Autopilot-Steuereinheit) mit Spannung versorgt. Der Plotter und das Funkgerät haben eine eigene Spannungsversorgung. Die Instrumente, das EV-1 und die Autopilot-Fernbedienung werden vom Bus mit Spannung versorgt.
 
 Wichtig ist in diesem Zusammenhang auch der Seatalk1 zu SeatalkNG-Wandler. Der Wandler verbindet die Versorgungsspannung von Seatalk1 und SeatalkNG direkt. Es ist daher nicht erforderlich, und auch nicht erwünscht, den Seatalk1-Bus extra zu versorgen. Speziell nicht über unterschiedliche Sicherungen/Schalter.
 
