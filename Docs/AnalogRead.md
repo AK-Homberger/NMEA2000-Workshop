@@ -39,7 +39,7 @@ Hier sehen wir die Batteriespannung (12.12 Volt) als PGN 127508:
 
 ![Spannung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-5.png)
 
-Und hier sehen wir den Wassertanklevel (88.3 %) als PGN 127505
+Und hier sehen wir den Wassertanklevel (88.3 %) als PGN 127505:
 
 ![TankLevel](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/NMEAReader-6.png)
 
