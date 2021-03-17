@@ -1,5 +1,7 @@
 # NMEA2000-Workshop
 
+![NMEA2000-Logo](https://www.nmea.org/Assets/high%20res%20nmea%202000.jpg)
+
 Dieses Repository enthält Informationen zum NMEA2000-Workshop in 2021.
 
 Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Sie können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Informationen und Erklärungen sind im Text enthalten.
