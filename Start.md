@@ -88,7 +88,7 @@ Bei größeren Booten mit längerem Backbone-Kabel kann es sinnvoll sein, die Sp
 ### Lastfaktor (LEN)
 Für die Berechnung des maximalen Lastfaktors (Lastfaktor = LEN) ist die Leistungsaufnahme der angeschlossenen Geräte und die Länge des Backbone-Kabels entscheidend. Hersteller geben für ihre Geräte immer an, welchen Lastfaktor ein Gerät hat. Ein LEN entspricht hierbei 50 mA. Ein Gerät mit 4-LEN benötigt daher maximal 200 mA.
 
-Detaillierte Informationen zur Berechnung findet man in den Hersteller-Dokumenten. [Hier](https://media1.svb-media.de/media/snr/504053/pdf/manual_2018-08-24_15-45-03_b95c81e6054c9a0496a6fd235f8eee6e.pdf) zum Beipiel für Raymarine.
+Detaillierte Informationen zur Berechnung findet man in den Hersteller-Dokumenten. [Hier](https://media1.svb-media.de/media/snr/504053/pdf/manual_2018-08-24_15-45-03_b95c81e6054c9a0496a6fd235f8eee6e.pdf) zum Beipiel für Raymarine und [hier](http://static.garmin.com/pumac/Tech_Ref_for_Garmin_NMEA2k_DE.pdf) für Garmin.
 
 ### Steckerbelegung / Anschluss
 - Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
