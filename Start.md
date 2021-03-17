@@ -26,7 +26,7 @@ Folgende Farben sind festgelegt:
 | rot     | V+       | +12 V    | Spannungsversorgung  |
 | schwarz | V-       | GND      | Spannungsversorgung  |
 
-Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. Geräte mit höherem Strombedarf müssen extra versorgt werden. Der Maximalstrom ist mit 3 A festgelegt. Der Leitungsschutz sollte über eine Sicherung mit 3 A erfolgen.
+Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. Geräte mit höherem Strombedarf müssen extra versorgt werden. Der Maximalstrom ist (für Light-Kabel) mit 3 A festgelegt. Der Leitungsschutz soll laut Standard über eine Sicherung mit 3 A erfolgen.
 
 Das NMEA2000-Netzwerk darf nur an **einer Stelle** mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
 
