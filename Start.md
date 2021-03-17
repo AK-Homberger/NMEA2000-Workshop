@@ -45,7 +45,7 @@ Die Endwiderstände sind notwendig, um Reflexionen des Signals zu vermeiden. 120
 <p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
 
 Es gelten folgende Grenzwerte:
-- Der Abstand zwischen zwei Punkten des NMEA 2000-Netzwerks darf 100 m nicht überschreiten (Backbonelänge plus Länge der Stichleitungen).
+- Der Abstand zwischen zwei Punkten des NMEA 2000-Netzwerks darf 100 m nicht überschreiten (Backbonelänge plus Länge der äußeren beiden Stichleitungen).
 - Die Gesamtlänge aller Stichleitungen muss weniger als 78 m sein.
 - Eine Stichleitung  darf maximal 6 m lang sein.
 - Es dürfen maximal 50 Geräte an das NMEA2000-Netzwerk angeschlossen werden (s. [LEN-Berechnung](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Start.md#lastfaktor-len)).
