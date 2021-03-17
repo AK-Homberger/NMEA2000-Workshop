@@ -90,7 +90,7 @@ Für die Berechnung des maximalen Lastfaktors (LEN = **L**oad **E**quivalency **
 
 Detaillierte Informationen zur Berechnung findet man in den Hersteller-Dokumenten. [Hier](https://media1.svb-media.de/media/snr/504053/pdf/manual_2018-08-24_15-45-03_b95c81e6054c9a0496a6fd235f8eee6e.pdf) zum Beipiel für Raymarine und [hier](http://static.garmin.com/pumac/Tech_Ref_for_Garmin_NMEA2k_DE.pdf) für Garmin.
 
-Die Bererchnungsformel im Garmin-Dokument kann man auch für Kabel mit anderem Widerstandswert verwenden. Für [AWG24-Kabel](https://de.wikipedia.org/wiki/American_Wire_Gauge) ist der Widerstand 0,0869 Ohm/m.
+Die Berechnungsformel im Garmin-Dokument kann man auch für Kabel mit anderem Widerstandswert verwenden. Für [AWG24-Kabel](https://de.wikipedia.org/wiki/American_Wire_Gauge) ist der Widerstand etwa 0,087 Ohm/m.
 
 ### Steckerbelegung / Anschluss
 - Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
