@@ -19,7 +19,7 @@ Ihr solltet nun folgendes können:
 - Messung von Spannungen und Widerständen (Batteriespannung, Tanksensoren)
 - Messung von Frequenzen (Motordrehzahl, Durchflussgeber)
 - Daten mit dem ESP32 vom NMEA2000-Bus lesen (PGN) und nutzen
-- Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und Tablet
+- Aufbau eines NMEA2000-zu-NMEA0183-WLAN-Gateways und Darstellung von simulierten Daten (NMEA-Simulator) in OpenCPN und auf dem Tablet
 - Optional: Aufbau eines ESP32-Web-Servers und Senden von Daten an einen SignalK-Server
 
 Ich glaube, wir können alles abhaken!
