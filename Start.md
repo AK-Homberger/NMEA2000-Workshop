@@ -30,7 +30,7 @@ Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. 
 
 Das NMEA2000-Netzwerk darf nur an **einer Stelle** mit der Versorgungsspannung und Masse (GND) verbunden werden (Vermeidung von [Masseschleifen](https://de.wikipedia.org/wiki/Erdschleife)).
 
-Für NMEA2000-Geräte, die durch den den Bus versorgt werden, gibt es keine Probleme (Sensoren, WLAN-Gateway usw.). Wenn jedoch Geräte angeschlossen werden, die auch eine eigene Spannungsversorgung haben, kann es zu Problemen kommen. Das gilt dann, wenn diese Geräte auch mit Schiffs-GND verbunden sind. 
+Für NMEA2000-Geräte, die durch den den Bus versorgt werden, gibt es keine Probleme (Sensoren, WLAN-Gateway usw.). Wenn jedoch Geräte angeschlossen werden, die auch eine eigene Spannungsversorgung haben, kann es zu Problemen kommen. Das gilt dann, wenn diese Geräte auch mit Schiffs-GND (Minus-Pol der Batterie) verbunden sind. 
 
 Speziell wenn z.B. ESP32-Module über den USB-Anschluss versorgt werden, kann es zu Problemen kommen, wenn der PC/Laptop oder Raspberry Pi die Spannung vom 12 Volt Bordnetz bekommt. DC/DC-Wandler trennen nicht unbedingt den Masse-Bezug. Der NMEA2000-Standard sieht für diese Fälle eine Entkopplung durch [Opto-Koppler](https://de.wikipedia.org/wiki/Optokoppler) vor.
 
