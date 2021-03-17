@@ -86,7 +86,7 @@ Wichtig ist in diesem Zusammenhang auch der Seatalk1 zu SeatalkNG-Wandler. Der W
 Bei größeren Booten mit längerem Backbone-Kabel kann es sinnvoll sein, die Spannungsversorgung in der Mitte des Kabels anzuschließen. Das verringert die Spannungsverluste auf dem Kabelweg.
 
 ### Lastfaktor (LEN)
-Für die Berechnung des maximalen Lastfaktors (LEN = "Load Equivalent Number) ist die Leistungsaufnahme der angeschlossenen Geräte und die Länge des Backbone-Kabels entscheidend. Hersteller geben für ihre Geräte immer an, welchen Lastfaktor ein Gerät hat. Ein LEN entspricht hierbei 50 mA. Ein Gerät mit 4-LEN benötigt daher maximal 200 mA.
+Für die Berechnung des maximalen Lastfaktors (LEN = "**L**oad **E**quivalent **N**umber) ist die Leistungsaufnahme der angeschlossenen Geräte und die Länge des Backbone-Kabels entscheidend. Hersteller geben für ihre Geräte immer an, welchen Lastfaktor ein Gerät hat. Ein LEN entspricht hierbei 50 mA. Ein Gerät mit 4-LEN benötigt daher maximal 200 mA.
 
 Detaillierte Informationen zur Berechnung findet man in den Hersteller-Dokumenten. [Hier](https://media1.svb-media.de/media/snr/504053/pdf/manual_2018-08-24_15-45-03_b95c81e6054c9a0496a6fd235f8eee6e.pdf) zum Beipiel für Raymarine und [hier](http://static.garmin.com/pumac/Tech_Ref_for_Garmin_NMEA2k_DE.pdf) für Garmin.
 
