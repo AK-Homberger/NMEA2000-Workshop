@@ -1,6 +1,6 @@
 # NMEA2000-Workshop
 
-![NMEA2000-Logo](https://www.nmea.org/Assets/high%20res%20nmea%202000.jpg)
+![NMEA2000-Logo](https://www.nmea.org/Assets/NMEA%202000.GIF)
 
 Dieses Repository enthält Informationen zum NMEA2000-Workshop in 2021.
 
