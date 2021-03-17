@@ -34,7 +34,7 @@ Für NMEA2000-Geräte, die durch den den Bus versorgt werden, gibt es keine Prob
 
 Speziell wenn z.B. ESP32-Module über den USB-Anschluss versorgt werden, kann es zu Problemen kommen, wenn der PC/Laptop oder Raspberry Pi die Spannung vom 12 Volt Bordnetz bekommt. DC/DC-Wandler trennen nicht unbedingt den Masse-Bezug. Der NMEA2000-Standard sieht für diese Fälle eine Entkopplung durch [Opto-Koppler](https://de.wikipedia.org/wiki/Optokoppler) vor.
 
-Bei Gateways ist daher eine drahtlose Kopplung (WLAN) einer kabelgebundenen (USB-Seriell) vorzuziehen.
+Bei selbstgebauten ESP32-Gateways ist daher eine drahtlose Kopplung (WLAN) einer kabelgebundenen (USB-Seriell) vorzuziehen.
 
 In den allermeisten Fällen wird es aber auch durch eine zusätzliche Massekopplung nicht zu Problemen kommen. Durch die [differentielle Datenübertragung](https://de.wikipedia.org/wiki/Symmetrische_Signal%C3%BCbertragung#Symmetrische_%C3%9Cbertragung,_differenzielle_Signale) ist der Bus sehr robust gegenüber Störungen durch Masseschleifen. Trotzdem sollte man diesen Zusammenhang verstehen.
 
