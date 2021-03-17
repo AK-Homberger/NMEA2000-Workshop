@@ -11,7 +11,7 @@ NMEA2000 nutzt den CAN-Bus mit einer Datenrate von 250 kBit/s und ist damit übe
 NMEA2000 ist ein selbstkonfigurierendes System. Es funktioniert ohne eine zetrale Steuerinstanz. Alle notwendigen Konfigurationen (z.B. Adressänderung bei Konflikten) erledigen die Geräte selbstständig durch Kommunikation miteinander.
 
 ### Elektrische Schnittstelle
-NMEA2000 definiert zusätzlich zu CAN-Bus Anforderungen an die Kabeltypen und die einzelnen Adern des Kabels.
+NMEA2000 definiert, zusätzlich zu CAN-Bus, Anforderungen an die Kabeltypen und die einzelnen Adern des Kabels.
 Es werden zwei paarweise verdrillte Adernpaare mit zusätzlicher Schirmung gefordert ([S/UTP](https://de.wikipedia.org/wiki/Twisted-Pair-Kabel#S/UTP,_F/UTP_oder_SF/UTP)).
 
 Ein Adernpaar ist für das Signal (CAN_High, CAN_Low) und ein Adernpaar ist für die Versorgungsspannung (12 Volt, GND). NMEA2000/CAN-Bus nutzt zur Reduzierung von Störungen eine [Symmetrische Signalübertragung](https://de.wikipedia.org/wiki/Symmetrische_Signal%C3%BCbertragung).
@@ -32,7 +32,7 @@ Das NMEA2000-Netzwerk darf nur an **einer Stelle** mit der Versorgungsspannung u
 
 Für NMEA2000-Geräte, die durch den den Bus versorgt werden, gibt es keine Probleme (Sensoren, WLAN-Gateway usw.). Wenn jedoch Geräte angeschlossen werden, die auch eine eigene Spannungsversorgung haben, kann es zu Problemen kommen. Das gilt dann, wenn diese Geräte auch mit Schiffs-GND verbunden sind. 
 
-Speziell wenn z.B. ESP32-Module über den USB-Anschluss versorgt werden, kann es zu Problemen kommen, wenn der PC/Laptop die Spannung vom 12V Bordnetz bekommt. DC/DC-Wandler trennen nicht unbedingt den Masse-Bezug. Der NMEA2000-Standard sieht für diese Fälle eine Entkopplung durch Opto-Koppler vor.
+Speziell wenn z.B. ESP32-Module über den USB-Anschluss versorgt werden, kann es zu Problemen kommen, wenn der PC/Laptop die Spannung vom 12 Volt Bordnetz bekommt. DC/DC-Wandler trennen nicht unbedingt den Masse-Bezug. Der NMEA2000-Standard sieht für diese Fälle eine Entkopplung durch Opto-Koppler vor.
 
 Bei Gateways ist daher eine drahtlose Kopplung (WLAN) einer kablgebundenen (USB-Seriell) immer vorzuziehen.
 
