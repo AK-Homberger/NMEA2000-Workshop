@@ -23,7 +23,7 @@ Für Fragen und Diskussionen zum Workshop könnt ihr gern auch das [Segeln-Forum
 
 Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelldaten folgt weiter [unten](https://github.com/AK-Homberger/NMEA2000-Workshop#material-f%C3%BCr-den-workshop).
 
-## Ziele
+## Ziele des Workshops
 Nach dem Workshop solltet ihr folgendes können:
 - Grundlegende Informationen zu NMEA0183 und NMEA2000 finden und verstehen
 - Aufbau eines NMEA2000-Netzwerks auf einem Steckbrett (ESP32, CAN-Bus-Transceiver)
