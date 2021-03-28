@@ -18,13 +18,13 @@ Ein Adernpaar ist für das Signal (CAN_High, CAN_Low) und ein Adernpaar ist für
 
 Folgende Farben sind festgelegt:
 
-| Farbe   | Name     | Spannung | Funktion             |
-|-------- |----------|----------|----------------------|
-| weiß    | CAN_High | +2,5 V   | Signal               |
-| blau    | CAN_Low  | -2,5 V   | Signal               |
-| Abschirmung  | Masse    | GND      | Abschirmung          |
-| rot     | V+       | +12 V    | Spannungsversorgung  |
-| schwarz | V-       | GND      | Spannungsversorgung  |
+| Farbe      | Name     | Spannung | Funktion             |
+|------------|----------|----------|----------------------|
+| weiß       | CAN_High | +2,5 V   | Signal               |
+| blau       | CAN_Low  | -2,5 V   | Signal               |
+| Schirmung  | Ground   | GND      | Abschirmung          |
+| rot        | V+       | +12 V    | Spannungsversorgung  |
+| schwarz    | V-       | GND      | Spannungsversorgung  |
 
 Die Stromversogung ist nur für Kleinverbraucher (z.B. Sensor/Anzeige) gedacht. Geräte mit höherem Strombedarf müssen extra versorgt werden. Der Maximalstrom ist (für Light-Kabel) mit 3 A festgelegt. Der Leitungsschutz soll laut Standard über eine Sicherung mit 3 A erfolgen.
 
