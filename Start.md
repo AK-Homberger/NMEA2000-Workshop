@@ -18,7 +18,7 @@ Ein Adernpaar ist für das Signal (CAN_High, CAN_Low) und ein Adernpaar ist für
 
 Folgende Farben sind festgelegt:
 
-| Farbe      | Bezeichnung | Spannungsniveau | Funktion             |
+| Farbe      | Bezeichnung | Spannung | Funktion             |
 |------------|-------------|----------|----------------------|
 | weiß       | CAN_High    | +2,5 V   | Signal               |
 | blau       | CAN_Low     | -2,5 V   | Signal               |
