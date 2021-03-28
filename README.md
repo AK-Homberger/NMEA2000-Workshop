@@ -1,6 +1,6 @@
 # NMEA2000-Workshop
 
-**_This repository contains a NMEA2000 tutorial. It is currently only available in German language. But you ca use Google Translate to do it other languages: [Start translating to English](https://translate.google.com/translate?hl=&sl=de&tl=en&u=https%3A%2F%2Fgithub.com%2FAK-Homberger%2FNMEA2000-Workshop)_**
+**_This repository contains a NMEA2000 tutorial. It is currently only available in German language. But you can use Google Translate to do it other languages: [Start translating to English](https://translate.google.com/translate?hl=&sl=de&tl=en&u=https%3A%2F%2Fgithub.com%2FAK-Homberger%2FNMEA2000-Workshop)_**
 
 Dieses Repository enthält Informationen zum NMEA2000-Workshop in 2021.
 
