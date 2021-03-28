@@ -36,7 +36,7 @@ Speziell wenn z.B. ESP32-Module über den USB-Anschluss versorgt werden, kann es
 
 Bei selbstgebauten ESP32-Gateways ist daher eine drahtlose Kopplung (WLAN) einer kabelgebundenen (USB-Seriell) vorzuziehen.
 
-In den allermeisten Fällen wird es aber auch durch eine zusätzliche Massekopplung nicht zu Problemen kommen. Durch die [differentielle Datenübertragung](https://de.wikipedia.org/wiki/Symmetrische_Signal%C3%BCbertragung#Symmetrische_%C3%9Cbertragung,_differenzielle_Signale) ist der Bus sehr robust gegenüber Störungen durch Masseschleifen. Trotzdem sollte man diesen Zusammenhang verstehen.
+In den allermeisten Fällen wird es aber auch durch eine zusätzliche Massekopplung nicht zu Problemen kommen. Durch die [differentielle Datenübertragung](https://de.wikipedia.org/wiki/Symmetrische_Signal%C3%BCbertragung#Symmetrische_%C3%9Cbertragung,_differenzielle_Signale) ist der Bus sehr robust gegenüber Störungen durch Masseschleifen. Trotzdem sollte man diesen Aspekt verstehen.
 
 ### NMEA-Netzwerk
 Ein NMEA2000-Netzwerk besteht aus einem Backbone-Kabel mit Abschlusswiderständen an beiden Enden (120 Ohm 1/4 Watt).
