@@ -22,7 +22,7 @@ Folgende Farben sind festgelegt:
 |-------- |----------|----------|----------------------|
 | weiß    | CAN_High | +2,5 V   | Signal               |
 | blau    | CAN_Low  | -2,5 V   | Signal               |
-| Schirm  | Masse    | GND      | Abschirmung          |
+| Abschirmung  | Masse    | GND      | Abschirmung          |
 | rot     | V+       | +12 V    | Spannungsversorgung  |
 | schwarz | V-       | GND      | Spannungsversorgung  |
 
