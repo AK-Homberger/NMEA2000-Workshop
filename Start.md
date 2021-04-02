@@ -24,8 +24,8 @@ Folgende Farben sind festgelegt:
 
 | Farbe      | Bezeichnung | Spannung    | Funktion             |
 |------------|-------------|-------------|----------------------|
-| weiß       | CAN_High    | 1,5V - 3,5V | Signal               |
-| blau       | CAN_Low     | 1,5V - 3,5V | Signal               |
+| weiß       | CAN_High    | 2,5V - 3,5V | Signal               |
+| blau       | CAN_Low     | 1,5V - 2,5V | Signal               |
 | metall     | Schirmung   | GND         | Abschirmung          |
 | rot        | V+          | +12V        | Spannungsversorgung  |
 | schwarz    | V-          | GND         | Spannungsversorgung  |
