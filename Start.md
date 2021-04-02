@@ -16,7 +16,7 @@ Es werden zwei paarweise verdrillte Adernpaare mit zusätzlicher Schirmung gefor
 
 Ein Adernpaar ist für das Signal (CAN_High, CAN_Low) und ein Adernpaar ist für die Versorgungsspannung (12 Volt, GND). NMEA2000/CAN-Bus nutzt zur Reduzierung von Störungen eine [Symmetrische Signalübertragung](https://de.wikipedia.org/wiki/Symmetrische_Signal%C3%BCbertragung).
 
-![CAN-Signal](https://de.wikipedia.org/wiki/Controller_Area_Network#/media/Datei:Canbus_levels.svg)
+![CAN-Signal](https://de.wikipedia.org/wiki/Datei:Canbus_levels.svg)
 
 Folgende Farben sind festgelegt:
 
