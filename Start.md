@@ -58,6 +58,15 @@ Die obigen Grenzwerte gelten für die im Sportbootbereich üblichen Light-Kabel.
 
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
+### Entfernen des 120 Ohm Widerstands vom Transceiver
+Aus unerklärlichen Gründen ist auf vielen CAN-Bus-Transceivern für den ESP32 ein 120 Ohm Widerstand mit eingebaut. Wie wir wissen gehört der Widerstand nicht an die Geräte an den Enden der Stichleitungen, sondern an die Enden des Backbone-Kabels.
+
+Ob der Tansceiver einen 120 Ohm Widerstand enthält kann man entweder durch Sichtung des Schaltplns feststellen oder durch Nachmessen mit dem Multimeter. 
+
+Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder aushebeln. Beim Transceiver von Eckstein dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chp abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand abhobeln/lösen/zerbrechen. Je nachdem, was zuerst passiert.
+
+Es sieht dann so wie auf dem Bild aus. Dann noch zur Sicherheit nachmessen. Ohne 120 Ohm Widerstand zeigt das Multimeter ca. 75 kOhm an.
+
 ### Datenübertragung - PGN
 Die Übertragung von Nutzdaten erfolgt mit definierten **P**arameter-**G**ruppen-**N**ummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGN sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch [Broadcast](https://de.wikipedia.org/wiki/Broadcast)-PGN, die an alle Busteilnehmer adressiert sind.
 
