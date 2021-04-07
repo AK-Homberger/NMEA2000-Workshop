@@ -65,7 +65,11 @@ Ob der Tansceiver einen 120 Ohm Widerstand enthält kann man entweder durch Sich
 
 Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder aushebeln. Beim Transceiver von Eckstein dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chp abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand abhobeln/lösen/zerbrechen. Je nachdem, was zuerst passiert.
 
+![Can-Transceiber](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/CAN-Transceiver.jpg)
+
 Es sieht dann so wie auf dem Bild aus. Dann noch zur Sicherheit nachmessen. Ohne 120 Ohm Widerstand zeigt das Multimeter ca. 75 kOhm an.
+
+
 
 ### Datenübertragung - PGN
 Die Übertragung von Nutzdaten erfolgt mit definierten **P**arameter-**G**ruppen-**N**ummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGN sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch [Broadcast](https://de.wikipedia.org/wiki/Broadcast)-PGN, die an alle Busteilnehmer adressiert sind.
