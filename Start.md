@@ -63,7 +63,7 @@ Aus unerklärlichen Gründen ist auf vielen CAN-Bus-Transceivern für den ESP32 
 
 Ob der Tansceiver einen 120 Ohm Widerstand enthält kann man entweder durch Sichtung des Schaltplns feststellen oder durch Nachmessen mit dem Multimeter. 
 
-Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder aushebeln. Beim Transceiver von Eckstein dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chp abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand abhobeln/lösen/zerbrechen. Je nachdem, was zuerst passiert.
+Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder aushebeln. Beim Transceiver von Eckstein dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chip abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand abhobeln/lösen/zerbrechen. Je nachdem, was zuerst passiert.
 
 ![Can-Transceiber](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/CAN-Transceiver.jpg)
 
