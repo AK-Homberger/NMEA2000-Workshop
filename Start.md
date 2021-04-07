@@ -67,7 +67,7 @@ Für den Workshop stört es nicht, wenn die beiden Transceiver einen 120 Ohm Wid
 
 **Für den späteren Einsatz von ESP32-Geräten auf dem Boot sollte der Widerstand jedoch entfernt werden.**
 
-Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder abhebeln. Beim hier gezeigten Transceiver dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chip abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand abhobeln/lösen/zerbrechen. Je nachdem, was zuerst passiert.
+Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder abhebeln. Beim hier gezeigten Transceiver dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chip abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand durchkratzen/lösen/zerbrechen. Je nachdem, was zuerst passiert.
 
 ![Can-Transceiber](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Bilder/CAN-Transceiver.jpg)
 
