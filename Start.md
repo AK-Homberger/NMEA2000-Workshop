@@ -69,8 +69,6 @@ Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Wide
 
 Es sieht dann so wie auf dem Bild aus. Dann noch zur Sicherheit nachmessen. Ohne 120 Ohm Widerstand zeigt das Multimeter ca. 75 kOhm an.
 
-
-
 ### Datenübertragung - PGN
 Die Übertragung von Nutzdaten erfolgt mit definierten **P**arameter-**G**ruppen-**N**ummern (PGN). Jedes Gerät am NMEA2000-Bus hat eine eigene Adresse. Einige PGN sind adressierbar (Senden an ein einzelnes Gerät). Die meisten PGN sind jedoch [Broadcast](https://de.wikipedia.org/wiki/Broadcast)-PGN, die an alle Busteilnehmer adressiert sind.
 
