@@ -61,7 +61,7 @@ Die obigen Grenzwerte gelten für die im Sportbootbereich üblichen Light-Kabel.
 ### Entfernen des 120 Ohm Widerstands vom Transceiver
 Aus unbekannten Gründen ist auf vielen CAN-Bus-Transceivern für den ESP32 ein 120 Ohm Widerstand mit eingebaut. Wie wir wissen, gehört der Widerstand nicht an die Geräte an den Enden der Stichleitungen, sondern an die Enden des Backbone-Kabels.
 
-Ob der Tansceiver einen 120 Ohm Widerstand enthält, kann man entweder durch Sichtung des Schaltplans feststellen oder durch Nachmessen mit dem Multimeter. 
+Ob der Tansceiver einen 120 Ohm Widerstand enthält, kann man entweder durch Sichtung des [Schaltplans](https://ecksteinimg.de/Produkt/WS83004/SN65HVD230-CAN-Board.7z) feststellen oder durch Nachmessen mit dem Multimeter. 
 
 Um den SMD-Widerstand zu entfernen eignet sich eine Messerspitze. Damit den Widerstand durchkratzen oder abhebeln. Beim hiergezeigten Transceiver dazu die Messerspitze vor den Widerstand platzieren (zwischen Chip und Widerstand) und das Messer gegen den Chip abstützen. Dann die Spitze gegen den Widerstand hebeln und damit den Widerstand abhobeln/lösen/zerbrechen. Je nachdem, was zuerst passiert.
 
