@@ -59,7 +59,7 @@ Die obigen Grenzwerte gelten für die im Sportbootbereich üblichen Light-Kabel.
 **Tip zur Funktionsprüfung:** Mit dem Multimeter kann man einfach die korrekte Verkabelung der Signalleitungen prüfen. Einfach bei abgeschalteter Spannungsversorgung den Widerstand zwischen CAN_High und CAN_Low messen. Der gemessene Wert sollte ca. 60 Ohm sein.
 
 ### Entfernen des 120 Ohm Widerstands vom Transceiver
-Aus unerklärlichen Gründen ist auf vielen CAN-Bus-Transceivern für den ESP32 ein 120 Ohm Widerstand mit eingebaut. Wie wir wissen gehört der Widerstand nicht an die Geräte an den Enden der Stichleitungen, sondern an die Enden des Backbone-Kabels.
+Aus unbekannten Gründen ist auf vielen CAN-Bus-Transceivern für den ESP32 ein 120 Ohm Widerstand mit eingebaut. Wie wir wissen gehört der Widerstand nicht an die Geräte an den Enden der Stichleitungen, sondern an die Enden des Backbone-Kabels.
 
 Ob der Tansceiver einen 120 Ohm Widerstand enthält kann man entweder durch Sichtung des Schaltplns feststellen oder durch Nachmessen mit dem Multimeter. 
 
