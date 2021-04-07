@@ -63,7 +63,7 @@ Aus unbekannten Gründen ist auf vielen CAN-Bus-Transceivern für den ESP32 ein 
 
 Ob der Tansceiver einen 120 Ohm Widerstand enthält, kann man entweder durch Sichtung des [Schaltplans](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/SN65HVD230%20CAN%20Board_SCH.pdf) feststellen oder durch Nachmessen mit dem Multimeter. 
 
-Für den Workshop stört es nicht, wenn die beiden Transceiver einen 120 Ohm Widerstand fest eingebaut haben. Wir haben damit ein sehr kurzes Backbone-Kabel, das jeweils mit 120 Ohm abgeschlossen ist.
+Für den Workshop stört es nicht, wenn die beiden Transceiver einen 120 Ohm Widerstand fest eingebaut haben. Wir haben damit ein sehr kurzes Backbone-Kabel, das jeweils and den Enden mit 120 Ohm abgeschlossen ist.
 
 **Für den späteren Einsatz von ESP32-Geräten auf dem Boot sollte der Widerstand jedoch entfernt werden.**
 
