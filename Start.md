@@ -114,6 +114,7 @@ Die Berechnungsformel im Garmin-Dokument kann man auch für Kabel mit anderem Wi
 ### Steckerbelegung / Anschluss
 - Hier ist die Steckerbelegung für Raymarine SeatalkNG zu [finden](http://raymarine.custhelp.com/app/answers/detail/a_id/4319/~/steckerbelegung-f%E3%BCr-seatalkng-spur--und-backbone-kabel-%28german%29).
 - Und hier für [Micro-C](https://klabauterkiste.de/wp-content/uploads/mnea2000_micro-c_steckerbelegung-1536x541.png).
+- Für älter SimNet-Komponenten werden die Kabelfarben [hier](https://panbo.com/n2k-cable-mixing-not-a-big-woop/) erklärt. Neuere Simrad-Komponenten verwenden Micro-C.
 
 Um später ein ESP32-Gerät mit den Netzwerk zu verbinden, ist es am Einfachsten, einen Stecker vom (Spur-)Kabel abzuschneiden und die Drähte gemäß der Beschreibung zu verbinden (CAN-H, CAN-L, +12V, 0V/GND). Für die Funktion sind mindestens CAN-H, CAN-L und GND notwendig. Die +12V können zusätzlich verwendet werden, um das ESP32-Gerät mit Spannung zu versorgen (über DC/DC-Wandler von 12 Volt auf 5 Volt).
 
