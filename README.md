@@ -4,7 +4,7 @@
 
 Dieses Repository enthält Informationen zum NMEA2000-Workshop in 2021.
 
-![NMEA2000-Bus](https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg)
+<p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
 
 Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Die Informationen können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Inhalte und Erklärungen sind im Text enthalten.
 
