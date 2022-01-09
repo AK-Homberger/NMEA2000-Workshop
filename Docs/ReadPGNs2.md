@@ -48,7 +48,7 @@ Falls es nicht funktioniert hat, könnt ihr das eigene Programm auch mit [NMEA20
 
 Das war schon alles zum Thema Lesen vom Bus.
 
-Als [nächstes](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/NMEA0182-Wind-ToN2K.md)  werden wir noch Daten von NMEA0183 zu NMEA2000 wandeln.
+Als [nächstes](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/NMEA0183-Wind-ToN2K.md)  werden wir noch Daten von NMEA0183 zu NMEA2000 wandeln.
 
 
 
