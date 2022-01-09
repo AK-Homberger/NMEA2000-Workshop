@@ -86,7 +86,7 @@ void HandleMWV(const tNMEA0183Msg &NMEA0183Msg) {
 }
 ```
 
-Als erstes werden benötigte Variablen deklariert. Welche Variablen benötigt werden, hängt von den unterschiedlichen NMEA0183-PareseXXX-Funktionen ab. Die Funktionen sind in der Header-Datei [NMEA0183Messges.h](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Messages.h) der Bibliothek von Timo Lappalainen festgelegt.
+Als erstes werden benötigte Variablen deklariert. Welche Variablen benötigt werden, hängt von den unterschiedlichen NMEA0183-ParseXXX-Funktionen ab. Die Funktionen sind in der Header-Datei [NMEA0183Messges.h](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Messages.h) der Bibliothek von Timo Lappalainen festgelegt.
 
 Für die Wind-Informationen im MWV-Typ rufen wir die entsprechende Funktion auf:
 
@@ -108,7 +108,7 @@ SetN2kWindSpeed(N2kMsg, 0, WindSpeed, DegToRad(WindAngle), WindReference);
   NMEA2000.SendMsg(N2kMsg);
 ```
 
-Eine Umrechnung auf die SI-Einheten erfolgt mit den ebtsprechenden Umwandlunsroutinen.
+Eine Umrechnung auf die SI-Einheiten erfolgt mit den entsprechenden Umwandlunsroutinen.
 
 Die Funktion loop() ist für dieses Beispiel recht kurz:
 
