@@ -34,4 +34,28 @@ Die Geräte-Informationen für NMEA2000 setzen wir auf 135 und 25, passend für 
 
 Das war es schon mit der Vorbereitung. Die anderen Elemente für NMEA2000 hatten wir bereits in anderen Beispielen.
 
+Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 findet in dieser Funktion statt:
+
+```
+//*****************************************************************************
+void NMEA0183_ParseMessages() {
+  tNMEA0183Msg NMEA0183Msg;  // Create message container
+  
+  if (!NMEA0183.GetMessage(NMEA0183Msg)) return;  // New message ?
+
+  // We do have a new message
+  if (NMEA0183Msg.IsMessageCode("MWV")) HandleMWV(NMEA0183Msg);  // Check and handle message
+}
+```
+Als erstes wir ein Nachrichtencontainer für eine NMEA0183-Nachricht erstellt. Dann prüfen wir, ob eine gültige NMEA0183-Nachricht von der seriellen Schnittstelle empfangen wurde.
+Falls nicht, beenden wir die Funktion.
+
+Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die "MWV"-Nachricht mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Verfahren kann man beliebege NMEA0183-Nachrichten behandeln.
+
+
+
+
+
+
+
 
