@@ -1,6 +1,6 @@
 # NMEA0183 nach NMEA2000 wandeln
 Manchmal möchte man auch NMEA0183-Nachrichten zu NMEA2000 wandeln. Ach dies geht sehr einfach mit den Bibliotheken von Timo Lappalainen.
-Als Beispiel werden wir nun Wind-Daten, die als [MWV-Datensatz](http://www.nmea.de/nmea0183datensaetze.html#mwv) vorliegen, nach NMEA2000 wandeln. Prinzipiell kann man nach diesem Schama alle NMEA0183-Datensätze zu NMEA2000 umsetzen. Weitere [Beispiele](https://github.com/ttlappalainen/NMEA0183/tree/master/Examples) sind auch in der Bibliotehk enthalten.
+Als Beispiel werden wir nun Wind-Daten, die als [MWV-Datensatz](http://www.nmea.de/nmea0183datensaetze.html#mwv) vorliegen, nach NMEA2000 wandeln. Prinzipiell kann man nach diesem Schema alle NMEA0183-Datensätze zu NMEA2000 umsetzen. Weitere [Beispiele](https://github.com/ttlappalainen/NMEA0183/tree/master/Examples) sind auch in der Bibliotehk enthalten.
 
 Im [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA0183WindToN2k/NMEA0183WindToN2k.ino) benötigen wir als erstes zwei zusätzliche Include-Dateien:
 
