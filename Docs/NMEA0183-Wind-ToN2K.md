@@ -54,7 +54,7 @@ Falls nicht, beenden wir die Funktion.
 
 Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die ["MWV"-Nachricht](http://www.nmea.de/nmea0183datensaetze.html#mwv) mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Verfahren kann man beliebege NMEA0183-Nachrichten behandeln.
 
-Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 erfolgt in der jeweiligen Behandlungsroutine. Hier exeplarisch für MWV:
+Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 erfolgt in der jeweiligen Behandlungsroutine. Hier exemplarisch für MWV:
 
 ```
 //*****************************************************************************
