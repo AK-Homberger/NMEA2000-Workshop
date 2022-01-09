@@ -24,7 +24,7 @@ Die bedeutet, dass wir für das Objekt die 2. serielle Schnittstelle mit der Bau
 
 Die Geräte-Informationen für NMEA2000 setzen wir auf 135 und 25, passend für ein NMEA0183 zu NMEA2000 Gateway:
 ```
-// Det device information
+// Set device information
   NMEA2000.SetDeviceInformation(id,  // Unique number. Use e.g. Serial number.
                                 135, // Device function=NMEA 0183 Gateway. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20%26%20function%20codes%20v%202.00.pdf
                                 25,  // Device class=Inter/Intranetwork Device. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20%26%20function%20codes%20v%202.00.pdf
