@@ -131,7 +131,7 @@ void HandleMWV(const tNMEA0183Msg &NMEA0183Msg) {
   //Serial.println("MWV Message");
   
   // Parse MWV message (WindSpeed is in m/s !!!)
-  NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed);
+  if (!NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed)) return;
 
   // Read/Set wind reference
   if(Reference == NMEA0183Wind_True) {
