@@ -9,5 +9,18 @@ Im [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Softwa
 #include <NMEA0183Messages.h>
 ```
 
+Zusätzlich benötigen wir noch eine NMEA-Objekt zur Behandlung der Stream-Daten von der Seriellen Schnittstelle:
+```
+// Global objects/variables
+tNMEA0183 NMEA0183;         // NMEA stream for NMEA0183 receiving
+```
+
+In setup() initialisieren wir das Stream-Objekt mit:
+
+```
+NMEA0183.Begin(&Serial2, 3, 4800); // Start NMEA0183 stream handling with 4800 baud
+```
+Die bedeutet, dass wir für das Ojekt die 2. serielle Schnittstell mit der Baud-Rate 4800 angeben.
+Das war es schon mit der Vorbereitung. Die anderen Elemente für NMEA2000 hatten wir bereits in anderen Beispielen.
 
 
