@@ -48,5 +48,7 @@ Falls es nicht funktioniert hat, könnt ihr das eigene Programm auch mit [NMEA20
 
 Das war schon alles zum Thema Lesen vom Bus.
 
-Wir kommen nun zum letzten Teil des Workshops, dem Aufbau eines [NMEA2000-WLAN-Gateways](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW.md).
+Als [nächstes](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/NMEA0182-Wind-ToN2K.md)  werden wir noch Daten von NMEA0183 zu NMEA2000 wandeln.
+
+
 
