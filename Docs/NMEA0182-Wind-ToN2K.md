@@ -21,6 +21,17 @@ In setup() initialisieren wir das Stream-Objekt mit:
 NMEA0183.Begin(&Serial2, 3, 4800); // Start NMEA0183 stream handling with 4800 baud
 ```
 Die bedeutet, dass wir für das Ojekt die 2. serielle Schnittstell mit der Baud-Rate 4800 angeben.
+
+Die Geräte-Informationen für NMEA2000 setzen wir auf 13 und 25, passend für ein NMEA0183 zu NMEA2000 Gateway:
+```
+// Det device information
+  NMEA2000.SetDeviceInformation(id,  // Unique number. Use e.g. Serial number.
+                                135, // Device function=NMEA 0183 Gateway. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20%26%20function%20codes%20v%202.00.pdf
+                                25,  // Device class=Inter/Intranetwork Device. See codes on http://www.nmea.org/Assets/20120726%20nmea%202000%20class%20%26%20function%20codes%20v%202.00.pdf
+                                2046 // Just choosen free from code list on http://www.nmea.org/Assets/20121020%20nmea%202000%20registration%20list.pdf
+                               );
+```
+
 Das war es schon mit der Vorbereitung. Die anderen Elemente für NMEA2000 hatten wir bereits in anderen Beispielen.
 
 
