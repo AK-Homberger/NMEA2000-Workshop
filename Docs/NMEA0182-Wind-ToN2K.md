@@ -1,8 +1,8 @@
 # NMEA0183 nach NMEA2000 wandeln
-Manchmal möchte man auch NMEA0183-Nachrichten zu NMEA2000 wandeln. Ach dies geht sehr einfach mit den Bibliotheken von Timo Lappalainen.
-Als Beispiel werden wir nun Wind-Daten, die als [MWV-Datensatz](http://www.nmea.de/nmea0183datensaetze.html#mwv) vorliegen, nach NMEA2000 wandeln. Prinzipiell kann man nach diesem Schema alle NMEA0183-Datensätze zu NMEA2000 umsetzen. Weitere [Beispiele](https://github.com/ttlappalainen/NMEA0183/tree/master/Examples) sind auch in der Bibliotehk enthalten.
+Manchmal möchte man auch NMEA0183-Nachrichten zu NMEA2000 wandeln. Auch dies geht sehr einfach mit den Bibliotheken von Timo Lappalainen.
+Als Beispiel werden wir nun Wind-Daten, die als [MWV-Datensatz](http://www.nmea.de/nmea0183datensaetze.html#mwv) vorliegen, nach NMEA2000 wandeln. Prinzipiell kann man nach diesem Schema alle NMEA0183-Datensätze zu NMEA2000 umsetzen. Weitere [Beispiele](https://github.com/ttlappalainen/NMEA0183/tree/master/Examples) sind auch in der Bibliothek enthalten.
 
-Im [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA0183WindToN2k/NMEA0183WindToN2k.ino) benötigen wir als erstes zwei zusätzliche Include-Dateien:
+Im [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA0183WindToN2k/NMEA0183WindToN2k.ino) benötigen wir als Erstes zwei zusätzliche Include-Dateien:
 
 ```
 #include <NMEA0183.h>
@@ -94,9 +94,17 @@ Für die Wind-Informationen im MWV-Typ rufen wir die entsprechende Funktion auf:
 ```
 
 Als Daten übergeben wir die NMEA0183-Nachricht und Referenzen auf die benötigten Variablen. Die Variablen haben nach Rückkehr die entsprechenden Werte.
-Je nach Daten sind eventuell Umsetzungen von NME0183 auf NMA2000 notwendig. Wie hier zum Beispiel für die Referenzen auf die Wind-Typen.
+Je nach Daten sind eventuell Umsetzungen von NMEA0183 auf NMEA2000 notwendig. Wie hier zum Beispiel für die Referenzen auf die Wind-Typen.
 
-Als letztes wird die NMEA2000-Nachricht zusammengabaut (hier mit SetN2kWindSpeed) und gesendet. Eine Umrechnung auf die SI-Einheten erfolgt mit den ebtsprechenden Umwandlunsroutinen.
+Als letztes wird die NMEA2000-Nachricht zusammengabaut (hier mit SetN2kWindSpeed) und gesendet. 
+
+```
+SetN2kWindSpeed(N2kMsg, 0, WindSpeed, DegToRad(WindAngle), WindReference);
+  // Send message
+  NMEA2000.SendMsg(N2kMsg);
+```
+
+Eine Umrechnung auf die SI-Einheten erfolgt mit den ebtsprechenden Umwandlunsroutinen.
 
 Die Funktion loop() ist für dieses Beispiel recht kurz:
 
