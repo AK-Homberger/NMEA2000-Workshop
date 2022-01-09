@@ -9,7 +9,7 @@ Im [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Softwa
 #include <NMEA0183Messages.h>
 ```
 
-Zusätzlich benötigen wir noch eine NMEA-Objekt zur Behandlung der Stream-Daten von der Seriellen Schnittstelle:
+Zusätzlich benötigen wir noch ein NMEA-Objekt zur Behandlung der Stream-Daten von der seriellen Schnittstelle:
 ```
 // Global objects/variables
 tNMEA0183 NMEA0183;         // NMEA stream for NMEA0183 receiving
@@ -34,7 +34,7 @@ Die Geräte-Informationen für NMEA2000 setzen wir auf 135 und 25, passend für 
 
 Das war es schon mit der Vorbereitung. Die anderen Elemente für NMEA2000 hatten wir bereits in anderen Beispielen.
 
-Die Erkennung der NMEA0183-Nachritentypen erfolgt in der Funktion NMEA0183_ParseMessges():
+Die Erkennung der NMEA0183-Nachrichtentypen erfolgt in der Funktion NMEA0183_ParseMessges():
 
 ```
 //*****************************************************************************
@@ -50,7 +50,7 @@ void NMEA0183_ParseMessages() {
 Als erstes wir ein Nachrichtencontainer für eine NMEA0183-Nachricht erstellt. Dann prüfen wir, ob eine gültige NMEA0183-Nachricht von der seriellen Schnittstelle empfangen wurde.
 Falls nicht, beenden wir die Funktion.
 
-Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die "MWV"-Nachricht mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Verfahren kann man beliebege NMEA0183-Nachrichten behandeln.
+Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die ["MWV"-Nachricht](http://www.nmea.de/nmea0183datensaetze.html#mwv) mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Verfahren kann man beliebege NMEA0183-Nachrichten behandeln.
 
 Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 erfolgt in der jeweiligen Behandlungsroutine. Hier exeplarisch für MWV:
 
@@ -96,9 +96,9 @@ Für die Wind-Informationen im MWV-Typ rufen wir die entsprechende Funktion auf:
 Als Daten übergeben wir die NMEA0183-Nachricht und Referenzen auf die benötigten Variablen. Die Variablen haben nach Rückkehr die entsprechenden Werte.
 Je nach Daten sind eventuell Umsetzungen von NME0183 auf NMA2000 notwendig. Wie hier zum Beispiel für die Referenzen auf die Wind-Typen.
 
-Als letztes wird die NMEA2000-Nachricht zusammengabaut (hier mit SetN2kWindSpeed) und gesendet.
+Als letztes wird die NMEA2000-Nachricht zusammengabaut (hier mit SetN2kWindSpeed) und gesendet. Eine Umrechnung auf die SI-Einheten erfolgt mit den ebtsprechenden Umwandlunsroutinen.
 
-Die Funktion loop() ist für diese Beispiel recht kurz:
+Die Funktion loop() ist für dieses Beispiel recht kurz:
 
 ```
 void loop() {
