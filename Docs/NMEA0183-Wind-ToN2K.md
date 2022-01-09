@@ -21,7 +21,7 @@ In setup() initialisieren wir das Stream-Objekt mit:
 ```
 NMEA0183.Begin(&Serial2, 3, 4800); // Start NMEA0183 stream handling with 4800 baud
 ```
-Die bedeutet, dass wir für das Objekt die 2. serielle Schnittstelle mit der Baud-Rate 4800 angeben.
+Dies bedeutet, dass wir für das Objekt die 2. serielle Schnittstelle mit der Baud-Rate 4800 angeben.
 
 Die Geräte-Informationen für NMEA2000 setzen wir auf 135 und 25, passend für ein NMEA0183 zu NMEA2000 Gateway:
 ```
@@ -86,7 +86,7 @@ void HandleMWV(const tNMEA0183Msg &NMEA0183Msg) {
 }
 ```
 
-Als erstes werden benötigte Variablen deklariert. Welche Variablen benötigt werden, hängt von den unterschiedlichen NMEA0183-ParseXXX-Funktionen ab. Die Funktionen sind in der Header-Datei [NMEA0183Messges.h](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Messages.h) der Bibliothek von Timo Lappalainen festgelegt.
+Als Erstes werden benötigte Variablen deklariert. Welche Variablen benötigt werden, hängt von den unterschiedlichen NMEA0183-ParseXXX-Funktionen ab. Die Funktionen sind in der Header-Datei [NMEA0183Messges.h](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Messages.h) der Bibliothek von Timo Lappalainen festgelegt.
 
 Für die Wind-Informationen im MWV-Typ rufen wir die entsprechende Funktion auf:
 
