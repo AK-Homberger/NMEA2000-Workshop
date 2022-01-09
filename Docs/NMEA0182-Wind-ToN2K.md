@@ -9,7 +9,7 @@ Im [Programm](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Softwa
 #include <NMEA0183Messages.h>
 ```
 
-Zusätzlich benötigen wir noch ein NMEA-Objekt zur Behandlung der Stream-Daten von der seriellen Schnittstelle:
+Zusätzlich benötigen wir noch ein NMEA0183-Objekt zur Behandlung der Stream-Daten von der seriellen Schnittstelle:
 ```
 // Global objects/variables
 tNMEA0183 NMEA0183;         // NMEA stream for NMEA0183 receiving
