@@ -109,6 +109,7 @@ void loop() {
 ```
 
 Das war es schon mit der Wandlung von NMEA0183 zu NMEA2000. 
+Leider können wir das Programm mangels NMEA0183-Daten nicht testen.
 
 Wir kommen nun zum letzten Teil des Workshops, dem Aufbau eines [NMEA2000-WLAN-Gateways](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW.md).
 
