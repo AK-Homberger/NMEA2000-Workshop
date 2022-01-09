@@ -34,7 +34,7 @@ Die Geräte-Informationen für NMEA2000 setzen wir auf 135 und 25, passend für 
 
 Das war es schon mit der Vorbereitung. Die anderen Elemente für NMEA2000 hatten wir bereits in anderen Beispielen.
 
-Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 startet in der folgenden Funktion:
+Die Erkennung der NMEA0183-Nachritentypen erfolgt in der Funktion NMEA0183_ParseMessges():
 
 ```
 //*****************************************************************************
@@ -52,7 +52,39 @@ Falls nicht, beenden wir die Funktion.
 
 Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die "MWV"-Nachricht mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Verfahren kann man beliebege NMEA0183-Nachrichten behandeln.
 
+Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 erfolgt in der jeweiligen Behandlungsroutine. Hier exeplarisch für MWV:
 
+```
+//*****************************************************************************
+void HandleMWV(const tNMEA0183Msg &NMEA0183Msg) {
+  double WindAngle;
+  tNMEA0183WindReference Reference;
+  tN2kWindReference WindReference;
+  double WindSpeed;
+  tN2kMsg N2kMsg;
+  
+  //Serial.println("MWV Message");
+  
+  // Parse MWV message (WindSpeed is in m/s !!!)
+  NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed);
+
+  // Read/Set wind reference
+  if(Reference == NMEA0183Wind_True) {
+    WindReference =  N2kWind_True_boat;
+  } else {
+    WindReference =  N2kWind_Apparent;
+  }
+
+  //Serial.printf("Angle=%4.1f°, Speeed=%3.1f kn, Reference=%d\n", WindAngle, msToKnots(WindSpeed), Reference);
+  
+  // Create NMEA2000 message
+  SetN2kWindSpeed(N2kMsg, 0, WindSpeed, DegToRad(WindAngle), WindReference);
+  // Send message
+  NMEA2000.SendMsg(N2kMsg);
+}
+```
+
+Als erstes werden benötigte Variablen deklariert. Welche Variablen benötigt werden, hängt von den unterschiedlichen NMEA0183-PareseXXX-Funktionen ab. Die Funktionen sind in der Header-Datei [NMEA0183Messges.h](https://github.com/ttlappalainen/NMEA0183/blob/master/NMEA0183Messages.h) der Bibliothek von Timo Lappalainen festgelegt.
 
 
 
