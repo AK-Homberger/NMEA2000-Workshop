@@ -66,7 +66,7 @@ void HandleMWV(const tNMEA0183Msg &NMEA0183Msg) {
   //Serial.println("MWV Message");
   
   // Parse MWV message (WindSpeed is in m/s !!!)
-  NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed);
+  if (!NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed)) return;
 
   // Read/Set wind reference
   if(Reference == NMEA0183Wind_True) {
@@ -90,10 +90,12 @@ Für die Wind-Informationen im MWV-Typ rufen wir die entsprechende Funktion auf:
 
 ```
 // Parse MWV message (WindSpeed is in m/s !!!)
-  NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed);
+  if (!NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed)) return;
 ```
 
 Als Daten übergeben wir die NMEA0183-Nachricht und Referenzen auf die benötigten Variablen. Die Variablen haben nach Rückkehr die entsprechenden Werte.
+Falls das Parsen nicht erfolgreich war, beenden wir die Funktion mit "return;".
+
 Je nach Daten sind eventuell Umsetzungen von NMEA0183 auf NMEA2000 notwendig. Wie hier zum Beispiel für die Referenzen auf die Wind-Typen.
 
 Als letztes wird die NMEA2000-Nachricht zusammengabaut (hier mit SetN2kWindSpeed) und gesendet. 
