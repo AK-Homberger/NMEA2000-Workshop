@@ -166,7 +166,7 @@ Folgende Beispielprogramme werden im Workshop gemeinsam erstellt/erweitert und m
 3. [Spannungs- und Widerstandsmessung (Batteriespannung, Tankanzeige)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/AnalogRead.md)
 4. [Messung von Frequenzen (Motordrehzahl, Durchflussgeber)](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/Frequenz.md)
 5. [Daten (PGN) vom NMEA2000-Bus lesen und darstellen](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/ReadPGNs.md)
-6. [NMEA0183-Nachrichten nach NMEA2000 wandeln](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/NMEA0182-Wind-ToN2K.md)
+6. [NMEA0183-Nachrichten nach NMEA2000 wandeln](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/NMEA0183-Wind-ToN2K.md)
 7. [NMEA2000-WLAN-Gateway und Anzeige der Daten auf OpenCPN und Tablet/Telefon](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW.md)
 8. [Gateway plus AIS-Multiplexing](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW3.md)
 9. [Optional: Gateway mit Web-Server](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Docs/WLAN-GW4.md)
