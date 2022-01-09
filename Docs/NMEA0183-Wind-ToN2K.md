@@ -108,7 +108,7 @@ SetN2kWindSpeed(N2kMsg, 0, WindSpeed, DegToRad(WindAngle), WindReference);
   NMEA2000.SendMsg(N2kMsg);
 ```
 
-Eine Umrechnung auf die SI-Einheiten erfolgt mit den entsprechenden Umwandlunsroutinen.
+Eine Umrechnung auf die SI-Einheiten erfolgt mit den entsprechenden[Umwandlunsroutinen](https://github.com/ttlappalainen/NMEA2000/blob/db22adbb3fec182ecae2ae8bc816378ac43d7fc3/src/N2kMessages.h#L42).
 
 Die Funktion loop() ist für dieses Beispiel recht kurz:
 
