@@ -101,7 +101,7 @@ Falls das Parsen nicht erfolgreich war, beenden wir die Funktion mit "return;".
 
 Je nach Daten sind eventuell Umsetzungen von NMEA0183 auf NMEA2000 notwendig. Wie hier zum Beispiel für die Referenzen auf die Wind-Typen.
 
-Als letztes wird die NMEA2000-Nachricht zusammengebaut (hier mit SetN2kWindSpeed) und gesendet. 
+Als letztes wird die NMEA2000-Nachricht zusammengebaut (hier mit SetN2kWindSpeed, PGN 130306) und gesendet. 
 
 ```
 SetN2kWindSpeed(N2kMsg, 0, WindSpeed, DegToRad(WindAngle), WindReference);
