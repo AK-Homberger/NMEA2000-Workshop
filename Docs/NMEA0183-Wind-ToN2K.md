@@ -21,7 +21,7 @@ In setup() initialisieren wir das Stream-Objekt mit:
 ```
 NMEA0183.Begin(&Serial2, 3, 4800); // Start NMEA0183 stream handling with 4800 baud
 ```
-Dies bedeutet, dass wir für das Objekt die 2. serielle Schnittstelle mit der Baud-Rate 4800 angeben.
+Dies bedeutet, dass wir für das Stream-Objekt die 2. serielle Schnittstelle (RX an GPIO 16) mit der Baud-Rate 4800 angeben.
 
 Die Geräte-Informationen für NMEA2000 setzen wir auf 135 und 25, passend für ein NMEA0183 zu NMEA2000 Gateway:
 ```
