@@ -3,7 +3,7 @@ Manchmal möchte man auch [NMEA0183-Nachrichten](https://de.wikipedia.org/wiki/N
 
 Als Beispiel werden wir nun NMEA0183-Wind-Daten von der seriellen Schnittstelle, die als [MWV-Datensatz](http://www.nmea.de/nmea0183datensaetze.html#mwv) vorliegen, nach NMEA2000 wandeln. Prinzipiell kann man nach diesem Schema alle NMEA0183-Datensätze zu NMEA2000 umsetzen. Weitere [Beispiele](https://github.com/ttlappalainen/NMEA0183/tree/master/Examples) sind auch in der Bibliothek enthalten.
 
-Im Programm **[NMEA0183WindToN2k.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA0183WindToN2k/NMEA0183WindToN2k.ino)** benötigen wir als Erstes zwei zusätzliche Include-Dateien:
+Im Programm [NMEA0183WindToN2k.ino](https://github.com/AK-Homberger/NMEA2000-Workshop/blob/main/Software/NMEA0183WindToN2k/NMEA0183WindToN2k.ino) benötigen wir als Erstes zwei zusätzliche Include-Dateien:
 
 ```
 #include <NMEA0183.h>
