@@ -52,7 +52,7 @@ Als Erstes wird ein Nachrichtencontainer für eine NMEA0183-Nachricht erstellt. 
 
 Falls nicht, beenden wir die Funktion.
 
-Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die ["MWV"-Nachricht](http://www.nmea.de/nmea0183datensaetze.html#mwv) mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Verfahren kann man beliebege NMEA0183-Nachrichten behandeln.
+Falls eine Nachricht empfangen wurde, testen wir nun, um welche Nachricht es sich handelt. Für das Beispiel interessieren wir uns nur für die ["MWV"-Nachricht](http://www.nmea.de/nmea0183datensaetze.html#mwv) mit Wind-Informationen. Wenn MWV empfangen wurde, rufen wie die entsprechende Behandlunsroutine auf. Nach diesem Schema können beliebege NMEA0183-Nachrichten behandelt werden.
 
 Die eigentliche Umwandlung von NMEA0183 zu NMEA2000 erfolgt in der jeweiligen Behandlungsroutine. Hier exemplarisch für MWV:
 
@@ -95,7 +95,8 @@ Für die Wind-Informationen im MWV-Typ rufen wir die entsprechende Funktion auf:
   if (!NMEA0183ParseMWV_nc(NMEA0183Msg, WindAngle, Reference, WindSpeed)) return;
 ```
 
-Als Daten übergeben wir die NMEA0183-Nachricht und Referenzen auf die benötigten Variablen. Die Variablen haben nach Rückkehr die entsprechenden Werte.
+Als Daten übergeben wir die NMEA0183-Nachricht und Referenzen auf die benötigten Variablen. Die Variablen haben nach dem Funktionsaufruf die entsprechenden Werte.
+
 Falls das Parsen nicht erfolgreich war, beenden wir die Funktion mit "return;".
 
 Je nach Daten sind eventuell Umsetzungen von NMEA0183 auf NMEA2000 notwendig. Wie hier zum Beispiel für die Referenzen auf die Wind-Typen.
