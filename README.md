@@ -55,6 +55,8 @@ Für den Workshop sind einige Vorbereitungen notwendig. Diese sollten vor dem Wo
 Falls es bei den Vorbereitungen zu Problemen kam, können wir die Probleme im Workshop gemeinsam lösen.
 
 ## Vorbereiten der Arduino-IDE
+Als erstes müsse wir die Arduino-IDE und die ESP32-Board-Unterstützung installieren. Wie das geht, wird bei den folgenden Links beschrieben.
+  
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-boards-manager) (Bitte Methode "Installing using Boards Manager" nutzen).
 
