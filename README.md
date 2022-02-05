@@ -56,9 +56,11 @@ Falls es bei den Vorbereitungen zu Problemen kam, können wir die Probleme im Wo
 
 ## Vorbereiten der Arduino-IDE
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
-- Installation der ESP32-Board Informationen [Link](https://www.az-delivery.de/blogs/azdelivery-blog-fur-arduino-und-raspberry-pi/esp32-jetzt-mit-boardverwalter-installieren)
+- Installation der ESP32-Board Informationen [Link](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-boards-manager)
 
-Die Beispiele im Workshop sind mit der Board-Version 1.0.6 getestet. Bei neueren Board-Versionen kann es zu Fehlern beim Kompilieren kommen, da sich einzelne Funktionen der ESP32-API geändert haben. So ist zum Beispiel "esp_efuse_read_mac(chipid);" durch die geänderte Funktion "esp_efuse_mac_get_default(chipid);" zu ersetzen.
+Die Beispiele im Workshop sind mit der Board-Version 1.0.6 getestet. Die Version 1.0.6 ist die letze, die auch von 32-Bit Windows-Systemen unterstützt wird. 
+  
+Bei neueren Board-Versionen (2.x.x) kann es zu Fehlern beim Kompilieren kommen, da sich einzelne Funktionen der ESP32-API geändert haben. So ist zum Beispiel "esp_efuse_read_mac(chipid);" durch die geänderte Funktion "esp_efuse_mac_get_default(chipid);" zu ersetzen.
   
 In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
