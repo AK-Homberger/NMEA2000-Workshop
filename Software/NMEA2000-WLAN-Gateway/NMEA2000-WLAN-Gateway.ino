@@ -98,7 +98,7 @@ void setup() {
   NMEA2000.SetN2kCANReceiveFrameBufSize(150);
   NMEA2000.SetN2kCANSendFrameBufSize(150);
 
-  esp_efuse_read_mac(chipid);
+  esp_efuse_mac_get_default(chipid);
   for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));
 
   // Set product information
