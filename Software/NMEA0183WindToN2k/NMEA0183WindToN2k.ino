@@ -40,7 +40,7 @@ void setup() {
   Serial.begin(115200);
   NMEA0183.Begin(&Serial2, 3, 4800); // Start NMEA0183 stream handling with 4800 baud
 
-  esp_efuse_read_mac(chipid);
+  esp_efuse_mac_get_default(chipid);
   for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));
 
   // Setup NMEA2000 system
