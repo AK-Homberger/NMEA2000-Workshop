@@ -69,7 +69,7 @@ In den aktuellen Beispielen auf Git-Hub sind die Funktionen schon umbenannt. Das
 In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
 ## Download der NMEA2000-Bibliotheken
-Im Workshop werden wir Biblotheken von Timo Lappalainen verwnden. Durch die Nutzung der Bibliotheken wird die Programmierung von NMEA20000 sehr vereinfacht.
+Im Workshop werden wir Bibliotheken von Timo Lappalainen verwnden. Durch die Nutzung der Bibliotheken wird die Programmierung von NMEA20000 sehr vereinfacht.
 
 Folgene Bibliotheken bitte als ZIP-Dateien downloaden und installieren:
 - [NMEA2000](https://github.com/ttlappalainen/NMEA2000)
