@@ -55,7 +55,7 @@ Für den Workshop sind einige Vorbereitungen notwendig. Diese sollten vor dem Wo
 Falls es bei den Vorbereitungen zu Problemen kam, können wir die Probleme im Workshop gemeinsam lösen.
 
 ## Vorbereiten der Arduino-IDE
-Als erstes müsse wir die Arduino-IDE und die ESP32-Board-Unterstützung installieren. Wie das geht, wird bei den folgenden Links beschrieben.
+Als Erstes müssen wir die Arduino-IDE und die ESP32-Board-Unterstützung installieren. Wie das geht, wird bei den folgenden Links beschrieben.
   
 - Download und Installation der Arduino-Entwicklungsumgebung [Link](https://www.arduino.cc/en/software)
 - Installation der ESP32-Board Informationen [Link](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-boards-manager) (Bitte Methode "Installing using Boards Manager" nutzen).
@@ -64,13 +64,14 @@ Die Beispiele im Workshop sind mit der Board-Version 1.0.6 getestet. Die Version
   
 Bei neueren Board-Versionen (2.x.x) kann es zu Fehlern beim Kompilieren mit früheren Beispielprogrammen kommen, da sich einzelne Funktionen der ESP32-API geändert haben. So ist zum Beispiel "esp_efuse_read_mac(chipid);" durch die geänderte Funktion "esp_efuse_mac_get_default(chipid);" zu ersetzen.
 
-In den aktuellen Beispielen auf Git-Hub sind die Funktionen schon umbenannt. Das gilt auch für meine anderen NMEA2000 Projekte auf Git-Hub.
+In den aktuellen Beispielen auf Git-Hub sind die Funktionen schon umbenannt. Das gilt auch für meine anderen NMEA2000-Projekte auf Git-Hub.
   
 In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
 ## Download der NMEA2000-Bibliotheken
+Im Workshop werden wir Biblotheken von Timo Lappalainen verwnden. Durch die Nutzung der Bibliotheken wird die Programmierung von NMEA20000 sehr vereinfacht.
 
-Folgene Bibliotheken als ZIP-Dateien downloaden und installieren:
+Folgene Bibliotheken bitte als ZIP-Dateien downloaden und installieren:
 - [NMEA2000](https://github.com/ttlappalainen/NMEA2000)
 - [NMEA2000_esp32](https://github.com/ttlappalainen/NMEA2000_esp32)
 - [NMEA0183](https://github.com/ttlappalainen/NMEA0183)
