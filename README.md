@@ -64,7 +64,7 @@ Die Beispiele im Workshop sind mit der Board-Version 1.0.6 getestet. Die Version
   
 Bei neueren Board-Versionen (2.x.x) kann es zu Fehlern beim Kompilieren mit früheren Beispielprogrammen kommen, da sich einzelne Funktionen der ESP32-API geändert haben. So ist zum Beispiel "esp_efuse_read_mac(chipid);" durch die geänderte Funktion "esp_efuse_mac_get_default(chipid);" zu ersetzen.
 
-In den aktuellen Beispielen auf Git-Hub sind die Funktionen schon umbenannt. Das gilt auch für meine anderen NMEA2000-Projekte auf Git-Hub.
+In den aktuellen Beispielen auf GitHub sind die Funktionen schon umbenannt. Das gilt auch für meine anderen NMEA2000-Projekte auf Git-Hub.
   
 In der Arduino-IDE müssen wir als Nächstes das richtige Board auswählen. Dazu klicken wir auf "Werkzeuge", "Board" und wählen dann "ESP32 Arduino" und "ESP32 Dev Module".
 
