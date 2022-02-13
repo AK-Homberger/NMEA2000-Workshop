@@ -2,7 +2,7 @@
 
 **_This repository contains information for a NMEA2000 workshop. It is currently only available in German language. But you can use Google Translate to translate it to other languages: [Start translating to English](https://translate.google.com/translate?hl=&sl=de&tl=en&u=https%3A%2F%2Fgithub.com%2FAK-Homberger%2FNMEA2000-Workshop)_**
 
-Dieses Repository enthält Informationen zum NMEA2000-Workshop in 2021.
+Dieses Repository enthält Informationen zu einem kompletten NMEA2000-Workshop.
 
 <p><a href="https://commons.wikimedia.org/wiki/File:NMEA2000_Modified_motor_yacht.jpg#/media/Datei:NMEA2000_Modified_motor_yacht.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NMEA2000_Modified_motor_yacht.jpg/1200px-NMEA2000_Modified_motor_yacht.jpg" alt="NMEA2000 Modified motor yacht.jpg"></a><br>
 
