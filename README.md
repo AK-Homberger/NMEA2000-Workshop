@@ -15,11 +15,7 @@ Es haben inzwischen zwei Online-Workshops stattgefunden:
 
 Die Zweiteilung des Workshops hat sich dabei bewährt, da es für einen Termin zu viel Inhalt ist.
 
-Weitere Workshops können bei Bedarf folgen.
-
-Bei Interesse bitte im Segeln-Forum [hier](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) melden. 
-
-Sobald genügend Interessenten dabei sind, planen wir dann den nächsten Workshop.
+Weitere Workshops können bei Bedarf folgen. Bei Interesse bitte im Segeln-Forum [hier](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) melden. Sobald genügend Interessenten dabei sind, planen wir dann den nächsten Workshop.
 
 Für Fragen und Diskussionen zum Workshop könnt ihr gern auch das [Segeln-Forum](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) nutzen. Alternativ geht natürlich auch die [Discussions-Funktion](https://github.com/AK-Homberger/NMEA2000-Workshop/discussions) in GitHub.
 
