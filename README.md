@@ -21,7 +21,7 @@ Bei Interesse bitte im Segeln-Forum [hier](https://www.segeln-forum.de/board194-
 
 Sobald genügend Interessenten dabei sind, planen wir dann den nächsten Workshop.
 
-Für Fragen und Diskussionen zum Workshop könnt ihr gern auch das [Segeln-Forum](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) nutzen.
+Für Fragen und Diskussionen zum Workshop könnt ihr gern auch das [Segeln-Forum](https://www.segeln-forum.de/board194-boot-technik/board195-open-boat-projects-org/78918-open-boat-projects-live-3/?s=c8766c7bea94061aa3d0a8ebb954e6c4d6c9e1ec) nutzen. Alternativ geht natürlich auch die [Discussions](https://github.com/AK-Homberger/NMEA2000-Workshop/discussions)-Funktion in GitHub.
 
 Für den Workshop sind einige Bauteile notwendig. Die Liste mit genauen Bestelldaten folgt weiter [unten](https://github.com/AK-Homberger/NMEA2000-Workshop#material-f%C3%BCr-den-workshop).
 
