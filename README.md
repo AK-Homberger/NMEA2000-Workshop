@@ -2,7 +2,7 @@
 
 **_This repository contains information for a NMEA2000 workshop. It is currently only available in German language. But you can use Google Translate to translate it to other languages: [Start translating to English](https://translate.google.com/translate?hl=&sl=de&tl=en&u=https%3A%2F%2Fgithub.com%2FAK-Homberger%2FNMEA2000-Workshop)_**
 
-Dieses Repository enthält Informationen zu einem NMEA2000-Workshop. 
+Dieses Repository enthält Informationen zu einem NMEA2000-Workshop. Mit Schritt-für-Schritt-Anleitungen und vielen Beispielen wir die Nutzung und Programmierung von NMEA2000-Anwendungen gezeigt.
 
 Die Informationen sind eigentlich für die Nutzung in einem Präsenz- oder Online-Workshop gedacht. Die Informationen können aber auch ohne Workshop in eigener Regie genutzt werden. Alle notwendigen Inhalte und Erklärungen sind im Text enthalten.
 
